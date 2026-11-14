@@ -1,0 +1,75 @@
+{
+  "counts": {
+    "exact_duplicate_records_merged": 0,
+    "native_highway_features": 572,
+    "nominal_common_observation_support": 199,
+    "short_empty_or_invalid": 47,
+    "unique_road_geometries_ge20m": 525
+  },
+  "flood_attributes_used": false,
+  "new_water_pixels": 351,
+  "optical_grid": {
+    "cell_area_m2": 400.0,
+    "cell_size_m": [
+      20.0,
+      20.0
+    ],
+    "crs": "EPSG:32632",
+    "shape": [
+      464,
+      376
+    ],
+    "transform": [
+      20.0,
+      0.0,
+      355840.0,
+      0.0,
+      -20.0,
+      5601760.0
+    ]
+  },
+  "paired_clear_optical_pixels": 89933,
+  "predictions_sha256": "da77b64b64060e747f89b3020a93e392cc81ded23bd742d8792e04cdfbbdda8a",
+  "predictor_receipt_sha256": "3ffd7e7312af8e0b95fb0149ae0b3f0adfe8ce675be4d4b21a8f9c924cdf7069",
+  "protocol_sha256": "ca78eb5c887ba157e64f92fe3db49031167faafc04fd1d45332d05ea84484f4d",
+  "reference_receipt_sha256": "d2770b224e28c676f6a610019af9e0b37e01397ce97feef8c3006a4367f41978",
+  "source_commit": "b5c5b1ff76fc2b9021521cd5b974f8e4608f41a8",
+  "terrain": {
+    "boundary_condition": "Open outer edge and NoData perimeter; external contributing area unavailable",
+    "conditioning": "fill",
+    "filled_cells": 3429,
+    "flat_parent_routes": 3429,
+    "flow_method": "D8 steepest descent; Priority-Flood parent on filled flats",
+    "hand_valid_cells": 71238,
+    "interpretation": "Potential topographic drainage; not flood/debris propagation or flood depth",
+    "maximum_fill_m": 15.284841475770719,
+    "outlet_accumulation_sum_cells": 73612,
+    "outlets": 43,
+    "stream_cells": 3626,
+    "stream_threshold_m2": 100000,
+    "total_cells": 77559,
+    "valid_cells": 73612,
+    "valid_fraction": 0.9491097100272051
+  },
+  "terrain_grid": {
+    "cell_area_m2": 900.0,
+    "cell_size_m": [
+      30.0,
+      30.0
+    ],
+    "crs": "EPSG:32632",
+    "shape": [
+      309,
+      251
+    ],
+    "transform": [
+      30.0,
+      0.0,
+      355830.0,
+      0.0,
+      -30.0,
+      5601750.0
+    ]
+  },
+  "terrain_seed_cells": 277
+}

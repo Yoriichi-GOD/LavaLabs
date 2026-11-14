@@ -1,0 +1,73 @@
+{
+  "schema": "satquery.r3.evidence-discrimination/1",
+  "disposition": "Development-only reinterpretation of consumed Ahr and Canadian observations. Protocol fixed before executing this refinement; historical aggregate outcomes were known.",
+  "ahr": {
+    "population": "original 199 supported road IDs, 60 proximity candidates, 23 nominal positive-length witnesses",
+    "common_candidate_queue": "fixed proximity flag and lexicographic score, identical tie groups",
+    "required_variants": [
+      "unfilled_30",
+      "shift_east_30",
+      "shift_west_30",
+      "shift_north_30",
+      "shift_south_30",
+      "ndvi_exclusion",
+      "ndwi_agreement"
+    ],
+    "diagnostic_variants": [
+      "filled_90",
+      "unfilled_90",
+      "missing_pre",
+      "missing_post"
+    ],
+    "independent_endpoint_references": 0,
+    "independent_traversal_references": 0,
+    "strict_expected_paths": 3
+  },
+  "direction": {
+    "population": "42 previously observed South Saskatchewan blocks; same grid lookup and vector target as pilot",
+    "nominal": "GLO30_30m_fill",
+    "alternates": [
+      "GLO30_30m_none",
+      "GLO30_90m_fill",
+      "MERIT_derived_native"
+    ],
+    "agreement_degrees": 45,
+    "coverage_counts": [
+      2,
+      7,
+      14,
+      21,
+      42
+    ],
+    "tie": "Exact uniform-in-boundary expectation and attainable min/max. No stochastic sample and no interpolation.",
+    "evidence_priority": [
+      "complete_and_compatible",
+      "complete_and_discordant",
+      "auxiliary_variant_unavailable"
+    ],
+    "agreement_comparator": "G ranks complete cases by resultant length of the four unit vectors, then puts incomplete cases in a single lower tie. An agreement-based rejection control, not a reproduction of GFM or trained selective prediction.",
+    "conflict_comparator": "Only uses a separate pre-release reference; the scoring ADCP vector never enters ranking or policy. None is available, so D equals the observation gate."
+  },
+  "states": {
+    "A": "supported nominal model; all required available sensitivity checks agree",
+    "B": "nominal model supported, alternate evidence changes the relationship or leaves robustness indeterminate; disclose which",
+    "C": "missing required evidence for this claim; withhold only the dependent claim",
+    "D": "valid independent observation contradicts the specified target; block its physical escalation",
+    "E": "scale cannot resolve the specified structure; no asset-scale or absence claim",
+    "F": "independent, target-matched support; endpoint and directed traversal separately recorded"
+  },
+  "arms": {
+    "A": "original positive-length nominal model",
+    "B": "frozen strict CEGS",
+    "C": "nominal observability only",
+    "D": "C plus no independently contradicted same-target release; unresolved reference remains unknown",
+    "E": "explicit claim scope and typed evidence; report nominal model only if nominal requirements pass, and physical claims only with separately matched independent support",
+    "F": "abstain on all pathway claims while retaining the candidate queue",
+    "G": "coverage-constrained directional ensemble concentration control; G unavailable for Ahr path scoring"
+  },
+  "policies": {
+    "references": "lineage, footprint, time, target, identity and usable support must all pass; contradictions and support may target endpoint or traversal",
+    "reliability": "no probabilities, performance intervals or external accuracy extrapolation",
+    "matched": "Subsample within native issue set only. B is infeasible above its issued count; F is feasible at zero only. A/C/D reference-blind uniform ties. E typed ranking for local direction diagnostic only; original road queue rank is preserved."
+  }
+}

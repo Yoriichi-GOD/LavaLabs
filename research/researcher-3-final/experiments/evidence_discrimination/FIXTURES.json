@@ -1,0 +1,409 @@
+{
+  "scope": "Software contract extension with manually declared outcomes. Physical references are synthetic and do not estimate field risk. Freeze before execution.",
+  "expected_columns": [
+    "model_state",
+    "modeled_scope",
+    "endpoint_qualified",
+    "traversal_qualified",
+    "endpoint_state",
+    "traversal_state",
+    "scale_state"
+  ],
+  "base": {
+    "observed": true,
+    "geometric": true,
+    "nominal": true,
+    "strict": true,
+    "sensitive": false,
+    "auxiliary_missing": false,
+    "scale_unresolved": false,
+    "receptor_identified": true
+  },
+  "cases": [
+    {
+      "name": "matched_alternative",
+      "change": {},
+      "references": [],
+      "expected": [
+        "A",
+        "nominal_model_with_compatible_required_alternatives",
+        false,
+        false,
+        "UNKNOWN",
+        "UNKNOWN",
+        "NOT_FLAGGED"
+      ]
+    },
+    {
+      "name": "conditioning_displaces_witness",
+      "change": {
+        "strict": false,
+        "sensitive": true
+      },
+      "references": [],
+      "expected": [
+        "B",
+        "nominal_model_only",
+        false,
+        false,
+        "UNKNOWN",
+        "UNKNOWN",
+        "NOT_FLAGGED"
+      ]
+    },
+    {
+      "name": "alternate_observation_missing",
+      "change": {
+        "strict": false,
+        "auxiliary_missing": true
+      },
+      "references": [],
+      "expected": [
+        "B",
+        "nominal_model_only",
+        false,
+        false,
+        "UNKNOWN",
+        "UNKNOWN",
+        "NOT_FLAGGED"
+      ]
+    },
+    {
+      "name": "required_imagery_missing",
+      "change": {
+        "observed": false,
+        "strict": false
+      },
+      "references": [],
+      "expected": [
+        "C",
+        null,
+        false,
+        false,
+        "UNKNOWN",
+        "UNKNOWN",
+        "NOT_FLAGGED"
+      ]
+    },
+    {
+      "name": "subgrid_culvert",
+      "change": {
+        "scale_unresolved": true
+      },
+      "references": [],
+      "expected": [
+        "A",
+        "nominal_model_with_compatible_required_alternatives",
+        false,
+        false,
+        "UNKNOWN",
+        "UNKNOWN",
+        "E"
+      ]
+    },
+    {
+      "name": "registration_ambiguous_but_endpoint_observed",
+      "change": {
+        "strict": false,
+        "sensitive": true
+      },
+      "references": [
+        {
+          "identity": "independent_endpoint",
+          "target": "endpoint_exposure",
+          "verdict": "supports",
+          "checks": {
+            "identity_verified": true,
+            "independent_lineage": true,
+            "target_matches": true,
+            "footprint_matches": true,
+            "time_matches": true,
+            "observed_support": true
+          }
+        }
+      ],
+      "expected": [
+        "B",
+        "nominal_model_only",
+        true,
+        false,
+        "F",
+        "UNKNOWN",
+        "NOT_FLAGGED"
+      ]
+    },
+    {
+      "name": "stable_model_with_direction_contradicted",
+      "change": {},
+      "references": [
+        {
+          "identity": "independent_reverse",
+          "target": "source_to_endpoint_traversal",
+          "verdict": "contradicts",
+          "checks": {
+            "identity_verified": true,
+            "independent_lineage": true,
+            "target_matches": true,
+            "footprint_matches": true,
+            "time_matches": true,
+            "observed_support": true
+          }
+        }
+      ],
+      "expected": [
+        "A",
+        "nominal_model_with_compatible_required_alternatives",
+        false,
+        false,
+        "UNKNOWN",
+        "D",
+        "NOT_FLAGGED"
+      ]
+    },
+    {
+      "name": "same_source_cannot_corroborate",
+      "change": {},
+      "references": [
+        {
+          "identity": "same_imagery",
+          "target": "endpoint_exposure",
+          "verdict": "supports",
+          "checks": {
+            "identity_verified": true,
+            "independent_lineage": false,
+            "target_matches": true,
+            "footprint_matches": true,
+            "time_matches": true,
+            "observed_support": true
+          }
+        }
+      ],
+      "expected": [
+        "A",
+        "nominal_model_with_compatible_required_alternatives",
+        false,
+        false,
+        "UNKNOWN",
+        "UNKNOWN",
+        "NOT_FLAGGED"
+      ]
+    },
+    {
+      "name": "out_of_time_cannot_contradict",
+      "change": {},
+      "references": [
+        {
+          "identity": "wrong_date",
+          "target": "source_to_endpoint_traversal",
+          "verdict": "contradicts",
+          "checks": {
+            "identity_verified": true,
+            "independent_lineage": true,
+            "target_matches": true,
+            "footprint_matches": true,
+            "time_matches": false,
+            "observed_support": true
+          }
+        }
+      ],
+      "expected": [
+        "A",
+        "nominal_model_with_compatible_required_alternatives",
+        false,
+        false,
+        "UNKNOWN",
+        "UNKNOWN",
+        "NOT_FLAGGED"
+      ]
+    },
+    {
+      "name": "independent_endpoint_and_contradicted_traversal",
+      "change": {},
+      "references": [
+        {
+          "identity": "wet_endpoint",
+          "target": "endpoint_exposure",
+          "verdict": "supports",
+          "checks": {
+            "identity_verified": true,
+            "independent_lineage": true,
+            "target_matches": true,
+            "footprint_matches": true,
+            "time_matches": true,
+            "observed_support": true
+          }
+        },
+        {
+          "identity": "opposed_route",
+          "target": "source_to_endpoint_traversal",
+          "verdict": "contradicts",
+          "checks": {
+            "identity_verified": true,
+            "independent_lineage": true,
+            "target_matches": true,
+            "footprint_matches": true,
+            "time_matches": true,
+            "observed_support": true
+          }
+        }
+      ],
+      "expected": [
+        "A",
+        "nominal_model_with_compatible_required_alternatives",
+        true,
+        false,
+        "F",
+        "D",
+        "NOT_FLAGGED"
+      ]
+    },
+    {
+      "name": "two_eligible_references_conflict",
+      "change": {},
+      "references": [
+        {
+          "identity": "wet",
+          "target": "endpoint_exposure",
+          "verdict": "supports",
+          "checks": {
+            "identity_verified": true,
+            "independent_lineage": true,
+            "target_matches": true,
+            "footprint_matches": true,
+            "time_matches": true,
+            "observed_support": true
+          }
+        },
+        {
+          "identity": "dry",
+          "target": "endpoint_exposure",
+          "verdict": "contradicts",
+          "checks": {
+            "identity_verified": true,
+            "independent_lineage": true,
+            "target_matches": true,
+            "footprint_matches": true,
+            "time_matches": true,
+            "observed_support": true
+          }
+        }
+      ],
+      "expected": [
+        "A",
+        "nominal_model_with_compatible_required_alternatives",
+        false,
+        false,
+        "D",
+        "UNKNOWN",
+        "NOT_FLAGGED"
+      ]
+    },
+    {
+      "name": "independent_traversal_can_be_observed_without_nominal_model",
+      "change": {
+        "nominal": false,
+        "strict": false
+      },
+      "references": [
+        {
+          "identity": "observed_track",
+          "target": "source_to_endpoint_traversal",
+          "verdict": "supports",
+          "checks": {
+            "identity_verified": true,
+            "independent_lineage": true,
+            "target_matches": true,
+            "footprint_matches": true,
+            "time_matches": true,
+            "observed_support": true
+          }
+        }
+      ],
+      "expected": [
+        "NO_MODELED_WITNESS",
+        null,
+        false,
+        true,
+        "UNKNOWN",
+        "F",
+        "NOT_FLAGGED"
+      ]
+    },
+    {
+      "name": "correct_reference_wrong_footprint",
+      "change": {},
+      "references": [
+        {
+          "identity": "neighbor",
+          "target": "endpoint_exposure",
+          "verdict": "supports",
+          "checks": {
+            "identity_verified": true,
+            "independent_lineage": true,
+            "target_matches": true,
+            "footprint_matches": false,
+            "time_matches": true,
+            "observed_support": true
+          }
+        }
+      ],
+      "expected": [
+        "A",
+        "nominal_model_with_compatible_required_alternatives",
+        false,
+        false,
+        "UNKNOWN",
+        "UNKNOWN",
+        "NOT_FLAGGED"
+      ]
+    },
+    {
+      "name": "known_geometry_with_no_nominal_route",
+      "change": {
+        "nominal": false,
+        "strict": false
+      },
+      "references": [],
+      "expected": [
+        "NO_MODELED_WITNESS",
+        null,
+        false,
+        false,
+        "UNKNOWN",
+        "UNKNOWN",
+        "NOT_FLAGGED"
+      ]
+    },
+    {
+      "name": "missing_receptor_blocks_physical",
+      "change": {
+        "receptor_identified": false,
+        "strict": false
+      },
+      "references": [
+        {
+          "identity": "independent_endpoint",
+          "target": "endpoint_exposure",
+          "verdict": "supports",
+          "checks": {
+            "identity_verified": true,
+            "independent_lineage": true,
+            "target_matches": true,
+            "footprint_matches": true,
+            "time_matches": true,
+            "observed_support": true
+          }
+        }
+      ],
+      "expected": [
+        "C",
+        null,
+        false,
+        false,
+        "F",
+        "UNKNOWN",
+        "NOT_FLAGGED"
+      ]
+    }
+  ]
+}

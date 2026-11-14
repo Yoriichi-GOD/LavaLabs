@@ -1,0 +1,19 @@
+{
+  "code": {
+    "policy.py": "a9defbd6f7113b9295df6007bf2432b0a0b647ba751c0d244e9d5deaff57943d",
+    "run.py": "6463a22c30fa813fcb6dc17679c1212219dca9fcdccba748e89766bb887f3c6a"
+  },
+  "direction_rankings_sha256": "46cded0165afaf92cdb2797079bdb370271edeb62ddd2df6da379f4fa2723821",
+  "fixture_sha256": "eb913fd02c84adeb5cf2027b7333365bc3a127d73a8b4ae98b33cf160b31d048",
+  "input_adcp_sha256": "82b1a049bbd34742e3e1b9289a282c5a3b165c55eb6aef97f7991764a93d0666",
+  "input_ahr_sha256": "b263a86285b32920a035aa8d0b3ed4852de65d3face75c0c934fc82fc2f2f335",
+  "protocol_sha256": "0858335c8ffeef528c7f8e23ee76e114e14e853fb14dda1f75c3699bfee58e78",
+  "road_claims_sha256": "e0647d9161c649b7a7b43fa4bdc1684cf536003986c725a9d185aa32f654a12c",
+  "scope": "Retrospective artifact separation. Canadian reference outcomes were already consumed.",
+  "source_integrity": {
+    "CEGS_files": 44,
+    "V2_files": 44,
+    "drainage_compact": 15,
+    "exposure_compact": 9
+  }
+}

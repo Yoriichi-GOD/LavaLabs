@@ -1,0 +1,143 @@
+{
+  "population_sha256": "439d621a9eec5791f1aba14c877543de6614c342d8455bf3614e66b383fe24b1",
+  "protocol_sha256": "b7797dfacc53ae46a995dbcef6c521d7800b40e94bd62cf0077c4fb7bfc61e30",
+  "records": [
+    {
+      "grid": {
+        "cell_area_m2": 100.0,
+        "cell_size_m": [
+          10.0,
+          10.0
+        ],
+        "crs": "EPSG:32630",
+        "shape": [
+          512,
+          512
+        ],
+        "transform": [
+          10.0,
+          0.0,
+          745460.0,
+          0.0,
+          -10.0,
+          4412290.0
+        ]
+      },
+      "id": "EMSR422_AOI06_DEL_PRODUCT",
+      "input_sha256": [
+        "497e6fd3826b842b8b7c5ba918839f3b50297b15cbd2a4a10c40086692e81486"
+      ],
+      "prediction_sha256": "7ad1ab995a27be75c074cc6d8f5ee7840bf0793fae842fad2a967c762c7f68ec",
+      "status": "PREDICTIONS_SEALED",
+      "window": [
+        799,
+        1449,
+        512,
+        512
+      ]
+    },
+    {
+      "grid": {
+        "cell_area_m2": 100.0,
+        "cell_size_m": [
+          10.0,
+          10.0
+        ],
+        "crs": "EPSG:32636",
+        "shape": [
+          512,
+          512
+        ],
+        "transform": [
+          10.0,
+          0.0,
+          451300.0,
+          0.0,
+          -10.0,
+          20310.0
+        ]
+      },
+      "id": "EMSR438_AOI02_DEL_MONIT03",
+      "input_sha256": [
+        "15be4da2e7a37457e32ccce594feec296be8eb3416b09e30c20c067c6e711879"
+      ],
+      "prediction_sha256": "1c0bbf6c9bb8600b0a9c5c6acdf80af209bf5d485563fce0a946cdd6d2993db0",
+      "status": "PREDICTIONS_SEALED",
+      "window": [
+        2691,
+        1685,
+        512,
+        512
+      ]
+    },
+    {
+      "grid": {
+        "cell_area_m2": 100.0,
+        "cell_size_m": [
+          10.0,
+          10.0
+        ],
+        "crs": "EPSG:32632",
+        "shape": [
+          512,
+          512
+        ],
+        "transform": [
+          10.0,
+          0.0,
+          196480.0,
+          0.0,
+          -10.0,
+          1513000.0
+        ]
+      },
+      "id": "EMSR466_AOI01_DEL_PRODUCT",
+      "input_sha256": [
+        "42ada7b457017d0d50144e15635ebdea9ac260281daabdc1e461bb91de65ef9c"
+      ],
+      "prediction_sha256": "107daf976b6dd3baa9105680292d2206e2ae168010a69f76999e739098ced563",
+      "status": "PREDICTIONS_SEALED",
+      "window": [
+        1215,
+        749,
+        512,
+        512
+      ]
+    },
+    {
+      "grid": {
+        "cell_area_m2": 100.0,
+        "cell_size_m": [
+          10.0,
+          10.0
+        ],
+        "crs": "EPSG:32634",
+        "shape": [
+          512,
+          512
+        ],
+        "transform": [
+          10.0,
+          0.0,
+          620250.0,
+          0.0,
+          -10.0,
+          7371890.0
+        ]
+      },
+      "id": "EMSR9284_01YLITORNIONORTHERN_DEL_MONIT01_v1",
+      "input_sha256": [
+        "4a77c2a630bddac139659eab2be773ee6adfd48db9e14ab8fc770fddb6d133b4"
+      ],
+      "prediction_sha256": "660b7c2ebe186186e49266676aed05d8935e1f212c20ce1c7bb77f6f24e55b4d",
+      "status": "PREDICTIONS_SEALED",
+      "window": [
+        626,
+        692,
+        512,
+        512
+      ]
+    }
+  ],
+  "reference_pixels_read": false
+}

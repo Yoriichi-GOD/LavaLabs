@@ -1,0 +1,4 @@
+case,units,clear_eligible_units,temporal_common_eligible_units,raw_robust_water_disagreements,ndvi_threshold_sensitive_clear_units,resolved_uncensored_width_units,width_widening_ge20m,width_narrowing_le_minus20m,administrative_orientable,administrative_majority_agreements,raw_water_flag_admin_agree,raw_water_flag_admin_disagree,physical_direction_accuracy,verified_error_detection_precision,verified_false_flags
+nepal,68,24,20,14,9,3,0,0,0,0,0,0,,,
+varanasi,2184,2162,2155,1941,802,46,7,9,0,0,0,0,,,
+sangam-vihar,83,83,49,79,64,0,0,0,80,48,45,31,,,

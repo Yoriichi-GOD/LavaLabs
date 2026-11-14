@@ -1,0 +1,43 @@
+{
+  "schema": "satquery.observed-flow-control/1",
+  "freeze": "Before opening any South Saskatchewan CSV measurement rows",
+  "reference": {
+    "doi": "10.5285/e4fe2ebe-b207-47d5-8c77-9873afc63da9",
+    "archive_sha256": "805f1011ae32e6ee3f10b6195e9e8658dfd56cbb27105d21b93e896abe630df3",
+    "measurement_members": "All50 published CSV cross-sections, all3 years; no subset selected by results",
+    "columns": ["UTM_easting_m", "UTM_northing_m", "water_depth_m", "depth_averaged_east_velocity_m_s", "depth_averaged_north_velocity_m_s"],
+    "coordinate_interpretation": "EPSG:32613 inferred from same-grant companion orthomosaic/DSM explicit CRS, not directly certified by ADCP metadata; geometry-fit check required",
+    "published_broad_bbox_wgs84": [-110,49,-105,53.2],
+    "velocity": "Boat-motion-corrected ADCP horizontal depth-average components; not a terrain-derived flow label",
+    "limitations": "Grid-versus-true-north and positional error unreported; observed local current can differ from coarse routing, braid-branch or basin direction"
+  },
+  "geometry_phase": {
+    "rule": "Read ONLY columns0/1 to establish geometry extent and crop requests; velocity columns not parsed or emitted until predictors sealed",
+    "domain": "Whole coordinate envelope plus300m metric halo; fail if outside published broad bbox or >1000000 cells at30m",
+    "predictor_inputs": "GLO30 public COGs and MERIT-derived distributor basin71; metadata selection, never label performance",
+    "dem": "GLO30 bilinear onto projected metric30m and90m grids, fill and none, stream100000m2; no hydrographic label burning",
+    "merit": "Native3arcsecond categorical vectors, nearest native cell and projected downstream endpoint; mosaic71 preselected via source geography, no favorable replacement",
+    "outlet": "No anchor unless independently documented in a separate source before reference opening; absence blocks real outlet-gain claim"
+  },
+  "scoring": {
+    "reference_speed_min_m_s": 0.1,
+    "block_m": 180,
+    "block_identity": "year,floor(easting/180),floor(northing/180); fixed spatial tiling, not terrain-derived channels",
+    "block_min_points": 5,
+    "block_min_directional_coherence": 0.75,
+    "block_vector": "Arithmetic mean of eligible observed u/v, normalized for angles; coherence is magnitude of mean normalized point vectors",
+    "block_location": "Mean eligible observed easting/northing, independent of terrain predictions",
+    "unknown": "Nonfinite, slow and low-support/incoherent observations remain excluded/unknown with denominators; never negative labels",
+    "primary": "Per-year angular error and positive-cosine hemisphere agreement of each source on identical eligible blocks",
+    "secondary": ["angle<=45degrees", "median/p90 angle", "paired win/tie/loss of angle errors on common source support", "pointwise diagnostic, correlated not independent"],
+    "heading_stress_degrees": [-2,0,2],
+    "position_stress_m": [0,30,90],
+    "position_stress": "Four cardinal shifts at each nonzero displacement; not measured registration correction",
+    "claim": "Conditional physical observed-flow agreement for one braided river surveyed3years, with unverified absolute registration/heading; not global accuracy, transfer, routing-error truth, exposure performance or outlet gain",
+    "statistics": "No pixel-independent inferential tests/CI; years/cross-sections share one river and are correlated",
+    "no_fusion_gain": "No claim of improved spectral/outlet fusion without matched observations and independently sourced anchors; symmetry tests separately establish directional identifiability limits"
+  },
+  "protected": ["original regional results", "four WorldFloods reserves", "production defaults", "day1-final"],
+  "paid_calls": 0,
+  "publication_or_push": false
+}

@@ -1,0 +1,1548 @@
+{
+  "project": "LavaLabs",
+  "scope": "Curated public demonstration and selected research records. Historical manifests can reference additional retained local material.",
+  "prior_source_revision": "aee5e52c386e39e7576f6d3642869facd23716e7",
+  "si_assisted": "OpenAI Codex assisted code integration, calculation implementation, verification and documentation. Satellite and model observations have original source provenance.",
+  "files": {
+    ".gitattributes": {
+      "sha256": "347f8969fd1f7dbef83ad5ad9da9b9cfaeaa8d0570b9472116b8b127c79cf74c",
+      "bytes": 80
+    },
+    ".gitignore": {
+      "sha256": "c298577cc57b741d297d19587b05e4416e3c1ab69e775348b98ece11bd0385ee",
+      "bytes": 395
+    },
+    "DATA_LICENSES.md": {
+      "sha256": "6e9397522ba508d5e0f0206ef62e95aee68938633eee2cca0d09953ad564d0a7",
+      "bytes": 2509
+    },
+    "DESIGN.md": {
+      "sha256": "de6dccc9d92e2d0843f8c5be51c70550582d79a0609b0f85e511aef04c9978cd",
+      "bytes": 1101
+    },
+    "LICENSE": {
+      "sha256": "22326cbc09b0b991357dc6b2cdcf251d2866196c94d32c9f9a4ba62ff2fd1b51",
+      "bytes": 1089
+    },
+    "README.md": {
+      "sha256": "c2992454af492389bd07049c782291a962cb6dcb88293584b3d3a0140dad3ee2",
+      "bytes": 4929
+    },
+    "UI/app.js": {
+      "sha256": "740cd1dcedace19cee15d8a1a55de45b71ba2f86eeac4baee10363b2596cf781",
+      "bytes": 12798
+    },
+    "UI/art/empty-planet.png": {
+      "sha256": "f785a7cee045c94342cae7ff100934a526ddaa4a1179c23edb7441d34b6226a5",
+      "bytes": 1118791
+    },
+    "UI/art/evaluation-space.png": {
+      "sha256": "cd34464c3c317b82be7364bb681a8c856a9433d71e69825dff5b8f97fe928842",
+      "bytes": 1383151
+    },
+    "UI/art/footer-dark.png": {
+      "sha256": "87c4639edccbf5c72db10d12a66a72f3fd465c3dcab8f6d7621c9f533171baa1",
+      "bytes": 189627
+    },
+    "UI/art/footer-light.png": {
+      "sha256": "44b0efba46e5fb8675666dd8b5ce4c21c3cd2cde4966c8775f5cb71f1bcb2787",
+      "bytes": 192665
+    },
+    "UI/art/header-dark.png": {
+      "sha256": "26045f986a6401cb9c0ed0f057d9c5637bfe2fc76ad6843a1c35cd22532ba6c1",
+      "bytes": 488279
+    },
+    "UI/art/header-light.png": {
+      "sha256": "6c4c53f3abc19fbdd3a8a02032fded4a98b98ba2660124c83ffa99504b1baf3f",
+      "bytes": 497149
+    },
+    "UI/art/loading.png": {
+      "sha256": "d83e2fa92bbc8862a1fa01248322a4dbae14818a8662c70c851d11ec408cfbed",
+      "bytes": 828200
+    },
+    "UI/art/logo.png": {
+      "sha256": "7eeb3b76c87cd4f6b01c9a9f3890084ea0318aa12ba2986b04ac26cd73dabf70",
+      "bytes": 639641
+    },
+    "UI/assets/LavaLabs Volcano Logo.png": {
+      "sha256": "ae2a5abf55af74b4d65ec06ae0572ff1c1518ff15ac3da7f8050c5b18c857cae",
+      "bytes": 922735
+    },
+    "UI/assets/README.md": {
+      "sha256": "5aea24b8d386f42a0dfa6d0c57efeaec3af92e8ce2a3682711e2beea87a13d44",
+      "bytes": 527
+    },
+    "UI/assets/volcano-placeholder.svg": {
+      "sha256": "356031485db73c303d57806673157006d13b50a3725632cbd963fe24ef0905a5",
+      "bytes": 633
+    },
+    "UI/index.html": {
+      "sha256": "a47ec07f059d03a53a1e6fba77412af2531669ed11391e3b930e2ab224f923e3",
+      "bytes": 5935
+    },
+    "UI/lava.css": {
+      "sha256": "c75465d44d3a4de8d8b292bbea5d3fe11be03e9e93efad9e137cfa95d767c0e2",
+      "bytes": 14109
+    },
+    "UI/processor-lava.js": {
+      "sha256": "ce83652c35aeaa96cef5be419ff4e494f30848d37eb5be09578754aefbfd3fa4",
+      "bytes": 592
+    },
+    "UI/processor.css": {
+      "sha256": "40e1f3e2f0440d530a00b7cbe24818f929a9d7dd42c2d4baf992c7e26da04747",
+      "bytes": 1410
+    },
+    "UI/satquery/fonts/geist-OFL.txt": {
+      "sha256": "03f7731e1f962a91216320e38a5fe00a3236b19a15b486b629e65aa82010907c",
+      "bytes": 4579
+    },
+    "UI/satquery/fonts/geist-latin-400-normal.woff2": {
+      "sha256": "ead637fd0b6b887d829b3ce3f25fdc242b1de0cfb69c0d97987933675d1315ba",
+      "bytes": 12956
+    },
+    "UI/satquery/fonts/geist-latin-500-normal.woff2": {
+      "sha256": "6145bf6706dbc1b6686f04f871489cf724951f00b752745896ccdcac07639a53",
+      "bytes": 13296
+    },
+    "UI/satquery/fonts/ibm-plex-mono-OFL.txt": {
+      "sha256": "03b9b5ee8909a33418aaebfa6a807da48c6edebdde79b5b026258a2463e2919b",
+      "bytes": 5392
+    },
+    "UI/satquery/fonts/ibm-plex-mono-latin-400-normal.woff2": {
+      "sha256": "08949f728dc52d528e69b1667d15c89a5686a4ee9a296ff90983985f99c380f7",
+      "bytes": 14708
+    },
+    "UI/satquery/fonts/space-grotesk-OFL.txt": {
+      "sha256": "c9a6f76d065b19ee383e42c8a114915e733bcbaed9759de41f4016b64d502cd5",
+      "bytes": 4494
+    },
+    "UI/satquery/fonts/space-grotesk-latin-500-normal.woff2": {
+      "sha256": "1b1a8131d9edf975d9decee81e2f2bf504812f7a4f498e5500f28a613e22e64c",
+      "bytes": 13312
+    },
+    "UI/satquery/noir.css": {
+      "sha256": "ea1e7f030eb62d5c73f6d6ab12e138d6d440e6f519b8494d0f4244e6bfaa3912",
+      "bytes": 21429
+    },
+    "UI/satquery/noir/scientific-noir-background.png": {
+      "sha256": "79bf0e52cca240d9c3b1f8e1f17656134636ccb1cbdd3f222c8f2dafbbf93e4e",
+      "bytes": 2328940
+    },
+    "UI/satquery/style.css": {
+      "sha256": "26e4797599587816e105da03a435a99192e0b8c597c41564241161b9e060a4f5",
+      "bytes": 12089
+    },
+    "UI/satquery/visual-context.js": {
+      "sha256": "dbe7ea5bd57371f789a3ed8f6b6ca7ca4667bd86cc9dcaff41d08ea71fbeed9c",
+      "bytes": 6576
+    },
+    "UI/satquery/workspace-shell.css": {
+      "sha256": "76bbafcb7c7c0f149df17bfc6b08a9d932789bb381dd79156f561ded3058db8c",
+      "bytes": 4537
+    },
+    "UI/trends/app.js": {
+      "sha256": "b1f0524c7f4199a4ccc9230b8faadca880978099ffa9c03296b1e68ed33c79e8",
+      "bytes": 10676
+    },
+    "UI/trends/chrome.js": {
+      "sha256": "ab8ba5965ea85f8792a838df94a97053cd3da8dc498cbf4ac5725544fcd220d1",
+      "bytes": 505
+    },
+    "UI/trends/index.html": {
+      "sha256": "2b5aab65b892b3554c8d3c5afe7c89299cec694263e4ce655cf4fc697fb1a1a8",
+      "bytes": 9247
+    },
+    "UI/trends/noir.css": {
+      "sha256": "42e229b2d273b6621c3fe6edf67bea89e5a1645aaf6dd62fce742d33a3bee4ca",
+      "bytes": 1488
+    },
+    "UI/wordmark.css": {
+      "sha256": "c293e1d50c80556b31bc4a04dc9857ead654073e3dff73322230b2a72af80e20",
+      "bytes": 638
+    },
+    "VERIFICATION.md": {
+      "sha256": "2d4f6572aa2072e2c020a8bebc808d3a82e13d23537e8099edbf37a1495368de",
+      "bytes": 2542
+    },
+    "components/floodlab/configs/sar-request.json": {
+      "sha256": "11119e905d0c49176c279e777faecaf7c550bd1cdde7b29c6c164dbf2a724b3f",
+      "bytes": 1698
+    },
+    "components/floodlab/docs/claims-ledger.md": {
+      "sha256": "dcd6dededafee257d43d444862fc56711d3721a3e1c797fab77ca76941ec1061",
+      "bytes": 1124
+    },
+    "components/floodlab/docs/data-access.md": {
+      "sha256": "6ec8ed1c8d9e39fe9818b7dc765d8106ded99f3337864a198653c60373452751",
+      "bytes": 2286
+    },
+    "components/floodlab/docs/dataset-readiness.json": {
+      "sha256": "7cdd65e4c3aecdb8f4bf14931daa2f6a1cc852d37f5c91b725a4aafd05b35c48",
+      "bytes": 9091
+    },
+    "components/floodlab/docs/nepal-integration.md": {
+      "sha256": "b60b44c84550726f7071e21bdae1daeb3b404a98b53b72ae674d2d864a967bcf",
+      "bytes": 4215
+    },
+    "components/floodlab/docs/test-results.xml": {
+      "sha256": "54119a1ee7e2ba258dd71635b9b483e4b713a249c4910fdea3f2bfaacaca2d6e",
+      "bytes": 7276
+    },
+    "components/floodlab/floodlab/__init__.py": {
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+      "bytes": 2
+    },
+    "components/floodlab/floodlab/acquisition.py": {
+      "sha256": "3955e5e284b5b8a4eee219bc20995ee32a4da954d285685b9898d593877e5841",
+      "bytes": 2729
+    },
+    "components/floodlab/floodlab/ai_worker.py": {
+      "sha256": "15341af4e4c0af96d9d5ece4b63689af46838db232f6404a4d7588626f7a2034",
+      "bytes": 2951
+    },
+    "components/floodlab/floodlab/automatic.py": {
+      "sha256": "be57752a6e9b8e44af88e237d43d8caef6ba8651bbaf5f5d443f5095c0d108c3",
+      "bytes": 6883
+    },
+    "components/floodlab/floodlab/automatic_optical.py": {
+      "sha256": "83e43d9b2697960465251c075c31c1c7c37d45b890752eb8514a8bb726f74170",
+      "bytes": 5044
+    },
+    "components/floodlab/floodlab/automatic_topology.py": {
+      "sha256": "69e2b509431616b4179bf0e5143d7dc5666ce3fa0365b9ee76cdb4896320c4a9",
+      "bytes": 4824
+    },
+    "components/floodlab/floodlab/copilot.py": {
+      "sha256": "ffbe2f5727a4a43725b5ce4a830b2fb5309db517cfed50466e44900c13e9f116",
+      "bytes": 4090
+    },
+    "components/floodlab/floodlab/core.py": {
+      "sha256": "4f51c22a7908d24f8b1b23b0e7a86d2d92fe9020312a97e67d3604a015191ae2",
+      "bytes": 3327
+    },
+    "components/floodlab/floodlab/debris.py": {
+      "sha256": "b5f90d8d6a9a532d10aa4a64ea2d94dc8e69c3399c33dafd22152a15959dd4e0",
+      "bytes": 876
+    },
+    "components/floodlab/floodlab/evaluate.py": {
+      "sha256": "72cfc33e2bfd9538ad5e0b441fa00e61e4ce583c73d90764148f089986f0941f",
+      "bytes": 2152
+    },
+    "components/floodlab/floodlab/event_acquisition.py": {
+      "sha256": "337b841174edadece44ef404f9453488e50a7d02168409a96b6a33a28789993c",
+      "bytes": 4518
+    },
+    "components/floodlab/floodlab/fixture.py": {
+      "sha256": "87b258edf5b35272d6c571ac4330578c35127d24766185f4ccfae3b4f74719a2",
+      "bytes": 2525
+    },
+    "components/floodlab/floodlab/historical.py": {
+      "sha256": "9ecd8c5d5755c583c52cd49fdf6e485c985bccc0f54881fa134eff21c17c0096",
+      "bytes": 1836
+    },
+    "components/floodlab/floodlab/impact.py": {
+      "sha256": "b55a3840902b2f2934d5ea43459f515b03390798817dba4d08348266ad523480",
+      "bytes": 6263
+    },
+    "components/floodlab/floodlab/jobs.py": {
+      "sha256": "50884d3de0b03f155140944b498a8908e86feb6450f95c3d85593a3374ca3e0a",
+      "bytes": 3999
+    },
+    "components/floodlab/floodlab/pipeline.py": {
+      "sha256": "d605dfc7776810f4d5af76bb523755f1356d9733fbcd635848c4806c51301ac2",
+      "bytes": 12323
+    },
+    "components/floodlab/floodlab/server.py": {
+      "sha256": "2e8a894e550485b36eb003b04045ef622332c5036647368d3a5846537bd12f5a",
+      "bytes": 4581
+    },
+    "components/floodlab/scripts/acquire_optical.py": {
+      "sha256": "cc9fc79e1bd031d82563caf52c4584d741edab2a61631d27fa7a765c9e3bb6c1",
+      "bytes": 2771
+    },
+    "components/floodlab/scripts/audit_catalogue.py": {
+      "sha256": "d31a44c8ee704a57579c234b69620cdf9722824a70fbcda7a1dc96617a63307f",
+      "bytes": 1175
+    },
+    "components/floodlab/scripts/build_final_report.py": {
+      "sha256": "ec3bd36bcd2e00e182f889eba2c68c84b30b6b7208497aa1d803cc48451748ef",
+      "bytes": 26928
+    },
+    "components/floodlab/scripts/build_optical_previews.py": {
+      "sha256": "3b075fc995cee8252d6aa497b9d90962f826b0a3e141cefb31d4e37853d4e699",
+      "bytes": 2369
+    },
+    "components/floodlab/scripts/build_reports.py": {
+      "sha256": "d4d6bd2ecfea2bd5625fb92b6ae6bcfc0191705f5d31deb9f1ffad4840fbda57",
+      "bytes": 8825
+    },
+    "components/floodlab/scripts/check_public_assets.py": {
+      "sha256": "a2961d9d8a652a9e623a852c8aa1baafefd4fdb280844c554d7f24fdcfa204dd",
+      "bytes": 1507
+    },
+    "components/floodlab/scripts/diagnose_access.py": {
+      "sha256": "1aef85fb6e8f5ca00ac6659410ea24d90ac7a152f85b7c6442b76ce9200fdb8a",
+      "bytes": 842
+    },
+    "components/floodlab/scripts/download_copilot.py": {
+      "sha256": "d73d8ce2a72aa5647615ca129e50d3bbd2c141c2e16e47c24a58e96f1fafe70c",
+      "bytes": 621
+    },
+    "components/floodlab/scripts/evaluate_copilot.py": {
+      "sha256": "c13571208b0827c0923ad8d886775886ff5a6c5362f932a9aba67c5d928fd430",
+      "bytes": 1444
+    },
+    "components/floodlab/scripts/evaluate_debris_reference.py": {
+      "sha256": "3d0b6d9006cb0d989b31dc17daa7bb7c3ae8ef4b8b5ee284ffea82854ed0f023",
+      "bytes": 3108
+    },
+    "components/floodlab/scripts/evaluate_unosat_reference_agreement.py": {
+      "sha256": "73c6b2a5ef494f799a7727808836b0a5598d1b88bc6e55ec7a1c34104abf108a",
+      "bytes": 10963
+    },
+    "components/floodlab/scripts/fetch_historical_osm.py": {
+      "sha256": "7be36701624e71679d2b65dbbf9cdb58a764ab9fdb84ba209e96a52c7a2cdab1",
+      "bytes": 1698
+    },
+    "components/floodlab/scripts/fetch_road_topology.py": {
+      "sha256": "3f33feeac06de48c577298da168cdba613bc11da191d4bb7810ec7f2062eeeda",
+      "bytes": 607
+    },
+    "components/floodlab/scripts/fetch_way_versions.py": {
+      "sha256": "1ca5df50c3c7c6e8aa4af0f4245e49625327a855604a6aa491a6a45e4bfed55e",
+      "bytes": 1997
+    },
+    "components/floodlab/scripts/integrate_nepal_kit.py": {
+      "sha256": "fee3e216a91e0c7190e022861496c1900a85a4f1ba5fb035544c2e4e011f7810",
+      "bytes": 5298
+    },
+    "components/floodlab/scripts/prepare_connectivity.py": {
+      "sha256": "4eebd9c2508babc0d2110df57442225c5c45485f4d47957d81414230cc2ce991",
+      "bytes": 4549
+    },
+    "components/floodlab/scripts/prepare_debris.py": {
+      "sha256": "8515d45f127774ca9b93183389dcd2f909ca8e34a85fcdca877ecf908fcd4fa6",
+      "bytes": 1709
+    },
+    "components/floodlab/scripts/prepare_nepal_access.py": {
+      "sha256": "4427d26f9bb3fd6b6ac3a818f862ced81a44c14e4b79927483772b554e713673",
+      "bytes": 3359
+    },
+    "components/floodlab/scripts/prepare_real_case.py": {
+      "sha256": "e8863bec69167ec3ac6cea506531e197843d9e0046e213b338f33476741cd18b",
+      "bytes": 5857
+    },
+    "components/floodlab/scripts/verify_http.py": {
+      "sha256": "88f8ff2d10da1889bb94b88a98f16b13b429def2f0f361eefb4c9f7847116caa",
+      "bytes": 840
+    },
+    "components/floodlab/tests/test_copilot.py": {
+      "sha256": "ca9bae065f39ff9c823bd935c28c7888ca3487aea749710e39c325b640807fd1",
+      "bytes": 1566
+    },
+    "components/floodlab/tests/test_core.py": {
+      "sha256": "ac871dd3322feae267a48034f59c5256f0e38fa27458c50ff3db6fd278b92c9d",
+      "bytes": 1802
+    },
+    "components/floodlab/tests/test_debris.py": {
+      "sha256": "e511b572d4becd38421ba1aee4b4468cf521702ada127dc82629ec06685fb4f2",
+      "bytes": 701
+    },
+    "components/floodlab/tests/test_evaluate.py": {
+      "sha256": "11bba292cacfd228b422fe7339d3dc27d9c655501f200935e91b9c89bf67753d",
+      "bytes": 980
+    },
+    "components/floodlab/tests/test_event_acquisition.py": {
+      "sha256": "73373af222ee28b23119c95b2105e17152707517d5de9eac84ef64078e04e891",
+      "bytes": 583
+    },
+    "components/floodlab/tests/test_historical.py": {
+      "sha256": "bfded788f191b04fc03225f32dc9f78a0dd9ac264fdd745be29a210006affe71",
+      "bytes": 1404
+    },
+    "components/floodlab/tests/test_impact.py": {
+      "sha256": "37c0aa53adbf3d80d2521ccfc39fb8a529a91e0a4bb619f2aceda0b6e2df9b0f",
+      "bytes": 2814
+    },
+    "components/floodlab/tests/test_jobs.py": {
+      "sha256": "59082c04893940ebfc0a95f8215f77d18a4d323c49f350891c68cde23fc7da29",
+      "bytes": 3723
+    },
+    "components/floodlab/tests/test_nepal_registration.py": {
+      "sha256": "8b37c6ac0ab185b1416baee2957024f99fcd8aa13e0d399bed4c514aaec45aa7",
+      "bytes": 1042
+    },
+    "components/floodlab/tests/test_pipeline.py": {
+      "sha256": "b869ba649b22bf0f0e08a1ad0c39772ac0ed47372766646321384e9541156e1c",
+      "bytes": 3190
+    },
+    "components/floodlab/tests/test_server.py": {
+      "sha256": "bf904ef59bd7099007e88f06ebd238ee56983298004cb218e0daf17b1338a669",
+      "bytes": 891
+    },
+    "components/floodlab/vendor/SATQUERY-LICENSE.txt": {
+      "sha256": "a2094be9099ae133d56e2f3874af7022bf4ec34aaf1d06d0873643f629cb88b4",
+      "bytes": 1088
+    },
+    "components/floodlab/web/app.js": {
+      "sha256": "da603cadc73183cbc272be3ab8b04c977fd34e6a6e3959338d0913885c281b74",
+      "bytes": 20306
+    },
+    "components/floodlab/web/art/empty-planet.png": {
+      "sha256": "f785a7cee045c94342cae7ff100934a526ddaa4a1179c23edb7441d34b6226a5",
+      "bytes": 1118791
+    },
+    "components/floodlab/web/art/evaluation-space.png": {
+      "sha256": "cd34464c3c317b82be7364bb681a8c856a9433d71e69825dff5b8f97fe928842",
+      "bytes": 1383151
+    },
+    "components/floodlab/web/art/flood-workflow-satellite-planet.png": {
+      "sha256": "d83e2fa92bbc8862a1fa01248322a4dbae14818a8662c70c851d11ec408cfbed",
+      "bytes": 828200
+    },
+    "components/floodlab/web/art/footer-dark.png": {
+      "sha256": "87c4639edccbf5c72db10d12a66a72f3fd465c3dcab8f6d7621c9f533171baa1",
+      "bytes": 189627
+    },
+    "components/floodlab/web/art/footer-light.png": {
+      "sha256": "44b0efba46e5fb8675666dd8b5ce4c21c3cd2cde4966c8775f5cb71f1bcb2787",
+      "bytes": 192665
+    },
+    "components/floodlab/web/art/header-dark.png": {
+      "sha256": "26045f986a6401cb9c0ed0f057d9c5637bfe2fc76ad6843a1c35cd22532ba6c1",
+      "bytes": 488279
+    },
+    "components/floodlab/web/art/header-light.png": {
+      "sha256": "6c4c53f3abc19fbdd3a8a02032fded4a98b98ba2660124c83ffa99504b1baf3f",
+      "bytes": 497149
+    },
+    "components/floodlab/web/art/loading.png": {
+      "sha256": "d83e2fa92bbc8862a1fa01248322a4dbae14818a8662c70c851d11ec408cfbed",
+      "bytes": 828200
+    },
+    "components/floodlab/web/benchmark-data.json": {
+      "sha256": "009d67b95af3f6cff6511451f29fb26b244550c84345ac94caba5180d02d073d",
+      "bytes": 220
+    },
+    "components/floodlab/web/benchmarks.js": {
+      "sha256": "dd771656f83ac760d189af486c11c3148aada628bcd38afd904ee6179e8fdaac",
+      "bytes": 4411
+    },
+    "components/floodlab/web/dataset-readiness.json": {
+      "sha256": "aef953d4a31c92c34f4b71e8464d9d4a6d0cbba03c6d615fe07c169c137264a6",
+      "bytes": 7731
+    },
+    "components/floodlab/web/debris-reference-agreement.json": {
+      "sha256": "8918ee11dd75aa9ef26e3a0eb840e27507ee22ec84319676e52ed78e1480bd2b",
+      "bytes": 1421
+    },
+    "components/floodlab/web/demo-status.json": {
+      "sha256": "a9b6d46593fc93ff62e775794c491fd2c6ce3c8ead1fd8d22f1fbddd4f88956b",
+      "bytes": 1020
+    },
+    "components/floodlab/web/experimental.js": {
+      "sha256": "f06e5e57f8beef415ad3e7b19da3f54e4f5af1b4b603b167a1a021be01a08e9a",
+      "bytes": 997
+    },
+    "components/floodlab/web/flood-workspace.css": {
+      "sha256": "b51384903b45ea30d3af0a52f32745f23acf268ba7bd1adad9b8846e1748da5e",
+      "bytes": 11605
+    },
+    "components/floodlab/web/flood-workspace.js": {
+      "sha256": "7f87bc1a1f15e4634a0a136a9d009cc8dfa6a44f659de314e2c0ef1b95c1ef79",
+      "bytes": 18512
+    },
+    "components/floodlab/web/flood.html": {
+      "sha256": "6173d15472b6c3e5b2c57fc5474745aa305b910e31bacf34986e2b2f94b5af98",
+      "bytes": 7194
+    },
+    "components/floodlab/web/index.html": {
+      "sha256": "6d7e2bb4fe0ed0034dfa3b7e0668361821ea3827ed4e1174f8a4a71c1e00657f",
+      "bytes": 8109
+    },
+    "components/floodlab/web/observations/index.json": {
+      "sha256": "ada7a481b69d3f71edff9a05198954850416442b4e70f0b570c3c9375c9f1be9",
+      "bytes": 12201
+    },
+    "components/floodlab/web/style.css": {
+      "sha256": "26e4797599587816e105da03a435a99192e0b8c597c41564241161b9e060a4f5",
+      "bytes": 12089
+    },
+    "components/floodlab/web/upload_preview.js": {
+      "sha256": "4efea3ed54a6b2ac71a871fb2e7a5144d4321538fa670ee0900baa2cb064e450",
+      "bytes": 4141
+    },
+    "data/demo/manifest.json": {
+      "sha256": "6382d3b20a49404a05844621e8ed993b7d1b2fc5c768b6934cf6c2a166fe9f9a",
+      "bytes": 14981
+    },
+    "data/demo/nepal-evidence.zip": {
+      "sha256": "2e0279ca39051f24592de941ad89880e8d71416f6bab712a754c4d185edd884c",
+      "bytes": 38669475
+    },
+    "data/views/kedarnath.json": {
+      "sha256": "d1e5ac5c14c1cbbf687af4b569d4faa55e38819ed0f289cd27c0a2569f3a4442",
+      "bytes": 931992
+    },
+    "data/views/manifest.json": {
+      "sha256": "1c5da0247cabe28422c8164bdca2e8ffc4fef9ad3a1b4d839d3208e341fa3fa2",
+      "bytes": 475
+    },
+    "data/views/nepal.json": {
+      "sha256": "68246117cb27d9da955413a89f9dd0e3136147b465b2a0a2ad089f50d709597f",
+      "bytes": 792057
+    },
+    "data/views/research.json": {
+      "sha256": "7541e726d9fc5c49522baf81735cfe881129bac89e65804760fcdcba29d16675",
+      "bytes": 3781
+    },
+    "data/views/sangam-vihar.json": {
+      "sha256": "7274eb9476f9299d5dccdef9a042a9c829e65082af50fd337eff4ee670c53024",
+      "bytes": 422003
+    },
+    "data/views/varanasi.json": {
+      "sha256": "6be984e29a373b052894f24c1aec6b07029c8c18b331ba6a4abf3ff90433c0a0",
+      "bytes": 1054221
+    },
+    "jai_extension/README.md": {
+      "sha256": "d88dccd6bc75f9dfcc99aace21629a6561c7225eb9ec3b497ccbcc26e8f06a7b",
+      "bytes": 3861
+    },
+    "jai_extension/__init__.py": {
+      "sha256": "d50116f8b15615e98eace0a9659d065a107a9bf5e72bac8e295242d588a42ece",
+      "bytes": 82
+    },
+    "jai_extension/flood_bridge.py": {
+      "sha256": "85c9c57b55d7f22a06fc5c354c7efaf0c21c4fee4d7437a5efe39a32253d0af6",
+      "bytes": 20974
+    },
+    "jai_extension/geo_context.py": {
+      "sha256": "f0ec08cedfdfd68a2318fb633aebcbec3dd62c54391a9dfbd4a0b4e0243f9316",
+      "bytes": 10956
+    },
+    "jai_extension/investigation.py": {
+      "sha256": "f7664c77250f659b00013d55e6954e8956380daaca0e3ef1e36e827e53064f29",
+      "bytes": 21921
+    },
+    "jai_extension/requirements.txt": {
+      "sha256": "d01846dd8fc9df8557e9a6b8ca9177cbf41492693e447ac7dea4b74098ad856c",
+      "bytes": 163
+    },
+    "jai_extension/research_cases.py": {
+      "sha256": "508ff57b388f199480afe0d30372b8ff996bb8f47b2e27821d8b1520d6845948",
+      "bytes": 2696
+    },
+    "jai_extension/server.py": {
+      "sha256": "ec34434503800d8c48eb2f81fbdb180fdacc5fdb965a4ee27ba2b53c50b3d105",
+      "bytes": 11092
+    },
+    "jai_extension/terrain.py": {
+      "sha256": "0e4e9b1e8d9b955bd3d239949bce312280b8ba1a9031edb7be0c915b31c59b2a",
+      "bytes": 12369
+    },
+    "jai_extension/terrain_exposure.py": {
+      "sha256": "585953eeecbd7d1b96cff90781c739a583e51e068e8f23b7788aa6e8c1db73c0",
+      "bytes": 6489
+    },
+    "jai_extension/visual_context.py": {
+      "sha256": "bad6bcceb165f059ed70a2eb954ab6c9af66caae3ba0ff5c91477a5e178bb9d7",
+      "bytes": 7196
+    },
+    "jai_extension/web/earth.css": {
+      "sha256": "06bb30b46a35998bff158375f01c010c8f392ebeec37b4e02fb8ae34fce67cb4",
+      "bytes": 9831
+    },
+    "jai_extension/web/earth.js": {
+      "sha256": "bbcd4bdcc3f918181579a0a0eddbcf7804d063413056807e0f0396ada465dc69",
+      "bytes": 48651
+    },
+    "jai_extension/web/extension.css": {
+      "sha256": "b65a537b7febce11f9f6a79b63177517845bdbf305405a02fab854e9f804cb3b",
+      "bytes": 4845
+    },
+    "jai_extension/web/extension.js": {
+      "sha256": "728ef3c81ae41ae6cc20661cdcd07fc9430cc97f4e6a13ad345165f9647a0b95",
+      "bytes": 10821
+    },
+    "jai_extension/web/terrain.js": {
+      "sha256": "7da400fdccdf8f90b3d4bedcbc2bc880d0f23f0e37d13d2ec17ef91314a1ec21",
+      "bytes": 8731
+    },
+    "jai_extension/web/vendor/PLOTLY-LICENSE.txt": {
+      "sha256": "896062a93257c7ede496b4b110b997f21dd9836736a6ebfd89f185e6317a74a0",
+      "bytes": 1299
+    },
+    "jai_extension/web/vendor/plotly-4.1.1.min.js": {
+      "sha256": "d1b35fcc41b2eb43a7804f6317e5c73761c26d1724810ae695690dd92a73fa1e",
+      "bytes": 4819433
+    },
+    "jai_extension/web/workflow.css": {
+      "sha256": "6fef755e087768495dc25f24252902cf2bafd4513b421aa6e53d9e0e5887ea5e",
+      "bytes": 1709
+    },
+    "jai_extension/web/workflow.js": {
+      "sha256": "30a88793287b33db4209f55e92eef0ecbee3de49491b373af69ceaeef59a0d40",
+      "bytes": 17542
+    },
+    "lavalabs/__init__.py": {
+      "sha256": "bae2e842208d2431ab6bb0d18b317c2f68c03f1327dd48b43af77e2310e80321",
+      "bytes": 88
+    },
+    "lavalabs/public_runs.py": {
+      "sha256": "a0575e602760171d7633ca220e513e0ca2862ae513eea3aefed7b75c4116fdbd",
+      "bytes": 1113
+    },
+    "lavalabs/server.py": {
+      "sha256": "cb382945ee758deaff6080dde870abf0b46c76d4f5f9f0b3bfbcf1cefd1f917d",
+      "bytes": 11309
+    },
+    "lavalabs/trend_exports.py": {
+      "sha256": "1f0f64f69fa6d0e4e282bd25f8e3439763a876603dc7bef81916f53a4863d5a4",
+      "bytes": 2043
+    },
+    "requirements-lock.txt": {
+      "sha256": "525f2319ef9e2e615391c5f0098e0b52242a2dca6d3a5415b7cc9785409fe84f",
+      "bytes": 954
+    },
+    "research/__init__.py": {
+      "sha256": "5bba5f870313a6138b02554b197ac4404dd9d20b1ed530f03f98668ad33eaccb",
+      "bytes": 89
+    },
+    "research/cases/acquire_campaign.py": {
+      "sha256": "96053d7a5f53344f0e7d77ae8b5752b2a41ceba678291add784910dfd5b1c750",
+      "bytes": 5457
+    },
+    "research/cases/kedarnath_quality.py": {
+      "sha256": "b519bad54282776f419ba0c479cc4a355cf2700c66356e0606e9f2d101ec3cdd",
+      "bytes": 7390
+    },
+    "research/cases/nepal.json": {
+      "sha256": "ab7a56d4bc9c9821fe4a61eba69255649e41711d5af5551c759d346b47071a43",
+      "bytes": 1319
+    },
+    "research/cases/process_campaign.py": {
+      "sha256": "d2ea71f3cf6383c89ce1e7cd8a0fb95c08197ed32150c8179755c23ca1bdbdfb",
+      "bytes": 17529
+    },
+    "research/cases/sangam-vihar.json": {
+      "sha256": "1e5e03f10f61a94dc33f6083fab0b1ef1fd051c3da49e2f581677b0563157388",
+      "bytes": 1047
+    },
+    "research/cases/urban.py": {
+      "sha256": "fab67efd29fb1376e04f7ee5244cfa1acc1f949bee16f252e557a9085beb1713",
+      "bytes": 6928
+    },
+    "research/cases/varanasi.json": {
+      "sha256": "a6a6d4d235fa0f5bc4df4cf45f4b51a4931a674a16b002f87fa8ce53f95596f9",
+      "bytes": 1078
+    },
+    "research/datasets/__init__.py": {
+      "sha256": "0ffc18f28c4a3f8d3b8567ebce2a03ab0eaa2494e1121beb5fa109e8f1b35313",
+      "bytes": 90
+    },
+    "research/datasets/acquire.py": {
+      "sha256": "ca2319b5668e001b50613efc1d93bf0b2ae7fb78b5590e5877d28b4796d9dc2b",
+      "bytes": 6077
+    },
+    "research/datasets/cog.py": {
+      "sha256": "42015803ca0cac9c959386ef8d6845f3311fb1b7876a540f7775bf4da2c8a94e",
+      "bytes": 6499
+    },
+    "research/datasets/delhi_reference.py": {
+      "sha256": "f92f2a672d6594b35213c5197883e03a5a9ae257fb07794d12824d864bd1f69d",
+      "bytes": 4578
+    },
+    "research/datasets/nepal_postevent.py": {
+      "sha256": "46fc65d2f7642331f430581ac6c946924f344153d6c0b923b50f0eca00e1c334",
+      "bytes": 7395
+    },
+    "research/datasets/osm_case_context.py": {
+      "sha256": "b7433026370732d07b00396999644024b15dbf41aece8505fb2f1629b1a6d899",
+      "bytes": 3804
+    },
+    "research/datasets/registry.json": {
+      "sha256": "48948a97c6382f8e2abf6950c4f59696ef37d7653f4f5d5df04569a3d469c76d",
+      "bytes": 7999
+    },
+    "research/evaluation/__init__.py": {
+      "sha256": "b9d1c5f64d528e6220e5daf5ae3acd3ccb1a3ef8f3acb2abb4757fd63a42508b",
+      "bytes": 77
+    },
+    "research/evaluation/evidence_contract.py": {
+      "sha256": "d8c12b4e70bf0721e13d8d86c164835562468d98ee0944917d2b2c2f18028cba",
+      "bytes": 1063
+    },
+    "research/evaluation/figures.py": {
+      "sha256": "61556c32b9300934dd8ec3df79751cb853ec41f3127334600f142423046b5fb7",
+      "bytes": 4197
+    },
+    "research/evaluation/metrics.py": {
+      "sha256": "4ef663c16cf831e65623187ecd149815d201486662ddf9ab3030afcfa905ce8e",
+      "bytes": 4651
+    },
+    "research/evaluation/postevent_support.py": {
+      "sha256": "2424e554da0a5ffa572b78ba0bea5ad0bde7fe9f19889276e1ab34801838db54",
+      "bytes": 3730
+    },
+    "research/experiments/__init__.py": {
+      "sha256": "0ea98dd9e439dc20c4104e8da0ee1e2f40ab6586e9bbb381ac8b4751e9e3364f",
+      "bytes": 72
+    },
+    "research/experiments/analyst-tasks.json": {
+      "sha256": "7be17462657a5270fa7c0ec013b5d0d10bbcc0083edd9bea9ce71894b3a38bef",
+      "bytes": 1147
+    },
+    "research/experiments/analyst.py": {
+      "sha256": "55400fcb8a2e5f35da3389cc096c366f9ba37cbe6d72de1888a4a5321cd48889",
+      "bytes": 5684
+    },
+    "research/experiments/case-campaign-20261107.json": {
+      "sha256": "7db20238e570bb6c2068b3b34e4864b4049d2453d2dd3627941e0bc009d7cdf5",
+      "bytes": 3590
+    },
+    "research/experiments/delhi_drainage.py": {
+      "sha256": "b91ac6bcdffc47b202e0e43829fe893afaa38fe6d55a708c23610e95e651aa01",
+      "bytes": 11638
+    },
+    "research/experiments/drainage-calibration-20261112.json": {
+      "sha256": "7c39e6fc9e8eee7a4a28fe4ab255095243413160a0b1931efe780f2dce3fe49c",
+      "bytes": 1006
+    },
+    "research/experiments/drainage-consistency-20261112.json": {
+      "sha256": "5ba9d5ef9f90bd9dd73393e0cc229f2759646213e0de1e5a4399bc5dbb41437d",
+      "bytes": 4858
+    },
+    "research/experiments/drainage-scale-20261112.json": {
+      "sha256": "76fa262edffdb0bd7c461b39921e27b51d5e6785fe61ec79fb79b715e2bac599",
+      "bytes": 651
+    },
+    "research/experiments/drainage-validation-20261112.json": {
+      "sha256": "131debef53eb79b0d93d9741fd1a819c06302544129c40a22dd288f26a7cd9cf",
+      "bytes": 4016
+    },
+    "research/experiments/drainage_acquire.py": {
+      "sha256": "1c8319c72e582a48c4fbd17a43271ebf58a885b20875f8923e63fd5843460843",
+      "bytes": 7657
+    },
+    "research/experiments/drainage_core.py": {
+      "sha256": "1af731b07873ab75a1bab67c5002e696dfde59bca8cef10fb2da1c7cc30e2121",
+      "bytes": 10483
+    },
+    "research/experiments/drainage_pilot.py": {
+      "sha256": "370e5b5908cbfca6d390ca1aaa465098c4477e679ce18c499bd48559b60cdaee",
+      "bytes": 21936
+    },
+    "research/experiments/evidence_campaign.py": {
+      "sha256": "f26a39a7d4ecea0d5caaaf7e926d3e290407c4c403cebc83d983b1887aae9087",
+      "bytes": 4903
+    },
+    "research/experiments/flow_vectors.py": {
+      "sha256": "1910a2d18d75b1059fa6159c65e02abe8edc76ffc1127cdd3d676c6c2a404f04",
+      "bytes": 3666
+    },
+    "research/experiments/merit_compare.py": {
+      "sha256": "1aa7a725b70012e8ae1d1fabd28d6f00f53136ce49343cfeef586b7c65651df5",
+      "bytes": 8530
+    },
+    "research/experiments/merit_windows.py": {
+      "sha256": "51dc96cc2d2e6172fba3807a6cbf131d1d0eb929ff8a45526b92c2f9a46c5626",
+      "bytes": 11205
+    },
+    "research/experiments/nepal-postevent-2m-20261107.json": {
+      "sha256": "834792e0fb8a2c6c2f66878a03168073c47627dfb6af5b8ffd18193133e4a719",
+      "bytes": 1633
+    },
+    "research/experiments/nepal-road-screening.json": {
+      "sha256": "7bd6712ccf8bc44bfe11546bf4859e8d8cf2d6c9d305303fb25eb94a7e40894b",
+      "bytes": 2402
+    },
+    "research/experiments/nepal.py": {
+      "sha256": "9904bb09696454583a3cafa500ccb9bd2b3a61cb9babc855232360b10f58f24c",
+      "bytes": 13997
+    },
+    "research/experiments/nepal_resolution_campaign.py": {
+      "sha256": "b4056c15b7ac6887b7227bf7bc8cab1ea2e7c15ca02e2c1e37a722bd4407b338",
+      "bytes": 2844
+    },
+    "research/experiments/observed-flow-20261112.json": {
+      "sha256": "6d653c1d6b615944d8568ea7d3e6525fc5531edb73b4312068f4f8a63103514e",
+      "bytes": 3803
+    },
+    "research/experiments/observed_flow_acquire.py": {
+      "sha256": "9cf1ea130e6773ac1c639c34529142c7241b40194942b0647834fbd949af40f7",
+      "bytes": 2260
+    },
+    "research/experiments/observed_flow_control.py": {
+      "sha256": "3638b1b03b3475f37f08ef5b10b081557178fb5821f6fe2f0534648bb1027560",
+      "bytes": 11902
+    },
+    "research/experiments/observed_flow_geometry.py": {
+      "sha256": "9f0e664d409c820550bd008d77664095771bf048a712c8e3eb7b81679447e81f",
+      "bytes": 4093
+    },
+    "research/experiments/observed_flow_inputs.py": {
+      "sha256": "c44d8f6b3e761524c1978badf608f7ce8e6cefb70d6f2bdf19355ef3468f9b5b",
+      "bytes": 5762
+    },
+    "research/experiments/road-exposure-20261112.json": {
+      "sha256": "ca78eb5c887ba157e64f92fe3db49031167faafc04fd1d45332d05ea84484f4d",
+      "bytes": 4099
+    },
+    "research/experiments/road-exposure-label-audit-20261112.json": {
+      "sha256": "5159ffdef77c7a5b472bdf5ab6892035c2c32fe3cb3fc7c14f4f44ef681bc59a",
+      "bytes": 1125
+    },
+    "research/experiments/road_exposure.py": {
+      "sha256": "e63c7eec1880ca827438ca936a6a292e130870ce1f7f8f733dc09ce77fc64a3b",
+      "bytes": 15668
+    },
+    "research/experiments/road_exposure_acquire.py": {
+      "sha256": "fa273b9abd323a47a4c8dd096c65c638456f22a238832ad9a39478ec1b06fb04",
+      "bytes": 7283
+    },
+    "research/experiments/spectral-review-20261112.json": {
+      "sha256": "b7797dfacc53ae46a995dbcef6c521d7800b40e94bd62cf0077c4fb7bfc61e30",
+      "bytes": 2654
+    },
+    "research/experiments/spectral_review.py": {
+      "sha256": "ce7aa84249e9810e64ebd9ea09b2fad20d08d9d15d8bcca67616d909db958bf0",
+      "bytes": 10514
+    },
+    "research/experiments/validation-closure-20261107.json": {
+      "sha256": "2f6d89b1f53232734e1afc051a8147bb8a1f6832c67c2eb9fec71482f8362e38",
+      "bytes": 3778
+    },
+    "research/experiments/validation_identity.py": {
+      "sha256": "aad447c9707b4e95f3a9378e4eca3b524d202b301883f09eadaaddb7cf6e2bab",
+      "bytes": 270
+    },
+    "research/experiments/worldfloods-blind-20261107.json": {
+      "sha256": "22800bab216b6b48889ca3cb0157356e58eb74167fd2efcd5d071c8e9b759973",
+      "bytes": 2727
+    },
+    "research/experiments/worldfloods-reserve-20261107.json": {
+      "sha256": "35f1bafeda2069dffa00eddcc0907d7169c470d50f342680aa183b1875d2d75a",
+      "bytes": 1341
+    },
+    "research/experiments/worldfloods_component.py": {
+      "sha256": "c2eedfdf7a51133c865d93c1e64edba9f3e4ad218ef33587689ca4f192cfe2a6",
+      "bytes": 11983
+    },
+    "research/registration/__init__.py": {
+      "sha256": "434a4efd3d4e7e54b4436b8d4210af35dd97080b1be20219c90e6d285b7f0e5f",
+      "bytes": 85
+    },
+    "research/registration/diagnostics.py": {
+      "sha256": "1a45c6c06d279c56b22af59bae37380cfb1dabbc9e9ab82ccde27056121ee8b9",
+      "bytes": 9545
+    },
+    "research/researcher-3-final/FINAL_REVIEW_REPORT.md": {
+      "sha256": "7d6d9d7b0c2eb4cb6821b440a51115b913b23d7a3390c435b9001eefef158907",
+      "bytes": 4562
+    },
+    "research/researcher-3-final/evidence/CLAIM_TO_EVIDENCE_LEDGER.md": {
+      "sha256": "08b02d3a814295a5bc2e67ceaf26031623473db7d3f69f9efa3d07846c5a3635",
+      "bytes": 3333
+    },
+    "research/researcher-3-final/evidence/DATA_LINEAGE.md": {
+      "sha256": "bdaf475ba2a542fbda5710e8a3a1d7916ff8dd3908a00f99784f067baa10f814",
+      "bytes": 5515
+    },
+    "research/researcher-3-final/evidence/NOVELTY_COMPARISON.md": {
+      "sha256": "d13ed690c0fb0bf185064d55176aaa0c613f0d89dca3ac6fe79edbf501accaa9",
+      "bytes": 13698
+    },
+    "research/researcher-3-final/evidence/REPRODUCIBILITY.md": {
+      "sha256": "f4673e25c17e895440b86589e7301b64055824355558d8bbbfe76830b970ba15",
+      "bytes": 4054
+    },
+    "research/researcher-3-final/evidence/SCIENTIFIC_LIMITATIONS.md": {
+      "sha256": "2ac7c786023a462b1fde678ffd5dc545c56db404ce20206ca80dd39ea5c1e5cf",
+      "bytes": 2901
+    },
+    "research/researcher-3-final/experiments/evidence_discrimination/FIXTURES.json": {
+      "sha256": "eb913fd02c84adeb5cf2027b7333365bc3a127d73a8b4ae98b33cf160b31d048",
+      "bytes": 9712
+    },
+    "research/researcher-3-final/experiments/evidence_discrimination/FIXTURE_RESULTS.json": {
+      "sha256": "6fb4cfbb8ce96163e8fe1288f5db2ea76a9e314e90121861bb6f1ba74cb03731",
+      "bytes": 18692
+    },
+    "research/researcher-3-final/experiments/evidence_discrimination/PREDICTION_SEAL.json": {
+      "sha256": "c9d6fee6541437581f48b60678c9253ba828910385cf58f67d44db97881890a9",
+      "bytes": 960
+    },
+    "research/researcher-3-final/experiments/evidence_discrimination/PROTOCOL.json": {
+      "sha256": "0858335c8ffeef528c7f8e23ee76e114e14e853fb14dda1f75c3699bfee58e78",
+      "bytes": 3736
+    },
+    "research/researcher-3-final/experiments/evidence_discrimination/check.py": {
+      "sha256": "5b9b89a2bee4e0f74e0856d93f63f0eaf8de364ae540d57b2d7ea7be38a0f975",
+      "bytes": 4301
+    },
+    "research/researcher-3-final/experiments/evidence_discrimination/policy.py": {
+      "sha256": "a9defbd6f7113b9295df6007bf2432b0a0b647ba751c0d244e9d5deaff57943d",
+      "bytes": 5130
+    },
+    "research/researcher-3-final/experiments/evidence_discrimination/run.py": {
+      "sha256": "6463a22c30fa813fcb6dc17679c1212219dca9fcdccba748e89766bb887f3c6a",
+      "bytes": 14476
+    },
+    "research/researcher-3-final/experiments/validation/ADCP_EVIDENCE_STRATA.csv": {
+      "sha256": "35056fee7b478568a29c3de1c48b83376ab439177dead787c338fa1740032840",
+      "bytes": 179
+    },
+    "research/researcher-3-final/experiments/validation/FUTURE_HOLDOUT_PROTOCOL.md": {
+      "sha256": "ca50e6b27de23c9d2806465136fbee1f7666bcd9d91dd88608401558aeeb08ab",
+      "bytes": 1788
+    },
+    "research/researcher-3-final/experiments/validation/REFERENCE_ACCESS_RECEIPT.json": {
+      "sha256": "711eebdb8a34126bd18b43c11537602ad26520af931118b51cbff88959f253a0",
+      "bytes": 1133
+    },
+    "research/researcher-3-final/experiments/validation/REFERENCE_SEARCH.md": {
+      "sha256": "3fb18b628bfdfe79171246d13da231c85668d1ded7c176b0d5584a1b67674e50",
+      "bytes": 13569
+    },
+    "research/researcher-3-final/experiments/validation/SUMMARY.json": {
+      "sha256": "88a3f0ee000435b9bdcb63a227a357342a8adb71730f1232043c1781a07b0746",
+      "bytes": 7155
+    },
+    "research/researcher-3-final/integration/FIGURE_AND_TABLE_INDEX.md": {
+      "sha256": "47912dc14102f13cafc4abac52f8e17baea539ca83137cd5ee965fdb8f81395a",
+      "bytes": 3612
+    },
+    "research/researcher-3-final/integration/RESEARCHER_3_FINAL_FINDINGS.md": {
+      "sha256": "0427c84c781830713a03e64a52b19b1a8da91a9a3470e5162f26a1a67da34fcf",
+      "bytes": 3980
+    },
+    "research/researcher-3-final/integration/UNIFIED_PAPER_HANDOFF.md": {
+      "sha256": "869fc9ff69887b508b29cc0008be797fe979905f02c0b904a50c99722c0d5fec",
+      "bytes": 6255
+    },
+    "research/researcher-3-final/tables/claim_coverage.csv": {
+      "sha256": "f019cdec195ddfa815037b36db9adb074418a937323b0bcccbefa2581db0c904",
+      "bytes": 969
+    },
+    "research/researcher-3-final/tables/comparison_results.csv": {
+      "sha256": "7a2dcc7ba6961cc71107ea9e94712ecea7359f59707a3e80292d8ec6709dad24",
+      "bytes": 4450
+    },
+    "research/researcher-3-final/tables/evidence_categories.csv": {
+      "sha256": "d6305600afaad43a084b8621a5c798eea519117b3bb10157f0eabcfae4acfe40",
+      "bytes": 924
+    },
+    "research/researcher-3-final/tables/original_results_index.csv": {
+      "sha256": "942cf59534c05e2bb9fefad4454facd6ddc433a81e6653dd95e0999be28c68c6",
+      "bytes": 5378
+    },
+    "research/results/case-campaign-20261107/MEASUREMENTS.csv": {
+      "sha256": "3db332dcab99b1685f61fec11ba7295b525457ff0a0c9cada1ad8b91d640e400",
+      "bytes": 934
+    },
+    "research/results/case-campaign-20261107/RELEASE_MANIFEST.json": {
+      "sha256": "5da07ea3395d26119d8ff4103b7da32107a97f006ed826546393253d86f73e98",
+      "bytes": 8577
+    },
+    "research/results/case-campaign-20261107/REPORT.md": {
+      "sha256": "bf412ef0fbef8de71ba73aa23fb563b19a6159335cba5acb73878b836e3b50a3",
+      "bytes": 12718
+    },
+    "research/results/case-campaign-20261107/cases/kedarnath/case-panels.png": {
+      "sha256": "34ba166afc02b50aa15085e4c2f43810295bd8cc30894cd0857f569bfec90304",
+      "bytes": 409739
+    },
+    "research/results/case-campaign-20261107/cases/kedarnath/sources.json": {
+      "sha256": "919c22704e01b1409e884e8e5af3d9cfd398ead90e5cb59f8f2cf4ba08966c84",
+      "bytes": 36925
+    },
+    "research/results/case-campaign-20261107/cases/kedarnath/summary.json": {
+      "sha256": "d7ff1a603a3326de9f90106107d6c7d553b4a6c5e09a79b79fdfe0ad51e0a38c",
+      "bytes": 7340
+    },
+    "research/results/case-campaign-20261107/cases/nepal/case-panels.png": {
+      "sha256": "285d1add673fa58570a449320bfe48f5c5a9647354fc2b486b7b6aa3c8246865",
+      "bytes": 215155
+    },
+    "research/results/case-campaign-20261107/cases/nepal/sources.json": {
+      "sha256": "3935e4588e22dc91a55ba9d20196dc705374f2cc7d28f57d25c7b4bc15a8a585",
+      "bytes": 1915
+    },
+    "research/results/case-campaign-20261107/cases/nepal/summary.json": {
+      "sha256": "6fdf2c7210ceb5b74e6178e061ecde21fccc97ebc96a779e62e34f10fa9e3ad5",
+      "bytes": 4563
+    },
+    "research/results/case-campaign-20261107/cases/sangam-vihar/case-panels.png": {
+      "sha256": "3889ab54d235fe4e355422c3465fa785dcfd3886c716aa5f3ff6c89364f3c8d5",
+      "bytes": 305556
+    },
+    "research/results/case-campaign-20261107/cases/sangam-vihar/sources.json": {
+      "sha256": "5b50830e1746b522910762f69e329d7934b6fa97cb71b29bf1ec5c5a71bd72e8",
+      "bytes": 12864
+    },
+    "research/results/case-campaign-20261107/cases/sangam-vihar/summary.json": {
+      "sha256": "9df140c393d8840c0877febf06820558ac6a8ee1a285af5f6493d019d9af8bcd",
+      "bytes": 7887
+    },
+    "research/results/case-campaign-20261107/cases/varanasi/case-panels.png": {
+      "sha256": "90f996c00d286675bae99b90f807e5793bd2591b5a25087283c41e8154cb9381",
+      "bytes": 1362933
+    },
+    "research/results/case-campaign-20261107/cases/varanasi/sources.json": {
+      "sha256": "f2f1173339d3aff0c269191b902d60f938a0f190f317ed9a4faee6a0f57b715e",
+      "bytes": 14713
+    },
+    "research/results/case-campaign-20261107/cases/varanasi/summary.json": {
+      "sha256": "f3e42b1eaa5d575461776cab1249248c99835da431cfc4b33d576f48284e064e",
+      "bytes": 7974
+    },
+    "research/results/case-campaign-20261107/completion.json": {
+      "sha256": "5b3dc433746b4b454f5407249085dcdbd46cd9a1ca3304d6a824e18ee15536a7",
+      "bytes": 1855
+    },
+    "research/results/case-campaign-20261107/nepal/independent-arithmetic-30m.json": {
+      "sha256": "2f8f2f2556cf3bf5a73c9e7d2438f32261ea0ec3f2f4055f1058f4c7486c23ba",
+      "bytes": 741
+    },
+    "research/results/case-campaign-20261107/nepal/replay-30m-summary.json": {
+      "sha256": "14e7ef72ce1a5c697141440d0e8350366696e4ad11e884e9650b054b6a75bdcd",
+      "bytes": 6095
+    },
+    "research/results/case-campaign-20261107/nepal/replay-90m-summary.json": {
+      "sha256": "885e592ecdada27f2a4bf695194b53919e6f35b371b2ff115b20021109eea545",
+      "bytes": 6089
+    },
+    "research/results/case-campaign-20261107/protocol.json": {
+      "sha256": "23a41c5f05fdc3373881fe372abbaed883179e38b9a7d426cd4e4a55d0e9ae2d",
+      "bytes": 4304
+    },
+    "research/results/drainage-consistency-20261112/REPORT.md": {
+      "sha256": "824a883523b6c1d3a2ecf869df5c6da19d7c4d9e22dc3e2a6c0d0b2f8f092e08",
+      "bytes": 43925
+    },
+    "research/results/drainage-consistency-20261112/verified-v3-recount2/ablation.csv": {
+      "sha256": "0d02733642a074660728589ed9b26ae9d554cb77169743e54cb5e51f03989ccd",
+      "bytes": 1293
+    },
+    "research/results/drainage-consistency-20261112/verified-v3-recount2/calibration-clarification.json": {
+      "sha256": "ce983ed32e53cb948e249a094b1d569ed8bf288b36310014a5623f2c207edaac",
+      "bytes": 1040
+    },
+    "research/results/drainage-consistency-20261112/verified-v3-recount2/case-measurements.csv": {
+      "sha256": "295d872c9fa26fa6567f0ee6c2d9c8cba53b7ccc7baa365f7b05417dc5f962fa",
+      "bytes": 555
+    },
+    "research/results/drainage-consistency-20261112/verified-v3-recount2/independent-recount.json": {
+      "sha256": "81c53fd25902c1469f17a0044c899046a20b833d5e7a3a99734f8dc4065e2a3c",
+      "bytes": 2213
+    },
+    "research/results/drainage-consistency-20261112/verified-v3-recount2/protocol.json": {
+      "sha256": "262fa32709265397311dd25f61c9e90e426748d0efef25273645e617b2796e11",
+      "bytes": 5730
+    },
+    "research/results/drainage-consistency-20261112/verified-v3-recount2/scale-clarification.json": {
+      "sha256": "5c315ba133c94d07e3af37e73761b9368537c261b60bde8f5dea696c4be6afd4",
+      "bytes": 676
+    },
+    "research/results/drainage-consistency-20261112/verified-v3-recount2/spectral-threshold-summary.csv": {
+      "sha256": "5d936e9128595bc7ff0b143c8f984c4ea279d6eeb99777b255123a07ed3282ab",
+      "bytes": 1222
+    },
+    "research/results/drainage-consistency-20261112/verified-v3-recount2/summary.json": {
+      "sha256": "6045c6bf98c4442c5d0d354be5ec06061d5b745c8a284ff5a09be40681c1bbba",
+      "bytes": 7695
+    },
+    "research/results/drainage-consistency-20261112/verified-v3-recount2/terrain-sensitivity.csv": {
+      "sha256": "6493c726ce6243eca10614a0d7f627b91a48dcb935b358b3ab21c4c893f2b53f",
+      "bytes": 4117
+    },
+    "research/results/drainage-validation-20261112/REPORT.md": {
+      "sha256": "802905628f6244726760b57609907d6fd70e4c1083d3de71235d2d59b2ddb1a5",
+      "bytes": 14506
+    },
+    "research/results/drainage-validation-20261112/SOURCE_ELIGIBILITY.md": {
+      "sha256": "d8bf4bc0de03caac1585e9e712c7259c514545dc9ee773eab2495ead614d69c7",
+      "bytes": 22430
+    },
+    "research/results/drainage-validation-20261112/verified/observed-by-year.csv": {
+      "sha256": "31eab20b2747ff7b2748fe0f40df0eec3e263052ff7db975796972030c7e5441",
+      "bytes": 2397
+    },
+    "research/results/drainage-validation-20261112/verified/observed-registration-heading-stress.json": {
+      "sha256": "342fa788969050bf3fc39d2d65c5361421dace4a0daa813eaf204adeccad8b07",
+      "bytes": 42542
+    },
+    "research/results/drainage-validation-20261112/verified/observed-summary.json": {
+      "sha256": "0f72aaa77586dceabfbbf9cf24ff912f26f5ff3c5248db59dc43984e456c5668",
+      "bytes": 13623
+    },
+    "research/results/drainage-validation-20261112/verified/regional-registration-stress.json": {
+      "sha256": "0a14356d9788ec6b2e2a956e5e39657d50cc4ee99fbcad498e0a92235c2f5f69",
+      "bytes": 9025
+    },
+    "research/results/drainage-validation-20261112/verified/regional-summary.json": {
+      "sha256": "fb98aefc2c9ec659b0bf98e1252d19019942bb029407895210ccacbf238a9215",
+      "bytes": 5397
+    },
+    "research/results/drainage-validation-20261112/verified/verification.json": {
+      "sha256": "2810bfe6b4118fc650825eb9c5db77bcfa6e3f18ff21b1c8143795a65b6e33f7",
+      "bytes": 3611
+    },
+    "research/results/exposure-verification-20261112/REPORT.md": {
+      "sha256": "b9375b242bfe32b8a45b168aadc8a99c7797ccab5f3244c150b82d4240b12186",
+      "bytes": 11391
+    },
+    "research/results/exposure-verification-20261112/SOURCE_ELIGIBILITY.md": {
+      "sha256": "55fe51d761757bb97a0823e2861656f5c8d44f4d6b5c71b99f5b608bb48c8486",
+      "bytes": 12559
+    },
+    "research/results/exposure-verification-20261112/verified/ahr-input-receipt.json": {
+      "sha256": "3ffd7e7312af8e0b95fb0149ae0b3f0adfe8ce675be4d4b21a8f9c924cdf7069",
+      "bytes": 3121
+    },
+    "research/results/exposure-verification-20261112/verified/ahr-reference-receipt.json": {
+      "sha256": "d2770b224e28c676f6a610019af9e0b37e01397ce97feef8c3006a4367f41978",
+      "bytes": 38028
+    },
+    "research/results/exposure-verification-20261112/verified/ahr-results.json": {
+      "sha256": "04455c851ee59b15c8d96d4ba286a829aa16c93b31cf541ef38138c72388bd5d",
+      "bytes": 34303
+    },
+    "research/results/exposure-verification-20261112/verified/ahr-seal.json": {
+      "sha256": "769bb431570384faa54ab6c7848be91a23c7ecdb7be1a9eb1478fd18d47565bc",
+      "bytes": 2024
+    },
+    "research/results/exposure-verification-20261112/verified/manifest.json": {
+      "sha256": "2a114f9dfdaf66e445030a7f3c830b528febdd500e2a5f95f510838fd8cd09dc",
+      "bytes": 900
+    },
+    "research/results/exposure-verification-20261112/verified/spectral-development-seal.json": {
+      "sha256": "07c1dfadfbcdaa5f6535c6abc659ab871ffa8aca28b8562e29d535bd30d24ba9",
+      "bytes": 5041
+    },
+    "research/results/exposure-verification-20261112/verified/spectral-development.json": {
+      "sha256": "6b1fccce89626b2e5c1342a41fa5d825dd13632e2bd8ceadd8151560b53075a9",
+      "bytes": 38980
+    },
+    "research/results/exposure-verification-20261112/verified/spectral-reserve-seal.json": {
+      "sha256": "34e9aa59bb359ebe07816e19c0f4ec64995f49ef611518cfee5518b10544324b",
+      "bytes": 3132
+    },
+    "research/results/exposure-verification-20261112/verified/spectral-reserve.json": {
+      "sha256": "76dc8184e63dc4b087a6296373d072eb39d05f7af6c1159d663ce1610f9310d3",
+      "bytes": 27489
+    },
+    "research/results/exposure-verification-20261112/verified/verification.json": {
+      "sha256": "bbd7de5010217ed4d607ab44dabc47483a8e4f736139a43a45610360f269dbd1",
+      "bytes": 4758
+    },
+    "research/results/terrain-exposure-20261105/REPORT.md": {
+      "sha256": "950a184e6aa1923b9e8a573d2c03cd7fdd4802a5bbc82841b0f6ac560a7d26df",
+      "bytes": 11139
+    },
+    "research/results/terrain-exposure-20261105/completion.json": {
+      "sha256": "fa28dd6f1cfe07aea6997be0a24caa469d4713398c63459ddc3e03c81144a78b",
+      "bytes": 2893
+    },
+    "research/results/terrain-exposure-20261105/independent-verification.json": {
+      "sha256": "ee7b8dfc069c2686617275163c4fc5eb5d563fed0da604470d347317b0028392",
+      "bytes": 740
+    },
+    "research/results/terrain-exposure-20261105/nepal-reference-metrics.csv": {
+      "sha256": "6d8b191c16100f03c5ce9e4aaeafc9c779d613a19e67e3321826173e1cae06c8",
+      "bytes": 886
+    },
+    "research/results/terrain-exposure-20261105/nepal-reference-metrics.json": {
+      "sha256": "c94ea9eb77565389c8d5cd514213d99318a25c5f522513acfac11aeab52cef31",
+      "bytes": 15084
+    },
+    "research/results/terrain-exposure-20261105/nepal-reference-protocol.json": {
+      "sha256": "365f9e71caff768511bacbc695673f813b9c2d7c728b235569ce0f4121533941",
+      "bytes": 2384
+    },
+    "research/results/terrain-exposure-20261105/nepal-replay-summary.json": {
+      "sha256": "b2d48fd827df1ed5763048acc922a511b0064eb943fd430de237904fcea10d98",
+      "bytes": 6322
+    },
+    "research/results/terrain-exposure-20261105/registration-audit.json": {
+      "sha256": "f24fae35ddc890cb0d7d652ee764627d04409b1d87894a5fe28188f41ced8e66",
+      "bytes": 3474
+    },
+    "research/results/terrain-exposure-20261105/sangam-vihar-summary.json": {
+      "sha256": "f4a9794886c34c87baa3287da7fd2932f25ac0ce88b1e746b6c5e5c65338dac3",
+      "bytes": 4215
+    },
+    "research/results/terrain-exposure-20261105/varanasi-summary.json": {
+      "sha256": "59633691554f2201cb890975d24e6139b8598e9643d139c7abd11529050f03fc",
+      "bytes": 4601
+    },
+    "research/results/validation-closure-20261107/REPORT.md": {
+      "sha256": "98a78f6c819efb3016141795f4d0faeb3724d9a2e39f0317234883ae5ea38ff7",
+      "bytes": 15400
+    },
+    "research/results/validation-closure-20261107/completion.json": {
+      "sha256": "12dcde9643b9dd30274ff8439a737fdea071334559fe9ae307edbd5b6d44ef22",
+      "bytes": 1479
+    },
+    "research/results/validation-closure-20261107/delhi/summary.json": {
+      "sha256": "e0bf0df1455cfd5fa816d7f7a2f617651fae48db801ba42eb78ad94c7ad4dd91",
+      "bytes": 9861
+    },
+    "research/results/validation-closure-20261107/external-water/metrics.csv": {
+      "sha256": "18c0cb5c6ea589095aaae3b506fd68234830fec7ccc52d98b52a678b5c1ea3db",
+      "bytes": 790
+    },
+    "research/results/validation-closure-20261107/external-water/population-seal.json": {
+      "sha256": "b07ebcb08699637bf04eee970317f68cd1a23a8e007ffd6cca57841a015b6407",
+      "bytes": 462
+    },
+    "research/results/validation-closure-20261107/external-water/prediction-seal.json": {
+      "sha256": "1f8d55ddca9ba8abd7a6f14c8fd78d10b761da31207b048744c32da71bedc16f",
+      "bytes": 3271
+    },
+    "research/results/validation-closure-20261107/external-water/summary.json": {
+      "sha256": "fd72f4cd7b7ff3c4b2f567ad2298d2576240b73f588ec05104851bd75c5b337a",
+      "bytes": 15706
+    },
+    "research/results/validation-closure-20261107/kedarnath/quality-rows.json": {
+      "sha256": "ce6fafa75fe80234e8781b51efb7c08ba45a5c85b269c0c7790234718d75dd1b",
+      "bytes": 8266
+    },
+    "research/results/validation-closure-20261107/kedarnath/sealed-candidate-ids.json": {
+      "sha256": "e8a969153533594f54bf3e21a82b34904c230c1f254539cbb22dcfc42a0e6ef9",
+      "bytes": 329
+    },
+    "research/results/validation-closure-20261107/kedarnath/selection.json": {
+      "sha256": "eb2f4ed7c2a9eaa63e2f3250f5aa82248b04ca89b2bdb11130b138590ae56588",
+      "bytes": 799
+    },
+    "research/results/validation-closure-20261107/nepal-2m/saved-observation-support.json": {
+      "sha256": "8ffd60178ae7982810945d06282b07a198382518afdc4e2acea1c699d33e3f34",
+      "bytes": 95773
+    },
+    "research/results/validation-closure-20261107/nepal-2m/summary.json": {
+      "sha256": "cdb00bfa11f03428b5125512110a02d20cc4968157d0e8559307040ce3f802b7",
+      "bytes": 7032
+    },
+    "research/results/validation-closure-20261107/protocols/nepal-postevent-2m-20261107.json": {
+      "sha256": "834792e0fb8a2c6c2f66878a03168073c47627dfb6af5b8ffd18193133e4a719",
+      "bytes": 1633
+    },
+    "research/results/validation-closure-20261107/protocols/validation-closure-20261107.json": {
+      "sha256": "2f6d89b1f53232734e1afc051a8147bb8a1f6832c67c2eb9fec71482f8362e38",
+      "bytes": 3778
+    },
+    "research/results/validation-closure-20261107/protocols/worldfloods-blind-20261107.json": {
+      "sha256": "22800bab216b6b48889ca3cb0157356e58eb74167fd2efcd5d071c8e9b759973",
+      "bytes": 2727
+    },
+    "research/results/validation-closure-20261107/protocols/worldfloods-reserve-20261107.json": {
+      "sha256": "35f1bafeda2069dffa00eddcc0907d7169c470d50f342680aa183b1875d2d75a",
+      "bytes": 1341
+    },
+    "research/results/validation-closure-20261107/sources/PRIMARY_SOURCES.md": {
+      "sha256": "bc5d796b6252edd74452e0a5a141fd440714e1b1c8b7be991a266b0ef2065d7b",
+      "bytes": 5094
+    },
+    "research/terrain_exposure/__init__.py": {
+      "sha256": "abf8e4ccd10170bc89e8e62acc728934a20376bfe35e23966e7c7be466551833",
+      "bytes": 125
+    },
+    "research/terrain_exposure/compact.py": {
+      "sha256": "069bf8df884c983b4e47d8115470774b2ca4e0656c25f78a0394de7a1724cf79",
+      "bytes": 2037
+    },
+    "research/terrain_exposure/demo.py": {
+      "sha256": "c4e60515d4db4018cd7e0c83424fc0d63ec0d93e74db53510cc769143d3076e5",
+      "bytes": 1962
+    },
+    "research/terrain_exposure/graph.py": {
+      "sha256": "fb675ad9ca1c58d93d00bb2063abbe314d60d3841e1161438dde50870e60e4e5",
+      "bytes": 20530
+    },
+    "research/terrain_exposure/hydrology.py": {
+      "sha256": "df509d94b90b3ea13c001d2f7f948f1edb6ae37801487bf7723519520caa8224",
+      "bytes": 9623
+    },
+    "research/terrain_exposure/io.py": {
+      "sha256": "ac0d9536cc865d401f7520e2303daff795259ab98dc74e8aeff81296a634255b",
+      "bytes": 4586
+    },
+    "research/terrain_exposure/replay.py": {
+      "sha256": "b6130dd5c023c721fe408583a9ab6ed133d9d80ce6de0894eb0ce67d7dc1482f",
+      "bytes": 8723
+    },
+    "runtime_paths.py": {
+      "sha256": "f3bd80e95ff700e62ac81ad1ffe1b1a82ce666012b334399a499b3e6d47a9f9c",
+      "bytes": 3203
+    },
+    "scripts/bootstrap_demo.py": {
+      "sha256": "bc4e0998b454f778bf7dc2e2d46d0c8814b49bfa4623bbbb930601d9f28e4c73",
+      "bytes": 3087
+    },
+    "scripts/check_research_release_http.py": {
+      "sha256": "9138f37c927fafca54a5cebe9a4172c5a0e630f858d1314a72bbbeb06d5b05a0",
+      "bytes": 3659
+    },
+    "scripts/package_case_campaign.py": {
+      "sha256": "c634a5fccdf3b196412561efb4ceef8661917e4bcbdb00fe49c335d30daf84d0",
+      "bytes": 9753
+    },
+    "scripts/package_demo.py": {
+      "sha256": "ea705448b95d7e423c5cfdf9a446492e30959e73fda0fa2ca044fc0e7b5784da",
+      "bytes": 3764
+    },
+    "scripts/plot_drainage_pilot.py": {
+      "sha256": "a0cc5e3ceffc5e8c2083664a48ddb45c07ff1a30591b81358eff22267485e6f9",
+      "bytes": 4416
+    },
+    "scripts/plot_drainage_validation.py": {
+      "sha256": "b25f64e0ca80e581dce5a2f3de5a9af8295195f3d971c5b030cc2a6e440ea803",
+      "bytes": 3209
+    },
+    "scripts/plot_exposure_verification.py": {
+      "sha256": "9464888b6c4a4e65bf909f005c0a6fe82d090631fec1ae411d83a99fdb6fe576",
+      "bytes": 2396
+    },
+    "scripts/prepare_case_views.py": {
+      "sha256": "8ad6bb82ac9904e6f76378a38007777ad1ac553b52603f3461a84e780d6a7cc2",
+      "bytes": 7923
+    },
+    "scripts/prepare_research_release.py": {
+      "sha256": "cd50f8e376d8923e65401585a82ad6951de94b7a34deb056c2800cbc04f5d492",
+      "bytes": 3730
+    },
+    "scripts/prepare_ui.py": {
+      "sha256": "4708f49130f55d58017597301d39a92badb950036999accf245ee6a5210904d2",
+      "bytes": 9122
+    },
+    "scripts/start_research_release.py": {
+      "sha256": "e3689dac5a9b378f072dbdc1ec0a345135d752fc879ddbc5e13d6fb4a9b29b96",
+      "bytes": 2798
+    },
+    "scripts/verify_case_campaign.py": {
+      "sha256": "e8b9e64e252b2d923298ec26ec94ed31c19ed852174d1c772e6c3cf118ae293b",
+      "bytes": 4173
+    },
+    "scripts/verify_drainage_pilot.py": {
+      "sha256": "aaa8a4ea556fbc6a3ddc63e6e7903f73595ec52bfd5be87fcced381fc01fa353",
+      "bytes": 9433
+    },
+    "scripts/verify_drainage_validation.py": {
+      "sha256": "9a817dcab840b87a78bfc6372c2efb8d15f9d6a6277e4a60fe0d30819e76141e",
+      "bytes": 12620
+    },
+    "scripts/verify_exposure_verification.py": {
+      "sha256": "da4c48518f368550e81c40db9f0ecbfe3b7e9a57c5a2390dbf00a00dbc104038",
+      "bytes": 10894
+    },
+    "scripts/verify_jai_terrain.py": {
+      "sha256": "dab2a6b22c50ac047d44ee3d6a19767ad88fe187c79cfd082c497371baae0277",
+      "bytes": 2828
+    },
+    "scripts/verify_terrain_exposure.py": {
+      "sha256": "7d3d09a180e734c177ea580e70d7dad8a0d81f851adfcecaf56820df34e10f21",
+      "bytes": 5409
+    },
+    "start.ps1": {
+      "sha256": "852f52ae7a17049c533d28a367ec1d6b04b499cdfeaddce74e78ed9261b28c5a",
+      "bytes": 534
+    },
+    "start.py": {
+      "sha256": "69c8252e7ead5ff85a7b4a07b748b62567efa41e352b0aeeb5bc76b430619584",
+      "bytes": 2057
+    },
+    "tests/test_drainage_consistency.py": {
+      "sha256": "7d74fecec9e185d668175c308692fd0addeddd4a5fb7198e7906c976209e7abe",
+      "bytes": 8747
+    },
+    "tests/test_flow_vectors.py": {
+      "sha256": "0c427439f00adde7afae2a53cbca67641a52e2f99226925fca585f37b6d5a846",
+      "bytes": 2371
+    },
+    "tests/test_jai_flood_bridge.py": {
+      "sha256": "d43382b3dcaabcd3e808c13f81c994ac83cd7ab29c1053a92e783b51c2f98b3d",
+      "bytes": 6734
+    },
+    "tests/test_jai_geo_context.py": {
+      "sha256": "66badebda7bb6f7f8fb1ddad7bed6e4c4dcfacc1ed81abfc5a5edf9ea7bcb44b",
+      "bytes": 6135
+    },
+    "tests/test_jai_investigation.py": {
+      "sha256": "052ce43a062180018401d4a65fe53f40c64b6e38d6fbef44b3398944cbced041",
+      "bytes": 8212
+    },
+    "tests/test_jai_origin.py": {
+      "sha256": "c32807698cc981ded2f013fb54849960dd3cc120644e2be5fbb18440286c4b06",
+      "bytes": 1250
+    },
+    "tests/test_jai_terrain.py": {
+      "sha256": "f1423ae0fa6c0efc099699aa9631ad222b767a202af97d4990a01667caa88c36",
+      "bytes": 4413
+    },
+    "tests/test_lavalabs.py": {
+      "sha256": "27ef22d75769e3b44a81fd8f1cca8ca40bcc8aeafdf52b4e3cf210263962f68b",
+      "bytes": 4259
+    },
+    "tests/test_merit_windows.py": {
+      "sha256": "41217269e07747e2d7f696b9529ef5bc41113ec7448d5459f50ba277a53fa2b1",
+      "bytes": 3685
+    },
+    "tests/test_observed_flow_control.py": {
+      "sha256": "30b64df4c60ce24098a505e75f32b05524faba4293f64acabd061ca6a56f4097",
+      "bytes": 1702
+    },
+    "tests/test_research_cases_api.py": {
+      "sha256": "6bfa4fcde52d1e62660a85f361b280bbeacc3556f6838e305249707b09a6e2d5",
+      "bytes": 2298
+    },
+    "tests/test_road_exposure.py": {
+      "sha256": "b73015673556394685d850b55c2c9d09d0d08dda80cbd68f682236648617617a",
+      "bytes": 1456
+    },
+    "tests/test_spectral_review.py": {
+      "sha256": "cee46802f52ce6de5afc0da9c4e38002303aa4bd9f0dbc4e8156ae82601fe3c9",
+      "bytes": 1362
+    },
+    "tests/test_terrain_exposure_api.py": {
+      "sha256": "8f9d4ddaf7fa87b685f1844d75a8c4ac21eefe1c1befa3fb0df162cfe86bd600",
+      "bytes": 5613
+    },
+    "trend_lab/PACKAGE_VERIFICATION.json": {
+      "sha256": "0340def94089fca393080661ec23b9a3adbd21f33e2e00cff80ea41d3b9278b1",
+      "bytes": 556
+    },
+    "trend_lab/README.md": {
+      "sha256": "8707898d93bc0dda24bb510ce02a9b0924d5ffa8a58ec1d8afd6b9f78bdd96ec",
+      "bytes": 6299
+    },
+    "trend_lab/SATQuery_Trend_Lab.html": {
+      "sha256": "190843ceca2321f1f23398417a61d2ae53ebea92912bb275d8e1420ab208409e",
+      "bytes": 431649
+    },
+    "trend_lab/VERIFICATION.md": {
+      "sha256": "742ce1a0fb530cab14c430873733e6886ba9f299edfc118b7df3216321dd1015",
+      "bytes": 4689
+    },
+    "trend_lab/acquire.py": {
+      "sha256": "64f99f5967c78a3f31b31a594ce1b1d5c69cdc10ee4931d60192b7c72c45fc1b",
+      "bytes": 2263
+    },
+    "trend_lab/analysis.py": {
+      "sha256": "459b12ca2e85fa2c5f74bccf410f586e426e41f5baa9bef9c900a0c79341c270",
+      "bytes": 6247
+    },
+    "trend_lab/config.py": {
+      "sha256": "33c1557bc15ae4b523a81ad8e35defcf561f3bdacbd4ba78b1f7b102cc0fc2b6",
+      "bytes": 1201
+    },
+    "trend_lab/data/analysis.json": {
+      "sha256": "cfc1bdc33b806912843041d58a584efeff1125096a034dd3882ef00ab0228dea",
+      "bytes": 103790
+    },
+    "trend_lab/data/delhi.json": {
+      "sha256": "d1f2e4df7f35d5f9d89f1cb43ea82df8fdbcd7c027fdd90d7140c3b9948ed840",
+      "bytes": 16284
+    },
+    "trend_lab/data/fairbanks.json": {
+      "sha256": "4bd506b97fa56ea10d807d13a6eaf6c0e92820cfcc6da47270acfd0298f52a04",
+      "bytes": 16430
+    },
+    "trend_lab/data/manaus.json": {
+      "sha256": "89d8fa8a36df806f86d74f08b2d27340d2906654b34cb81a861a109f4f40eded",
+      "bytes": 16339
+    },
+    "trend_lab/data/manifest.json": {
+      "sha256": "1598002fea47f259917d640e85bcc27f519ed0058d4790bd7db30ebcedd8ddf3",
+      "bytes": 7592
+    },
+    "trend_lab/data/nairobi.json": {
+      "sha256": "cef571483ebefd2f12d6cd0698e961c0eeee43dfcebe3277f64b6eb00da73b9a",
+      "bytes": 16312
+    },
+    "trend_lab/data/reykjavik.json": {
+      "sha256": "a885927140d69709c84e8bfab24cceaa7a8c2d1869f859a4f91abba4cb871941",
+      "bytes": 15914
+    },
+    "trend_lab/data/sydney.json": {
+      "sha256": "6576967f6fb120cb31ebefbaec2b37332a9d8521624bc7bf15b3602859d4e249",
+      "bytes": 16295
+    },
+    "trend_lab/export.py": {
+      "sha256": "2f2b43f72bc5d26f87103514d47f234ed8a4e42b4f98b8caafb77679b4e78871",
+      "bytes": 3079
+    },
+    "trend_lab/requirements-lock.txt": {
+      "sha256": "b2e3a545628459dfc87531642560b1446a1314bfba19c99feb45e0260780a1a2",
+      "bytes": 223
+    },
+    "trend_lab/requirements.txt": {
+      "sha256": "bbadc71b7a024dc92e86715bf29e0887022179dfa3c1ad5a80f95e3594c8e149",
+      "bytes": 47
+    },
+    "trend_lab/test_analysis.py": {
+      "sha256": "c8adcc0fbc1f3933b6bd020576bc123b7cf23f88b3274a106fa93072cb5d51c4",
+      "bytes": 4937
+    },
+    "trend_lab/test_question.cjs": {
+      "sha256": "667d27ca1296efbb249d05fa15ff166f94bb32d0bc276f5e8517b81bd568d43d",
+      "bytes": 985
+    },
+    "trend_lab/verify_package.py": {
+      "sha256": "2b0058b70d0e15ef6db40d3b4c1855b1e4cdb48ead8aa50fe284cfbd14ccf4fb",
+      "bytes": 4149
+    },
+    "trend_lab/web/app.js": {
+      "sha256": "e1e1dede02f63b3529712697d5075f512c3c8dbc94fb1f301b880cc4bb3cd048",
+      "bytes": 11468
+    },
+    "trend_lab/web/data/analysis.json": {
+      "sha256": "41baa6272738bbe7d878e5e16f42d433a8698cde8de683f156dabc75b9f1fd32",
+      "bytes": 269976
+    },
+    "trend_lab/web/data/manifest.json": {
+      "sha256": "1598002fea47f259917d640e85bcc27f519ed0058d4790bd7db30ebcedd8ddf3",
+      "bytes": 7592
+    },
+    "trend_lab/web/data/sources/delhi.json": {
+      "sha256": "d1f2e4df7f35d5f9d89f1cb43ea82df8fdbcd7c027fdd90d7140c3b9948ed840",
+      "bytes": 16284
+    },
+    "trend_lab/web/data/sources/fairbanks.json": {
+      "sha256": "4bd506b97fa56ea10d807d13a6eaf6c0e92820cfcc6da47270acfd0298f52a04",
+      "bytes": 16430
+    },
+    "trend_lab/web/data/sources/manaus.json": {
+      "sha256": "89d8fa8a36df806f86d74f08b2d27340d2906654b34cb81a861a109f4f40eded",
+      "bytes": 16339
+    },
+    "trend_lab/web/data/sources/nairobi.json": {
+      "sha256": "cef571483ebefd2f12d6cd0698e961c0eeee43dfcebe3277f64b6eb00da73b9a",
+      "bytes": 16312
+    },
+    "trend_lab/web/data/sources/reykjavik.json": {
+      "sha256": "a885927140d69709c84e8bfab24cceaa7a8c2d1869f859a4f91abba4cb871941",
+      "bytes": 15914
+    },
+    "trend_lab/web/data/sources/sydney.json": {
+      "sha256": "6576967f6fb120cb31ebefbaec2b37332a9d8521624bc7bf15b3602859d4e249",
+      "bytes": 16295
+    },
+    "trend_lab/web/index.html": {
+      "sha256": "6329613f261a68bec04a85793ea0ac77df73e09b59f4ba5b732a003e9807104e",
+      "bytes": 8853
+    },
+    "trend_lab/web/land.geojson": {
+      "sha256": "9e0729ee253ca7d7a5c4ae9395fb1902264c5377c52e224d13dd85010e2835d9",
+      "bytes": 138160
+    },
+    "trend_lab/web/snapshot.html": {
+      "sha256": "190843ceca2321f1f23398417a61d2ae53ebea92912bb275d8e1420ab208409e",
+      "bytes": 431649
+    },
+    "trend_lab/web/style.css": {
+      "sha256": "9f458cdcbb36789460fda31f32e7a187e6b33c9474bb4bc132d1f91bde7f8e02",
+      "bytes": 8403
+    }
+  }
+}

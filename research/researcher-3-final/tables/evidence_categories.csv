@@ -1,0 +1,11 @@
+cohort,category,count,interpretation
+Ahr,A,3,supported nominal model; all required available sensitivity checks agree
+Ahr,B,20,"nominal model supported, alternate evidence changes the relationship or leaves robustness indeterminate; disclose which"
+Ahr,NO_MODELED_WITNESS,37,No positive-length nominal witness
+Ahr,C,0,missing required evidence for this claim; withhold only the dependent claim
+Ahr,D,0,valid independent observation contradicts the specified target; block its physical escalation
+Ahr,E,60,scale cannot resolve the specified structure; no asset-scale or absence claim
+Ahr,F,0,"independent, target-matched support; endpoint and directed traversal separately recorded"
+ADCP,complete_and_compatible,2,1 within 45 degrees in the consumed diagnostic
+ADCP,complete_and_discordant,15,5 within 45 degrees in the consumed diagnostic
+ADCP,auxiliary_variant_unavailable,25,7 within 45 degrees in the consumed diagnostic

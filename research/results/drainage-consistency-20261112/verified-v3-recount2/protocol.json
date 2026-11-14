@@ -1,0 +1,173 @@
+{
+  "arms": {
+    "A": [
+      "terrain"
+    ],
+    "B": [
+      "terrain",
+      "vegetation"
+    ],
+    "C": [
+      "terrain",
+      "water"
+    ],
+    "D": [
+      "terrain",
+      "morphology"
+    ],
+    "E": [
+      "terrain",
+      "outlet"
+    ],
+    "F": [
+      "terrain",
+      "vegetation",
+      "water",
+      "morphology",
+      "outlet"
+    ]
+  },
+  "baseline_commit": "f53fa04e7e33ba6beddc72e7cb349a488261aa45",
+  "cases": [
+    "nepal",
+    "varanasi",
+    "sangam-vihar"
+  ],
+  "categories": [
+    "SUPPORTED_DIRECTION",
+    "CONFLICTING_EVIDENCE",
+    "AMBIGUOUS_DIRECTION",
+    "INSUFFICIENT_SPATIAL_RESOLUTION",
+    "INSUFFICIENT_OBSERVATION",
+    "REFERENCE_UNAVAILABLE"
+  ],
+  "decision_order": [
+    "resolution gate",
+    "required observation gate",
+    "water-corridor conflict if eligible and robust across thresholds",
+    "missing independent outlet for outlet arm",
+    "vegetation threshold sensitivity or width ambiguity",
+    "outlet-consistent direction with water support and no conflicts",
+    "ambiguous computational direction"
+  ],
+  "dem": {
+    "conditioning": [
+      "fill",
+      "none"
+    ],
+    "no_postevent_terrain": true,
+    "primary": {
+      "conditioning": "fill",
+      "resolution_m": 30,
+      "stream_area_m2": 100000
+    },
+    "resolution_m": [
+      30,
+      90
+    ],
+    "source": "retained historical Copernicus GLO30",
+    "stream_area_m2": [
+      50000,
+      100000,
+      200000
+    ]
+  },
+  "evaluation": {
+    "eligible_direction_accuracy": "only independent verified labels with adequate scale and registration; otherwise null, never zero or100%",
+    "flag_validation": "error=independent direction mismatch only on eligible reaches; count correct/false flags and abstention; otherwise null",
+    "location": "model-stream\u2194mapped-drain distances and clear spectral corridor association, not physical accuracy",
+    "raw_direction_diagnostic": "cosine sign of local D8 vectors against independent supplied from\u2192to annotation, tangent matched to geometry; threshold cos>0, unavailable zero/outlet vectors; not physical truth",
+    "seed": 20261112,
+    "uncertainty": "No pixel-bootstrap inference; report case/reach dependence; no CI with insufficient independently labelled basins"
+  },
+  "features": {
+    "morphology": "skeleton/apparent wetted diameter, Theil-Sen median pairwise width slope along terrain orientation; not bathymetry/incision/flow proof",
+    "spectral_conflict_fraction": 0.2,
+    "threshold_instability_range": 0.4,
+    "vegetation": "NDVI distribution, corridor-minus-flank contrast, below-threshold occupancy/continuity; no directional vote",
+    "water_support": "fraction of clear samples within30m of water; connected-component persistence and near-stream skeleton width; threshold range reported",
+    "width_trend_min_change_m": 20
+  },
+  "frozen_date": "2026-11-12",
+  "independence": {
+    "delhi_reference": "Previously consumed GSDL mapped geometry. From/To coordinates + INLETNODE/OUTLETNODE are administrative annotations, not verified observed flow; evaluate raw annotation association separately from scale/registration-qualified accuracy.",
+    "direction_truth": "UNAVAILABLE unless independently verified reach labels supplied",
+    "no_groundtruth_dem_or_width": true,
+    "no_reference_used_as_predictor": true,
+    "outlet_and_validation_source_ids_must_be_disjoint": true,
+    "registration": "UNVERIFIED; no residual invented"
+  },
+  "restrictions": {
+    "application_changes": false,
+    "historical_results_changes": false,
+    "new_training": false,
+    "paid_calls": false,
+    "publication_or_push": false,
+    "reserved_worldfloods_access": false
+  },
+  "role": "DEVELOPMENT ONLY; prespecified exploratory pilot, not independent physical-direction validation",
+  "schema": "satquery.drainage-consistency/1",
+  "spectral": {
+    "denominator_epsilon": 1e-08,
+    "formulas": {
+      "MNDWI": "(GREEN-SWIR16)/(GREEN+SWIR16)",
+      "NDVI": "(NIR-RED)/(NIR+RED)",
+      "NDWI": "(GREEN-NIR)/(GREEN+NIR)"
+    },
+    "native_swir_m": 20,
+    "ndvi_thresholds": [
+      0.0,
+      0.2,
+      0.4
+    ],
+    "quality_scl": [
+      4,
+      5,
+      6
+    ],
+    "thresholds_are_correlated": true,
+    "water_thresholds": [
+      -0.1,
+      0.0,
+      0.1
+    ]
+  },
+  "targeted_ablations": [
+    "F_no_vegetation",
+    "F_no_water",
+    "F_no_morphology",
+    "F_no_outlet"
+  ],
+  "units": {
+    "corridor_halfwidth_m": 30,
+    "engineered": "Positive-length clipped mapped drain features; use geometry as evaluation unit only, not predictor; raw from/to/node attributes evaluated only after predictions sealed",
+    "flank_inner_m": 60,
+    "flank_outer_m": 90,
+    "minimum_clear_fraction": 0.8,
+    "minimum_feature_cells": 2,
+    "minimum_width_m": 40,
+    "minimum_width_samples": 5,
+    "natural": "Nonoverlapping D8 stream reaches between junctions/endpoints on primary network; split at300m, retain >=90m; freeze before reference comparison. Other DEM settings sampled on same primary geometries.",
+    "sample_spacing_m": 10
+  },
+  "urban_optical": {
+    "bands": [
+      "blue",
+      "green",
+      "red",
+      "nir",
+      "swir16",
+      "scl"
+    ],
+    "collection": "sentinel-2-l2a",
+    "development_data": true,
+    "if_no_eligible_scene": "retain failure, no convenient replacement",
+    "maximum_native_pixels_per_band": 4000000,
+    "maximum_total_native_download_mib": 96,
+    "periods": [
+      "2023-10-01T00:00:00Z/2023-11-30T23:59:59Z",
+      "2024-10-01T00:00:00Z/2024-11-30T23:59:59Z"
+    ],
+    "selection": "First metadata-ranked full-ROI scene: ascending eo:cloud_cover, datetime, id; maximum100 metadata items per period; no pixel/reference/metric selection"
+  }
+}

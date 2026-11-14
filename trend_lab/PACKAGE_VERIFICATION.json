@@ -1,0 +1,16 @@
+{
+  "source_files": 6,
+  "analyses": 36,
+  "annual_values_recounted": 1008,
+  "checks": [
+    "embedded raw-source bytes and hashes",
+    "source coordinates and source type",
+    "complete monthly coverage",
+    "annual aggregation including NASA annual temperature summaries",
+    "independent OLS slope formula",
+    "independent Holm correction over 36 tests",
+    "self-contained packaging"
+  ],
+  "result": "pass",
+  "scope": "Software, source integrity and arithmetic; not independent scientific validation or causal attribution."
+}

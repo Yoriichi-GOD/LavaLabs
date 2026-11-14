@@ -1,0 +1,238 @@
+{
+  "schema": 1,
+  "source": "NASA POWER / MERRA-2 reanalysis",
+  "start": 1984,
+  "end": 2025,
+  "selection": "Six predetermined demonstration coordinates; no global coverage or city-scale resolution is claimed.",
+  "si_disclosure": "OpenAI Codex assisted acquisition/analysis code and documentation. Original NASA data values are retained unchanged.",
+  "entries": [
+    {
+      "region": {
+        "id": "delhi",
+        "name": "Delhi",
+        "country": "India",
+        "lat": 28.614,
+        "lon": 77.209
+      },
+      "file": "delhi.json",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M%2CPRECTOTCORR&community=AG&longitude=77.209&latitude=28.614&start=1984&end=2025&format=JSON",
+      "retrieved_utc": "2026-11-14T04:23:42.480825+00:00",
+      "sha256": "d1f2e4df7f35d5f9d89f1cb43ea82df8fdbcd7c027fdd90d7140c3b9948ed840",
+      "bytes": 16284,
+      "header": {
+        "title": "NASA/POWER Source Native Resolution Monthly and Annual",
+        "api": {
+          "version": "v2.10.0",
+          "name": "POWER Monthly and Annual API"
+        },
+        "sources": [
+          "MERRA2"
+        ],
+        "fill_value": -999.0,
+        "time_standard": "LST",
+        "start": "19840101",
+        "end": "20251231"
+      },
+      "parameters": {
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        }
+      }
+    },
+    {
+      "region": {
+        "id": "manaus",
+        "name": "Manaus",
+        "country": "Brazil",
+        "lat": -3.119,
+        "lon": -60.022
+      },
+      "file": "manaus.json",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M%2CPRECTOTCORR&community=AG&longitude=-60.022&latitude=-3.119&start=1984&end=2025&format=JSON",
+      "retrieved_utc": "2026-11-14T04:23:43.779125+00:00",
+      "sha256": "89d8fa8a36df806f86d74f08b2d27340d2906654b34cb81a861a109f4f40eded",
+      "bytes": 16339,
+      "header": {
+        "title": "NASA/POWER Source Native Resolution Monthly and Annual",
+        "api": {
+          "version": "v2.10.0",
+          "name": "POWER Monthly and Annual API"
+        },
+        "sources": [
+          "MERRA2"
+        ],
+        "fill_value": -999.0,
+        "time_standard": "LST",
+        "start": "19840101",
+        "end": "20251231"
+      },
+      "parameters": {
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        }
+      }
+    },
+    {
+      "region": {
+        "id": "nairobi",
+        "name": "Nairobi",
+        "country": "Kenya",
+        "lat": -1.286,
+        "lon": 36.817
+      },
+      "file": "nairobi.json",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M%2CPRECTOTCORR&community=AG&longitude=36.817&latitude=-1.286&start=1984&end=2025&format=JSON",
+      "retrieved_utc": "2026-11-14T04:23:45.005021+00:00",
+      "sha256": "cef571483ebefd2f12d6cd0698e961c0eeee43dfcebe3277f64b6eb00da73b9a",
+      "bytes": 16312,
+      "header": {
+        "title": "NASA/POWER Source Native Resolution Monthly and Annual",
+        "api": {
+          "version": "v2.10.0",
+          "name": "POWER Monthly and Annual API"
+        },
+        "sources": [
+          "MERRA2"
+        ],
+        "fill_value": -999.0,
+        "time_standard": "LST",
+        "start": "19840101",
+        "end": "20251231"
+      },
+      "parameters": {
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        }
+      }
+    },
+    {
+      "region": {
+        "id": "sydney",
+        "name": "Sydney",
+        "country": "Australia",
+        "lat": -33.869,
+        "lon": 151.209
+      },
+      "file": "sydney.json",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M%2CPRECTOTCORR&community=AG&longitude=151.209&latitude=-33.869&start=1984&end=2025&format=JSON",
+      "retrieved_utc": "2026-11-14T04:23:45.524756+00:00",
+      "sha256": "6576967f6fb120cb31ebefbaec2b37332a9d8521624bc7bf15b3602859d4e249",
+      "bytes": 16295,
+      "header": {
+        "title": "NASA/POWER Source Native Resolution Monthly and Annual",
+        "api": {
+          "version": "v2.10.0",
+          "name": "POWER Monthly and Annual API"
+        },
+        "sources": [
+          "MERRA2"
+        ],
+        "fill_value": -999.0,
+        "time_standard": "LST",
+        "start": "19840101",
+        "end": "20251231"
+      },
+      "parameters": {
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        }
+      }
+    },
+    {
+      "region": {
+        "id": "fairbanks",
+        "name": "Fairbanks",
+        "country": "United States",
+        "lat": 64.838,
+        "lon": -147.716
+      },
+      "file": "fairbanks.json",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M%2CPRECTOTCORR&community=AG&longitude=-147.716&latitude=64.838&start=1984&end=2025&format=JSON",
+      "retrieved_utc": "2026-11-14T04:23:46.828532+00:00",
+      "sha256": "4bd506b97fa56ea10d807d13a6eaf6c0e92820cfcc6da47270acfd0298f52a04",
+      "bytes": 16430,
+      "header": {
+        "title": "NASA/POWER Source Native Resolution Monthly and Annual",
+        "api": {
+          "version": "v2.10.0",
+          "name": "POWER Monthly and Annual API"
+        },
+        "sources": [
+          "MERRA2"
+        ],
+        "fill_value": -999.0,
+        "time_standard": "LST",
+        "start": "19840101",
+        "end": "20251231"
+      },
+      "parameters": {
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        }
+      }
+    },
+    {
+      "region": {
+        "id": "reykjavik",
+        "name": "Reykjavík",
+        "country": "Iceland",
+        "lat": 64.147,
+        "lon": -21.94
+      },
+      "file": "reykjavik.json",
+      "url": "https://power.larc.nasa.gov/api/temporal/monthly/point?parameters=T2M%2CPRECTOTCORR&community=AG&longitude=-21.94&latitude=64.147&start=1984&end=2025&format=JSON",
+      "retrieved_utc": "2026-11-14T04:23:48.114846+00:00",
+      "sha256": "a885927140d69709c84e8bfab24cceaa7a8c2d1869f859a4f91abba4cb871941",
+      "bytes": 15914,
+      "header": {
+        "title": "NASA/POWER Source Native Resolution Monthly and Annual",
+        "api": {
+          "version": "v2.10.0",
+          "name": "POWER Monthly and Annual API"
+        },
+        "sources": [
+          "MERRA2"
+        ],
+        "fill_value": -999.0,
+        "time_standard": "LST",
+        "start": "19840101",
+        "end": "20251231"
+      },
+      "parameters": {
+        "PRECTOTCORR": {
+          "units": "mm/day",
+          "longname": "Precipitation Corrected"
+        },
+        "T2M": {
+          "units": "C",
+          "longname": "Temperature at 2 Meters"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "acquisition_sha256": "ade3526d2bb3902db882baae61e8a25713b8b149dc0fd54edacf220e392f5fbf",
+  "cases": {
+    "nepal": {
+      "clear_units": 24,
+      "distinct_native_merit_cells_at_samples": 218,
+      "fixed_samples": 1690,
+      "glo30_merit": {
+        "at_least_90deg": 148,
+        "median_angle_deg": 4.245003720031248,
+        "over_1deg": 1393,
+        "over_45deg": 543,
+        "p90_angle_deg": 89.21350533433133,
+        "paired_samples": 1688,
+        "samples": 1690,
+        "source_a_available": 1688,
+        "source_b_available": 1690
+      },
+      "glo90_merit": {
+        "at_least_90deg": 119,
+        "median_angle_deg": 4.244806807325174,
+        "over_1deg": 1327,
+        "over_45deg": 578,
+        "p90_angle_deg": 49.24074078658713,
+        "paired_samples": 1682,
+        "samples": 1690,
+        "source_a_available": 1682,
+        "source_b_available": 1690
+      },
+      "opposite_majority_unit_orientations": 1,
+      "orientable_unit_pairs": 67,
+      "physical_direction_accuracy": null,
+      "physical_reference_units": 0,
+      "sampled_unique_cell_upstream_count": {
+        "maximum": 538240,
+        "median": 10.0,
+        "unit": "upstream grid cells, not km2",
+        "valid_cells": 218
+      },
+      "units": 68,
+      "vegetation_unstable_units": 9,
+      "water_warning_comparator_contingency": {
+        "warning_False_comparator_disagree_False": 10,
+        "warning_False_comparator_disagree_True": 0,
+        "warning_True_comparator_disagree_False": 13,
+        "warning_True_comparator_disagree_True": 1
+      },
+      "water_warnings": 14,
+      "width_trend_counts": {
+        "narrowing": 0,
+        "small": 3,
+        "unavailable": 65,
+        "widening": 0
+      }
+    },
+    "sangam-vihar": {
+      "clear_units": 83,
+      "distinct_native_merit_cells_at_samples": 95,
+      "fixed_samples": 968,
+      "glo30_merit": {
+        "at_least_90deg": 422,
+        "median_angle_deg": 87.52885561023925,
+        "over_1deg": 960,
+        "over_45deg": 670,
+        "p90_angle_deg": 139.613194340293,
+        "paired_samples": 960,
+        "samples": 968,
+        "source_a_available": 960,
+        "source_b_available": 968
+      },
+      "glo90_merit": {
+        "at_least_90deg": 375,
+        "median_angle_deg": 85.3834181794084,
+        "over_1deg": 956,
+        "over_45deg": 656,
+        "p90_angle_deg": 137.48050258430402,
+        "paired_samples": 956,
+        "samples": 968,
+        "source_a_available": 956,
+        "source_b_available": 968
+      },
+      "opposite_majority_unit_orientations": 31,
+      "orientable_unit_pairs": 77,
+      "physical_direction_accuracy": null,
+      "physical_reference_units": 0,
+      "sampled_unique_cell_upstream_count": {
+        "maximum": 1154,
+        "median": 1.0,
+        "unit": "upstream grid cells, not km2",
+        "valid_cells": 95
+      },
+      "units": 83,
+      "vegetation_unstable_units": 64,
+      "water_warning_comparator_contingency": {
+        "warning_False_comparator_disagree_False": 1,
+        "warning_False_comparator_disagree_True": 3,
+        "warning_True_comparator_disagree_False": 45,
+        "warning_True_comparator_disagree_True": 28
+      },
+      "water_warnings": 79,
+      "width_trend_counts": {
+        "narrowing": 0,
+        "small": 0,
+        "unavailable": 83,
+        "widening": 0
+      }
+    },
+    "varanasi": {
+      "clear_units": 2162,
+      "distinct_native_merit_cells_at_samples": 7498,
+      "fixed_samples": 56763,
+      "glo30_merit": {
+        "at_least_90deg": 20364,
+        "median_angle_deg": 48.59360162949874,
+        "over_1deg": 52816,
+        "over_45deg": 36333,
+        "p90_angle_deg": 136.86676311510664,
+        "paired_samples": 56701,
+        "samples": 56763,
+        "source_a_available": 56701,
+        "source_b_available": 56763
+      },
+      "glo90_merit": {
+        "at_least_90deg": 17559,
+        "median_angle_deg": 46.866452701131394,
+        "over_1deg": 49159,
+        "over_45deg": 33457,
+        "p90_angle_deg": 136.85967284631965,
+        "paired_samples": 56486,
+        "samples": 56763,
+        "source_a_available": 56486,
+        "source_b_available": 56763
+      },
+      "opposite_majority_unit_orientations": 691,
+      "orientable_unit_pairs": 2120,
+      "physical_direction_accuracy": null,
+      "physical_reference_units": 0,
+      "sampled_unique_cell_upstream_count": {
+        "maximum": 60830811,
+        "median": 2.0,
+        "unit": "upstream grid cells, not km2",
+        "valid_cells": 7498
+      },
+      "units": 2184,
+      "vegetation_unstable_units": 802,
+      "water_warning_comparator_contingency": {
+        "warning_False_comparator_disagree_False": 132,
+        "warning_False_comparator_disagree_True": 85,
+        "warning_True_comparator_disagree_False": 1290,
+        "warning_True_comparator_disagree_True": 593
+      },
+      "water_warnings": 1941,
+      "width_trend_counts": {
+        "narrowing": 9,
+        "small": 30,
+        "unavailable": 2138,
+        "widening": 7
+      }
+    }
+  },
+  "prior_manifest_sha256": "a222f2c011faa53dc2112d4601014efe4215565f2b5d02405e60b7a5f9311974",
+  "protocol_sha256": "131debef53eb79b0d93d9741fd1a819c06302544129c40a22dd288f26a7cd9cf",
+  "role": "MODELED_SOURCE_COMPARISON_NOT_PHYSICAL_ACCURACY",
+  "schema": "satquery.merit-comparison/1",
+  "source_commit": "705279c3e9d6bb651d0063bf2bcd4305c4c930b1"
+}

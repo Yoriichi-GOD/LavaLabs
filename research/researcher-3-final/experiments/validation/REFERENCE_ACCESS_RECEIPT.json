@@ -1,0 +1,31 @@
+{
+  "scope": "Metadata-only access check. No candidate velocity outcome labels opened or scored.",
+  "probes": [
+    {
+      "item": "Tanana/Nenana",
+      "doi": "10.5066/P968OENT",
+      "url": "https://www.sciencebase.gov/catalog/item/62389ff6d34e915b67cc45bc?format=json",
+      "http_status": 403,
+      "source": "direct request from scientific environment"
+    },
+    {
+      "item": "Missouri/Mississippi bridges 2022",
+      "doi": "10.5066/P9K66GYC",
+      "url": "https://www.sciencebase.gov/catalog/item/641a0fb6d34eb496d1d2a1b7?format=json",
+      "http_status": 403,
+      "source": "direct request from scientific environment"
+    },
+    {
+      "item": "Tanana attachment",
+      "url": "https://www.sciencebase.gov/catalog/file/get/62389ff6d34e915b67cc45bc?name=TananaADCP.csv",
+      "http_status": 403,
+      "source": "HEAD challenge; external reference audit"
+    },
+    {
+      "item": "Nenana attachment",
+      "url": "https://www.sciencebase.gov/catalog/file/get/62389ff6d34e915b67cc45bc?name=NenanaADCP.csv",
+      "http_status": 403,
+      "source": "HEAD challenge; external reference audit"
+    }
+  ]
+}

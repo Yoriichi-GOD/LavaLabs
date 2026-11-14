@@ -1,0 +1,130 @@
+{
+  "measurement_source_commit": "705279c3e9d6bb651d0063bf2bcd4305c4c930b1",
+  "observed_pooled_descriptive_recount": {
+    "GLO30_30m_fill": {
+      "at_most45deg": 13,
+      "available": 42,
+      "eligible_blocks": 42,
+      "median_angle_deg": 61.681720274342766,
+      "positive_cosine": 31
+    },
+    "GLO30_30m_none": {
+      "at_most45deg": 6,
+      "available": 17,
+      "eligible_blocks": 42,
+      "median_angle_deg": 67.69030504330279,
+      "positive_cosine": 10
+    },
+    "GLO30_90m_fill": {
+      "at_most45deg": 9,
+      "available": 42,
+      "eligible_blocks": 42,
+      "median_angle_deg": 76.28936067301258,
+      "positive_cosine": 27
+    },
+    "GLO30_90m_none": {
+      "at_most45deg": 7,
+      "available": 36,
+      "eligible_blocks": 42,
+      "median_angle_deg": 76.28936067301258,
+      "positive_cosine": 23
+    },
+    "MERIT_derived_native": {
+      "at_most45deg": 9,
+      "available": 42,
+      "eligible_blocks": 42,
+      "median_angle_deg": 86.7726735626559,
+      "positive_cosine": 24
+    }
+  },
+  "reference_identity": {
+    "archive_sha256": "805f1011ae32e6ee3f10b6195e9e8658dfd56cbb27105d21b93e896abe630df3",
+    "eligible_blocks_reconstructed": 42,
+    "published_csv_hashes_matched": 50,
+    "reference_tiles_reconstructed": 43,
+    "rows_recounted": 14468,
+    "speed_eligible_rows_recounted": 13829,
+    "uncompressed_csv_bytes": 949009
+  },
+  "regional_recount": {
+    "nepal": {
+      "fixed_samples": 1690,
+      "orientable_units": 67,
+      "paired_sources": {
+        "glo30": {
+          "at_least_90deg": 148,
+          "over_1deg": 1393,
+          "over_45deg": 543,
+          "paired_samples": 1688
+        },
+        "glo90": {
+          "at_least_90deg": 119,
+          "over_1deg": 1327,
+          "over_45deg": 578,
+          "paired_samples": 1682
+        }
+      },
+      "units": 68,
+      "warning_association": {
+        "warning_False_comparator_disagree_False": 10,
+        "warning_False_comparator_disagree_True": 0,
+        "warning_True_comparator_disagree_False": 13,
+        "warning_True_comparator_disagree_True": 1
+      }
+    },
+    "sangam-vihar": {
+      "fixed_samples": 968,
+      "orientable_units": 77,
+      "paired_sources": {
+        "glo30": {
+          "at_least_90deg": 422,
+          "over_1deg": 960,
+          "over_45deg": 670,
+          "paired_samples": 960
+        },
+        "glo90": {
+          "at_least_90deg": 375,
+          "over_1deg": 956,
+          "over_45deg": 656,
+          "paired_samples": 956
+        }
+      },
+      "units": 83,
+      "warning_association": {
+        "warning_False_comparator_disagree_False": 1,
+        "warning_False_comparator_disagree_True": 3,
+        "warning_True_comparator_disagree_False": 45,
+        "warning_True_comparator_disagree_True": 28
+      }
+    },
+    "varanasi": {
+      "fixed_samples": 56763,
+      "orientable_units": 2120,
+      "paired_sources": {
+        "glo30": {
+          "at_least_90deg": 20364,
+          "over_1deg": 52816,
+          "over_45deg": 36333,
+          "paired_samples": 56701
+        },
+        "glo90": {
+          "at_least_90deg": 17559,
+          "over_1deg": 49159,
+          "over_45deg": 33457,
+          "paired_samples": 56486
+        }
+      },
+      "units": 2184,
+      "warning_association": {
+        "warning_False_comparator_disagree_False": 132,
+        "warning_False_comparator_disagree_True": 85,
+        "warning_True_comparator_disagree_False": 1290,
+        "warning_True_comparator_disagree_True": 593
+      }
+    }
+  },
+  "same_input_repeat_identical_files": {
+    "observed": 5,
+    "regional": 9
+  }
+}

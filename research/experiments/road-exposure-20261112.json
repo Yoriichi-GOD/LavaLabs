@@ -1,0 +1,49 @@
+{
+  "schema": "satquery.road-exposure/1",
+  "target": "Agreement with SpaceNet 8 Maxar-image interpretations of road segments visibly covered by water or rubble. This is conditional screening on supplied road geometries.",
+  "population": {
+    "region": "Germany_Training_Public",
+    "selection": "All official mapping rows with the single post-image catalogue 10500500E6DD3C00; no second post image",
+    "expected_tiles": 122,
+    "mapping_sha256": "6eb036a70cdd19f15fb9dabc067e8c41a79d7cea8e4b3927d5188661d7e5e45e",
+    "image_envelope_wgs84": [6.976108584859848,50.47268852142039,7.063694325061571,50.54567663825516],
+    "reference_date": "2021-07-18",
+    "source": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/",
+    "license": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "max_annotation_bytes": 67108864
+  },
+  "observations": {
+    "crs": "EPSG:32632",
+    "optical_grid_m": 20,
+    "pre_dates": "2021-06-20T00:00:00Z/2021-07-12T23:59:59Z",
+    "post_dates": "2021-07-18T00:00:00Z/2021-07-18T23:59:59Z",
+    "selection": "For pre use the single full-envelope Earth Search S2 L2A scene with least scene cloud, then latest time, then ID. Post is the same-day full-envelope scene S2A_32ULB_20210718_1_L2A. Require full scene support for the reference envelope plus the analysis halo.",
+    "bands": ["green","red","nir","swir16","scl"],
+    "valid_scl": [4,5,6],
+    "reflectance": "Use explicit Earth Search BOA offset flag and asset calibration, identical to prior drainage experiments",
+    "domain_halo_m": 300,
+    "terrain_m": 30,
+    "terrain": "Copernicus GLO-30, one 30 m projected grid, bilinear resampling, fill and D8. Keep native scale limitations.",
+    "independent_outlet": "Unavailable; no outlet-constrained arm or claimed gain"
+  },
+  "unit": {
+    "type": "Native mapped highway LineString or MultiLineString in label file",
+    "sampling": "Subdivide each part into equal-length bins at most 10 m long and sample at bin midpoints, weighted by represented length. No geometry buffering for direct hits.",
+    "eligibility": "Finite valid terrain and paired clear optical at >=80% of centreline quadrature support and length >=20 m. Exact geometries deduplicated with conflicts excluded after labels.",
+    "reference_label": "Explicit flooded yes or no; absent or ambiguous labels remain unknown. Use source label on its supplied geometry, which can include rubble."
+  },
+  "comparison": {
+    "A_post": "Post MNDWI>0 fraction of eligible road support",
+    "B_change": "Post MNDWI>0 AND pre MNDWI<=0 fraction of eligible road support",
+    "P_proximity": "B direct fraction, then negative closest Euclidean distance to a change candidate in the same 30 m seed raster used by D8, capped beyond 300 m",
+    "C_terrain": "B direct fraction, then negative shortest D8 path distance from that same seed raster. Stop at 300 m; unknown cells break paths.",
+    "B_ndvi": "B change fraction excluding post NDVI>0.2",
+    "B_ndwi": "B change fraction requiring post NDWI>0",
+    "prediction_threshold": "Direct fraction >=0.2. For P and C also flag proximity or path distance <=90 m.",
+    "review": "For B binary error triage compare margin to the 0.2 road threshold against flag-first rankings. NDWI flags if the B decision changes under the NDWI filter; NDVI flags if it changes under the NDVI filter. Ties by stable road ID.",
+    "review_budget": 0.2,
+    "metrics": "Threshold average precision and top-budget retrieval with tie handling; TP FP FN TN, precision recall F1; equal-budget capture of baseline disagreements; class coverage, spatial blocks, and 30 m cardinal lookup perturbation on the same scored roads.",
+    "primary": "C vs P for benefit beyond proximity; C vs B and B vs A for secondary interpretation. Added indices are separate ablations. Single event descriptive agreement, no geographic inference or label tuning.",
+    "release": "Save geometry-only road inputs and seal prediction rows before parsing flooded values. Public reference data stay local. Preserve missing and ambiguous labels."
+  }
+}

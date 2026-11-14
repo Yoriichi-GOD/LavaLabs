@@ -1,0 +1,44 @@
+{
+  "schema": "satquery.drainage-validation/1",
+  "frozen_before_new_raster_measurements": true,
+  "base_commit": "7dd9fb0620585e2605718cbeb289cc6dc7d73196",
+  "scope": "New-source sensitivity and conditional independent-reference testing, not a promised improvement",
+  "cases": ["nepal", "varanasi", "sangam-vihar"],
+  "units": "Exact accepted prior-pilot fixed geometries and 10 m interior quadrature; no outcome-based unit selection",
+  "source": {
+    "url_prefix": "https://mghydro.com/watersheds/data/",
+    "files": ["flowdir45.tif", "accum45.tif"],
+    "role": "MERIT-derived distributor mosaic; original MERIT version not verified; comparator not independent truth",
+    "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+    "accumulation_units": "upstream grid-cell count, not square kilometres",
+    "missing_bands": ["elv", "hnd", "wth"],
+    "native_sampling": "3 arc seconds in EPSG:4326; categorical directions sampled with nearest cell only",
+    "direction_codes": {"1": [1,0], "2": [1,1], "4": [0,1], "8": [-1,1], "16": [-1,0], "32": [-1,-1], "64": [0,-1], "128": [1,-1]},
+    "nonvector_codes": [0,247,255],
+    "acquisition_network_budget_mib": 64,
+    "maximum_native_crop_pixels": 1000000,
+    "native_crop_halo_cells": 2
+  },
+  "comparisons": {
+    "terrain": ["GLO30_30m_fill", "GLO30_90m_fill", "MERIT_derived_native"],
+    "sampling": "Project each geographic cell-centre and its downstream endpoint into the case metric CRS, then normalize; do not interpolate D8 codes",
+    "primary_direction_disagreement": "cosine <= 0, i.e. at least 90 degrees on paired valid vectors",
+    "secondary": "absolute angle > 45 degrees; any angle > 1 degree; per-unit majority of positive tangent projections, ties unknown",
+    "denominators": "All fixed samples, available vectors per source, paired samples, fixed units, orientable unit pairs and distinct native MERIT cells; correlated samples are not independent trials",
+    "registration_stress_m": [0,30,90],
+    "registration_stress": "At each nonzero distance use four cardinal shifts of MERIT sample positions only; a robustness stress, not a measured registration residual",
+    "water_warning": "Reuse frozen prior primary clear gate >=0.8 and max MNDWI near-water fraction over -0.1,0,+0.1 <0.2; warning association with comparator disagreement is not error precision",
+    "clerical_correction": "The initial ed27b42 text accidentally said0.5; corrected to the actual unchanged pilot threshold0.2 after checking its source protocol, before comparator scoring; no threshold selected from outcomes",
+    "ablation": "Report water/vegetation/morphology flags independently alongside the old final categories, avoiding gate-preemption; do not invent a learned fusion score",
+    "statistics": "Case-level descriptive comparisons only; no pixel-independent confidence intervals or favorable threshold selection"
+  },
+  "physical_reference": {
+    "priority": "Official published ADCP observed interior flow vectors, independently sourced outlet inputs",
+    "status_at_freeze": "Attachment access unresolved; no measurement rows read",
+    "sacramento_glenn_2023": "DEVELOPMENT ONLY: source metadata exposed aggregate signed velocity ranges; not unread/blinded",
+    "allegheny_2021_2022": "Prospective reference; schema/access only, do not read values before a separate frozen reference-specific protocol",
+    "rule": "No physical direction accuracy, routing-error precision/recall, outlet gain, calibration or geographic transfer claim without compatible observed labels and disjoint predictor sources"
+  },
+  "protected": ["all original artifacts", "day1-final", "application", "four reserved WorldFloods activations", "production/training defaults"],
+  "definition_of_done": ["bounded data acquired with receipts", "native-code and coordinate handling tested", "same-unit comparisons run", "independent arithmetic recount", "repeat check", "per-claim verdict and access gaps documented", "local genuine commits; no push"]
+}

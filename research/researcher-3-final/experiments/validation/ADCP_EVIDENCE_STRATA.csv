@@ -1,0 +1,4 @@
+evidence_stratum,units,within_45,over_45,agreement
+complete_and_compatible,2,1,1,0.5
+complete_and_discordant,15,5,10,0.3333333333333333
+auxiliary_variant_unavailable,25,7,18,0.28

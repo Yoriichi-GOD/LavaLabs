@@ -1,0 +1,784 @@
+[
+  {
+    "actual": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "case": "matched_alternative",
+    "expected": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "model_reasons": [],
+    "model_state": "A",
+    "modeled_scope": "nominal_model_with_compatible_required_alternatives",
+    "passed": true,
+    "physical_targets": {
+      "endpoint_exposure": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      },
+      "source_to_endpoint_traversal": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      }
+    },
+    "qualified_claims": [
+      "OBSERVED_CHANGE",
+      "GEOMETRIC_SCREENING_CANDIDATE",
+      "MODELED_TERRAIN_PATHWAY"
+    ],
+    "scale_state": "NOT_FLAGGED"
+  },
+  {
+    "actual": [
+      "B",
+      "nominal_model_only",
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "case": "conditioning_displaces_witness",
+    "expected": [
+      "B",
+      "nominal_model_only",
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "model_reasons": [
+      "ALTERNATIVE_RELATIONSHIP_CHANGED"
+    ],
+    "model_state": "B",
+    "modeled_scope": "nominal_model_only",
+    "passed": true,
+    "physical_targets": {
+      "endpoint_exposure": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      },
+      "source_to_endpoint_traversal": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      }
+    },
+    "qualified_claims": [
+      "OBSERVED_CHANGE",
+      "GEOMETRIC_SCREENING_CANDIDATE",
+      "MODELED_TERRAIN_PATHWAY"
+    ],
+    "scale_state": "NOT_FLAGGED"
+  },
+  {
+    "actual": [
+      "B",
+      "nominal_model_only",
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "case": "alternate_observation_missing",
+    "expected": [
+      "B",
+      "nominal_model_only",
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "model_reasons": [
+      "ALTERNATIVE_SUPPORT_UNAVAILABLE"
+    ],
+    "model_state": "B",
+    "modeled_scope": "nominal_model_only",
+    "passed": true,
+    "physical_targets": {
+      "endpoint_exposure": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      },
+      "source_to_endpoint_traversal": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      }
+    },
+    "qualified_claims": [
+      "OBSERVED_CHANGE",
+      "GEOMETRIC_SCREENING_CANDIDATE",
+      "MODELED_TERRAIN_PATHWAY"
+    ],
+    "scale_state": "NOT_FLAGGED"
+  },
+  {
+    "actual": [
+      "C",
+      null,
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "case": "required_imagery_missing",
+    "expected": [
+      "C",
+      null,
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "model_reasons": [
+      "NOMINAL_OBSERVATION_UNAVAILABLE"
+    ],
+    "model_state": "C",
+    "modeled_scope": null,
+    "passed": true,
+    "physical_targets": {
+      "endpoint_exposure": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      },
+      "source_to_endpoint_traversal": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      }
+    },
+    "qualified_claims": [],
+    "scale_state": "NOT_FLAGGED"
+  },
+  {
+    "actual": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "E"
+    ],
+    "case": "subgrid_culvert",
+    "expected": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "E"
+    ],
+    "model_reasons": [
+      "ASSET_SCALE_UNRESOLVED"
+    ],
+    "model_state": "A",
+    "modeled_scope": "nominal_model_with_compatible_required_alternatives",
+    "passed": true,
+    "physical_targets": {
+      "endpoint_exposure": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      },
+      "source_to_endpoint_traversal": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      }
+    },
+    "qualified_claims": [
+      "OBSERVED_CHANGE",
+      "GEOMETRIC_SCREENING_CANDIDATE",
+      "MODELED_TERRAIN_PATHWAY"
+    ],
+    "scale_state": "E"
+  },
+  {
+    "actual": [
+      "B",
+      "nominal_model_only",
+      true,
+      false,
+      "F",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "case": "registration_ambiguous_but_endpoint_observed",
+    "expected": [
+      "B",
+      "nominal_model_only",
+      true,
+      false,
+      "F",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "model_reasons": [
+      "ALTERNATIVE_RELATIONSHIP_CHANGED"
+    ],
+    "model_state": "B",
+    "modeled_scope": "nominal_model_only",
+    "passed": true,
+    "physical_targets": {
+      "endpoint_exposure": {
+        "contradicting_ids": [],
+        "qualified": true,
+        "state": "F",
+        "supporting_ids": [
+          "independent_endpoint"
+        ],
+        "unmatched": [],
+        "withholding_reason": null
+      },
+      "source_to_endpoint_traversal": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      }
+    },
+    "qualified_claims": [
+      "OBSERVED_CHANGE",
+      "GEOMETRIC_SCREENING_CANDIDATE",
+      "MODELED_TERRAIN_PATHWAY",
+      "INDEPENDENTLY_SUPPORTED_PHYSICAL_EXPOSURE"
+    ],
+    "scale_state": "NOT_FLAGGED"
+  },
+  {
+    "actual": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      false,
+      false,
+      "UNKNOWN",
+      "D",
+      "NOT_FLAGGED"
+    ],
+    "case": "stable_model_with_direction_contradicted",
+    "expected": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      false,
+      false,
+      "UNKNOWN",
+      "D",
+      "NOT_FLAGGED"
+    ],
+    "model_reasons": [],
+    "model_state": "A",
+    "modeled_scope": "nominal_model_with_compatible_required_alternatives",
+    "passed": true,
+    "physical_targets": {
+      "endpoint_exposure": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      },
+      "source_to_endpoint_traversal": {
+        "contradicting_ids": [
+          "independent_reverse"
+        ],
+        "qualified": false,
+        "state": "D",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "MATCHED_INDEPENDENT_CONTRADICTION"
+      }
+    },
+    "qualified_claims": [
+      "OBSERVED_CHANGE",
+      "GEOMETRIC_SCREENING_CANDIDATE",
+      "MODELED_TERRAIN_PATHWAY"
+    ],
+    "scale_state": "NOT_FLAGGED"
+  },
+  {
+    "actual": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "case": "same_source_cannot_corroborate",
+    "expected": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "model_reasons": [],
+    "model_state": "A",
+    "modeled_scope": "nominal_model_with_compatible_required_alternatives",
+    "passed": true,
+    "physical_targets": {
+      "endpoint_exposure": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [
+          {
+            "failed": [
+              "independent_lineage"
+            ],
+            "identity": "same_imagery"
+          }
+        ],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      },
+      "source_to_endpoint_traversal": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      }
+    },
+    "qualified_claims": [
+      "OBSERVED_CHANGE",
+      "GEOMETRIC_SCREENING_CANDIDATE",
+      "MODELED_TERRAIN_PATHWAY"
+    ],
+    "scale_state": "NOT_FLAGGED"
+  },
+  {
+    "actual": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "case": "out_of_time_cannot_contradict",
+    "expected": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "model_reasons": [],
+    "model_state": "A",
+    "modeled_scope": "nominal_model_with_compatible_required_alternatives",
+    "passed": true,
+    "physical_targets": {
+      "endpoint_exposure": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      },
+      "source_to_endpoint_traversal": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [
+          {
+            "failed": [
+              "time_matches"
+            ],
+            "identity": "wrong_date"
+          }
+        ],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      }
+    },
+    "qualified_claims": [
+      "OBSERVED_CHANGE",
+      "GEOMETRIC_SCREENING_CANDIDATE",
+      "MODELED_TERRAIN_PATHWAY"
+    ],
+    "scale_state": "NOT_FLAGGED"
+  },
+  {
+    "actual": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      true,
+      false,
+      "F",
+      "D",
+      "NOT_FLAGGED"
+    ],
+    "case": "independent_endpoint_and_contradicted_traversal",
+    "expected": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      true,
+      false,
+      "F",
+      "D",
+      "NOT_FLAGGED"
+    ],
+    "model_reasons": [],
+    "model_state": "A",
+    "modeled_scope": "nominal_model_with_compatible_required_alternatives",
+    "passed": true,
+    "physical_targets": {
+      "endpoint_exposure": {
+        "contradicting_ids": [],
+        "qualified": true,
+        "state": "F",
+        "supporting_ids": [
+          "wet_endpoint"
+        ],
+        "unmatched": [],
+        "withholding_reason": null
+      },
+      "source_to_endpoint_traversal": {
+        "contradicting_ids": [
+          "opposed_route"
+        ],
+        "qualified": false,
+        "state": "D",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "MATCHED_INDEPENDENT_CONTRADICTION"
+      }
+    },
+    "qualified_claims": [
+      "OBSERVED_CHANGE",
+      "GEOMETRIC_SCREENING_CANDIDATE",
+      "MODELED_TERRAIN_PATHWAY",
+      "INDEPENDENTLY_SUPPORTED_PHYSICAL_EXPOSURE"
+    ],
+    "scale_state": "NOT_FLAGGED"
+  },
+  {
+    "actual": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      false,
+      false,
+      "D",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "case": "two_eligible_references_conflict",
+    "expected": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      false,
+      false,
+      "D",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "model_reasons": [],
+    "model_state": "A",
+    "modeled_scope": "nominal_model_with_compatible_required_alternatives",
+    "passed": true,
+    "physical_targets": {
+      "endpoint_exposure": {
+        "contradicting_ids": [
+          "dry"
+        ],
+        "qualified": false,
+        "state": "D",
+        "supporting_ids": [
+          "wet"
+        ],
+        "unmatched": [],
+        "withholding_reason": "MATCHED_INDEPENDENT_CONTRADICTION"
+      },
+      "source_to_endpoint_traversal": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      }
+    },
+    "qualified_claims": [
+      "OBSERVED_CHANGE",
+      "GEOMETRIC_SCREENING_CANDIDATE",
+      "MODELED_TERRAIN_PATHWAY"
+    ],
+    "scale_state": "NOT_FLAGGED"
+  },
+  {
+    "actual": [
+      "NO_MODELED_WITNESS",
+      null,
+      false,
+      true,
+      "UNKNOWN",
+      "F",
+      "NOT_FLAGGED"
+    ],
+    "case": "independent_traversal_can_be_observed_without_nominal_model",
+    "expected": [
+      "NO_MODELED_WITNESS",
+      null,
+      false,
+      true,
+      "UNKNOWN",
+      "F",
+      "NOT_FLAGGED"
+    ],
+    "model_reasons": [
+      "NO_NOMINAL_WITNESS"
+    ],
+    "model_state": "NO_MODELED_WITNESS",
+    "modeled_scope": null,
+    "passed": true,
+    "physical_targets": {
+      "endpoint_exposure": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      },
+      "source_to_endpoint_traversal": {
+        "contradicting_ids": [],
+        "qualified": true,
+        "state": "F",
+        "supporting_ids": [
+          "observed_track"
+        ],
+        "unmatched": [],
+        "withholding_reason": null
+      }
+    },
+    "qualified_claims": [
+      "OBSERVED_CHANGE",
+      "GEOMETRIC_SCREENING_CANDIDATE"
+    ],
+    "scale_state": "NOT_FLAGGED"
+  },
+  {
+    "actual": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "case": "correct_reference_wrong_footprint",
+    "expected": [
+      "A",
+      "nominal_model_with_compatible_required_alternatives",
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "model_reasons": [],
+    "model_state": "A",
+    "modeled_scope": "nominal_model_with_compatible_required_alternatives",
+    "passed": true,
+    "physical_targets": {
+      "endpoint_exposure": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [
+          {
+            "failed": [
+              "footprint_matches"
+            ],
+            "identity": "neighbor"
+          }
+        ],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      },
+      "source_to_endpoint_traversal": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      }
+    },
+    "qualified_claims": [
+      "OBSERVED_CHANGE",
+      "GEOMETRIC_SCREENING_CANDIDATE",
+      "MODELED_TERRAIN_PATHWAY"
+    ],
+    "scale_state": "NOT_FLAGGED"
+  },
+  {
+    "actual": [
+      "NO_MODELED_WITNESS",
+      null,
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "case": "known_geometry_with_no_nominal_route",
+    "expected": [
+      "NO_MODELED_WITNESS",
+      null,
+      false,
+      false,
+      "UNKNOWN",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "model_reasons": [
+      "NO_NOMINAL_WITNESS"
+    ],
+    "model_state": "NO_MODELED_WITNESS",
+    "modeled_scope": null,
+    "passed": true,
+    "physical_targets": {
+      "endpoint_exposure": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      },
+      "source_to_endpoint_traversal": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      }
+    },
+    "qualified_claims": [
+      "OBSERVED_CHANGE",
+      "GEOMETRIC_SCREENING_CANDIDATE"
+    ],
+    "scale_state": "NOT_FLAGGED"
+  },
+  {
+    "actual": [
+      "C",
+      null,
+      false,
+      false,
+      "F",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "case": "missing_receptor_blocks_physical",
+    "expected": [
+      "C",
+      null,
+      false,
+      false,
+      "F",
+      "UNKNOWN",
+      "NOT_FLAGGED"
+    ],
+    "model_reasons": [
+      "RECEPTOR_IDENTITY_UNAVAILABLE"
+    ],
+    "model_state": "C",
+    "modeled_scope": null,
+    "passed": true,
+    "physical_targets": {
+      "endpoint_exposure": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "F",
+        "supporting_ids": [
+          "independent_endpoint"
+        ],
+        "unmatched": [],
+        "withholding_reason": "PREREQUISITE_OBSERVATION_OR_GEOMETRY_UNAVAILABLE"
+      },
+      "source_to_endpoint_traversal": {
+        "contradicting_ids": [],
+        "qualified": false,
+        "state": "UNKNOWN",
+        "supporting_ids": [],
+        "unmatched": [],
+        "withholding_reason": "NO_MATCHED_INDEPENDENT_REFERENCE"
+      }
+    },
+    "qualified_claims": [
+      "OBSERVED_CHANGE"
+    ],
+    "scale_state": "NOT_FLAGGED"
+  }
+]

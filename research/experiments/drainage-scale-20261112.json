@@ -1,0 +1,6 @@
+{
+  "role":"Pre-execution scale clarification; no measured metric or new directional label has been read",
+  "declared_target_width_m":{"nepal":60,"varanasi":60,"sangam-vihar":1},
+  "interpretation":"Natural-case pilot investigates nominal >=60m broad drainage corridors, not all narrow channels. This engineering target is not a surveyed width. Apparent spectral widths and their censorship are reported separately. Engineered target1m is the prior published-inventory median, not an assumed optical resolution.",
+  "physical_accuracy":"No claim enabled by this nominal scale gate; registration and verified direction reference remain unavailable"
+}

@@ -1,0 +1,13 @@
+{
+  "files": {
+    "ahr-input-receipt.json": "3ffd7e7312af8e0b95fb0149ae0b3f0adfe8ce675be4d4b21a8f9c924cdf7069",
+    "ahr-reference-receipt.json": "d2770b224e28c676f6a610019af9e0b37e01397ce97feef8c3006a4367f41978",
+    "ahr-results.json": "04455c851ee59b15c8d96d4ba286a829aa16c93b31cf541ef38138c72388bd5d",
+    "ahr-seal.json": "769bb431570384faa54ab6c7848be91a23c7ecdb7be1a9eb1478fd18d47565bc",
+    "spectral-development-seal.json": "07c1dfadfbcdaa5f6535c6abc659ab871ffa8aca28b8562e29d535bd30d24ba9",
+    "spectral-development.json": "6b1fccce89626b2e5c1342a41fa5d825dd13632e2bd8ceadd8151560b53075a9",
+    "spectral-reserve-seal.json": "34e9aa59bb359ebe07816e19c0f4ec64995f49ef611518cfee5518b10544324b",
+    "spectral-reserve.json": "76dc8184e63dc4b087a6296373d072eb39d05f7af6c1159d663ce1610f9310d3",
+    "verification.json": "bbd7de5010217ed4d607ab44dabc47483a8e4f736139a43a45610360f269dbd1"
+  }
+}

@@ -1,0 +1,472 @@
+{
+  "coordinate_status": "COMPANION_INFERRED_UTM13N; no measured absolute registration/heading residual",
+  "coverage": {
+    "all_rows": 14468,
+    "all_year_spatial_tiles": 43,
+    "eligible_blocks": 42,
+    "excluded_blocks": {
+      "below_minimum_points": 1,
+      "incoherent": 0
+    },
+    "finite_velocity_rows": 14468,
+    "speed_eligible_rows": 13829
+  },
+  "fusion_gain": null,
+  "independent_basins": 1,
+  "known_physical_outlets": 0,
+  "paired_angular_comparisons": [
+    {
+      "against": "GLO30_30m_fill",
+      "blocks": 0,
+      "higher_angular_error": 0,
+      "lower_angular_error": 0,
+      "mean_angle_difference_deg": null,
+      "source": "GLO30_30m_fill",
+      "tie": 0,
+      "year": 2015
+    },
+    {
+      "against": "GLO30_30m_fill",
+      "blocks": 0,
+      "higher_angular_error": 0,
+      "lower_angular_error": 0,
+      "mean_angle_difference_deg": null,
+      "source": "GLO30_30m_none",
+      "tie": 0,
+      "year": 2015
+    },
+    {
+      "against": "GLO30_30m_fill",
+      "blocks": 0,
+      "higher_angular_error": 0,
+      "lower_angular_error": 0,
+      "mean_angle_difference_deg": null,
+      "source": "GLO30_90m_fill",
+      "tie": 0,
+      "year": 2015
+    },
+    {
+      "against": "GLO30_30m_fill",
+      "blocks": 0,
+      "higher_angular_error": 0,
+      "lower_angular_error": 0,
+      "mean_angle_difference_deg": null,
+      "source": "GLO30_90m_none",
+      "tie": 0,
+      "year": 2015
+    },
+    {
+      "against": "GLO30_30m_fill",
+      "blocks": 0,
+      "higher_angular_error": 0,
+      "lower_angular_error": 0,
+      "mean_angle_difference_deg": null,
+      "source": "MERIT_derived_native",
+      "tie": 0,
+      "year": 2015
+    },
+    {
+      "against": "GLO30_30m_fill",
+      "blocks": 5,
+      "higher_angular_error": 0,
+      "lower_angular_error": 0,
+      "mean_angle_difference_deg": 0.0,
+      "source": "GLO30_30m_fill",
+      "tie": 5,
+      "year": 2016
+    },
+    {
+      "against": "GLO30_30m_fill",
+      "blocks": 5,
+      "higher_angular_error": 1,
+      "lower_angular_error": 1,
+      "mean_angle_difference_deg": 4.385009055807143,
+      "source": "GLO30_30m_none",
+      "tie": 3,
+      "year": 2016
+    },
+    {
+      "against": "GLO30_30m_fill",
+      "blocks": 5,
+      "higher_angular_error": 1,
+      "lower_angular_error": 2,
+      "mean_angle_difference_deg": -22.614990944192847,
+      "source": "GLO30_90m_fill",
+      "tie": 2,
+      "year": 2016
+    },
+    {
+      "against": "GLO30_30m_fill",
+      "blocks": 5,
+      "higher_angular_error": 1,
+      "lower_angular_error": 2,
+      "mean_angle_difference_deg": -13.614990944192845,
+      "source": "GLO30_90m_none",
+      "tie": 2,
+      "year": 2016
+    },
+    {
+      "against": "GLO30_30m_fill",
+      "blocks": 5,
+      "higher_angular_error": 3,
+      "lower_angular_error": 2,
+      "mean_angle_difference_deg": 3.39642398765194,
+      "source": "MERIT_derived_native",
+      "tie": 0,
+      "year": 2016
+    },
+    {
+      "against": "GLO30_30m_fill",
+      "blocks": 10,
+      "higher_angular_error": 0,
+      "lower_angular_error": 0,
+      "mean_angle_difference_deg": 0.0,
+      "source": "GLO30_30m_fill",
+      "tie": 10,
+      "year": 2017
+    },
+    {
+      "against": "GLO30_30m_fill",
+      "blocks": 10,
+      "higher_angular_error": 2,
+      "lower_angular_error": 0,
+      "mean_angle_difference_deg": 5.442982417216894,
+      "source": "GLO30_30m_none",
+      "tie": 8,
+      "year": 2017
+    },
+    {
+      "against": "GLO30_30m_fill",
+      "blocks": 10,
+      "higher_angular_error": 3,
+      "lower_angular_error": 3,
+      "mean_angle_difference_deg": 11.244789420580862,
+      "source": "GLO30_90m_fill",
+      "tie": 4,
+      "year": 2017
+    },
+    {
+      "against": "GLO30_30m_fill",
+      "blocks": 10,
+      "higher_angular_error": 3,
+      "lower_angular_error": 3,
+      "mean_angle_difference_deg": 11.244789420580862,
+      "source": "GLO30_90m_none",
+      "tie": 4,
+      "year": 2017
+    },
+    {
+      "against": "GLO30_30m_fill",
+      "blocks": 10,
+      "higher_angular_error": 6,
+      "lower_angular_error": 4,
+      "mean_angle_difference_deg": 10.487053540734838,
+      "source": "MERIT_derived_native",
+      "tie": 0,
+      "year": 2017
+    }
+  ],
+  "physical_registration_verified": false,
+  "prediction_seal_sha256": "73aa8635d46ad160223f3304b87040408e7264c911003ff865b8c7437f2a9488",
+  "protocol_sha256": "6d653c1d6b615944d8568ea7d3e6525fc5531edb73b4312068f4f8a63103514e",
+  "reference_archive_sha256": "805f1011ae32e6ee3f10b6195e9e8658dfd56cbb27105d21b93e896abe630df3",
+  "schema": "satquery.observed-flow-control-result/1",
+  "scope": "Conditional agreement with observed local flow in one braided river; not regional/global routing accuracy",
+  "source_commit": "705279c3e9d6bb651d0063bf2bcd4305c4c930b1",
+  "survey_years": {
+    "2015": {
+      "common_blocks_all_sources": 0,
+      "eligible_blocks": 5,
+      "matched_support": {
+        "GLO30_30m_fill": {
+          "at_most45deg": 0,
+          "available": 0,
+          "median_angle_deg": null,
+          "p90_angle_deg": null,
+          "positive_cosine": 0,
+          "reference_units": 0,
+          "unavailable": 0
+        },
+        "GLO30_30m_none": {
+          "at_most45deg": 0,
+          "available": 0,
+          "median_angle_deg": null,
+          "p90_angle_deg": null,
+          "positive_cosine": 0,
+          "reference_units": 0,
+          "unavailable": 0
+        },
+        "GLO30_90m_fill": {
+          "at_most45deg": 0,
+          "available": 0,
+          "median_angle_deg": null,
+          "p90_angle_deg": null,
+          "positive_cosine": 0,
+          "reference_units": 0,
+          "unavailable": 0
+        },
+        "GLO30_90m_none": {
+          "at_most45deg": 0,
+          "available": 0,
+          "median_angle_deg": null,
+          "p90_angle_deg": null,
+          "positive_cosine": 0,
+          "reference_units": 0,
+          "unavailable": 0
+        },
+        "MERIT_derived_native": {
+          "at_most45deg": 0,
+          "available": 0,
+          "median_angle_deg": null,
+          "p90_angle_deg": null,
+          "positive_cosine": 0,
+          "reference_units": 0,
+          "unavailable": 0
+        }
+      },
+      "own_support": {
+        "GLO30_30m_fill": {
+          "at_most45deg": 2,
+          "available": 5,
+          "median_angle_deg": 59.1473556302695,
+          "p90_angle_deg": 75.67761751472533,
+          "positive_cosine": 5,
+          "reference_units": 5,
+          "unavailable": 0
+        },
+        "GLO30_30m_none": {
+          "at_most45deg": 0,
+          "available": 0,
+          "median_angle_deg": null,
+          "p90_angle_deg": null,
+          "positive_cosine": 0,
+          "reference_units": 5,
+          "unavailable": 5
+        },
+        "GLO30_90m_fill": {
+          "at_most45deg": 0,
+          "available": 5,
+          "median_angle_deg": 76.72607697629468,
+          "p90_angle_deg": 130.98473278226686,
+          "positive_cosine": 4,
+          "reference_units": 5,
+          "unavailable": 0
+        },
+        "GLO30_90m_none": {
+          "at_most45deg": 0,
+          "available": 5,
+          "median_angle_deg": 76.72607697629468,
+          "p90_angle_deg": 130.98473278226686,
+          "positive_cosine": 4,
+          "reference_units": 5,
+          "unavailable": 0
+        },
+        "MERIT_derived_native": {
+          "at_most45deg": 0,
+          "available": 5,
+          "median_angle_deg": 87.42266027676361,
+          "p90_angle_deg": 134.117045211645,
+          "positive_cosine": 3,
+          "reference_units": 5,
+          "unavailable": 0
+        }
+      }
+    },
+    "2016": {
+      "common_blocks_all_sources": 5,
+      "eligible_blocks": 24,
+      "matched_support": {
+        "GLO30_30m_fill": {
+          "at_most45deg": 1,
+          "available": 5,
+          "median_angle_deg": 106.7617123356684,
+          "p90_angle_deg": 155.12392863839185,
+          "positive_cosine": 2,
+          "reference_units": 5,
+          "unavailable": 0
+        },
+        "GLO30_30m_none": {
+          "at_most45deg": 1,
+          "available": 5,
+          "median_angle_deg": 106.7617123356684,
+          "p90_angle_deg": 166.31973231083128,
+          "positive_cosine": 2,
+          "reference_units": 5,
+          "unavailable": 0
+        },
+        "GLO30_90m_fill": {
+          "at_most45deg": 0,
+          "available": 5,
+          "median_angle_deg": 73.10554681780143,
+          "p90_angle_deg": 95.44203645720819,
+          "positive_cosine": 4,
+          "reference_units": 5,
+          "unavailable": 0
+        },
+        "GLO30_90m_none": {
+          "at_most45deg": 0,
+          "available": 5,
+          "median_angle_deg": 78.46252263951787,
+          "p90_angle_deg": 103.31762794911204,
+          "positive_cosine": 3,
+          "reference_units": 5,
+          "unavailable": 0
+        },
+        "MERIT_derived_native": {
+          "at_most45deg": 0,
+          "available": 5,
+          "median_angle_deg": 86.70517613543657,
+          "p90_angle_deg": 131.19385467149152,
+          "positive_cosine": 3,
+          "reference_units": 5,
+          "unavailable": 0
+        }
+      },
+      "own_support": {
+        "GLO30_30m_fill": {
+          "at_most45deg": 5,
+          "available": 24,
+          "median_angle_deg": 66.21001658594197,
+          "p90_angle_deg": 140.02942293537788,
+          "positive_cosine": 16,
+          "reference_units": 24,
+          "unavailable": 0
+        },
+        "GLO30_30m_none": {
+          "at_most45deg": 2,
+          "available": 6,
+          "median_angle_deg": 80.76940445313139,
+          "p90_angle_deg": 165.78403472865966,
+          "positive_cosine": 3,
+          "reference_units": 24,
+          "unavailable": 18
+        },
+        "GLO30_90m_fill": {
+          "at_most45deg": 4,
+          "available": 24,
+          "median_angle_deg": 80.6583959350264,
+          "p90_angle_deg": 169.1430026067212,
+          "positive_cosine": 14,
+          "reference_units": 24,
+          "unavailable": 0
+        },
+        "GLO30_90m_none": {
+          "at_most45deg": 2,
+          "available": 19,
+          "median_angle_deg": 85.20761655522708,
+          "p90_angle_deg": 166.31642797775592,
+          "positive_cosine": 10,
+          "reference_units": 24,
+          "unavailable": 5
+        },
+        "MERIT_derived_native": {
+          "at_most45deg": 3,
+          "available": 24,
+          "median_angle_deg": 101.13167511190107,
+          "p90_angle_deg": 149.37345345619943,
+          "positive_cosine": 11,
+          "reference_units": 24,
+          "unavailable": 0
+        }
+      }
+    },
+    "2017": {
+      "common_blocks_all_sources": 10,
+      "eligible_blocks": 13,
+      "matched_support": {
+        "GLO30_30m_fill": {
+          "at_most45deg": 5,
+          "available": 10,
+          "median_angle_deg": 56.09795798334414,
+          "p90_angle_deg": 119.172608417555,
+          "positive_cosine": 7,
+          "reference_units": 10,
+          "unavailable": 0
+        },
+        "GLO30_30m_none": {
+          "at_most45deg": 4,
+          "available": 10,
+          "median_angle_deg": 60.34386753084587,
+          "p90_angle_deg": 119.172608417555,
+          "positive_cosine": 7,
+          "reference_units": 10,
+          "unavailable": 0
+        },
+        "GLO30_90m_fill": {
+          "at_most45deg": 4,
+          "available": 10,
+          "median_angle_deg": 68.81314239577466,
+          "p90_angle_deg": 123.01078812076432,
+          "positive_cosine": 7,
+          "reference_units": 10,
+          "unavailable": 0
+        },
+        "GLO30_90m_none": {
+          "at_most45deg": 4,
+          "available": 10,
+          "median_angle_deg": 68.81314239577466,
+          "p90_angle_deg": 123.01078812076432,
+          "positive_cosine": 7,
+          "reference_units": 10,
+          "unavailable": 0
+        },
+        "MERIT_derived_native": {
+          "at_most45deg": 3,
+          "available": 10,
+          "median_angle_deg": 63.58616126450906,
+          "p90_angle_deg": 130.31113367921745,
+          "positive_cosine": 7,
+          "reference_units": 10,
+          "unavailable": 0
+        }
+      },
+      "own_support": {
+        "GLO30_30m_fill": {
+          "at_most45deg": 6,
+          "available": 13,
+          "median_angle_deg": 60.57994251149246,
+          "p90_angle_deg": 116.07075865081977,
+          "positive_cosine": 10,
+          "reference_units": 13,
+          "unavailable": 0
+        },
+        "GLO30_30m_none": {
+          "at_most45deg": 4,
+          "available": 11,
+          "median_angle_deg": 67.69030504330279,
+          "p90_angle_deg": 128.3904625846394,
+          "positive_cosine": 7,
+          "reference_units": 13,
+          "unavailable": 2
+        },
+        "GLO30_90m_fill": {
+          "at_most45deg": 5,
+          "available": 13,
+          "median_angle_deg": 68.5155312088691,
+          "p90_angle_deg": 157.04748817318426,
+          "positive_cosine": 9,
+          "reference_units": 13,
+          "unavailable": 0
+        },
+        "GLO30_90m_none": {
+          "at_most45deg": 5,
+          "available": 12,
+          "median_angle_deg": 68.10291812608594,
+          "p90_angle_deg": 115.65476791399043,
+          "positive_cosine": 9,
+          "reference_units": 13,
+          "unavailable": 1
+        },
+        "MERIT_derived_native": {
+          "at_most45deg": 6,
+          "available": 13,
+          "median_angle_deg": 46.11813592286167,
+          "p90_angle_deg": 122.02176921956551,
+          "positive_cosine": 10,
+          "reference_units": 13,
+          "unavailable": 0
+        }
+      }
+    }
+  }
+}

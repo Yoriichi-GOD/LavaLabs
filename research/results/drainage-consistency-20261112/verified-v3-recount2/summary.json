@@ -1,0 +1,278 @@
+{
+  "execution": {
+    "calibration_sha256": "7c39e6fc9e8eee7a4a28fe4ab255095243413160a0b1931efe780f2dce3fe49c",
+    "platform": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.43",
+    "protocol_sha256": "5ba9d5ef9f90bd9dd73393e0cc229f2759646213e0de1e5a4399bc5dbb41437d",
+    "python": "3.11.16 (main, Sep  1 2026, 14:18:37) [Clang 22.1.3 ]",
+    "reserved_data_accessed": false,
+    "scale_sha256": "76fa262edffdb0bd7c461b39921e27b51d5e6785fe61ec79fb79b715e2bac599",
+    "seconds": 50.020706647000225
+  },
+  "nepal": {
+    "administrative_annotation_rows": 0,
+    "administrative_majority_matches": 0,
+    "administrative_orientable_units": 0,
+    "dates": [
+      "2026-08-22",
+      "2026-08-27"
+    ],
+    "known_outlets": 0,
+    "not_accuracy": "Unverified administrative orientation diagnostic; no valid physical-error/false-flag denominator",
+    "optical_calibration": [
+      {
+        "provider": "retained physical reflectance cube"
+      },
+      {
+        "provider": "retained physical reflectance cube"
+      }
+    ],
+    "physical_direction_evaluation": {
+      "accuracy": null,
+      "answered": 0,
+      "correct_error_flags": null,
+      "eligible": 0,
+      "false_error_flags": null,
+      "status": "BLOCKED_NO_ELIGIBLE_DIRECTION_REFERENCE",
+      "useful_answer_coverage": null
+    },
+    "primary_clear_eligible_units": 24,
+    "primary_terrain": {
+      "boundary_condition": "Open outer edge and NoData perimeter; external contributing area unavailable",
+      "conditioning": "fill",
+      "filled_cells": 238,
+      "flat_parent_routes": 238,
+      "flow_method": "D8 steepest descent; Priority-Flood parent on filled flats",
+      "hand_valid_cells": 11718,
+      "interpretation": "Potential topographic drainage; not flood/debris propagation or flood depth",
+      "maximum_fill_m": 27.992534028675436,
+      "outlet_accumulation_sum_cells": 11869,
+      "outlets": 4,
+      "stream_cells": 513,
+      "stream_threshold_m2": 100000,
+      "total_cells": 12410,
+      "valid_cells": 11869,
+      "valid_fraction": 0.956406124093473
+    },
+    "reference_independent_verified_directions": 0,
+    "registration": "UNVERIFIED",
+    "role": "DEVELOPMENT ONLY",
+    "unit_info": {
+      "retained_units": 68,
+      "short_or_singleton_exclusions": 19
+    },
+    "units": 68
+  },
+  "sangam-vihar": {
+    "administrative_annotation_rows": 83,
+    "administrative_majority_matches": 48,
+    "administrative_orientable_units": 80,
+    "dates": [
+      "2023-10-06T05:41:04.401000Z",
+      "2024-10-30T05:41:32.820000Z"
+    ],
+    "known_outlets": 0,
+    "not_accuracy": "Unverified administrative orientation diagnostic; no valid physical-error/false-flag denominator",
+    "optical_calibration": [
+      {
+        "boa_offset_applied": true,
+        "effective": {
+          "blue": [
+            0.0001,
+            0
+          ],
+          "green": [
+            0.0001,
+            0
+          ],
+          "nir": [
+            0.0001,
+            0
+          ],
+          "red": [
+            0.0001,
+            0
+          ],
+          "scl": [
+            1,
+            0
+          ],
+          "swir16": [
+            0.0001,
+            0
+          ]
+        }
+      },
+      {
+        "boa_offset_applied": false,
+        "effective": {
+          "blue": [
+            0.0001,
+            -0.1
+          ],
+          "green": [
+            0.0001,
+            -0.1
+          ],
+          "nir": [
+            0.0001,
+            -0.1
+          ],
+          "red": [
+            0.0001,
+            -0.1
+          ],
+          "scl": [
+            1,
+            0
+          ],
+          "swir16": [
+            0.0001,
+            -0.1
+          ]
+        }
+      }
+    ],
+    "physical_direction_evaluation": {
+      "accuracy": null,
+      "answered": 0,
+      "correct_error_flags": null,
+      "eligible": 0,
+      "false_error_flags": null,
+      "status": "BLOCKED_NO_ELIGIBLE_DIRECTION_REFERENCE",
+      "useful_answer_coverage": null
+    },
+    "primary_clear_eligible_units": 83,
+    "primary_terrain": {
+      "boundary_condition": "Open outer edge and NoData perimeter; external contributing area unavailable",
+      "conditioning": "fill",
+      "filled_cells": 3321,
+      "flat_parent_routes": 3321,
+      "flow_method": "D8 steepest descent; Priority-Flood parent on filled flats",
+      "hand_valid_cells": 24042,
+      "interpretation": "Potential topographic drainage; not flood/debris propagation or flood depth",
+      "maximum_fill_m": 26.71433796491428,
+      "outlet_accumulation_sum_cells": 26535,
+      "outlets": 75,
+      "stream_cells": 1522,
+      "stream_threshold_m2": 100000,
+      "total_cells": 27816,
+      "valid_cells": 26535,
+      "valid_fraction": 0.9539473684210527
+    },
+    "reference_independent_verified_directions": 0,
+    "registration": "UNVERIFIED",
+    "role": "DEVELOPMENT ONLY",
+    "unit_info": {
+      "positive_clipped_reference_ids": 83,
+      "raw_features": 90,
+      "retained_units": 83
+    },
+    "units": 83
+  },
+  "varanasi": {
+    "administrative_annotation_rows": 0,
+    "administrative_majority_matches": 0,
+    "administrative_orientable_units": 0,
+    "dates": [
+      "2023-10-27T05:11:42.775000Z",
+      "2024-10-31T05:11:43.065000Z"
+    ],
+    "known_outlets": 0,
+    "not_accuracy": "Unverified administrative orientation diagnostic; no valid physical-error/false-flag denominator",
+    "optical_calibration": [
+      {
+        "boa_offset_applied": true,
+        "effective": {
+          "blue": [
+            0.0001,
+            0
+          ],
+          "green": [
+            0.0001,
+            0
+          ],
+          "nir": [
+            0.0001,
+            0
+          ],
+          "red": [
+            0.0001,
+            0
+          ],
+          "scl": [
+            1,
+            0
+          ],
+          "swir16": [
+            0.0001,
+            0
+          ]
+        }
+      },
+      {
+        "boa_offset_applied": true,
+        "effective": {
+          "blue": [
+            0.0001,
+            0
+          ],
+          "green": [
+            0.0001,
+            0
+          ],
+          "nir": [
+            0.0001,
+            0
+          ],
+          "red": [
+            0.0001,
+            0
+          ],
+          "scl": [
+            1,
+            0
+          ],
+          "swir16": [
+            0.0001,
+            0
+          ]
+        }
+      }
+    ],
+    "physical_direction_evaluation": {
+      "accuracy": null,
+      "answered": 0,
+      "correct_error_flags": null,
+      "eligible": 0,
+      "false_error_flags": null,
+      "status": "BLOCKED_NO_ELIGIBLE_DIRECTION_REFERENCE",
+      "useful_answer_coverage": null
+    },
+    "primary_clear_eligible_units": 2162,
+    "primary_terrain": {
+      "boundary_condition": "Open outer edge and NoData perimeter; external contributing area unavailable",
+      "conditioning": "fill",
+      "filled_cells": 80459,
+      "flat_parent_routes": 88608,
+      "flow_method": "D8 steepest descent; Priority-Flood parent on filled flats",
+      "hand_valid_cells": 215018,
+      "interpretation": "Potential topographic drainage; not flood/debris propagation or flood depth",
+      "maximum_fill_m": 10.483521016390853,
+      "outlet_accumulation_sum_cells": 257868,
+      "outlets": 316,
+      "stream_cells": 15788,
+      "stream_threshold_m2": 100000,
+      "total_cells": 266708,
+      "valid_cells": 257868,
+      "valid_fraction": 0.9668551374536947
+    },
+    "reference_independent_verified_directions": 0,
+    "registration": "UNVERIFIED",
+    "role": "DEVELOPMENT ONLY",
+    "unit_info": {
+      "retained_units": 2184,
+      "short_or_singleton_exclusions": 347
+    },
+    "units": 2184
+  }
+}

@@ -1,0 +1,14 @@
+const assert = require('node:assert/strict');
+const {parseQuestion, probability} = require('./web/app.js');
+const regions = [{id:'delhi',name:'Delhi'},{id:'reykjavik',name:'Reykjavík'},{id:'nairobi',name:'Nairobi'}];
+assert.deepEqual(parseQuestion('Is Delhi getting wetter?', regions), {region:'delhi',variable:'PRECTOTCORR'});
+assert.deepEqual(parseQuestion('Is Reykjavik warming?', regions), {region:'reykjavik',variable:'T2M'});
+assert.ok(parseQuestion('Will Delhi get wetter?', regions).error);
+assert.ok(parseQuestion('Why is Delhi warming?', regions).error);
+assert.ok(parseQuestion('Delhi rain in 2000?', regions).error);
+assert.ok(parseQuestion('Delhi and Nairobi temperature?', regions).error);
+assert.ok(parseQuestion('Delhi warming and rain?', regions).error);
+assert.ok(parseQuestion('Flood evacuation in Delhi?', regions).error);
+assert.equal(probability(0.00001),'<0.001');
+assert.equal(probability(null),'Unavailable');
+console.log('10 question/format checks passed');

@@ -1,0 +1,149 @@
+{
+  "dev_reserve_bbox_overlap": [],
+  "development_review_recount": {
+    "0.1": {
+      "either": 41198,
+      "margin": 36158,
+      "ndvi": 40205,
+      "ndwi": 41106
+    },
+    "0.2": {
+      "either": 45664,
+      "margin": 41887,
+      "ndvi": 44687,
+      "ndwi": 45576
+    }
+  },
+  "reserve_disposition": "All four listed windows consumed in first verification; subsequent accesses are replays",
+  "reserve_reference_date_audit": [
+    {
+      "days": 0.006912146990740741,
+      "id": "EMSR422_AOI06_DEL_PRODUCT",
+      "metadata_sha256": "bc4a16787adbc1e835e66f6b6337c9b110db3f15ebbbc804dee6052d8350b1c8",
+      "metadata_url": "https://huggingface.co/datasets/isp-uv-es/WorldFloodsv2/resolve/1f3faa2989e69930ac31d5c0a79fd224461123f8/test/meta/EMSR422_AOI06_DEL_PRODUCT.json",
+      "optical_date": "2020-01-26T11:00:00.209500+00:00",
+      "reference_date": "2020-01-26T10:50:03+00:00",
+      "reference_sensor": "Pleiades-1A-1B"
+    },
+    {
+      "days": 5.677152361111111,
+      "id": "EMSR438_AOI02_DEL_MONIT03",
+      "metadata_sha256": "40182b8dfd50ab51beccf00ecbfd19a719b26b6cb004e4a003eb4aa9771b13a2",
+      "metadata_url": "https://huggingface.co/datasets/isp-uv-es/WorldFloodsv2/resolve/1f3faa2989e69930ac31d5c0a79fd224461123f8/test/meta/EMSR438_AOI02_DEL_MONIT03.json",
+      "optical_date": "2020-05-14T08:20:07.964000+00:00",
+      "reference_date": "2020-05-08T16:05:02+00:00",
+      "reference_sensor": "Sentinel-1"
+    },
+    {
+      "days": 0.011493813657407408,
+      "id": "EMSR466_AOI01_DEL_PRODUCT",
+      "metadata_sha256": "5342fce751d8b5ad3fe7208e82ba9803ac1c0deffdcf594c5016ecb004d28e2e",
+      "metadata_url": "https://huggingface.co/datasets/isp-uv-es/WorldFloodsv2/resolve/1f3faa2989e69930ac31d5c0a79fd224461123f8/test/meta/EMSR466_AOI01_DEL_PRODUCT.json",
+      "optical_date": "2020-09-27T10:17:02.065500+00:00",
+      "reference_date": "2020-09-27T10:00:29+00:00",
+      "reference_sensor": "Sentinel-2"
+    },
+    {
+      "days": 1.2849186342592593,
+      "id": "EMSR9284_01YLITORNIONORTHERN_DEL_MONIT01_v1",
+      "metadata_sha256": "b4a1f41fff934c82eff776bba47caa6539c10b26e963ef1f8a59c9c78393d15d",
+      "metadata_url": "https://huggingface.co/datasets/isp-uv-es/WorldFloodsv2/resolve/1f3faa2989e69930ac31d5c0a79fd224461123f8/test/meta/EMSR9284_01YLITORNIONORTHERN_DEL_MONIT01_v1.json",
+      "optical_date": "2018-05-19T10:11:16.970000+00:00",
+      "reference_date": "2018-05-18T03:21:00+00:00",
+      "reference_sensor": "COSMO-SkyMed"
+    }
+  ],
+  "reserve_replay_exact_metrics": true,
+  "reserve_review_recount": {
+    "0.1": {
+      "either": 15974,
+      "margin": 20473,
+      "ndvi": 21645,
+      "ndwi": 15928
+    },
+    "0.2": {
+      "either": 20249,
+      "margin": 33886,
+      "ndvi": 34376,
+      "ndwi": 20217
+    }
+  },
+  "road": {
+    "road_labels_recounted": 199,
+    "road_replay_byte_identical": true,
+    "source_tile_hashes_verified": 122,
+    "support": {
+      "blank_eligible": 155,
+      "blank_total": 387,
+      "positive_eligible": 44,
+      "positive_total": 138
+    }
+  },
+  "status": "PASS",
+  "water_bounds_wgs84": {
+    "development": {
+      "EMSR273_01GRILE_DEL_MONIT04_v2": [
+        19.447154931578318,
+        42.11482222099234,
+        19.51019356203315,
+        42.1617403259159
+      ],
+      "EMSR286_08ITUANGONORTH_DEL_MONIT02_v1": [
+        -75.78966241896445,
+        7.016533535570618,
+        -75.74323127181977,
+        7.062920549821593
+      ],
+      "EMSR333_01RATTALORO_DEL_MONIT01_v1": [
+        12.507098750190496,
+        37.8620063367647,
+        12.566807274484491,
+        37.90932837166869
+      ],
+      "EMSR342_06NORTHNORMANTON_DEL_v1": [
+        140.90153386964036,
+        -17.723718749653198,
+        140.94983660707467,
+        -17.677421289655243
+      ],
+      "EMSR347_06MWANZA_DEL_v1": [
+        34.6792712563303,
+        -15.546404390281362,
+        34.727372471580544,
+        -15.499767803795377
+      ],
+      "EMSR419_AOI01_DEL_MONIT01": [
+        57.7951469307711,
+        25.69834484580698,
+        57.84649956973777,
+        25.744862188995587
+      ]
+    },
+    "reserve": {
+      "EMSR422_AOI06_DEL_PRODUCT": [
+        -0.13383824189974217,
+        39.77760924395458,
+        -0.07217134069966082,
+        39.825174395049835
+      ],
+      "EMSR438_AOI02_DEL_MONIT03": [
+        32.56234744385453,
+        0.13742465619721184,
+        32.608359493509774,
+        0.18374661324610558
+      ],
+      "EMSR466_AOI01_DEL_PRODUCT": [
+        6.194350229274043,
+        13.623870424658033,
+        6.2421763337535054,
+        13.670642021749028
+      ],
+      "EMSR9284_01YLITORNIONORTHERN_DEL_MONIT01_v1": [
+        23.69205685411815,
+        66.39514959288258,
+        23.811665312239,
+        66.44304972698166
+      ]
+    }
+  }
+}

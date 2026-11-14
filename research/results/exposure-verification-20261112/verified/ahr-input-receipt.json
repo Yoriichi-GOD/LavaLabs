@@ -1,0 +1,99 @@
+{
+  "bbox": [
+    6.968639714169611,
+    50.46842917993497,
+    7.071011221406512,
+    50.54993217172725
+  ],
+  "crs": "EPSG:32632",
+  "dem": [
+    {
+      "path": "dem-50-6.tif",
+      "sha256": "564408be8cfc8c233690ba64e62cbff8a1c9d94eee40a1dc40a77abadab03a75"
+    },
+    {
+      "path": "dem-50-7.tif",
+      "sha256": "678bcd6d1c9f65539c41e64a2989d2d6f34153329ef2a298215698900ef3eb38"
+    }
+  ],
+  "optical": {
+    "post": {
+      "assets": {
+        "green": {
+          "offset": -0.1,
+          "path": "post/green.tif",
+          "scale": 0.0001,
+          "sha256": "8b7d5c07c985db8f4933964fc08ee43e87c765e193ff0631e51ac47056d1d831"
+        },
+        "nir": {
+          "offset": -0.1,
+          "path": "post/nir.tif",
+          "scale": 0.0001,
+          "sha256": "adc8f353f96b14b4e30a6e2df7f817a05901ed99c831070ef2588921dae96de6"
+        },
+        "red": {
+          "offset": -0.1,
+          "path": "post/red.tif",
+          "scale": 0.0001,
+          "sha256": "7850deb5eae9b14944a0300ba6ed32d8111df59b9213ab152e32f1b13fcc5c60"
+        },
+        "scl": {
+          "offset": 0,
+          "path": "post/scl.tif",
+          "scale": 1,
+          "sha256": "299d62fd7c047395e73fbeed64d317da44e44fa88baf58ff4ada0f57c6504218"
+        },
+        "swir16": {
+          "offset": -0.1,
+          "path": "post/swir16.tif",
+          "scale": 0.0001,
+          "sha256": "505ff27c27b7c954c0c4a5f3d41e797f4b2600c1ad37f6d830eb1baa56e61f42"
+        }
+      },
+      "datetime": "2021-07-18T10:36:55.733000Z",
+      "id": "S2A_32ULB_20210718_1_L2A",
+      "item": "post/item.json",
+      "item_sha256": "b017e3fa1ee78ac4529d9da38ab92b6fab6a7149ccba92bbb22161628485ae9e"
+    },
+    "pre": {
+      "assets": {
+        "green": {
+          "offset": 0,
+          "path": "pre/green.tif",
+          "scale": 0.0001,
+          "sha256": "8bef71491582813d53b6472c8f7e0949176ea5c27b29243d91e47a41d20e4d4d"
+        },
+        "nir": {
+          "offset": 0,
+          "path": "pre/nir.tif",
+          "scale": 0.0001,
+          "sha256": "a0007cd5e9776c4175263305583b0a6d127043eb264d856754db0ef2c3e09312"
+        },
+        "red": {
+          "offset": 0,
+          "path": "pre/red.tif",
+          "scale": 0.0001,
+          "sha256": "40d79e4040a35e9d58c1920e9cf2c62ac15d7ac0680b609eff937695f4668d8d"
+        },
+        "scl": {
+          "offset": 0,
+          "path": "pre/scl.tif",
+          "scale": 1,
+          "sha256": "7f217ee3fa2ddf842efd4ada34dc01db4429c2fda4a8f3f3876ca6ee18729e0a"
+        },
+        "swir16": {
+          "offset": 0,
+          "path": "pre/swir16.tif",
+          "scale": 0.0001,
+          "sha256": "e17799d6825ac269eda3f68d5a2861bb732985d0a2e77e8b77349865c10b060d"
+        }
+      },
+      "datetime": "2021-07-03T10:36:53.839000Z",
+      "id": "S2B_32ULB_20210703_0_L2A",
+      "item": "pre/item.json",
+      "item_sha256": "f493e056a60e85a4b830aef23ad0ee7f7c56de16d7371477ec97b4701268359a"
+    }
+  },
+  "predictor_selection": "Optical source metadata and declared reference image envelope only",
+  "protocol_sha256": "ca78eb5c887ba157e64f92fe3db49031167faafc04fd1d45332d05ea84484f4d"
+}

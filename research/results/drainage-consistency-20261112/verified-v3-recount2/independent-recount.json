@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "output_manifest_files_verified": 24,
+  "input_records_hash_verified": 31,
+  "ablation_rows_recounted": 30,
+  "terrain_rows_checked": 36,
+  "population": "Stored pilot records and retained inputs; not field/independent scientific validation",
+  "cases": {
+    "nepal": {
+      "units": 68,
+      "clear_eligible_units": 24,
+      "temporal_common_eligible_units": 20,
+      "raw_robust_water_disagreements": 14,
+      "ndvi_threshold_sensitive_clear_units": 9,
+      "resolved_uncensored_width_units": 3,
+      "width_widening_ge20m": 0,
+      "width_narrowing_le_minus20m": 0,
+      "administrative_orientable": 0,
+      "administrative_majority_agreements": 0,
+      "raw_water_flag_admin_agree": 0,
+      "raw_water_flag_admin_disagree": 0,
+      "physical_direction_accuracy": null,
+      "verified_error_detection_precision": null,
+      "verified_false_flags": null
+    },
+    "varanasi": {
+      "units": 2184,
+      "clear_eligible_units": 2162,
+      "temporal_common_eligible_units": 2155,
+      "raw_robust_water_disagreements": 1941,
+      "ndvi_threshold_sensitive_clear_units": 802,
+      "resolved_uncensored_width_units": 46,
+      "width_widening_ge20m": 7,
+      "width_narrowing_le_minus20m": 9,
+      "administrative_orientable": 0,
+      "administrative_majority_agreements": 0,
+      "raw_water_flag_admin_agree": 0,
+      "raw_water_flag_admin_disagree": 0,
+      "physical_direction_accuracy": null,
+      "verified_error_detection_precision": null,
+      "verified_false_flags": null
+    },
+    "sangam-vihar": {
+      "units": 83,
+      "clear_eligible_units": 83,
+      "temporal_common_eligible_units": 49,
+      "raw_robust_water_disagreements": 79,
+      "ndvi_threshold_sensitive_clear_units": 64,
+      "resolved_uncensored_width_units": 0,
+      "width_widening_ge20m": 0,
+      "width_narrowing_le_minus20m": 0,
+      "administrative_orientable": 80,
+      "administrative_majority_agreements": 48,
+      "raw_water_flag_admin_agree": 45,
+      "raw_water_flag_admin_disagree": 31,
+      "physical_direction_accuracy": null,
+      "verified_error_detection_precision": null,
+      "verified_false_flags": null
+    }
+  },
+  "reserved_data_opened": false
+}

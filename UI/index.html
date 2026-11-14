@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" data-theme="dark" class="sq-clipped-scroll">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,interactive-widget=resizes-content">
+<meta name="theme-color" content="#000000"><meta name="color-scheme" content="dark">
+<meta name="description" content="LavaLabs connects retained satellite observations, 3D terrain, NDVI and Earth-system trends to inspectable scientific evidence.">
+<meta name="si-disclosure" content="OpenAI Codex assisted code, integration and writing. Retained source data are unchanged; prior SATQuery work is attributed separately.">
+<title>LavaLabs · Earth observation workspace</title><link rel="icon" href="/logo">
+<link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/noir.css"><link rel="stylesheet" href="/assets/workspace-shell.css"><link rel="stylesheet" href="/jai/assets/earth.css"><link rel="stylesheet" href="/ui/lava.css">
+<script defer src="/ui/app.js"></script><script defer src="/jai/assets/earth.js"></script><script defer src="/assets/visual-context.js"></script>
+</head>
+<body class="sq-document-scroll sq-clipped-scroll">
+<header><a class="brand" href="/#terrain"><img src="/logo" alt="LavaLabs volcano"><span>Lava<span class="brand-light">Labs</span></span></a><nav aria-label="Workspace"><button id="lab-tab">Case studies</button><button id="eval-tab">Research evidence</button><a href="/trends">NASA trends</a><a href="/processor">Flood processor</a></nav><div class="lava-status"><span class="status-dot"></span><span id="lava-status">Reading local evidence</span></div></header>
+<main>
+<div class="intro"><div><h1 id="page-title">Case studies</h1><p id="page-description">Four measured windows. Source observations, terrain and uncertainty together.</p></div><a class="text-link" href="/trends">Explore long-term NASA trends <span aria-hidden="true">→</span></a></div>
+<section id="lab" hidden aria-labelledby="page-title">
+ <div class="case-toolbar"><label for="case-select">Study area<select id="case-select"><option value="nepal">Syapru Besi, Nepal</option><option value="kedarnath">Kedarnath, Upper Mandakini</option><option value="varanasi">Varanasi, Ganges floodplain</option><option value="sangam-vihar">Sangam Vihar, Delhi</option></select></label><label for="case-field">Observation layer<select id="case-field"><option value="elevation">Elevation · DSM</option></select></label><button id="case-mode" type="button" aria-pressed="false">View as map</button></div>
+ <p id="case-message" class="muted" role="status">Reading retained case data…</p>
+ <div class="case-layout">
+  <section class="case-visual" aria-label="Measured case surface"><div class="case-visual-heading"><div><h2 id="case-title">Syapru Besi, Nepal</h2><p id="case-meta">Historical terrain and saved satellite observations</p></div><span id="case-unit"></span></div><div id="case-plot" aria-label="Interactive measured terrain and index values"></div><canvas id="case-map" width="600" height="500" aria-label="Numeric measured layer map" hidden></canvas><p id="case-display-note" class="view-note"></p><div class="case-actions"><button id="case-reset">Reset camera</button><a id="case-download">Download displayed evidence</a><a id="case-panels" target="_blank" rel="noopener">Original case panels</a></div></section>
+  <aside class="case-inspector"><h2>What can we infer?</h2><p id="case-interpretation"></p><dl id="case-statistics"></dl><section class="observation-dates"><h3>Optical observations</h3><div id="case-observations"></div></section><details open><summary>Evidence boundaries</summary><ul id="case-limits"></ul></details><details><summary>Source identities & original measurements</summary><div id="case-sources"></div><a id="case-summary">Download original case summary</a></details><a class="inspect-nepal" href="/#terrain">Open the complete Nepal flood investigation <span aria-hidden="true">→</span></a></aside>
+ </div>
+ <section class="case-context"><h2>A common workflow, different evidence</h2><div class="case-index"><button data-case="nepal"><strong>Syapru Besi</strong><span>Sentinel water candidates, retained RGB, historical terrain and mapped infrastructure</span></button><button data-case="kedarnath"><strong>Kedarnath</strong><span>Landsat in 2013; limited common clear support, registration unresolved</span></button><button data-case="varanasi"><strong>Varanasi</strong><span>River–city context, Sentinel-2 indices, drainage and source-scale limits</span></button><button data-case="sangam-vihar"><strong>Sangam Vihar</strong><span>Urban drainage review with explicit limits on culverts, DTM and physical outlets</span></button></div></section>
+</section>
+<section id="evaluation" hidden>
+ <p class="research-lead">Preserved experiments, controls and findings. A reproducible result is shown with the population it actually tested.</p>
+ <div id="research-list" role="list"><p class="muted">Reading frozen research results…</p></div>
+ <section class="research-boundary"><h2>What remains unproved</h2><p>Physical exposure accuracy, surveyed drainage connectivity, flood depth, safe access and analyst decision benefit remain unestablished. These studies contain computational controls, previously inspected data and exploratory cases. The newer 2 m post-event surface failed the full-case coverage gate; it is not a verified DTM upgrade.</p><p>Earth-system trends are evaluated separately in the NASA Trend Lab. Two-date NDVI change is not a long-term trend or a significance result.</p><a href="/trends">Open the NASA trend analysis</a></section>
+</section>
+</main>
+<footer class="lava-footer"><span>LavaLabs <span class="footer-separator">/</span> Earth observation research</span><span id="footer-context">Retained observations · Historical DSM · Source-linked evidence</span><span>SI-assisted code & writing</span></footer>
+</body></html>

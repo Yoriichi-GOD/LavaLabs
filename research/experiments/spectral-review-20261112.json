@@ -1,0 +1,26 @@
+{
+  "schema": "satquery.spectral-review/1",
+  "target": "Prioritize errors in an existing MNDWI>0 binary total-surface-water result for review",
+  "dataset": "isp-uv-es/WorldFloodsv2",
+  "revision": "1f3faa2989e69930ac31d5c0a79fd224461123f8",
+  "development_population": "The six already consumed fixed WorldFloods windows, using existing cropped green/NIR/SWIR and matching newly fetched red",
+  "verification_population": "All four named unopened reserve activations, fixed native centre 512 by 512 pixels; failed cases retained, no replacements",
+  "bands_one_based": {"green": 3, "red": 4, "nir": 8, "swir": 12},
+  "indices": "NDWI=(green-NIR)/(green+NIR); NDVI=(NIR-red)/(NIR+red); MNDWI=(green-SWIR)/(green+SWIR)",
+  "baseline": "MNDWI>0; retain the water decision in the review experiment",
+  "support": "For all methods use finite strictly positive values in all four bands and strictly positive denominators; evaluation further restricts to reference clear and known land/water. Reference support is used only for scoring.",
+  "review_priorities": {
+    "margin": "Ascending absolute MNDWI",
+    "ndwi": "Prioritize opposite NDWI>0 versus MNDWI>0 decisions, then ascending absolute MNDWI",
+    "ndvi": "Prioritize MNDWI water with NDVI>0.2, then ascending absolute MNDWI",
+    "either": "Prioritize either flag, then ascending absolute MNDWI",
+    "tie": "Stable native raster row-major order"
+  },
+  "review_budget_fractions": [0.1, 0.2],
+  "primary_comparison": "20% event-specific budget, NDWI plus NDVI (either) vs MNDWI margin, reporting each event and pooled paired counts; 10% sensitivity, NDWI-only/NDVI-only ablations and random expectation are secondary",
+  "metrics": "Review count, captured baseline mistakes, missed baseline mistakes, false positive and false negative captures, precision, mistake recall, unreviewed error rate and event-level paired counts. Baseline mistakes use independent benchmark labels after sealing. Random expectation is budget multiplied by baseline error prevalence.",
+  "hard_filter_ablation": ["original MNDWI", "MNDWI AND NDWI", "MNDWI AND NDVI<=0.2", "MNDWI AND NDWI AND NDVI<=0.2"],
+  "interpretation": "Correlated spectral consistency cues, not independent confirmation, confidence probabilities, improved accuracy without correction, or infrastructure exposure validation. Whole-window fixed review budget is a benchmark simulation and no human reviewer corrects any result.",
+  "freeze": "Freeze methods, thresholds, cohort and metrics before reading new reference pixels; no post-score parameter changes",
+  "publication": "Local research artifacts; benchmark imagery and labels remain local"
+}

@@ -1,0 +1,864 @@
+{
+  "annotation_bytes": 1871529,
+  "files": [
+    {
+      "bytes": 1956,
+      "file": "0_28_59.geojson",
+      "sha256": "51642d3665788435d4cb701288d57a17641875cef8173c9cfd5c265dae41de2c",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_28_59.geojson"
+    },
+    {
+      "bytes": 2966,
+      "file": "0_28_60.geojson",
+      "sha256": "a5a75178badf8a6e9968f018773866d8b24f2c487e198d151fd999836c73c77d",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_28_60.geojson"
+    },
+    {
+      "bytes": 3261,
+      "file": "0_28_61.geojson",
+      "sha256": "bf75360ccd67df58a97a77f7a8642ce3a0215410be9fce61f74c3a1b4236c241",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_28_61.geojson"
+    },
+    {
+      "bytes": 628,
+      "file": "0_29_59.geojson",
+      "sha256": "056b234a653cf5fdd71abb2605817410568999d7072daa09e0bcce1b71acd546",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_29_59.geojson"
+    },
+    {
+      "bytes": 2584,
+      "file": "0_29_60.geojson",
+      "sha256": "2d9df17b29ee9df09ca2786052dbd6d96c75fa18369494404cec4e89e62f250d",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_29_60.geojson"
+    },
+    {
+      "bytes": 8707,
+      "file": "0_29_61.geojson",
+      "sha256": "8ac896ee2d15ece9ed062caff81c1fe9a01808e167e2e73937c7632789589aab",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_29_61.geojson"
+    },
+    {
+      "bytes": 23501,
+      "file": "0_29_62.geojson",
+      "sha256": "054eb5a6d64a571bd1ca096cf2deebf24d04df10696da777086ca9fac2c17567",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_29_62.geojson"
+    },
+    {
+      "bytes": 45104,
+      "file": "0_29_63.geojson",
+      "sha256": "216c2e4bb3560b388138dd45cfd35c7de2dcbd5f562833b04afdb1939d15437b",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_29_63.geojson"
+    },
+    {
+      "bytes": 2262,
+      "file": "0_29_64.geojson",
+      "sha256": "52a0eb1e1ceac94f49dfed4da0c38e9828279346ddca31b2dc5f11f2c07ecc14",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_29_64.geojson"
+    },
+    {
+      "bytes": 1165,
+      "file": "0_29_65.geojson",
+      "sha256": "2dd1558940c6ea510305e113f0c01c8976864d80262871b845f6bce03549af88",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_29_65.geojson"
+    },
+    {
+      "bytes": 51324,
+      "file": "0_29_66.geojson",
+      "sha256": "791fe7e0f0dadd6c4eaaf2a0adb14e3ba9d4cda0a60c574e490ec764d8f1c813",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_29_66.geojson"
+    },
+    {
+      "bytes": 37394,
+      "file": "0_29_67.geojson",
+      "sha256": "87585200fffa276f4be0c969f4192c3bc759548aa26fb2ebac1ffccf5552d5ee",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_29_67.geojson"
+    },
+    {
+      "bytes": 23565,
+      "file": "0_29_68.geojson",
+      "sha256": "d1830ddabadf9afbbf53508666c21b6028b515e5e293f4199a8a33036fc54610",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_29_68.geojson"
+    },
+    {
+      "bytes": 40726,
+      "file": "0_29_69.geojson",
+      "sha256": "d4946f4c0876507e175fdea58ab296352a825526eae06462593cfe33b365d7b7",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_29_69.geojson"
+    },
+    {
+      "bytes": 4697,
+      "file": "0_29_70.geojson",
+      "sha256": "3b95f2f76dbbfbaa8818ccbdd547898664878ab388c2e2c7f7ec3adc2bdb39ec",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_29_70.geojson"
+    },
+    {
+      "bytes": 1522,
+      "file": "0_30_59.geojson",
+      "sha256": "4eb11716f7f908ba67eb5b9898396753d0cee1f47ad0ca089a692a0656b1083a",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_30_59.geojson"
+    },
+    {
+      "bytes": 30361,
+      "file": "0_30_60.geojson",
+      "sha256": "7a94bea4253f944ff471b43cd2df4fbff4e3ccf4fe588c88fad59a24f7aca18e",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_30_60.geojson"
+    },
+    {
+      "bytes": 38003,
+      "file": "0_30_61.geojson",
+      "sha256": "9a0d13defc688380f9daed1e4b25a25b8f821cbd17912efc2f24520410263c5e",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_30_61.geojson"
+    },
+    {
+      "bytes": 65006,
+      "file": "0_30_62.geojson",
+      "sha256": "2d84c98c73ba3d878ad919188948b30d5a2ca03b7056854fa5b8afd75e1f0204",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_30_62.geojson"
+    },
+    {
+      "bytes": 51159,
+      "file": "0_30_63.geojson",
+      "sha256": "548afa379251ddd15efe832c7d803abb7f1e6ac82bdbf9df02ab2de14f20d799",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_30_63.geojson"
+    },
+    {
+      "bytes": 3073,
+      "file": "0_30_66.geojson",
+      "sha256": "b5daaf26bbdcc8587cfc18779bd0bf33c90d1a823df5a866bd997214a4d242eb",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_30_66.geojson"
+    },
+    {
+      "bytes": 1432,
+      "file": "0_30_67.geojson",
+      "sha256": "a61d36dfb9b78951fc7cca91c2eea4a374b42aa08628ec0cb26f11e1098de841",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_30_67.geojson"
+    },
+    {
+      "bytes": 11655,
+      "file": "0_30_68.geojson",
+      "sha256": "77197225da8ef5177a12758bed5bab8894fc10af4754673ba467a2ce2ce1a800",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_30_68.geojson"
+    },
+    {
+      "bytes": 33921,
+      "file": "0_30_69.geojson",
+      "sha256": "5923bf213b00210a03e45330aed13a86081d7c55903d3615fda048c75b2efb3e",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_30_69.geojson"
+    },
+    {
+      "bytes": 57099,
+      "file": "0_30_70.geojson",
+      "sha256": "c87d0022eadd0d912b8e62e6f168b1e5b589b86f386177a6feb3e3bef925a655",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_30_70.geojson"
+    },
+    {
+      "bytes": 8033,
+      "file": "0_31_57.geojson",
+      "sha256": "85e6c99a93313bbbd7a07af2e0e0939774bb6b0774cd8528da2544dc164752ec",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_31_57.geojson"
+    },
+    {
+      "bytes": 7473,
+      "file": "0_31_59.geojson",
+      "sha256": "979e81b304ccf1bec345dd5bed8811b975dc1e6f70f5fbb8f2337d0a11f3678f",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_31_59.geojson"
+    },
+    {
+      "bytes": 28674,
+      "file": "0_31_60.geojson",
+      "sha256": "c030b249000a55269c82125c96f78adfbaaf5766efd7ce720f6572db4eb4f1b6",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_31_60.geojson"
+    },
+    {
+      "bytes": 51372,
+      "file": "0_31_61.geojson",
+      "sha256": "0d7bba61fed180c834b8040b45e5168aed80b62232c9a3c54a1cc1d267bc835d",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_31_61.geojson"
+    },
+    {
+      "bytes": 8307,
+      "file": "0_31_62.geojson",
+      "sha256": "ee58d19088e4a695de67dc020c6309f6853fc15155e5ab8967cb6d1dd991500c",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_31_62.geojson"
+    },
+    {
+      "bytes": 5141,
+      "file": "0_31_63.geojson",
+      "sha256": "53d85514142370538e79c5d0f063034d30adb87e46ec60f1102166b8515519b3",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_31_63.geojson"
+    },
+    {
+      "bytes": 892,
+      "file": "0_31_65.geojson",
+      "sha256": "d0159fddb44c660a69da1f0fd9aac7fb2489ed3077e63f08e71f182b696e3861",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_31_65.geojson"
+    },
+    {
+      "bytes": 1755,
+      "file": "0_31_66.geojson",
+      "sha256": "0b2990fb7fd9c731d00499674c52806a4430cb34d541e2524bc14e106493c5dd",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_31_66.geojson"
+    },
+    {
+      "bytes": 907,
+      "file": "0_31_67.geojson",
+      "sha256": "813d1ae9f65ecaac7d6ba56a54f95889ab238d267fded4efc0235009a664ff99",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_31_67.geojson"
+    },
+    {
+      "bytes": 12003,
+      "file": "0_31_68.geojson",
+      "sha256": "4a360e0953854e00de63342a59e0a5f4d25106a540c1cc5926cd8242e05d0332",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_31_68.geojson"
+    },
+    {
+      "bytes": 29059,
+      "file": "0_31_69.geojson",
+      "sha256": "871088255bff899218ed6705d1bee4623fccb11a518d9a61433c96c51ddf5384",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_31_69.geojson"
+    },
+    {
+      "bytes": 636,
+      "file": "0_32_56.geojson",
+      "sha256": "c5609b357b2f5326b701c11d5461f665497c25537a10f357ffacc7dba523f425",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_32_56.geojson"
+    },
+    {
+      "bytes": 3969,
+      "file": "0_32_57.geojson",
+      "sha256": "c3f2a68fcdad53d102f9501b4f3b748bc7bc070e28bdd7b1a26454c9396edf22",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_32_57.geojson"
+    },
+    {
+      "bytes": 1525,
+      "file": "0_32_58.geojson",
+      "sha256": "85b4b761f99080395a5785aba72c4c717c1bcbd05c83ab70eab0993fc7d4d9ee",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_32_58.geojson"
+    },
+    {
+      "bytes": 663,
+      "file": "0_32_59.geojson",
+      "sha256": "70645547feba3858a01727261b1a0cc473adbce221ccce049048f77c162b282a",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_32_59.geojson"
+    },
+    {
+      "bytes": 10603,
+      "file": "0_32_61.geojson",
+      "sha256": "ed247feb5ac6b3fb4453b080bac8bba4d44f71a198d20ab71aa7243bf7ba4be2",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_32_61.geojson"
+    },
+    {
+      "bytes": 2946,
+      "file": "0_32_62.geojson",
+      "sha256": "7586d1aa125938366bffec6b3194598018821fcd54dd59d637a923b07bc31ef0",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_32_62.geojson"
+    },
+    {
+      "bytes": 641,
+      "file": "0_32_63.geojson",
+      "sha256": "ed333748eaa8db92ce1b372b1832ac0440178e4a17f71b74a5c74731b1c19961",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_32_63.geojson"
+    },
+    {
+      "bytes": 647,
+      "file": "0_32_65.geojson",
+      "sha256": "ba7e437e6e8e71a6f9c044b710c58158f0930977f7d0ae19de1c92a814cd912c",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_32_65.geojson"
+    },
+    {
+      "bytes": 980,
+      "file": "0_32_66.geojson",
+      "sha256": "28373807859b7dda914535a28ddd315ddea8fcce841ae21308877ce0c846d6b2",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_32_66.geojson"
+    },
+    {
+      "bytes": 740,
+      "file": "0_32_68.geojson",
+      "sha256": "1214abc366bc4b68dae036c3a6e4811911860115a53ca7b848bf66590d76ce7e",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_32_68.geojson"
+    },
+    {
+      "bytes": 2096,
+      "file": "0_32_69.geojson",
+      "sha256": "6f697046cad0f8f7eb531baff78fc1a0c858d0d61ce5da421d0caaf855a9a964",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_32_69.geojson"
+    },
+    {
+      "bytes": 593,
+      "file": "0_33_56.geojson",
+      "sha256": "37adbee6eee8c1c7e11820679519a1a6a5a73ed42d9206d8377904afec039e9f",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_33_56.geojson"
+    },
+    {
+      "bytes": 1008,
+      "file": "0_33_57.geojson",
+      "sha256": "c39085d1a3f5f274cdfb732a8d8410425024300771419591ee15019cd176b790",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_33_57.geojson"
+    },
+    {
+      "bytes": 9748,
+      "file": "0_33_61.geojson",
+      "sha256": "277f2ff7b8ec2c4abd9293f2da2e4d84fa4792e11febefaa438481b9e5ed3b13",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_33_61.geojson"
+    },
+    {
+      "bytes": 715,
+      "file": "0_33_68.geojson",
+      "sha256": "ef08ef81cda28a67678cd15ed0170e6013cd4c3c80c65e6f2b1e143bedd32c44",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_33_68.geojson"
+    },
+    {
+      "bytes": 12239,
+      "file": "0_34_61.geojson",
+      "sha256": "f5b4b4d5b6e7eae557c5f5eb345c45d7bbe050ef29531e6a85fc8704d4a4f06f",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_34_61.geojson"
+    },
+    {
+      "bytes": 1608,
+      "file": "0_34_62.geojson",
+      "sha256": "9d23552f49b2e34c4be46ad8a97dd701c5f866bbfc79c599b5ddca12a6592dd6",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_34_62.geojson"
+    },
+    {
+      "bytes": 1102,
+      "file": "0_34_68.geojson",
+      "sha256": "369b7a26fbcdacef0e728d652f66094a0e6ecfb1a051c2bf7ae404c632d15460",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_34_68.geojson"
+    },
+    {
+      "bytes": 1332,
+      "file": "0_35_59.geojson",
+      "sha256": "c9e4ee08fbc069be21356a8539ed0587be77660984f2e05bbc9d670c4515f1fa",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_35_59.geojson"
+    },
+    {
+      "bytes": 46493,
+      "file": "0_35_60.geojson",
+      "sha256": "65c266aff938e0ef823e2b6d1380f0231bdd0919779844eef1a79767cca029c9",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_35_60.geojson"
+    },
+    {
+      "bytes": 23186,
+      "file": "0_35_61.geojson",
+      "sha256": "7ed539792b54a519e462a7a135f5039b1a86ecc68182aa240a1e1e76c7d968fd",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_35_61.geojson"
+    },
+    {
+      "bytes": 12588,
+      "file": "0_35_62.geojson",
+      "sha256": "21c3fa8373449302ab01dbcff5d3c0c906178925e54d6909bea43c161d6cbc11",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_35_62.geojson"
+    },
+    {
+      "bytes": 633,
+      "file": "0_35_63.geojson",
+      "sha256": "c3b5d8aa7e1729828d499148cd97ab31ff7204b2377d5b9a9d7abc33fbd4a5df",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_35_63.geojson"
+    },
+    {
+      "bytes": 742,
+      "file": "0_35_68.geojson",
+      "sha256": "6d5d3906c91f110250fd924a1c8104e4bc7923c35f113c786661f5b8118eb298",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_35_68.geojson"
+    },
+    {
+      "bytes": 1251,
+      "file": "0_36_59.geojson",
+      "sha256": "9bab4fc14c1a1d3c20b15feed1ea54db2f933cd5fac8566f1e55952eae9f5f3f",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_36_59.geojson"
+    },
+    {
+      "bytes": 88483,
+      "file": "0_36_60.geojson",
+      "sha256": "bdd0f7efbd7e9397cf8c79a534454a8287fe8a04fb4cea98615ecb8cb7910d8f",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_36_60.geojson"
+    },
+    {
+      "bytes": 80216,
+      "file": "0_36_61.geojson",
+      "sha256": "d87549a3eda9259b9de06a6f4c7361352cdd2685b38a13eafbc48df67dd8bedd",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_36_61.geojson"
+    },
+    {
+      "bytes": 4422,
+      "file": "0_36_62.geojson",
+      "sha256": "fb9db4a10ef22ced0b61864ee5a9f1cb926abeb567c49000a77e226bbfab0f3c",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_36_62.geojson"
+    },
+    {
+      "bytes": 2088,
+      "file": "0_36_68.geojson",
+      "sha256": "aa6e420e6b579e6ecdb0a6f5908d3161396a0b652a63eb826ca2cfbd24e2e549",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_36_68.geojson"
+    },
+    {
+      "bytes": 2850,
+      "file": "0_37_59.geojson",
+      "sha256": "f0113e29b102889b8c7eded09acf05629eb45d97c48481e22ff951c9c3a8d1b2",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_37_59.geojson"
+    },
+    {
+      "bytes": 62137,
+      "file": "0_37_60.geojson",
+      "sha256": "ae5ab24f751f79ca1d9cd253f6f05657b33d6c9c6e4b88f8a06d010d8fa50006",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_37_60.geojson"
+    },
+    {
+      "bytes": 25784,
+      "file": "0_37_61.geojson",
+      "sha256": "e634eb6905cd1af49e054d6a2200a6ca35716bc0fd7108d60da80e750a394140",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_37_61.geojson"
+    },
+    {
+      "bytes": 666,
+      "file": "0_37_62.geojson",
+      "sha256": "4f167e264a0d8ffa18d1431cf9312d2bd80a57b6e1b60b7089f801436c514f3b",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_37_62.geojson"
+    },
+    {
+      "bytes": 5791,
+      "file": "0_37_67.geojson",
+      "sha256": "541e04a86ab3e24ebec787288a17eaa595ce2b7c6327a38919b3963152fc769e",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_37_67.geojson"
+    },
+    {
+      "bytes": 52188,
+      "file": "0_37_68.geojson",
+      "sha256": "2cba1556df1f1248e8fd7e5e423b059d0d23282ac5fab01a585cbabaf7a1bfab",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_37_68.geojson"
+    },
+    {
+      "bytes": 37596,
+      "file": "0_37_69.geojson",
+      "sha256": "885484739ccb3cb2806aa0e8a4884499504c40bb57d9c1eb34421511d6ed2e5e",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_37_69.geojson"
+    },
+    {
+      "bytes": 1299,
+      "file": "0_37_70.geojson",
+      "sha256": "f0a4bfac0c21347851e677cdf998a500846fffe044470f660380c08559357a2f",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_37_70.geojson"
+    },
+    {
+      "bytes": 820,
+      "file": "0_38_60.geojson",
+      "sha256": "27c0ad8f1fe7c352d33c3864ba7484511397a3c78167be60cc65aa27001d6536",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_38_60.geojson"
+    },
+    {
+      "bytes": 2435,
+      "file": "0_38_61.geojson",
+      "sha256": "b6c81bb7ead658dc7a492fd4607f1a401d3312d1653000d83fc5a597d684e3a0",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_38_61.geojson"
+    },
+    {
+      "bytes": 1028,
+      "file": "0_38_62.geojson",
+      "sha256": "0713126196926ed7f610a65e3b50767bac823ed5c8e05b9479700ad1183dd8ee",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_38_62.geojson"
+    },
+    {
+      "bytes": 4661,
+      "file": "0_38_68.geojson",
+      "sha256": "cb9317d702f4169faed6d5737adbe3b769561a01aee96d2ee4ca6a342272a96a",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_38_68.geojson"
+    },
+    {
+      "bytes": 47609,
+      "file": "0_38_69.geojson",
+      "sha256": "34a0dd7bc875dcf389e2e1665daf5e995f187a23b7a28b87a8bd3fc70c949b0b",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_38_69.geojson"
+    },
+    {
+      "bytes": 1164,
+      "file": "0_39_60.geojson",
+      "sha256": "d80dec1f1bd6263fb15f893e911e496f04ab80895a08472d792f60a1674ead24",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_39_60.geojson"
+    },
+    {
+      "bytes": 3745,
+      "file": "0_39_61.geojson",
+      "sha256": "6d3bdf32bd28e0490b163bc799ecae19d0a0ee6641be9fa8991625a47162c2da",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_39_61.geojson"
+    },
+    {
+      "bytes": 4818,
+      "file": "0_39_62.geojson",
+      "sha256": "69bf14de063ccd1d404ffe8dde2984188f15190430e1793825cfdac3d48b2543",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_39_62.geojson"
+    },
+    {
+      "bytes": 697,
+      "file": "0_39_63.geojson",
+      "sha256": "c46996647011cbe5d7181eaa2e18a8e6feb36bdcb0ccd9d1260111e53eeeb0f3",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_39_63.geojson"
+    },
+    {
+      "bytes": 706,
+      "file": "0_39_66.geojson",
+      "sha256": "57e001375b52a4c411e8c3c32990f18185dfbab75d2f454bfdb7fe4954c34bfc",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_39_66.geojson"
+    },
+    {
+      "bytes": 905,
+      "file": "0_39_67.geojson",
+      "sha256": "ef9d69368d4325abc9c3835f60becf6b96646c4b68f2bcdbff7536d2c77214ff",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_39_67.geojson"
+    },
+    {
+      "bytes": 6693,
+      "file": "0_39_69.geojson",
+      "sha256": "a5b2deb0ebe0364a0fa1997756fa18b3d3959f95eb18d2757ab40896d042e8ce",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_39_69.geojson"
+    },
+    {
+      "bytes": 1063,
+      "file": "0_40_57.geojson",
+      "sha256": "8a9c192b028d6567399897222ea827f93302622ec758ec7967c9122b40de2456",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_40_57.geojson"
+    },
+    {
+      "bytes": 32084,
+      "file": "0_40_58.geojson",
+      "sha256": "65d5f20de5bfef6c4de84c96ef42379555c7b9e8f355b43779d0a0608b709c2d",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_40_58.geojson"
+    },
+    {
+      "bytes": 47213,
+      "file": "0_40_59.geojson",
+      "sha256": "49a73c509e9d1ba6f369a909c8d37eeaaad28cdb89dff8497289293c60c1b300",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_40_59.geojson"
+    },
+    {
+      "bytes": 11722,
+      "file": "0_40_60.geojson",
+      "sha256": "44a300adb2f278285c5257c53518554ad05f86ff7049fadbfb8174e7f275db4e",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_40_60.geojson"
+    },
+    {
+      "bytes": 32077,
+      "file": "0_40_61.geojson",
+      "sha256": "662e4be250a710db2e16d2ac4bbf43d3de9e0510f464edd9b66f13ddb5b6cc12",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_40_61.geojson"
+    },
+    {
+      "bytes": 87534,
+      "file": "0_40_62.geojson",
+      "sha256": "ae2b71f0c94d9214f26046c202673f27af2fc475cf06e9bdd31d2be143aa622c",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_40_62.geojson"
+    },
+    {
+      "bytes": 7225,
+      "file": "0_40_63.geojson",
+      "sha256": "60de6a027c1b40b6d3491b2f67ccfefd72cd4ee5564d9ff7f338595a57e9d616",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_40_63.geojson"
+    },
+    {
+      "bytes": 908,
+      "file": "0_40_67.geojson",
+      "sha256": "d5858b544a6de2eada90048d8a69e65b6b65d5c0026495b5d64f63450753e325",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_40_67.geojson"
+    },
+    {
+      "bytes": 1043,
+      "file": "0_40_68.geojson",
+      "sha256": "883819e00162e4fa005ccc0ba4ef14d99de75e47f18886e161d4228802106fdb",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_40_68.geojson"
+    },
+    {
+      "bytes": 1334,
+      "file": "0_40_69.geojson",
+      "sha256": "c0fcbaad36dbd4d8717a0658921bca8fd4b7ae3ef29a57f64a4c7e3e9ec57d5b",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_40_69.geojson"
+    },
+    {
+      "bytes": 140309,
+      "file": "0_41_58.geojson",
+      "sha256": "cc92d8ba56ddb19c68aecad5ec4c3cdc276ec3bffc1398087e1fd9167b07c127",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_41_58.geojson"
+    },
+    {
+      "bytes": 55897,
+      "file": "0_41_59.geojson",
+      "sha256": "a27d29217366973e87c07b975f36d22f3ab2916446495fed493e8305673195d3",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_41_59.geojson"
+    },
+    {
+      "bytes": 10643,
+      "file": "0_41_60.geojson",
+      "sha256": "da9e7958a7301b9f37db93f127dc4e1078129cd3b7f825d25e860ed794271834",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_41_60.geojson"
+    },
+    {
+      "bytes": 6409,
+      "file": "0_41_61.geojson",
+      "sha256": "80759fb5efa2b9f7b336143320f5629d58e1088c3bc29bfbeadade4303c140b9",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_41_61.geojson"
+    },
+    {
+      "bytes": 11266,
+      "file": "0_41_62.geojson",
+      "sha256": "6d62de93d2cf79c76afb3c9d08574b087990fbaf5bfbcd245b5fe6c208d85282",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_41_62.geojson"
+    },
+    {
+      "bytes": 12696,
+      "file": "0_41_63.geojson",
+      "sha256": "85cc16a31e0417a6c70078ace6c8c4fc775c93e54015eba7a7e4c36989cbbf81",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_41_63.geojson"
+    },
+    {
+      "bytes": 1314,
+      "file": "0_41_69.geojson",
+      "sha256": "344f5c4d10363d91c9a17bfe7193e5b70b5a86b06b7d3524aa5af0599dfbb9a2",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_41_69.geojson"
+    },
+    {
+      "bytes": 26113,
+      "file": "0_42_58.geojson",
+      "sha256": "32aaaf953d84df091ea0d71a11d8ec60fab9d74f77d9c35c389c15f3a560b93d",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_42_58.geojson"
+    },
+    {
+      "bytes": 1155,
+      "file": "0_42_59.geojson",
+      "sha256": "7c3f3823a62ca5120b04be4ca7f1dd8ec1dc038b30b4ca6dcc746dfce0a2ecbf",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_42_59.geojson"
+    },
+    {
+      "bytes": 862,
+      "file": "0_42_60.geojson",
+      "sha256": "df505e8ecd295058c13679449f1aae858f35d9b21d05afd512fd8d85884b78f2",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_42_60.geojson"
+    },
+    {
+      "bytes": 852,
+      "file": "0_42_61.geojson",
+      "sha256": "ac2a381dc2d1b445a877be374e7cedef63b50c7a61b0e68f3a8b8191c8f85ad5",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_42_61.geojson"
+    },
+    {
+      "bytes": 1041,
+      "file": "0_42_62.geojson",
+      "sha256": "6c22fe06d5ec32f3320b4b0c07dc3de4be376c9810a88333a027b717e4eaf749",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_42_62.geojson"
+    },
+    {
+      "bytes": 1016,
+      "file": "0_42_69.geojson",
+      "sha256": "9b574794dc6fc48e07577232f412f6781e3cf7d307825d65e04ad625087d8e8d",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_42_69.geojson"
+    },
+    {
+      "bytes": 1172,
+      "file": "0_43_58.geojson",
+      "sha256": "68387ced9497b7d531ef3709592e55145e4b7d0f0e4feaefdc19ba4929cf0035",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_43_58.geojson"
+    },
+    {
+      "bytes": 743,
+      "file": "0_43_62.geojson",
+      "sha256": "df413038e7dd0d1042d067e025be0d92af0501c67e89c3d3f188dd44d3ec5374",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_43_62.geojson"
+    },
+    {
+      "bytes": 852,
+      "file": "0_43_63.geojson",
+      "sha256": "7b490f097bd5619b806ca332ab74a3d7c7bb5732b009665576724dd6f55312f7",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_43_63.geojson"
+    },
+    {
+      "bytes": 32094,
+      "file": "0_43_68.geojson",
+      "sha256": "7b3eb8a40ad814b5e2a8b41d795231d06ca4a3cea462b354a880b02e486e9eae",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_43_68.geojson"
+    },
+    {
+      "bytes": 15521,
+      "file": "0_43_69.geojson",
+      "sha256": "706cea99c9d42db8df90abd3982c116209ded9c3b2e3f9b8872b2415420f4664",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_43_69.geojson"
+    },
+    {
+      "bytes": 825,
+      "file": "0_44_63.geojson",
+      "sha256": "bf1f946562d5b9a2a22d1384c87bb4b572fec14c1b88e37050a6c11e71ba58f1",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_44_63.geojson"
+    },
+    {
+      "bytes": 37257,
+      "file": "0_44_68.geojson",
+      "sha256": "6df63e0a8f5530db549d5861b3aecdac5b99090101ad6d6bcec68d531c7a685e",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_44_68.geojson"
+    },
+    {
+      "bytes": 1146,
+      "file": "0_44_69.geojson",
+      "sha256": "eb7e9d3f2d1759d9f6d3ef273738a7a0a74d74226ddadc017e5a6d624ea493fe",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_44_69.geojson"
+    },
+    {
+      "bytes": 664,
+      "file": "0_45_63.geojson",
+      "sha256": "20d4b0b4426ee7e98a5985d7f9db35b1c75e58f72a91631a1a4222ceacf2f8b3",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_45_63.geojson"
+    },
+    {
+      "bytes": 569,
+      "file": "0_45_64.geojson",
+      "sha256": "938896d6226c4dcab655eb8af5e2661ec9d79a7373511b9ec0e8148165e14914",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_45_64.geojson"
+    },
+    {
+      "bytes": 1247,
+      "file": "0_45_67.geojson",
+      "sha256": "b0db5c7275bf70868f66d9f20e6a5fb7b96df43d97d7c9802a464cc42c06d523",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_45_67.geojson"
+    },
+    {
+      "bytes": 10840,
+      "file": "0_45_68.geojson",
+      "sha256": "49a57d1012a803231b88de265f72154b6d6efa9d630b551d125c68e12ecc99de",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_45_68.geojson"
+    },
+    {
+      "bytes": 1737,
+      "file": "0_45_69.geojson",
+      "sha256": "8a26f11bf820706749bc97d246584a18be25118a0fddc7cf956938091774ac70",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_45_69.geojson"
+    },
+    {
+      "bytes": 914,
+      "file": "0_45_70.geojson",
+      "sha256": "9eae940edde1f740609814f5ebde601a7819733fc00d4a918780125e10991a5c",
+      "status": "ACQUIRED",
+      "url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/annotations/0_45_70.geojson"
+    }
+  ],
+  "mapping_sha256": "6eb036a70cdd19f15fb9dabc067e8c41a79d7cea8e4b3927d5188661d7e5e45e",
+  "mapping_url": "https://spacenet-dataset.s3.amazonaws.com/spacenet/SN8_floods/Germany_Training_Public/Germany_Training_Public_label_image_mapping.csv",
+  "protocol_sha256": "ca78eb5c887ba157e64f92fe3db49031167faafc04fd1d45332d05ea84484f4d",
+  "selected": 122,
+  "semantic_labels_read": false
+}

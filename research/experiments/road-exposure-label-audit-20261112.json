@@ -1,0 +1,14 @@
+{
+  "schema": "satquery.road-exposure-label-audit/1",
+  "when": "After the first label join found no explicit negative grades; before any comparative road metrics were produced",
+  "fixed_prediction_seal": "ahr-sealed-1",
+  "strict_result": "Report screening recall among explicitly flooded yes labels on common optical/terrain support. No strict precision, F1 or AP without explicit negatives.",
+  "conditional_benchmark_result": "As a secondary analysis, replay the same immutable prediction rows using the publisher's road scorer convention. Missing flooded is negative under that convention, but obscured roads may also be missing. Result estimates agreement with this benchmark coding only.",
+  "sources": [
+    "https://elib.dlr.de/191307/1/Hansch_SpaceNet_8_-_The_Detection_of_Flooded_Roads_and_Buildings_CVPRW_2022_paper.pdf",
+    "https://github.com/SpaceNetChallenge/SpaceNet8/blob/main/baseline/utils/gt_geojson_to_wkt_csv.ipynb",
+    "https://github.com/SpaceNetChallenge/SpaceNet8/blob/main/baseline/data_prep/geojson_prep.py"
+  ],
+  "changes_to_cohort_predictors_parameters": false,
+  "no_score_tuning": true
+}

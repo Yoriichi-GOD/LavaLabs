@@ -1,0 +1,8 @@
+population,arm,queue,known_endpoints,endpoint_reference_positives,modeled_issued,modeled_coverage,known_positive_endpoints_with_model,physical_exposure_issued,physical_traversal_issued,physical_traversal_truth,conditional_physical_error,reason
+Ahr fixed proximity queue,A,60,38,44,23,0.38333333333333336,15,0,0,0,,NO_MATCHED_INDEPENDENT_TRAVERSAL_REFERENCE
+Ahr fixed proximity queue,B,60,38,44,3,0.05,3,0,0,0,,NO_MATCHED_INDEPENDENT_TRAVERSAL_REFERENCE
+Ahr fixed proximity queue,C,60,38,44,23,0.38333333333333336,15,0,0,0,,NO_MATCHED_INDEPENDENT_TRAVERSAL_REFERENCE
+Ahr fixed proximity queue,D,60,38,44,23,0.38333333333333336,15,0,0,0,,NO_MATCHED_INDEPENDENT_TRAVERSAL_REFERENCE
+Ahr fixed proximity queue,E,60,38,44,23,0.38333333333333336,15,0,0,0,,NO_MATCHED_INDEPENDENT_TRAVERSAL_REFERENCE
+Ahr fixed proximity queue,F,60,38,44,0,0.0,0,0,0,0,,NO_MATCHED_INDEPENDENT_TRAVERSAL_REFERENCE
+Ahr fixed proximity queue,G,60,38,44,,,,,,0,,NO_ENSEMBLE_BASELINE_FOR_THIS_TARGET

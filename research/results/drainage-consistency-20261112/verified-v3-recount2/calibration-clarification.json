@@ -1,0 +1,14 @@
+{
+  "additional_uncertainty_source": "https://github.com/Element84/earth-search/issues/71",
+  "interpretation": "Provider convention, not independent radiometric calibration. Known catalog flag issues remain a source-quality limitation, especially false-flag scenes. No threshold was tuned and no direction truth was read.",
+  "observed_metadata": {
+    "sangam_2023": true,
+    "sangam_2024": false,
+    "varanasi_2023": true,
+    "varanasi_2024": true
+  },
+  "provider_source": "https://github.com/Element84/earth-search/issues/9",
+  "role": "Source-calibration correction before accepted results; rejected run-v2 retained",
+  "rule": "Require explicit Earth Search BOA-offset-applied boolean and scale. If true use scale only; if false retain explicitly declared offset. Missing convention fails closed. Never apply an offset twice.",
+  "validity": "Nonnegative finite contributing reflectances and finite nonzero normalized-index denominators; negative reflectance remains excluded/unknown, never clipped to make an index plausible."
+}
