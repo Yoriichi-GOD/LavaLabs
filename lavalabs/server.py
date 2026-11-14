@@ -21,6 +21,7 @@ from jai_extension.terrain_exposure import TerrainExposureStore
 from jai_extension.research_cases import CaseResearchStore, router as case_router, CASES
 from .public_runs import DemoBridge
 from .trend_exports import router as export_router
+from .nepal_exports import router as nepal_export_router
 
 ROOT = Path(__file__).resolve().parents[1]
 UI = ROOT / 'UI'
@@ -87,6 +88,7 @@ def create_app():
 
     attach(app, bridge, terrain, FLOOD, exposure, authorize_run=bridge.require)
     app.include_router(export_router)
+    app.include_router(nepal_export_router)
     app.include_router(case_router(CaseResearchStore(ROOT/'research/results/case-campaign-20261107')))
 
     @app.get('/', response_class=HTMLResponse)
@@ -135,7 +137,14 @@ def create_app():
 
     @app.get('/trends', response_class=HTMLResponse)
     def trends():
-        return HTMLResponse(with_brand((UI/'trends/index.html').read_text(encoding='utf-8')), headers={'Cache-Control': 'no-store'})
+        html = (UI/'trends/index.html').read_text(encoding='utf-8')
+        html = html.replace('<span class="snapshot">Frozen real-data demonstration</span>',
+                            '<a class="text-link" href="/nepal">Explore the Nepal investigation ↗</a>', 1)
+        return HTMLResponse(with_brand(html), headers={'Cache-Control': 'no-store'})
+
+    @app.get('/nepal', response_class=HTMLResponse)
+    def nepal():
+        return HTMLResponse(with_brand((UI/'nepal/index.html').read_text(encoding='utf-8')), headers={'Cache-Control': 'no-store'})
 
     @app.get('/processor', response_class=HTMLResponse)
     def processor():

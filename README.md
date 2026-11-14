@@ -2,6 +2,8 @@
 
 LavaLabs is a Scientific Noir workspace for investigating Earth-system change. Explore long-term NASA POWER temperature and precipitation trends, then compare what shorter satellite observation windows can establish across four flood and drainage case studies.
 
+Start with the [Nepal investigation](http://127.0.0.1:8780/nepal) after launching. Compare 15 NASA model cells across 42 years, then inspect the saved Syapru Besi event and follow the evidence into the 3D workspace. The [Nepal evidence notes](NEPAL_EVIDENCE.md) record the exact data, result and replay commands.
+
 | Workspace | What you can do |
 | --- | --- |
 | NASA trends | Select a variable, one of six model cells and one of three periods from 1984–2025. Compare slopes per decade, confidence intervals and significance across 36 fixed comparisons. Download CSV, the evidence receipt and original NASA data. |

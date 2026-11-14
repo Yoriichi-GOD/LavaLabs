@@ -114,7 +114,8 @@
     state.contextLoading=true;setBusy(false);
     $('#earth-refresh').disabled=true;
     const results=await Promise.allSettled([api('/api/flood/runs'),api('/api/terrain/status')]);
-    const selectedRun=state.sourcesLoaded?$('#earth-run').value:(localStorage.getItem('earth-run')??localStorage.getItem('jai-last-flood-run'));
+    const linkedRun = new URLSearchParams(location.search).get('run');
+    const selectedRun=state.sourcesLoaded?$('#earth-run').value:(linkedRun??localStorage.getItem('earth-run')??localStorage.getItem('jai-last-flood-run'));
     const selectedScene=state.sourcesLoaded?$('#earth-scene').value:localStorage.getItem('earth-scene');
     state.runs=results[0].status==='fulfilled'?results[0].value.runs.filter(r=>r.population==='FROZEN_REAL_OBSERVATION'):[];
     state.scenes=results[1].status==='fulfilled'?results[1].value.scenes:[];

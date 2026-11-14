@@ -24,9 +24,13 @@
       "sha256": "22326cbc09b0b991357dc6b2cdcf251d2866196c94d32c9f9a4ba62ff2fd1b51",
       "bytes": 1089
     },
+    "NEPAL_EVIDENCE.md": {
+      "sha256": "e67f4b14ddc0b12f07465df630c946b1d357c5d241abf5448c1801d9afbb2554",
+      "bytes": 4974
+    },
     "README.md": {
-      "sha256": "c2992454af492389bd07049c782291a962cb6dcb88293584b3d3a0140dad3ee2",
-      "bytes": 4929
+      "sha256": "67016233c2f1500e1eb8fad641433167f48f53b1ded798a47594171e760618ac",
+      "bytes": 5243
     },
     "UI/app.js": {
       "sha256": "740cd1dcedace19cee15d8a1a55de45b71ba2f86eeac4baee10363b2596cf781",
@@ -77,12 +81,48 @@
       "bytes": 633
     },
     "UI/index.html": {
-      "sha256": "a47ec07f059d03a53a1e6fba77412af2531669ed11391e3b930e2ab224f923e3",
-      "bytes": 5935
+      "sha256": "51093931c4a8450cbfedb4dc7434b28e83a7d1e62e2ba6ec09b4072ead2a59ca",
+      "bytes": 5948
     },
     "UI/lava.css": {
-      "sha256": "c75465d44d3a4de8d8b292bbea5d3fe11be03e9e93efad9e137cfa95d767c0e2",
-      "bytes": 14109
+      "sha256": "1486956e5c352fda423350321d730af7ac37a915614e411009b9c815f879493e",
+      "bytes": 14274
+    },
+    "UI/nepal/case.css": {
+      "sha256": "4ba8e06160b8fb0c9160230cce9757739612f628c17a25e0a9b961a008829fbe",
+      "bytes": 5737
+    },
+    "UI/nepal/case.js": {
+      "sha256": "cf669fcba748cc27834b7c6389b12dc388e2b3379810073066c7a85389d95ea1",
+      "bytes": 12734
+    },
+    "UI/nepal/data/after.png": {
+      "sha256": "d27f98d427a4b5f6333dd93e31390c548135adefdf1240c0adcc20e36e79982f",
+      "bytes": 81430
+    },
+    "UI/nepal/data/before.png": {
+      "sha256": "8c918f493562b066157307457943d53049c2ac52c24d8f64ddb2106210119b1f",
+      "bytes": 81504
+    },
+    "UI/nepal/data/case.json": {
+      "sha256": "88831dd8892af231a3610b7a7e36026442e9fc54518bc1c5a5a547a31baf012c",
+      "bytes": 133815
+    },
+    "UI/nepal/data/rainfall.json": {
+      "sha256": "8d65b18a901ba3291449ebda71001ab09ce1f1aec6090c6c77e01d59cb3bdd68",
+      "bytes": 115883
+    },
+    "UI/nepal/data/syapru-point.json": {
+      "sha256": "aff7ce7af840014b3af2ebc1d674f56b8357b4cf8e55e77409709e376408f185",
+      "bytes": 15955
+    },
+    "UI/nepal/data/t2m.json": {
+      "sha256": "fc61a6ff13ddfb970077a9326f1d00601a60dd5301f387031844420b6f264c38",
+      "bytes": 122821
+    },
+    "UI/nepal/index.html": {
+      "sha256": "f3f8788fdf34915d26a5387ced1ef978f1b6e808fcaffcefeaeb3085a310ec09",
+      "bytes": 6814
     },
     "UI/processor-lava.js": {
       "sha256": "ce83652c35aeaa96cef5be419ff4e494f30848d37eb5be09578754aefbfd3fa4",
@@ -553,8 +593,8 @@
       "bytes": 9831
     },
     "jai_extension/web/earth.js": {
-      "sha256": "bbcd4bdcc3f918181579a0a0eddbcf7804d063413056807e0f0396ada465dc69",
-      "bytes": 48651
+      "sha256": "e7093bfd2c5fe5d46c32a58e0a66e221f88a82809fbfff0d61857da05933d378",
+      "bytes": 48733
     },
     "jai_extension/web/extension.css": {
       "sha256": "b65a537b7febce11f9f6a79b63177517845bdbf305405a02fab854e9f804cb3b",
@@ -588,13 +628,17 @@
       "sha256": "bae2e842208d2431ab6bb0d18b317c2f68c03f1327dd48b43af77e2310e80321",
       "bytes": 88
     },
+    "lavalabs/nepal_exports.py": {
+      "sha256": "1b8a81a81e9db1b87f35dcb1c62f1c2ccf4aa553ec9edea3634d0c8e897826cf",
+      "bytes": 2383
+    },
     "lavalabs/public_runs.py": {
       "sha256": "a0575e602760171d7633ca220e513e0ca2862ae513eea3aefed7b75c4116fdbd",
       "bytes": 1113
     },
     "lavalabs/server.py": {
-      "sha256": "cb382945ee758deaff6080dde870abf0b46c76d4f5f9f0b3bfbcf1cefd1f917d",
-      "bytes": 11309
+      "sha256": "9036d5947daae7ec14a64d1b4322a3e632250e30143b00f00e781f498f4aac45",
+      "bytes": 11833
     },
     "lavalabs/trend_exports.py": {
       "sha256": "1f0f64f69fa6d0e4e282bd25f8e3439763a876603dc7bef81916f53a4863d5a4",
@@ -1280,6 +1324,10 @@
       "sha256": "bc4e0998b454f778bf7dc2e2d46d0c8814b49bfa4623bbbb930601d9f28e4c73",
       "bytes": 3087
     },
+    "scripts/build_nepal_case.py": {
+      "sha256": "87dee40dd96645c999d552c8c1c89a98b695d4ca0357bcfc125e51f27c9ba011",
+      "bytes": 9887
+    },
     "scripts/check_research_release_http.py": {
       "sha256": "9138f37c927fafca54a5cebe9a4172c5a0e630f858d1314a72bbbeb06d5b05a0",
       "bytes": 3659
@@ -1387,6 +1435,10 @@
     "tests/test_merit_windows.py": {
       "sha256": "41217269e07747e2d7f696b9529ef5bc41113ec7448d5459f50ba277a53fa2b1",
       "bytes": 3685
+    },
+    "tests/test_nepal_case.py": {
+      "sha256": "d1adb1ff6e6463092b49d55517465dfdf201458b61faffc83f858a7a6d037704",
+      "bytes": 4614
     },
     "tests/test_observed_flow_control.py": {
       "sha256": "30b64df4c60ce24098a505e75f32b05524faba4293f64acabd061ca6a56f4097",

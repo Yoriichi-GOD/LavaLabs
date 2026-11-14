@@ -13,4 +13,6 @@ body button{box-shadow:none!important}#earth>.earth-intro{display:none!important
 @media(max-width:760px){
  body>header nav[aria-label="Workspace"]{flex-wrap:wrap;gap:0 20px;overflow:visible}
  body>header nav[aria-label="Workspace"] :is(button,a){min-height:40px;padding:8px 0}
+ body .intro:has(>.nepal-entry){flex-wrap:wrap;gap:8px}
+ body .intro>.nepal-entry{display:inline-flex;align-items:center;gap:6px;min-height:40px;white-space:normal}
 }
