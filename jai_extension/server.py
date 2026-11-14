@@ -56,7 +56,7 @@ class InvestigationRequest(BaseModel):
     profile: Optional[ProfileRequest] = None
 
 
-def attach(app, bridge, terrain=None, visual_root=None, exposure_store=None, authorize_run=None):
+def attach(app, bridge, terrain=None, visual_root=None, exposure_store=None, authorize_run=None, job_bridge=None):
     router = APIRouter(prefix="/api/flood")
     visuals = VisualContext(bridge, visual_root)
 
@@ -173,7 +173,8 @@ def attach(app, bridge, terrain=None, visual_root=None, exposure_store=None, aut
             return geo.coverage(run_id,scene_id)
 
         app.include_router(context)
-        manager=JobManager(terrain.root.parent/'investigations',lambda check:InvestigationEngine(FloodBridge(bridge.upstream,check=check),terrain,exposure_store))
+        make_bridge = job_bridge or (lambda check: FloodBridge(bridge.upstream, check=check))
+        manager=JobManager(terrain.root.parent/'investigations',lambda check:InvestigationEngine(make_bridge(check),terrain,exposure_store))
         app.state.jai_investigations=manager
         app.add_event_handler('shutdown',manager.close)
         investigations=APIRouter(prefix='/api/investigations')

@@ -24,7 +24,7 @@ python3.11 -m venv .venv-linux
 .venv-linux/bin/python start.py
 ```
 
-Open [Terrain & flood](http://127.0.0.1:8780/#terrain) or start at [NASA trends](http://127.0.0.1:8780/trends). `start.py` binds the app and its Flood Lab service to loopback on 8780 and 8781. Ctrl+C stops both. On Windows with the requested scratch copy, run `start.ps1` from PowerShell to use its existing environment. Launch with `LAVALABS_LOCAL_ARCHIVE=1` to browse the additional saved runs in that local copy. The public repository ships two Nepal runs. New area/date acquisition requires its own provider credentials and network access. See the [Flood Lab access notes](components/floodlab/docs/data-access.md).
+Open [LavaLabs](http://127.0.0.1:8780/#terrain). The same workspace navigation reaches terrain, case studies, research, Nepal investigation, NASA trends, and the Flood Lab processor. `start.py` starts one service on port 8780. Set `LAVALABS_PORT` to change the port for the whole app. On Windows with the scratch copy, run `start.ps1` from PowerShell to use its existing environment. Launch with `LAVALABS_LOCAL_ARCHIVE=1` to browse the additional saved runs in that local copy. The public repository ships two Nepal runs. New area/date acquisition requires its own provider credentials and network access. See the [Flood Lab access notes](components/floodlab/docs/data-access.md).
 
 Run `.venv-linux/bin/python scripts/bootstrap_demo.py --verify` to check every archived member against the bundle manifest. The original two run freezes, 90 m terrain scene and full 30 m Nepal research graph keep their source hashes. The separate four-case display manifest verifies the accessible display grids. The [public file inventory](provenance/public-files.json) records the exported subset.
 

@@ -21,7 +21,23 @@ byId('run').addEventListener('change',show);byId('toggles').addEventListener('ch
 
 function updateView(){const mode=byId('view').value;byId('map').style.display=mode==='map'?'':'none';byId('sar-preview').hidden=mode==='map';const optical=opticalViews[mode];byId('optical-note').textContent=optical?optical.date+' · '+optical.description+(opticalViews.sharedGridMatch?' Preview linked by exact before/after Sentinel-1 file hashes.':''):'';if(mode!=='map'){byId('sar-preview').src=optical?optical.url:'/runs/'+encodeURIComponent(selected)+'/'+mode+'.png';byId('sar-preview').alt=optical?'Sentinel-2 RGB observation '+optical.date:'SAR VV observation';}}
 async function presentRecord(m,r,frozen){
- opticalViews={};try{const index=await read('/assets/observations/index.json');const exactPair=[m.pre.sha256,m.post.sha256].join(':');const matched=Object.values(index).find(entry=>entry.sar_pair_sha256===exactPair&&entry['optical-pre']&&entry['optical-post']);const chosen=index[r.run_id]||matched||{};const sharedGridMatch=!!chosen.shared_grid_match||(!index[r.run_id]&&!!matched);opticalViews=Object.fromEntries(Object.entries(chosen).filter(([key])=>key.startsWith('optical-')));opticalViews.sharedGridMatch=sharedGridMatch;}catch(error){}
+ opticalViews={};
+ try {
+  if (document.body.hasAttribute('data-lavalabs-processor')) {
+   const context=await read('/api/flood/runs/'+encodeURIComponent(r.run_id)+'/visual-context');
+   if (context.optical_available) {
+    const description='Retained Sentinel-2 RGB · source hashes checked. Optical dates can differ from radar dates.';
+    opticalViews={'optical-pre':{...context.before,description},'optical-post':{...context.after,description}};
+   }
+  } else {
+   const index=await read('/assets/observations/index.json');
+   const exactPair=[m.pre.sha256,m.post.sha256].join(':');
+   const matched=Object.values(index).find(entry=>entry.sar_pair_sha256===exactPair&&entry['optical-pre']&&entry['optical-post']);
+   const chosen=index[r.run_id]||matched||{};
+   opticalViews=Object.fromEntries(Object.entries(chosen).filter(([key])=>key.startsWith('optical-')));
+   opticalViews.sharedGridMatch=!!chosen.shared_grid_match||(!index[r.run_id]&&!!matched);
+  }
+ } catch(error){}
  for(const period of ['pre','post']){const mode='optical-'+period;const option=byId('view').querySelector('option[value="'+mode+'"]');option.disabled=!opticalViews[mode];option.textContent=(period==='pre'?'Before':'After')+' · optical RGB'+(opticalViews[mode]?' · '+opticalViews[mode].date:' · unavailable');}
  if(byId('view').selectedOptions[0].disabled)byId('view').value='map';
  const steps=[`Inputs: Sentinel-1 ${m.pre.datetime.slice(0,10)} / ${m.post.datetime.slice(0,10)}; relative orbit ${m.pre.relative_orbit}.`,`Preparation: aligned VV/VH dB observations; ${r.summary.valid_pixels.toLocaleString()} paired valid pixels.`,`Water candidates: post-event VV < ${r.analysis.water_db} dB and decrease ≥ ${r.analysis.drop_db} dB.`,m.debris?`Debris proxy: optical ${m.debris.pre_date} / ${m.debris.post_date}; vegetation loss and SAR change. Unvalidated.`:'Debris: not assessed in this run.',`Infrastructure: historical OSM snapshot ${m.osm_snapshot.slice(0,10)}; geometry intersections.`,frozen.files['topology-audit.json']?'Access: historical-node graph comparison; missing coverage and boundary uncertainty retained.':'Access: no historical topology audit for this run.',`Evidence: ${Object.keys(frozen.files).length} files recorded in the frozen hash manifest.`];

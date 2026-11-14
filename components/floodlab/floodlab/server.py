@@ -35,10 +35,13 @@ def workspace_status(): return {'state':'saved flood evidence and bounded automa
 def samples(): return []
 @app.get('/api/experimental-evidence')
 def experimental_evidence():
+    return evidence_for(runs())
+
+def evidence_for(saved_runs):
     root=ET.parse(ROOT/'docs/test-results.xml').getroot()
     cases=root.findall('.//testcase');counts=Counter(c.attrib['classname'] for c in cases)
     failures=sum(c.find('failure') is not None for c in cases);errors=sum(c.find('error') is not None for c in cases);skipped=sum(c.find('skipped') is not None for c in cases)
-    return {'tests':{'passed':len(cases)-failures-errors-skipped,'failures':failures,'errors':errors,'skipped':skipped,'suites':[{'name':k,'count':v} for k,v in sorted(counts.items())]},'runs':runs(),'benchmarks':json.loads((ROOT/'web/benchmark-data.json').read_text(encoding='utf-8-sig'))}
+    return {'tests':{'passed':len(cases)-failures-errors-skipped,'failures':failures,'errors':errors,'skipped':skipped,'suites':[{'name':k,'count':v} for k,v in sorted(counts.items())]},'runs':saved_runs,'benchmarks':json.loads((ROOT/'web/benchmark-data.json').read_text(encoding='utf-8-sig'))}
 from pydantic import BaseModel,Field
 from typing import Literal
 import requests

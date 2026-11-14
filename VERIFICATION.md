@@ -13,7 +13,7 @@
 
 The browser rendered the saved 90 m Syapru Besi terrain and both optical dates. A cross-section returned 128 valid samples across 2,160 m. The contextual investigation returned a saved water-candidate summary and a three-tool trace. All four NDVI maps loaded with dates, source sampling, statistics and blank unsupported cells. Six reports were available in Research evidence. The processor returned an evidence-backed road topic answer. An invalid area request was rejected before acquisition.
 
-The NASA panel returned a Delhi-area precipitation slope of +49.90 mm/decade with a Holm-adjusted p-value of 0.188 for 1984–2025. Its direct exports returned a 42-row annual CSV, a JSON evidence attachment and the original NASA response. The clean checkout restored all 54 demo files and their original checksums. Both services started with the bundled cases, two Nepal runs and the full terrain replay. This check used the already installed pinned Python packages.
+The NASA panel returned a Delhi-area precipitation slope of +49.90 mm/decade with a Holm-adjusted p-value of 0.188 for 1984–2025. Its direct exports returned a 42-row annual CSV, a JSON evidence attachment and the original NASA response. The clean checkout restored all 54 demo files and their original checksums. The evidence bundle includes the cases, two Nepal runs and the full terrain replay. This check used the already installed pinned Python packages.
 
 ## Repeat the checks
 

@@ -49,10 +49,35 @@ def test_private_paths_and_unknown_cases(client):
     assert client.post('/api/investigations',json=question).status_code==404
 
 def test_archive_boundary_is_explicit():
-    bridge=DemoBridge('http://127.0.0.1:8781')
+    bridge=DemoBridge()
     for run in DEMO_RUNS:bridge.require(run)
     with pytest.raises(BridgeError) as error:bridge.require('private-archive-run')
     assert error.value.status==404
+
+
+def test_flood_workflows_use_the_application_without_an_outbound_connection(client, monkeypatch):
+    import requests
+    from lavalabs import server
+    def no_network(*args, **kwargs):
+        pytest.fail('Saved evidence and copilot should not use an HTTP upstream')
+    monkeypatch.setattr(requests.sessions.Session, 'request', no_network)
+    run = 'event-fe47db331390'
+    processor = client.get('/processor').text
+    assert 'data-lavalabs-processor' in processor and processor.count('id="lab-tab"') == 1
+    assert client.get('/processor-assets/dataset-readiness.json').status_code == 200
+    assert client.get('/api/lava/status').json()['flood']['available']
+    assert {row['run_id'] for row in client.get('/api/runs').json()} >= DEMO_RUNS
+    assert run in {row['run_id'] for row in client.get('/api/experimental-evidence').json()['runs']}
+    assert client.get(f'/api/flood/runs/{run}/visual-context').json()['optical_available']
+    response = client.get(f'/runs/{run}/exposure.csv')
+    assert response.status_code == 200 and 'attachment' in response.headers['content-disposition']
+    assert client.get('/runs/private-archive-run/result.json').status_code == 404
+    answer = client.post('/api/copilot', json={'run_id': run, 'question': 'Which roads intersect the candidates?'}).json()
+    assert answer['intent'] == 'roads' and answer['routing']['ai_used'] is False
+    assert client.post('/api/event-jobs', json={'bbox': [1, 2, 3], 'event_date': '2026-08-26'}).status_code == 422
+    monkeypatch.setattr(server.event_jobs, 'submit', lambda event: {'job_id': 'event-012345abcdef', 'state': 'queued'})
+    job = client.post('/api/event-jobs', json={'bbox': [85.3232, 28.1491, 85.3483, 28.1882], 'event_date': '2026-08-26'})
+    assert job.status_code == 202 and job.json()['state'] == 'queued'
 
 @pytest.mark.parametrize('name',['../escape','/tmp/escape','.runtime/jai/terrain/../../../../escape',r'.runtime\jai\terrain\escape','research/datasets/local/example'])
 def test_bootstrap_rejects_outside_members(name,tmp_path):

@@ -29,8 +29,8 @@
       "bytes": 4974
     },
     "README.md": {
-      "sha256": "67016233c2f1500e1eb8fad641433167f48f53b1ded798a47594171e760618ac",
-      "bytes": 5243
+      "sha256": "d6cd316ffbe11b735c50d2140bf300c245665c5ea7e81b9cb2870cbd5659aa6b",
+      "bytes": 5306
     },
     "UI/app.js": {
       "sha256": "740cd1dcedace19cee15d8a1a55de45b71ba2f86eeac4baee10363b2596cf781",
@@ -81,8 +81,8 @@
       "bytes": 633
     },
     "UI/index.html": {
-      "sha256": "51093931c4a8450cbfedb4dc7434b28e83a7d1e62e2ba6ec09b4072ead2a59ca",
-      "bytes": 5948
+      "sha256": "d73bf3c1d9d93dd87e4af95aae691430a44090b79561093e9514c7eb9e904bc7",
+      "bytes": 5988
     },
     "UI/lava.css": {
       "sha256": "1486956e5c352fda423350321d730af7ac37a915614e411009b9c815f879493e",
@@ -129,8 +129,8 @@
       "bytes": 592
     },
     "UI/processor.css": {
-      "sha256": "40e1f3e2f0440d530a00b7cbe24818f929a9d7dd42c2d4baf992c7e26da04747",
-      "bytes": 1410
+      "sha256": "5f28471dba8320ceff3d888da112788518b7ef6d42ab8ed9c722cfa960743ecf",
+      "bytes": 2027
     },
     "UI/satquery/fonts/geist-OFL.txt": {
       "sha256": "03f7731e1f962a91216320e38a5fe00a3236b19a15b486b629e65aa82010907c",
@@ -201,8 +201,8 @@
       "bytes": 1193
     },
     "VERIFICATION.md": {
-      "sha256": "2d4f6572aa2072e2c020a8bebc808d3a82e13d23537e8099edbf37a1495368de",
-      "bytes": 2542
+      "sha256": "f9b007ddd906a2080b9849c7f7a830689bc911806ac001ced0f0769547a2e040",
+      "bytes": 2536
     },
     "components/floodlab/configs/sar-request.json": {
       "sha256": "11119e905d0c49176c279e777faecaf7c550bd1cdde7b29c6c164dbf2a724b3f",
@@ -293,8 +293,8 @@
       "bytes": 12323
     },
     "components/floodlab/floodlab/server.py": {
-      "sha256": "2e8a894e550485b36eb003b04045ef622332c5036647368d3a5846537bd12f5a",
-      "bytes": 4581
+      "sha256": "005b5c62ae9d075805a4f1b97ce2ca039788bb5d11716212536ffa0e9368f7a6",
+      "bytes": 4648
     },
     "components/floodlab/scripts/acquire_optical.py": {
       "sha256": "cc9fc79e1bd031d82563caf52c4584d741edab2a61631d27fa7a765c9e3bb6c1",
@@ -465,8 +465,8 @@
       "bytes": 220
     },
     "components/floodlab/web/benchmarks.js": {
-      "sha256": "dd771656f83ac760d189af486c11c3148aada628bcd38afd904ee6179e8fdaac",
-      "bytes": 4411
+      "sha256": "f237c3ecdbe604b17c760f352673e26a36a7463e5a74bec9643172cd51a4c174",
+      "bytes": 4557
     },
     "components/floodlab/web/dataset-readiness.json": {
       "sha256": "aef953d4a31c92c34f4b71e8464d9d4a6d0cbba03c6d615fe07c169c137264a6",
@@ -489,8 +489,8 @@
       "bytes": 11605
     },
     "components/floodlab/web/flood-workspace.js": {
-      "sha256": "7f87bc1a1f15e4634a0a136a9d009cc8dfa6a44f659de314e2c0ef1b95c1ef79",
-      "bytes": 18512
+      "sha256": "c4c47e3fb9e1ef40e6a1a70543b182d17b433578987b04dfee419f03e41aa88a",
+      "bytes": 18949
     },
     "components/floodlab/web/flood.html": {
       "sha256": "6173d15472b6c3e5b2c57fc5474745aa305b910e31bacf34986e2b2f94b5af98",
@@ -573,8 +573,8 @@
       "bytes": 2696
     },
     "jai_extension/server.py": {
-      "sha256": "ec34434503800d8c48eb2f81fbdb180fdacc5fdb965a4ee27ba2b53c50b3d105",
-      "bytes": 11092
+      "sha256": "02a90bb0d57f46b53ef353bbcdb2624424608284dd43f99e4ed9ce7216463791",
+      "bytes": 11181
     },
     "jai_extension/terrain.py": {
       "sha256": "0e4e9b1e8d9b955bd3d239949bce312280b8ba1a9031edb7be0c915b31c59b2a",
@@ -633,12 +633,12 @@
       "bytes": 2383
     },
     "lavalabs/public_runs.py": {
-      "sha256": "a0575e602760171d7633ca220e513e0ca2862ae513eea3aefed7b75c4116fdbd",
-      "bytes": 1113
+      "sha256": "6594f5b0baeee5aedd594eefb7cd9d091cc6db512f0513f676b4d65892176c70",
+      "bytes": 2635
     },
     "lavalabs/server.py": {
-      "sha256": "9036d5947daae7ec14a64d1b4322a3e632250e30143b00f00e781f498f4aac45",
-      "bytes": 11833
+      "sha256": "365b62c31642f6e6eb943fe0b8e2e4fe9d10a937cb1dd92fdd3da792fccc3738",
+      "bytes": 10826
     },
     "lavalabs/trend_exports.py": {
       "sha256": "1f0f64f69fa6d0e4e282bd25f8e3439763a876603dc7bef81916f53a4863d5a4",
@@ -1397,8 +1397,8 @@
       "bytes": 534
     },
     "start.py": {
-      "sha256": "69c8252e7ead5ff85a7b4a07b748b62567efa41e352b0aeeb5bc76b430619584",
-      "bytes": 2057
+      "sha256": "898dc41cd117ce54c8a3ab116250a093375794eb95bfec60ab048459c4190622",
+      "bytes": 645
     },
     "tests/test_drainage_consistency.py": {
       "sha256": "7d74fecec9e185d668175c308692fd0addeddd4a5fb7198e7906c976209e7abe",
@@ -1429,8 +1429,8 @@
       "bytes": 4413
     },
     "tests/test_lavalabs.py": {
-      "sha256": "27ef22d75769e3b44a81fd8f1cca8ca40bcc8aeafdf52b4e3cf210263962f68b",
-      "bytes": 4259
+      "sha256": "649162058728cfbbb7a6c910a7b3e16c28298d1ff18bb3d8c1dd656ac6ede37b",
+      "bytes": 6046
     },
     "tests/test_merit_windows.py": {
       "sha256": "41217269e07747e2d7f696b9529ef5bc41113ec7448d5459f50ba277a53fa2b1",
