@@ -122,6 +122,54 @@
     $('annual-download').href = `${url}/${hosted ? 'annual.csv' : 'csv'}`;
     $('receipt-download').href = `${url}/${hosted ? 'annual.json' : 'json'}`;
     $('raw-download').href = `/LavaLabs/ui/nepal/data/${data.climate.sources[variable].file}`;
+    $('diagnostic-download').href = `${url}/${hosted ? 'diagnostics.csv' : 'diagnostics'}`;
+  }
+
+  function drawDiagnostic() {
+    const check = cell.trends[variable].seasonal_check;
+    const chart = $('diagnostic-chart');
+    chart.replaceChildren();
+    $('diagnostic-stats').replaceChildren();
+    $('diagnostic-download').hidden = check?.status !== 'ok';
+    if (check?.status !== 'ok') {
+      set('diagnostic-reading', check?.reason || 'This saved case predates the seasonal diagnostic.');
+      return;
+    }
+    const seasonal = $('diagnostic-view').value === 'seasonal';
+    const series = seasonal ? check.climatology : check.annual.flatMap(point => [point.value, point.ols_fit, point.robust_fit]);
+    const min = Math.min(...series), max = Math.max(...series), padding = (max - min) * .1 || 1;
+    const low = min - padding, high = max + padding;
+    const rows = seasonal ? check.climatology.map((value, i) => ({x: i, value})) : check.annual.map(point => ({...point, x: point.year}));
+    const first = rows[0].x, last = rows[rows.length - 1].x;
+    const x = value => 59 + (value - first) / (last - first) * 486;
+    const y = value => 173 - (value - low) / (high - low) * 152;
+    const path = key => rows.map((point, i) => `${i ? 'L' : 'M'}${x(point.x).toFixed(2)} ${y(point[key]).toFixed(2)}`).join(' ');
+    chart.append(svg('text', {x: 59, y: 13}, seasonal ? check.monthly_unit : check.annual_unit + ' departure'));
+    for (let index = 0; index <= 4; index++) {
+      const value = low + (high - low) * index / 4, h = y(value);
+      chart.append(svg('line', {x1: 59, y1: h, x2: 545, y2: h, class: 'chart-grid'}),
+        svg('text', {x: 53, y: h + 4, 'text-anchor': 'end'}, fmt(value, variable === 'T2M' ? 1 : 0)));
+    }
+    const tickValues = seasonal ? [0, 2, 4, 6, 8, 10] : [1984, 1994, 2004, 2014, 2025];
+    for (const value of tickValues) chart.append(svg('text', {x: x(value), y: 195, 'text-anchor': 'middle'},
+      seasonal ? ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][value] : value));
+    chart.append(svg('path', {d: path('value'), class: 'observed', fill: 'none'}));
+    if (!seasonal) for (const [key, className] of [['ols_fit', 'fitted'], ['robust_fit', 'robust-fit']]) {
+      chart.append(svg('path', {d: path(key), class: className, fill: 'none'}));
+    }
+    $('diagnostic-key').hidden = seasonal;
+    chart.setAttribute('aria-label', seasonal ? `Calendar-month climatology at ${coords(cell)}, ${check.monthly_unit}`
+      : `Annual departures with ordinary and robust fitted trends at ${coords(cell)}`);
+    const difference = Math.abs(check.slope_difference_per_decade);
+    const units = variable === 'T2M' ? '°C' : 'mm';
+    set('diagnostic-reading', seasonal
+      ? 'Each point averages the same calendar month over 1984–2025. Rainfall values are monthly totals.'
+      : `The robust and ordinary fits ${check.same_direction ? 'agree on the trend direction' : 'give different trend directions'}. Their slopes differ by ${fmt(difference, digits())} ${units}/decade. The primary significance result is shown above.`);
+    facts('diagnostic-stats', [
+      ['OLS on yearly departures', slope(check.ols_slope_per_decade)],
+      ['Robust fit on yearly departures', slope(check.robust_slope_per_decade)],
+      ['Years with fit weight below 0.5', check.downweighted_years.join(', ') || 'None'],
+    ]);
   }
 
   function render() {
@@ -150,6 +198,7 @@
     $('subperiods').append(element('p', 'These fits describe the two fixed halves. The primary test covers the full record. A change in slope between the halves would require its own test.'));
     drawGrid();
     drawChart(row);
+    drawDiagnostic();
     updateDownloads();
     const url = new URL(location.href);
     url.searchParams.set('cell', cell.id);
@@ -195,6 +244,7 @@
       $('case-variable').value = variable;
       $('case-variable').addEventListener('change', event => { variable = event.target.value; render(); });
       $('select-site').addEventListener('click', () => { cell = match; render(); });
+      $('diagnostic-view').addEventListener('change', drawDiagnostic);
       const [lon, lat] = data.climate.site.requested_lon_lat;
       set('site-match', `Requested location ${lat}° N, ${lon}° E. Both 504-month point series exactly match the regional series at ${coords(match)}. The model grid is 0.5° × 0.625°. This checks cell identity within the same product.`);
       set('trend-method', [data.climate.method.fit, data.climate.method.multiple_testing, data.climate.method.coverage, data.climate.method.scope].join(' '));
