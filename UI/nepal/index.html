@@ -42,6 +42,17 @@
             <dl id="trend-stats" class="evidence-stats"></dl>
             <div class="chart-key"><span>Annual values</span><span>Fitted trend</span></div>
             <svg id="annual-chart" role="img" viewBox="0 0 560 206" aria-label="Annual observations and fitted trend"></svg>
+            <section class="seasonal-check" aria-labelledby="seasonal-title">
+              <h3 id="seasonal-title">Check seasonality and unusual years</h3>
+              <p class="case-note">A method check adapted from the NASA study listed for this challenge. Compare the usual seasonal cycle with yearly departures and a robust fit.</p>
+              <label for="diagnostic-view">Diagnostic view <select id="diagnostic-view"><option value="annual">Yearly departures and trend fits</option><option value="seasonal">Typical calendar month</option></select></label>
+              <svg id="diagnostic-chart" role="img" viewBox="0 0 560 206" aria-label="Seasonal diagnostic"></svg>
+              <div id="diagnostic-key" class="diagnostic-key"><span>Yearly departure</span><span>OLS fit</span><span>Robust fit</span></div>
+              <p id="diagnostic-reading" class="case-note"></p>
+              <dl id="diagnostic-stats" class="evidence-stats"></dl>
+              <details><summary>What did the NASA study contribute?</summary><p class="case-note">Acker and colleagues compare seasonal departures and ordinary versus robust regression in river-influenced coastal observations. Here we apply those checks to NASA POWER temperature and rainfall. The robust fit uses Huber weights. The primary significance verdict comes from the original annual OLS/HAC/Holm analysis.</p><a href="https://ntrs.nasa.gov/citations/20090042747">NASA study and original methods</a></details>
+              <div class="file-links"><a id="diagnostic-download" download>Monthly departures CSV</a></div>
+            </section>
             <details><summary>How sensitive is this result?</summary><div id="sensitivity"></div></details>
             <details><summary>How does the slope vary by period?</summary><div id="subperiods"></div></details>
             <div class="file-links"><a id="annual-download" download>Annual CSV</a><a id="receipt-download" download>Investigation receipt (JSON)</a><a id="raw-download" download>NASA source JSON</a></div>

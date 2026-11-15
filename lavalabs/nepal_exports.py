@@ -19,7 +19,7 @@ def load_case():
 
 @router.get('/{cell_id}/{variable}/{kind}')
 def download(cell_id: str, variable: str, kind: str):
-    if variable not in {'T2M', 'PRECTOTCORR'} or kind not in {'csv', 'json'}:
+    if variable not in {'T2M', 'PRECTOTCORR'} or kind not in {'csv', 'json', 'diagnostics'}:
         raise HTTPException(404, 'Unknown Nepal export')
     case = load_case()
     climate = case['climate']
@@ -31,7 +31,7 @@ def download(cell_id: str, variable: str, kind: str):
     filename = f'lavalabs-nepal-{cell_id}-{variable}.{kind}'
     headers = {'Content-Disposition': f'attachment; filename="{filename}"'}
     if kind == 'json':
-        selected = {key: climate[key] for key in ('method', 'period', 'site', 'grid_step', 'request_box')}
+        selected = {key: climate[key] for key in ('method', 'period', 'site', 'grid_step', 'request_box', 'reference_method') if key in climate}
         selected.update(sources=[climate['sources'][variable], climate['sources']['point_check']],
                         cell={key: cell[key] for key in ('id', 'lon', 'lat')},
                         variable=variable, annual_unit=unit, result=result)
@@ -40,6 +40,18 @@ def download(cell_id: str, variable: str, kind: str):
                              'inference_boundary': 'The NASA model record ends in 2025. The saved 2026 satellite pair supports candidate observations at local scale. Event attribution requires separate evidence.'}, headers=headers)
     buffer = io.StringIO()
     output = csv.writer(buffer)
+    if kind == 'diagnostics':
+        check = result.get('seasonal_check', {})
+        if check.get('status') != 'ok':
+            raise HTTPException(422, 'Complete seasonal diagnostics are unavailable for this cell')
+        headers['Content-Disposition'] = f'attachment; filename="lavalabs-nepal-{cell_id}-{variable}-seasonal.csv"'
+        output.writerow(['month', 'monthly_value', 'calendar_month_mean', 'departure', 'monthly_unit',
+                         'annual_ols_slope_per_decade', 'annual_robust_slope_per_decade', 'annual_unit'])
+        for month in check['monthly']:
+            output.writerow([month['month'], month['value'], month['climatology'], month['departure'],
+                             check['monthly_unit'], check['ols_slope_per_decade'],
+                             check['robust_slope_per_decade'], check['annual_unit']])
+        return Response(buffer.getvalue(), media_type='text/csv', headers=headers)
     output.writerow(['year', 'annual_value', 'fitted_value', 'unit'])
     fit = {point['year']: point['value'] for point in result.get('fit', [])}
     for point in result['annual']:

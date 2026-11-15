@@ -15,6 +15,16 @@ The two variables use day-weighted annual temperature and annual precipitation t
 
 The fitted temperature slope at Syapru remains inconclusive and the precipitation slope clears the threshold in this analysis. Descriptive rainfall slopes for the two fixed halves are −28.4 mm/decade in 1984–2004 and +128.7 mm/decade in 2005–2025. Those fits have no separate p-values and do not test a change between periods. This is an exploratory test of one model product at regional scale. Independent climate corroboration, a test of a difference between cells, and attribution of the August 2026 flood are separate tasks. The grid shows signed change at the returned sample locations.
 
+## Seasonality and unusual-year diagnostic
+
+The challenge's Resources tab lists Acker, McMahon, Shen, Hearty and Casey (2009), [Time-Series Analysis of Remotely-Sensed SeaWiFS Chlorophyll in River-Influenced Coastal Regions](https://ntrs.nasa.gov/citations/20090042747), NASA NTRS 20090042747. Its Methods and Figure 15 derive calendar-month climatologies, monthly anomalies and annual mean anomalies; Statistical Methods, Table 6 and Figure 16 compare ordinary and robust linear regression. LavaLabs applies that approach to the retained POWER observations. The paper is a methodological resource; its SeaWiFS observations and Giovanni retrievals are outside this implementation.
+
+For each of 15 cells and both variables, the builder requires 12 valid months in every selected year. It converts rainfall rates to monthly totals using actual calendar lengths, subtracts each calendar month's 1984–2025 mean, and averages the 12 departures each year. Rainfall annual departures are multiplied by 12 to express annual total differences. Temperature uses equal-month departures, so its diagnostic slope can differ slightly from the day-weighted primary series. The UI plots the seasonal cycle or annual departures and ordinary/robust lines; the diagnostic CSV includes all 504 monthly values, climatologies and departures.
+
+The robust fit uses statsmodels RLM with Huber T, tuning 1.345, at most 100 iterations and tolerance 1e-10. This is an explicit adaptation of the paper's MATLAB robust regression. Years with regression weight below 0.5 are listed for inspection; this cutoff is a descriptive UI choice. A failed fit or incomplete series abstains. No extra p-values are introduced and the primary 30-test OLS/HAC/Holm family is unchanged.
+
+At Syapru's matching cell, the rainfall diagnostic gives +177.2210 mm/decade (ordinary) and +177.6186 (Huber). Temperature gives +0.04209 °C/decade (ordinary, equal-month) and +0.04679 (Huber). Both fits retain the same direction for each variable. Agreement assesses sensitivity to this fitting choice within one product; it establishes neither independent corroboration nor flood attribution. The source PDF SHA-256 is `5209cee13b536f0b4df59b6e4fac9f631fafd1458f1e4d936d2cfab5edda0ab3`; source details and adaptation travel in the downloadable JSON receipt.
+
 ## Local event
 
 The prior SATQuery run `event-fe47db331390` used Sentinel-1D observations from August 16 and 28, 2026. The Nepal builder verifies the historical artifact checksums and rereads the 10 m raster: 99,858 of 110,998 cells are valid, and 956 are coded new-water candidates (9.56 ha). The prior overlap calculation reports 2 mapped buildings and 185.8 m of road. The saved erosion and dilation audit moves road overlap from 0.0 m to 765.8 m, which shows sensitivity to the candidate boundary. The original run did not assess connectivity. This replay verifies the retained candidate arithmetic. Damage, physical closures, flood accuracy and causal attribution remain unestablished.
@@ -25,11 +35,13 @@ The event section uses the original radar previews, with their freeze hashes. Th
 
 ```sh
 .venv-linux/bin/python scripts/bootstrap_demo.py --verify
-.venv-linux/bin/python scripts/build_nepal_case.py
-.venv-linux/bin/python -m pytest -q tests/test_nepal_case.py
+.venv-linux/bin/python -m scripts.build_nepal_case
+.venv-linux/bin/python -m pytest -q tests/test_nepal_case.py tests/test_seasonal_check.py
 ```
 
 The builder uses frozen inputs. It verifies all three NASA source checksums, the grid and same-product point match, and the selected historical event artifacts. The regression checks include an independent numerical implementation of the primary HAC calculation and Holm adjustment, abstention on an incomplete year in the centre of the record, and checks that the published route serves the correct frozen data.
+
+Diagnostic checks remove a known synthetic seasonal cycle, test an injected influential year, independently recalculate annual rainfall departures with leap-year month lengths, and verify all 30 real cell-variable outputs and their downloads.
 
 ## Design reference
 

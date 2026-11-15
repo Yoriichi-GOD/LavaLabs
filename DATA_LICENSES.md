@@ -5,6 +5,7 @@ The MIT license applies to project software. The original evidence manifests ide
 | Resource | Use and credit |
 | --- | --- |
 | [NASA POWER / MERRA-2](https://power.larc.nasa.gov/docs/methodology/data/sources_meteorology/) | Retained monthly model data for NASA trends. Source citations and exact response hashes are available in the app. |
+| [Acker et al. (2009), NASA NTRS 20090042747](https://ntrs.nasa.gov/citations/20090042747) | Challenge-listed methodological resource: calendar-month climatology, monthly and annual departures, and ordinary/robust slope comparison in the Nepal investigation. Huber RLM is our stated adaptation. NTRS marks this NASA work as public use permitted. The paper's SeaWiFS data were not used. |
 | [NASA JPL NASADEM HGT v001](https://doi.org/10.5067/MEaSUREs/NASADEM/NASADEM_HGT.001) | Terrain source for the Kedarnath derivatives. |
 | [USGS Landsat Collection 2](https://www.usgs.gov/landsat-missions/landsat-collection-2) | Kedarnath 2013 surface reflectance and quality flags. |
 | [Copernicus DEM](https://registry.opendata.aws/copernicus-dem/) | GLO-30 derivatives and historical GLO-90 Nepal scene. Produced using Copernicus WorldDEM-90/30 © DLR e.V. 2010–2014 and © Airbus Defence and Space GmbH 2014–2018, provided under COPERNICUS by the European Union and ESA. All rights reserved under the applicable product license. |

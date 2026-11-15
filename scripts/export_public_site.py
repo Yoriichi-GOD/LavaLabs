@@ -157,9 +157,10 @@ class Export:
                 self.snapshot(client, "/api/lava/reports/" + report, path="/api/lava/reports/" + report + ".md")
             for cell in load_case()["climate"]["cells"]:
                 for variable in cell["trends"]:
-                    for kind in ("json", "csv"):
+                    for kind in ("json", "csv", "diagnostics"):
                         stem = f"/api/lava/nepal/{cell['id']}/{variable}"
-                        self.snapshot(client, f"{stem}/{kind}", path=f"{stem}/annual.{kind}")
+                        name = "diagnostics.csv" if kind == "diagnostics" else f"annual.{kind}"
+                        self.snapshot(client, f"{stem}/{kind}", path=f"{stem}/{name}")
             for index, window in enumerate(read("analysis.json")["windows"]):
                 for row in window["results"]:
                     for kind in ("json", "csv"):

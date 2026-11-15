@@ -9,8 +9,10 @@ import numpy as np
 from statsmodels.stats.multitest import multipletests
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / 'trend_lab'))
 from analysis import annual_values, fit_series
+from scripts.trend_checks import REFERENCE, seasonal_check
 
 PACK = ROOT / 'UI/nepal/data'
 RUN = 'event-fe47db331390'
@@ -70,7 +72,9 @@ def fit_cell(payload, feature, variable):
             y = np.array([point['value'] for point in section], dtype=float)
             slope = float(np.polyfit(x - x.mean(), y, 1)[0] * 10)
         subperiods.append({'period': [start, end], 'slope_per_decade': slope})
-    return {'annual': annual, 'missing_years': missing, 'descriptive_subperiods': subperiods, **result}
+    checks = seasonal_check(feature['properties']['parameter'][variable], variable, START, END, payload['header']['fill_value'])
+    return {'annual': annual, 'missing_years': missing, 'descriptive_subperiods': subperiods,
+            'seasonal_check': checks, **result}
 
 
 def add_adjusted_results(cells):
@@ -118,7 +122,7 @@ def build_trends():
     return {'period': [START, END], 'request_box': [84, 27, 86, 29], 'grid_step': [0.625, 0.5],
             'site': {'name': 'Syapru Besi', 'requested_lon_lat': list(SITE),
                      'matching_cell': cells[matches[0]]['id'], 'matched_months_per_variable': len(month_keys())},
-            'sources': sources, 'cells': ordered,
+            'sources': sources, 'cells': ordered, 'reference_method': REFERENCE,
             'method': {'alpha': 0.05, 'tests_per_family': 30, 'primary_lag': 3, 'diagnostic_lags': [1, 5],
                        'fit': 'OLS on calendar-weighted annual data. Bartlett HAC with finite-sample correction and Student t reference.',
                        'multiple_testing': 'Holm across 15 cells × 2 variables at lag 3. Lags 1 and 5 each use their own 30-test diagnostic correction.',

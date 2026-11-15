@@ -6,6 +6,7 @@ Start with the [Nepal investigation](http://127.0.0.1:8780/nepal) after launchin
 
 | Workspace | What you can do |
 | --- | --- |
+| Nepal investigation | Compare 15 regional NASA cells, inspect annual change and significance, then check calendar-month seasonality and ordinary versus robust fits. Export monthly departures and a source-linked analysis receipt before reviewing the saved local event. |
 | NASA trends | Select a variable, one of six model cells and one of three periods from 1984–2025. Compare slopes per decade, confidence intervals and significance across 36 fixed comparisons. Download CSV, the evidence receipt and original NASA data. |
 | Terrain & flood | Inspect 3D terrain and imagery. Pick an area, set the date, and analyze it with provider access. Review completed observations, ranked response checks, reports and Flood Lab evidence in the same workspace. |
 | Case studies | Compare Syapru Besi, Kedarnath, Varanasi and Sangam Vihar in 3D or on a 2D map. Select elevation, slope, height above drainage (HAND), or before/after/changed NDVI. Inspect dates, source sampling and valid coverage. |
@@ -44,6 +45,12 @@ The exporter verifies the repository's demo archive before writing the package. 
 LavaLabs answers **Be An Earth System Trend Detective!** with an inspectable path from variable selection to direction, location, magnitude and significance. The NASA trend workflow uses 6,048 monthly T2M and PRECTOTCORR values from six predetermined MERRA-2 model cells. It aggregates annual temperature by days and converts precipitation rate to monthly totals with calendar month lengths. It reports OLS slopes with HAC lag-3 uncertainty and Holm-adjusted p-values across 36 tests. The intervals describe individual slopes. The analysis is exploratory and applies to the selected model cells and fixed time windows. [Challenge brief](https://www.spaceappschallenge.org/2026/challenges/earth-system-trend-detective/) · [NASA POWER monthly API](https://power.larc.nasa.gov/docs/services/api/temporal/monthly/) · [Trend method and tests](trend_lab/README.md)
 
 The NASA workflow and this independent integration are the Space Apps contribution. The Flood Lab engine, Nepal 3D investigation and earlier case, terrain, NDVI, drainage and evaluation results come from SATQuery. The new case viewer exposes their measured layers, quality masks and source provenance. Two-date NDVI differences show the available optical observations. Their projection onto terrain is for inspection. Physical registration, surveyed drainage connectivity and independent flood exposure accuracy remain unresolved. See [scope and verification](VERIFICATION.md).
+
+### A challenge-listed NASA method, applied
+
+The Nepal investigation implements a diagnostic adapted from Acker et al. (2009), [Time-Series Analysis of Remotely-Sensed SeaWiFS Chlorophyll in River-Influenced Coastal Regions](https://ntrs.nasa.gov/citations/20090042747), a NASA resource listed for this challenge. For every selected cell and variable, it computes the 1984–2025 calendar-month climatology, 504 monthly departures, and 42 annual departures. Users can switch between the seasonal cycle and annual departures, compare ordinary and Huber robust trend lines, and download the monthly diagnostic CSV. The JSON receipt identifies the paper, PDF hash, adaptation and regression settings.
+
+At the model cell matched to Syapru Besi, rainfall slopes are +177.2 mm/decade with ordinary regression and +177.6 with the robust diagnostic. This comparison checks sensitivity to unusual years within the same product. The primary annual OLS/HAC/Holm significance result remains separate. Temperature departures use equal-month means, while the primary annual temperature uses day weights. SeaWiFS observations and Giovanni retrievals are outside this implementation. Rebuild with `python -m scripts.build_nepal_case`; see [method and replay evidence](NEPAL_EVIDENCE.md).
 
 ## Credits and SI disclosure
 

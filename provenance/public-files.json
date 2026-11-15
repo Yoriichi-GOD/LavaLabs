@@ -13,8 +13,8 @@
       "bytes": 395
     },
     "DATA_LICENSES.md": {
-      "sha256": "6e9397522ba508d5e0f0206ef62e95aee68938633eee2cca0d09953ad564d0a7",
-      "bytes": 2509
+      "sha256": "7eba84cfacef0087eed3e2e6cb9f075622310a076c7924e94e099c5162da15db",
+      "bytes": 2898
     },
     "DESIGN.md": {
       "sha256": "070264f5637c4c147ec0e224d7ae3497e9cef3d7aaf3aa26d9e82c39972ed8e7",
@@ -25,12 +25,12 @@
       "bytes": 1089
     },
     "NEPAL_EVIDENCE.md": {
-      "sha256": "e67f4b14ddc0b12f07465df630c946b1d357c5d241abf5448c1801d9afbb2554",
-      "bytes": 4974
+      "sha256": "949ba2fee1cf82916e99692c04012d62781727289a1b7a976e3754db3f231ad1",
+      "bytes": 7554
     },
     "README.md": {
-      "sha256": "0428026003409ccdb31df2b884019020ff60ef3ba36837452b33e2e61b211248",
-      "bytes": 6209
+      "sha256": "157805c6f5490c121f0a5d624f83631c1aafdff2b5c613e1425840870ec733dc",
+      "bytes": 7754
     },
     "UI/app.js": {
       "sha256": "b1d66834bdd9334e4f2f718e392b615468f66f5d599315b11dde7a158eb1d6e0",
@@ -93,12 +93,12 @@
       "bytes": 14274
     },
     "UI/nepal/case.css": {
-      "sha256": "4ba8e06160b8fb0c9160230cce9757739612f628c17a25e0a9b961a008829fbe",
-      "bytes": 5737
+      "sha256": "a23225ba6ec8acab6d80e73444a80043bd9d0748752ab67715d441dde5ec3af8",
+      "bytes": 6656
     },
     "UI/nepal/case.js": {
-      "sha256": "5899051813d54addec867ab8ae52b112d4cfdd25d160df6c7d835a154e77e7e3",
-      "bytes": 12866
+      "sha256": "d93256f486508777d09db7bf690afcd0dcaf6bf1043f5685cb011721e4fb11ab",
+      "bytes": 16350
     },
     "UI/nepal/data/after.png": {
       "sha256": "d27f98d427a4b5f6333dd93e31390c548135adefdf1240c0adcc20e36e79982f",
@@ -109,8 +109,8 @@
       "bytes": 81504
     },
     "UI/nepal/data/case.json": {
-      "sha256": "88831dd8892af231a3610b7a7e36026442e9fc54518bc1c5a5a547a31baf012c",
-      "bytes": 133815
+      "sha256": "d604a0ec804693764e1b4871d1796b37d535754ae9b38628de3aeeb866b8a587",
+      "bytes": 1806343
     },
     "UI/nepal/data/rainfall.json": {
       "sha256": "8d65b18a901ba3291449ebda71001ab09ce1f1aec6090c6c77e01d59cb3bdd68",
@@ -125,8 +125,8 @@
       "bytes": 122821
     },
     "UI/nepal/index.html": {
-      "sha256": "7687899a38c8e982a568017c839d13ea981f203b48ee3c4dc9334df16c8a6146",
-      "bytes": 6990
+      "sha256": "a0120ac3561ee7293a6bee4a50cc7b33b9fcfdf7193d5a436b2d2f566c25e500",
+      "bytes": 8594
     },
     "UI/processor-lava.js": {
       "sha256": "751ba2f30ee22920227e34657a7911f2fa691ba2714983bfcc6f8d475a196ada",
@@ -649,8 +649,8 @@
       "bytes": 88
     },
     "lavalabs/nepal_exports.py": {
-      "sha256": "1b8a81a81e9db1b87f35dcb1c62f1c2ccf4aa553ec9edea3634d0c8e897826cf",
-      "bytes": 2383
+      "sha256": "885df70d01942a49e070ed97246e37ef55810187ad8fe1366fde23992e939c2a",
+      "bytes": 3374
     },
     "lavalabs/public_runs.py": {
       "sha256": "6594f5b0baeee5aedd594eefb7cd9d091cc6db512f0513f676b4d65892176c70",
@@ -1353,16 +1353,16 @@
       "bytes": 3087
     },
     "scripts/build_nepal_case.py": {
-      "sha256": "87dee40dd96645c999d552c8c1c89a98b695d4ca0357bcfc125e51f27c9ba011",
-      "bytes": 9887
+      "sha256": "f0c79fcbf2b035a0aaa021794eda6337a742e9aeebfd83f29f4573ebecfe84ea",
+      "bytes": 10174
     },
     "scripts/check_research_release_http.py": {
       "sha256": "9138f37c927fafca54a5cebe9a4172c5a0e630f858d1314a72bbbeb06d5b05a0",
       "bytes": 3659
     },
     "scripts/export_public_site.py": {
-      "sha256": "33373799a55af0789b1c2b59b5c2b46708b18214a6ac5e362c9248751b00f1aa",
-      "bytes": 10299
+      "sha256": "57e3c82ee6fdee1fb166abe5d1d386d93be7256e09d0f3155b1936513cc63d86",
+      "bytes": 10403
     },
     "scripts/package_case_campaign.py": {
       "sha256": "c634a5fccdf3b196412561efb4ceef8661917e4bcbdb00fe49c335d30daf84d0",
@@ -1403,6 +1403,10 @@
     "scripts/start_research_release.py": {
       "sha256": "e3689dac5a9b378f072dbdc1ec0a345135d752fc879ddbc5e13d6fb4a9b29b96",
       "bytes": 2798
+    },
+    "scripts/trend_checks.py": {
+      "sha256": "ac5ef27f376d162cca53b7332a9df6952dd617d961105ff3467b892fed55efb5",
+      "bytes": 5080
     },
     "scripts/verify_case_campaign.py": {
       "sha256": "e8b9e64e252b2d923298ec26ec94ed31c19ed852174d1c772e6c3cf118ae293b",
@@ -1491,6 +1495,10 @@
     "tests/test_road_exposure.py": {
       "sha256": "b73015673556394685d850b55c2c9d09d0d08dda80cbd68f682236648617617a",
       "bytes": 1456
+    },
+    "tests/test_seasonal_check.py": {
+      "sha256": "4401b87e760ebc115ebc88662dbe2f8c97c456e5b70f86d9ae95c0b297f5601b",
+      "bytes": 3079
     },
     "tests/test_spectral_review.py": {
       "sha256": "cee46802f52ce6de5afc0da9c4e38002303aa4bd9f0dbc4e8156ae82601fe3c9",
