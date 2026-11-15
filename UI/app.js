@@ -57,7 +57,7 @@
   const sources=$('case-sources');sources.replaceChildren();
   for(const source of data.sources){const row=node('div',undefined,'source-item');row.append(node('span',source.file||source.filename||source.role||'Retained source'));if(source.sha256)row.append(node('code',source.sha256));sources.append(row);}
   $('case-download').href=`/api/lava/cases/${selectedCase}/view`;$('case-download').download=`lavalabs-${selectedCase}-${field}.json`;
-  $('case-panels').href=`/api/research/cases/${selectedCase}/panels.png`;$('case-summary').href=`/api/research/cases/${selectedCase}`;
+  $('case-panels').href=`/api/research/cases/${selectedCase}/panels.png`;$('case-summary').href=`/api/research/cases/${selectedCase}`;$('case-summary').download=`lavalabs-${selectedCase}-summary.json`;
   document.querySelectorAll('[data-case]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.case===selectedCase)));
   $('footer-context').textContent=`${data.name} · ${layer.label} · Source-linked retained inputs`;
  }
@@ -105,7 +105,7 @@
  let researchLoaded=false;
  async function loadResearch(){
   if(researchLoaded)return;
-  try{const data=await get('/api/lava/research'),list=$('research-list');list.replaceChildren();for(const item of data.studies){const row=node('article',undefined,'research-row');row.setAttribute('role','listitem');const heading=node('div');heading.append(node('h2',item.title),node('p',item.scope,'scope'));const finding=node('div');finding.append(node('p',item.finding),node('p',item.limit,'result-limit'));const link=node('a','Original report ↗');link.href=item.report;link.setAttribute('download','');row.append(heading,finding,link);list.append(row);}researchLoaded=true;}catch(error){$('research-list').replaceChildren(node('p',error.message));}
+  try{const data=await get('/api/lava/research'),list=$('research-list');list.replaceChildren();for(const item of data.studies){const row=node('article',undefined,'research-row');row.setAttribute('role','listitem');const heading=node('div');heading.append(node('h2',item.title),node('p',item.scope,'scope'));const finding=node('div');finding.append(node('p',item.finding),node('p',item.limit,'result-limit'));const link=node('a','Original report ↗');link.href=item.report+(document.documentElement.hasAttribute('data-hosted')?'.md':'');link.setAttribute('download','');row.append(heading,finding,link);list.append(row);}researchLoaded=true;}catch(error){$('research-list').replaceChildren(node('p',error.message));}
  }
- get('/api/lava/status').then(data=>{$('lava-status').textContent=data.flood.available?'Local evidence ready':'Saved evidence · flood service unavailable';}).catch(()=>{$('lava-status').textContent='Local service unavailable';});
+ get('/api/lava/status').then(data=>{$('lava-status').textContent=document.documentElement.hasAttribute('data-hosted')?'Public demo · Saved observations':data.flood.available?'Local evidence ready':'Saved evidence · flood service unavailable';}).catch(()=>{$('lava-status').textContent='Evidence unavailable';});
 })();

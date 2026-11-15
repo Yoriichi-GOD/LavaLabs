@@ -25,6 +25,7 @@
 .processor-response h2 { margin: 0; font-size: 1.12rem; }
 .processor-response p { margin: .45rem 0; color: #e0c6c3; }
 .processor-response a { display: inline-flex; align-items: center; color: #ffb3a6; font-size: .9rem; text-decoration: underline; text-underline-offset: 4px; }
+:host-context([data-hosted]) :is(.analysis-settings, .question-panel) { display: none; }
 @media (max-width: 760px) {
   input, select, textarea { font-size: 16px; }
   button { min-height: 40px; touch-action: manipulation; }

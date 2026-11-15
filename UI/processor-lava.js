@@ -6,6 +6,7 @@
   const $ = id => root.getElementById(id);
   const views = ['terrain', 'analysis', 'response', 'flood-evidence'];
   const params = new URLSearchParams(location.search);
+  const hosted = document.documentElement.hasAttribute('data-hosted');
   const initial = params.get('view');
   let view = views.includes(initial) ? initial : 'terrain';
   let run = params.get('run');
@@ -17,7 +18,7 @@
     const query = new URLSearchParams();
     if (next !== 'terrain') query.set('view', next);
     if (id) query.set('run', id);
-    return '/' + (query.size ? '?' + query : '') + '#terrain';
+    return location.pathname + (query.size ? '?' + query : '') + '#terrain';
   }
 
   function render() {
@@ -91,7 +92,8 @@
     $('processor-response').hidden = false;
     status.textContent = 'Checking the saved run for priority locations…';
     try {
-      const api = await fetch('/api/flood/runs/' + encodeURIComponent(result.run_id) + '/response?brief=true', {signal});
+      const api = await fetch('/api/flood/runs/' + encodeURIComponent(result.run_id) +
+        (hosted ? '/response/brief.json' : '/response?brief=true'), {signal});
       if (!api.ok) throw new Error('Response evidence is unavailable for this analysis.');
       const brief = await api.json();
       if (signal.aborted) return;

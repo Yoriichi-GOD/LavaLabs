@@ -27,6 +27,18 @@ Open [LavaLabs](http://127.0.0.1:8780/#terrain). Terrain & Flood contains the fu
 
 Run `.venv-linux/bin/python scripts/bootstrap_demo.py --verify` to check every archived member against the bundle manifest. The original two run freezes, 90 m terrain scene and full 30 m Nepal research graph keep their source hashes. The separate four-case display manifest verifies the accessible display grids. The [public file inventory](provenance/public-files.json) records the exported subset.
 
+## Public demo
+
+[Open LavaLabs on GitHub Pages](https://yoriichi-god.github.io/LavaLabs/). The site includes the two saved Nepal runs, their response maps and optical overlays, 3D terrain, the four measured case views, research reports, and NASA trends with downloads. The browser reads the generated files directly. Fresh satellite acquisition, server-side questions and new terrain cross-sections are available in the local Python app.
+
+Build the Pages package from a clean checkout with the pinned Python dependencies installed:
+
+```sh
+python -m scripts.export_public_site --base /LavaLabs --output ./public-site
+```
+
+The exporter verifies the repository's demo archive before writing the package. GitHub Pages serves the root of the `gh-pages` branch. For a static host that serves at its domain root, use `--base ""`.
+
 ## NASA Space Apps contribution
 
 LavaLabs answers **Be An Earth System Trend Detective!** with an inspectable path from variable selection to direction, location, magnitude and significance. The NASA trend workflow uses 6,048 monthly T2M and PRECTOTCORR values from six predetermined MERRA-2 model cells. It aggregates annual temperature by days and converts precipitation rate to monthly totals with calendar month lengths. It reports OLS slopes with HAC lag-3 uncertainty and Holm-adjusted p-values across 36 tests. The intervals describe individual slopes. The analysis is exploratory and applies to the selected model cells and fixed time windows. [Challenge brief](https://www.spaceappschallenge.org/2026/challenges/earth-system-trend-detective/) · [NASA POWER monthly API](https://power.larc.nasa.gov/docs/services/api/temporal/monthly/) · [Trend method and tests](trend_lab/README.md)

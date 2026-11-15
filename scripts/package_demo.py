@@ -28,12 +28,14 @@ def package():
   for name,checksum in freeze['files'].items():
    if Path(name).name!=name:raise ValueError('Unsafe frozen member')
    add(folder/name,checksum,'Sentinel/OSM saved observation, not new accuracy evidence')
-  result=json.loads((folder/'result.json').read_text())
-  debris=result.get('provenance',{}).get('debris',{})
-  for date,checksum in debris.get('source_hashes',{}).items():
+  manifest=json.loads((folder/'manifest.json').read_text())
+  debris=manifest['debris']
+  for date in (debris['pre_date'],debris['post_date']):
+   checksum=debris['source_hashes'][date]
    candidates=[ROOT/'components/floodlab/data/automatic'/run/'optical'/date/'default.tif',ROOT/'components/floodlab/data/optical'/date/'default.tif']
    path=next((path for path in candidates if path.is_file() and digest(path)==checksum),None)
-   if path:add(path,checksum,'retained optical RGB/index source; Sentinel attribution retained')
+   if path is None:raise ValueError(f'Retained optical source is missing for {run}, {date}')
+   add(path,checksum,'retained optical RGB/index source; Sentinel attribution retained')
  terrain_root=ROOT/'.runtime/jai/terrain'
  for folder in sorted(terrain_root.glob('terrain-*')):
   scene=json.loads((folder/'scene.json').read_text());add(folder/'scene.json',role='original terrain scene metadata')

@@ -24,6 +24,9 @@ main > #flood-views button[aria-pressed=true] {
 main > #flood-views button:hover { color: #fff; }
 #flood-processor, #flood-response { min-width: 0; }
 #evaluation > .text-link { display: inline-block; margin: 0 0 .7rem; }
+[data-hosted] :is(#earth-question-form, #earth-ask-focus, .earth-profile, details:has(> #earth-acquire)) {
+  display: none !important;
+}
 @media (max-width: 550px) {
   main > #flood-views { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .3rem; }
   main > #flood-views button { font-size: .75rem; padding-inline: 0; white-space: normal; line-height: 1.2; }

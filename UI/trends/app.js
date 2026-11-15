@@ -98,8 +98,9 @@ function render() {
   $('live-source').href = row.source_url;
   $('raw-source').href = `/trends-data/data/sources/${source.file}`;
   const exportBase = `/api/lava/trends/${state.region}/${state.variable}/${state.window}`;
-  $('csv').href = `${exportBase}/csv`;
-  $('receipt').href = `${exportBase}/json`;
+  const hosted = document.documentElement.hasAttribute('data-hosted');
+  $('csv').href = `${exportBase}/${hosted ? 'annual.csv' : 'csv'}`;
+  $('receipt').href = `${exportBase}/${hosted ? 'annual.json' : 'json'}`;
   $('status').textContent = '';
 }
 

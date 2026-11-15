@@ -1,9 +1,9 @@
 {
   "schema": 1,
   "archive": "nepal-evidence.zip",
-  "archive_sha256": "2e0279ca39051f24592de941ad89880e8d71416f6bab712a754c4d185edd884c",
-  "archive_bytes": 38669475,
-  "unpacked_bytes": 537038379,
+  "archive_sha256": "cdc06cb5a4957338d7eb94ed3921dcd4795c00f9abeec81eca353a578e272509",
+  "archive_bytes": 44715328,
+  "unpacked_bytes": 543112027,
   "files": {
     "components/floodlab/artifacts/runs/event-fe47db331390/freeze.json": {
       "sha256": "ff6bb25ef3713d128bad95d9b44af0c33b0429ce6c767df6ac4c06524c3adb0e",
@@ -85,6 +85,16 @@
       "bytes": 3634,
       "role": "Sentinel/OSM saved observation, not new accuracy evidence"
     },
+    "components/floodlab/data/automatic/event-fe47db331390/optical/2026-08-22/default.tif": {
+      "sha256": "ed892dbf52413907ed7f9f0ae58aca3d716c2e5fb452a54a0218d7dba2b2691b",
+      "bytes": 1422454,
+      "role": "retained optical RGB/index source; Sentinel attribution retained"
+    },
+    "components/floodlab/data/automatic/event-fe47db331390/optical/2026-08-27/default.tif": {
+      "sha256": "964b26a5c8f218e6605c09fd929bac7849abd3acc4c3b334aa714809f89069a1",
+      "bytes": 1482156,
+      "role": "retained optical RGB/index source; Sentinel attribution retained"
+    },
     "components/floodlab/artifacts/runs/nepal-syapru-004/freeze.json": {
       "sha256": "f0d9b18a701209e790b7aae31cd1fde8d7155dd280c2a84d3b3296d02ff64c24",
       "bytes": 1399,
@@ -164,6 +174,16 @@
       "sha256": "c62cd1d909f4a3e8c3156fc5d95b5a0b2dd11e79b59c62303818188c691009ae",
       "bytes": 56638,
       "role": "Sentinel/OSM saved observation, not new accuracy evidence"
+    },
+    "components/floodlab/data/optical/2026-08-12/default.tif": {
+      "sha256": "52ece7b6cdf31c995fa946c21691f5333258e63643e8c95a26a1f7be32928991",
+      "bytes": 1549473,
+      "role": "retained optical RGB/index source; Sentinel attribution retained"
+    },
+    "components/floodlab/data/optical/2026-08-27/default.tif": {
+      "sha256": "5ffe4091276bee9b0cfbdd7ece4ed3f6dd027275f5628d5307da1b5e3aa4e134",
+      "bytes": 1619565,
+      "role": "retained optical RGB/index source; Sentinel attribution retained"
     },
     ".runtime/jai/terrain/terrain-45737e0da2983d9d/scene.json": {
       "sha256": "2b71739b1fddd7c4c5715511787274194ce7891751dafd55dd7ab25ad9bef6ab",

@@ -29,12 +29,12 @@
       "bytes": 4974
     },
     "README.md": {
-      "sha256": "d87d973312a71d15c1651799420a279abf21e3b0b59f267bbf03e3c9be655dc7",
-      "bytes": 5385
+      "sha256": "0428026003409ccdb31df2b884019020ff60ef3ba36837452b33e2e61b211248",
+      "bytes": 6209
     },
     "UI/app.js": {
-      "sha256": "09d2596e01853112c8d3701cefb1c862bdcaffabd6a06c118ef311ea230a95c1",
-      "bytes": 12863
+      "sha256": "b1d66834bdd9334e4f2f718e392b615468f66f5d599315b11dde7a158eb1d6e0",
+      "bytes": 13078
     },
     "UI/art/empty-planet.png": {
       "sha256": "f785a7cee045c94342cae7ff100934a526ddaa4a1179c23edb7441d34b6226a5",
@@ -81,8 +81,8 @@
       "bytes": 633
     },
     "UI/flood-desk.css": {
-      "sha256": "b3ad3604b5467414ebb939f566d75f05227af8f85d6ae64de2e5e4dee20157e6",
-      "bytes": 1056
+      "sha256": "604f1af769cb6e50132480d6ac08fd5458508309883cb84ac3f115445e54692b",
+      "bytes": 1193
     },
     "UI/index.html": {
       "sha256": "061077110dfab6553c47d5312dfb4668fa29db97f15d5dda211ac00cd939a7ab",
@@ -97,8 +97,8 @@
       "bytes": 5737
     },
     "UI/nepal/case.js": {
-      "sha256": "cf669fcba748cc27834b7c6389b12dc388e2b3379810073066c7a85389d95ea1",
-      "bytes": 12734
+      "sha256": "5899051813d54addec867ab8ae52b112d4cfdd25d160df6c7d835a154e77e7e3",
+      "bytes": 12866
     },
     "UI/nepal/data/after.png": {
       "sha256": "d27f98d427a4b5f6333dd93e31390c548135adefdf1240c0adcc20e36e79982f",
@@ -129,20 +129,20 @@
       "bytes": 6990
     },
     "UI/processor-lava.js": {
-      "sha256": "17a074c5c64cf09cd59481be7ad48de43b29fddee88ab23dc7cc125e85cd5f3f",
-      "bytes": 4675
+      "sha256": "751ba2f30ee22920227e34657a7911f2fa691ba2714983bfcc6f8d475a196ada",
+      "bytes": 4804
     },
     "UI/processor.css": {
-      "sha256": "3a6d20bd9152f05461ec45eae057e9c339de47e40c1b9f2af34a51ecc59d6248",
-      "bytes": 1527
+      "sha256": "72744d14ae4a3846bbad1391396e2dfc67d164cad84104d65c4df7c5c14e4e1e",
+      "bytes": 1616
     },
     "UI/response/index.html": {
       "sha256": "0cbddd67e7cb5ac5d0801fdbcf25ab57a435b0e4bff8f9e924cd789cb20a4319",
       "bytes": 5096
     },
     "UI/response/map.js": {
-      "sha256": "36aa8e8b245a7260b940a5ec798f4233683fd89059c112f598bc2101633baeb1",
-      "bytes": 15985
+      "sha256": "8d713ca9b3bbee881fb3a7840427b55b7c7c1bc4324364e1bb2d70464f61b42d",
+      "bytes": 16131
     },
     "UI/response/style.css": {
       "sha256": "23597b90b071848c0a0a6de4819df89ca4d03330aa88f8a698cf453797ceca1a",
@@ -197,8 +197,8 @@
       "bytes": 4537
     },
     "UI/trends/app.js": {
-      "sha256": "b1f0524c7f4199a4ccc9230b8faadca880978099ffa9c03296b1e68ed33c79e8",
-      "bytes": 10676
+      "sha256": "acec7adad9145070fe17ed960f609e75d30a06ef47b6e3a3dc84551c1d49e4d1",
+      "bytes": 10806
     },
     "UI/trends/chrome.js": {
       "sha256": "ab8ba5965ea85f8792a838df94a97053cd3da8dc498cbf4ac5725544fcd220d1",
@@ -505,8 +505,8 @@
       "bytes": 11605
     },
     "components/floodlab/web/flood-workspace.js": {
-      "sha256": "5fa2fd44979dc96e3d8b818c5b52fe65fa78a19a316b9eeca4ce7ccbc3b28ae1",
-      "bytes": 23971
+      "sha256": "d243ddbdfc448ef7fccffe6926553e6c90b9e7429e5f8b8e7040fe9e39f3b30d",
+      "bytes": 24029
     },
     "components/floodlab/web/flood.html": {
       "sha256": "6173d15472b6c3e5b2c57fc5474745aa305b910e31bacf34986e2b2f94b5af98",
@@ -529,12 +529,12 @@
       "bytes": 4141
     },
     "data/demo/manifest.json": {
-      "sha256": "6382d3b20a49404a05844621e8ed993b7d1b2fc5c768b6934cf6c2a166fe9f9a",
-      "bytes": 14981
+      "sha256": "810f33ceef82d1290af964e73d61ca477ae0d251babdf3b53c28abc95fcdcda0",
+      "bytes": 16083
     },
     "data/demo/nepal-evidence.zip": {
-      "sha256": "2e0279ca39051f24592de941ad89880e8d71416f6bab712a754c4d185edd884c",
-      "bytes": 38669475
+      "sha256": "cdc06cb5a4957338d7eb94ed3921dcd4795c00f9abeec81eca353a578e272509",
+      "bytes": 44715328
     },
     "data/views/kedarnath.json": {
       "sha256": "d1e5ac5c14c1cbbf687af4b569d4faa55e38819ed0f289cd27c0a2569f3a4442",
@@ -609,8 +609,8 @@
       "bytes": 9831
     },
     "jai_extension/web/earth.js": {
-      "sha256": "7f8b6a764703813429daa9d2b715ea4c606ac55457498bfc1ab83810a9619b43",
-      "bytes": 49442
+      "sha256": "8d15842ef517994c91b07666ef77fcab1d7765f6285a6dc56b449811133fe3dd",
+      "bytes": 49734
     },
     "jai_extension/web/extension.css": {
       "sha256": "b65a537b7febce11f9f6a79b63177517845bdbf305405a02fab854e9f804cb3b",
@@ -1360,13 +1360,17 @@
       "sha256": "9138f37c927fafca54a5cebe9a4172c5a0e630f858d1314a72bbbeb06d5b05a0",
       "bytes": 3659
     },
+    "scripts/export_public_site.py": {
+      "sha256": "33373799a55af0789b1c2b59b5c2b46708b18214a6ac5e362c9248751b00f1aa",
+      "bytes": 10299
+    },
     "scripts/package_case_campaign.py": {
       "sha256": "c634a5fccdf3b196412561efb4ceef8661917e4bcbdb00fe49c335d30daf84d0",
       "bytes": 9753
     },
     "scripts/package_demo.py": {
-      "sha256": "ea705448b95d7e423c5cfdf9a446492e30959e73fda0fa2ca044fc0e7b5784da",
-      "bytes": 3764
+      "sha256": "f74522de07826bb5b1eb258ff9b954114dbcb5d5823c5304cd7443f1a4a6815c",
+      "bytes": 3862
     },
     "scripts/plot_drainage_pilot.py": {
       "sha256": "a0cc5e3ceffc5e8c2083664a48ddb45c07ff1a30591b81358eff22267485e6f9",

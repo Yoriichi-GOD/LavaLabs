@@ -98,7 +98,7 @@ byId('event-form').addEventListener('submit',async event=>{
   localStorage.setItem('flood-active-job',d.job_id);renderEventProgress(d);watchEvent(d.job_id);
  }catch(error){byId('event-progress').hidden=false;byId('event-status').textContent=error.message;button.disabled=false;}
 });
-const pendingJob=localStorage.getItem('flood-active-job');if(pendingJob)watchEvent(pendingJob);
+const pendingJob=document.documentElement.hasAttribute('data-hosted')?null:localStorage.getItem('flood-active-job');if(pendingJob)watchEvent(pendingJob);
 
 let mapProjection, picking = false, firstCorner, selectedBox, boundsEdited = false, dateEdited = false;
 const picker = byId('event-pick');

@@ -2,6 +2,7 @@
 (() => {
   'use strict';
   const $ = selector => document.querySelector(selector);
+  const hosted = document.documentElement.hasAttribute('data-hosted');
   const node = (tag, text, className) => {
     const value = document.createElement(tag);
     if (text !== undefined) value.textContent = text;
@@ -58,7 +59,7 @@
         <details class="earth-disclosure earth-profile"><summary>Cross-section <span id="earth-profile-summary">Choose two terrain points</span></summary><div class="earth-disclosure-body"><p>Pick two points on the terrain, or enter coordinates in its projected metre CRS.</p><div class="earth-profile-fields"><label>Start easting<input id="earth-x1" type="number" step="0.1"></label><label>Start northing<input id="earth-y1" type="number" step="0.1"></label><label>End easting<input id="earth-x2" type="number" step="0.1"></label><label>End northing<input id="earth-y2" type="number" step="0.1"></label></div><div class="earth-button-row"><button id="earth-profile-pick">Pick on terrain</button><button id="earth-profile-calculate">Calculate profile</button></div><p id="earth-profile-state" role="status">Missing-data gaps remain visible.</p><div id="earth-profile-chart" hidden></div></div></details>
       </div>
       <aside class="earth-sidebar">
-        <span class="eyebrow">THIS AREA · CONNECTED ANALYSIS</span><h2>Ask in context.</h2>
+        <span class="eyebrow">THIS AREA · CONNECTED ANALYSIS</span><h2>${hosted ? 'Saved observations' : 'Ask in context.'}</h2>
         <label for="earth-run">Saved flood observation</label><div class="earth-selection-row"><select id="earth-run"><option value="">Checking available runs…</option></select><button id="earth-refresh" aria-label="Refresh available observations" title="Refresh available observations">↻</button></div>
         <p id="earth-dates" class="earth-muted">Saved source dates will appear here.</p>
         <div class="earth-context-chips" id="earth-context-chips"></div>
@@ -171,7 +172,10 @@
     const tasks=[];
     if(state.run)tasks.push(api('/api/flood/runs/'+encodeURIComponent(runID)+'/debris',{signal}).then(value=>{if(!isCurrent(token))return;state.debris=value;updateContext();showIntersections();if(state.view==='debris')drawView();}).catch(error=>{if(isCurrent(token)&&error.name!=='AbortError'){$('[data-view="debris"]').disabled=true;$('[data-story="debris"]').disabled=true;}}));
     if(state.run)tasks.push(api('/api/flood/runs/'+encodeURIComponent(runID)+'/exposure',{signal}).then(value=>{if(isCurrent(token)){state.exposure=value;showIntersections();}}).catch(error=>{if(isCurrent(token)&&error.name!=='AbortError')$('#earth-intersection-count').textContent='Unavailable';}));
-    if(state.run&&state.scene)tasks.push(api('/api/context/coverage?run_id='+encodeURIComponent(runID)+'&scene_id='+encodeURIComponent(sceneID),{signal}).then(value=>{
+    const coverageUrl=hosted
+      ? '/api/context/coverage/'+encodeURIComponent(runID)+'/'+encodeURIComponent(sceneID)+'.json'
+      : '/api/context/coverage?run_id='+encodeURIComponent(runID)+'&scene_id='+encodeURIComponent(sceneID);
+    if(state.run&&state.scene)tasks.push(api(coverageUrl,{signal}).then(value=>{
       if(!isCurrent(token))return;state.coverage=value;$('#earth-water-toggle').disabled=state.fallback;
       $('#earth-alignment-note').textContent=value.common_valid_dem_cells+' / '+value.terrain_valid_cells+' valid terrain cell centres share observed support. Physical co-registration is not independently validated.';
       const evidence={...value};delete evidence.candidate_points;delete evidence.classes_on_mesh;delete evidence.candidate_fraction_on_mesh;$('#earth-alignment-json').textContent=safeJSON(evidence);
@@ -182,7 +186,7 @@
     if(sceneResult.status==='rejected')message(sceneResult.reason.message);
     await Promise.allSettled(tasks);
     if(!isCurrent(token))return;
-    const previous=localStorage.getItem('earth-last-job');
+    const previous=hosted?null:localStorage.getItem('earth-last-job');
     if(previous&&!state.job){try{const saved=await api('/api/investigations/'+previous);if(isCurrent(token)&&saved.selection.run_id===(state.run?.id||null)&&saved.selection.scene_id===(state.scene?.id||null)){state.job=saved;$('#earth-question').value=saved.selection.question;renderJob(saved);if(!terminal.has(saved.state))pollJob(saved.id);}}catch{/* Old records never block the current selection. */}}
     if(isCurrent(token)){state.contextLoading=false;setBusy(Boolean(state.activeJob||state.submitting));}
   }
@@ -223,7 +227,7 @@
     if(state.debris?.debris_available){const d=node('details');d.append(node('summary','Debris proxy · independent coverage and source record'),node('pre',safeJSON(state.debris)));content.append(d);}
     if(state.scene){content.append(field('Terrain source',state.scene.provenance.dataset),field('Source resolution',state.scene.provenance.nominal_source_resolution_m+' m nominal'),field('Terrain time basis',state.scene.provenance.release));
       const details=node('details');details.append(node('summary','Terrain provenance & hashes'),node('pre',safeJSON({id:state.scene.id,...state.scene.provenance,hashes:state.scene.hashes})));content.append(details);
-      const link=node('a','Metric terrain GeoTIFF ↓');link.href='/api/terrain/scenes/'+state.scene.id+'/raster';link.download='copernicus90-metric.tif';downloads.append(link);
+      const link=node('a','Metric terrain GeoTIFF ↓');link.href='/api/terrain/scenes/'+state.scene.id+(hosted?'/raster.tif':'/raster');link.download='copernicus90-metric.tif';downloads.append(link);
     }
   }
   function showIntersections(rows=state.exposure?.rows) {

@@ -286,7 +286,8 @@
       const name = id === 'event-fe47db331390' ? 'Syapru Besi, Nepal' : data.event_name.replace(/\s+—.*$/, '')
       $('event-label').textContent = name + ' · ' + data.event_date.slice(0, 10)
       $('observation-dates').textContent = 'Radar pair ' + data.observations.map(value => value.slice(0, 10)).join(' / ')
-      $('download-brief').href = api + '?brief=true'
+      $('download-brief').href = api + (document.documentElement.hasAttribute('data-hosted') ? '/brief.json' : '?brief=true')
+      $('download-brief').download = 'lavalabs-response-' + id + '.json'
       renderMap()
       renderPriorities()
       paintSelection()

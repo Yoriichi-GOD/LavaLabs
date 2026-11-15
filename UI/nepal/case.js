@@ -118,8 +118,9 @@
 
   function updateDownloads() {
     const url = `/api/lava/nepal/${cell.id}/${variable}`;
-    $('annual-download').href = `${url}/csv`;
-    $('receipt-download').href = `${url}/json`;
+    const hosted = document.documentElement.hasAttribute('data-hosted');
+    $('annual-download').href = `${url}/${hosted ? 'annual.csv' : 'csv'}`;
+    $('receipt-download').href = `${url}/${hosted ? 'annual.json' : 'json'}`;
     $('raw-download').href = `/ui/nepal/data/${data.climate.sources[variable].file}`;
   }
 
