@@ -8,6 +8,7 @@ import hashlib
 import json
 import os
 import re
+from urllib.parse import urlencode
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, RedirectResponse
@@ -31,7 +32,7 @@ FLOOD = ROOT / 'components/floodlab'
 
 WORKSPACES = (
     ('/#terrain', 'Terrain &amp; flood'), ('/#cases', 'Case studies'), ('/#evidence', 'Research evidence'),
-    ('/nepal', 'Nepal investigation'), ('/trends', 'NASA trends'), ('/processor', 'Flood processor'),
+    ('/nepal', 'Nepal investigation'), ('/trends', 'NASA trends'),
 )
 
 
@@ -84,6 +85,33 @@ def with_brand(html):
     return html.replace('</head>', '<link rel="stylesheet" href="/ui/wordmark.css"></head>', 1)
 
 
+def flood_views():
+    source = (FLOOD/'web/index.html').read_text(encoding='utf-8')
+    processor = '<section id="lab">' + source.split('<section id="lab">', 1)[1].split('</main>', 1)[0]
+    dialog = '<dialog id="image-viewer"' + source.split('<dialog id="image-viewer"', 1)[1].split('</body>', 1)[0]
+    processor = processor.replace('/assets/', '/processor-assets/').replace('/art/', '/processor-art/')
+    processor = processor.replace('AI selects topic', 'Match a supported topic')
+    settings = re.search(r'<section class="analysis-settings">.*?</section></section>', processor, re.S)[0]
+    processor = processor.replace(settings, '', 1).replace('<section class="question-panel">',
+        '<section class="processor-response" id="processor-response" hidden>'
+        '<h2>Response for this observation</h2><p id="processor-response-status" role="status"></p>'
+        '<a id="processor-response-link" hidden>Analyze saved observation →</a></section>' +
+        settings + '<section class="question-panel">', 1)
+    processor = re.sub(r'(id="event-(?:bbox|date)"[^>]*?) value="[^"]*"', r'\1', processor)
+    processor = processor.replace('<button type="submit">Run analysis</button>',
+        '<div class="area-actions"><button id="event-pick" type="button">Pick area on map</button>'
+        '<button type="submit">Run analysis</button></div><p id="event-pick-status" role="status"></p>')
+    response = (UI/'response/index.html').read_text(encoding='utf-8').split('<main ', 1)[1].split('</main>', 1)[0]
+    return ('<section id="flood-processor" data-lavalabs-processor hidden><template shadowrootmode="open">'
+            '<link rel="stylesheet" href="/processor-assets/style.css">'
+            '<link rel="stylesheet" href="/processor-assets/flood-workspace.css">'
+            '<link rel="stylesheet" href="/ui/processor.css">'
+            f'{processor}{dialog}</template></section>'
+            '<section id="flood-response" hidden><template shadowrootmode="open">'
+            '<link rel="stylesheet" href="/ui/response/style.css">'
+            f'<div {response}</div></template></section>')
+
+
 REPORTS = {
     'spectral': ROOT/'research/results/exposure-verification-20261112/REPORT.md',
     'drainage': ROOT/'research/results/drainage-consistency-20261112/REPORT.md',
@@ -119,7 +147,8 @@ def create_app():
 
     @app.get('/', response_class=HTMLResponse)
     def home():
-        return HTMLResponse(with_brand((UI/'index.html').read_text(encoding='utf-8')), headers={'Cache-Control': 'no-store'})
+        html = (UI/'index.html').read_text(encoding='utf-8').replace('<!-- flood views -->', flood_views(), 1)
+        return HTMLResponse(with_brand(html), headers={'Cache-Control': 'no-store'})
 
     @app.get('/logo', include_in_schema=False)
     @app.get('/favicon.ico', include_in_schema=False)
@@ -173,27 +202,14 @@ def create_app():
         html = (UI/'nepal/index.html').read_text(encoding='utf-8')
         return HTMLResponse(with_brand(update_workspace_nav(html, '/nepal')), headers={'Cache-Control': 'no-store'})
 
-    @app.get('/processor', response_class=HTMLResponse)
-    def processor():
-        html = (FLOOD/'web/index.html').read_text(encoding='utf-8')
-        html = html.replace('/assets/', '/processor-assets/').replace('/art/', '/processor-art/')
-        html = html.replace('/processor-art/logo.png', '/logo').replace('SatQuery AI', 'LavaLabs').replace('SATquery', 'LavaLabs').replace('SatQuery', 'LavaLabs')
-        html = html.replace('<body>', '<body data-lavalabs-processor>', 1)
-        html = html.replace('<option value="auto">AI selects topic</option>', '<option value="auto">Match a supported topic</option>')
-        html = html.replace('</head>', '<link rel="stylesheet" href="/ui/processor.css"><script defer src="/ui/processor-lava.js"></script></head>')
-        html = re.sub(r'<nav>(.*?)</nav>', lambda match: workspace_nav('/processor'), html, count=1)
-        html = html.replace('<main>', '<main><nav class="processor-tabs" aria-label="Flood processor views">'
-                            '<button class="active" id="lab-tab">Workspace</button><button id="eval-tab">Evidence</button></nav>', 1)
-        html = html.replace('<section class="question-panel">', '<section class="processor-response" id="processor-response" hidden>'
-                            '<h2>Disaster response</h2><p id="processor-response-status" role="status"></p>'
-                            '<a id="processor-response-link" hidden>Open response map &amp; actions →</a></section>'
-                            '<section class="question-panel">', 1)
-        return HTMLResponse(with_brand(html), headers={'Cache-Control': 'no-store'})
-
-    @app.get('/processor/response', response_class=HTMLResponse)
-    def response_page():
-        html = (UI/'response/index.html').read_text(encoding='utf-8')
-        return HTMLResponse(with_brand(update_workspace_nav(html, '/processor')), headers={'Cache-Control': 'no-store'})
+    @app.get('/processor')
+    @app.get('/processor/response')
+    def processor_alias(request: Request, run: str | None = None):
+        view = 'response' if request.url.path.endswith('/response') else 'analysis'
+        query = {'view': view}
+        if run:
+            query['run'] = run
+        return RedirectResponse('/?' + urlencode(query) + '#terrain')
 
     @app.get('/api/flood/runs/{run_id}/response')
     def response_evidence(run_id: str, brief: bool = False):
@@ -205,7 +221,7 @@ def create_app():
 
     @app.get('/flood', include_in_schema=False)
     def flood_alias():
-        return RedirectResponse('/processor')
+        return RedirectResponse('/?view=analysis#terrain')
 
     @app.get('/api/runs')
     def flood_runs():

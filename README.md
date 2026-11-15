@@ -2,15 +2,14 @@
 
 LavaLabs is a Scientific Noir workspace for investigating Earth-system change. Explore long-term NASA POWER temperature and precipitation trends, then compare what shorter satellite observation windows can establish across four flood and drainage case studies.
 
-Start with the [Nepal investigation](http://127.0.0.1:8780/nepal) after launching. Compare 15 NASA model cells across 42 years, then inspect the saved Syapru Besi event and follow the evidence into the 3D workspace. The [Disaster response map](http://127.0.0.1:8780/processor/response?run=event-fe47db331390) ranks welfare checks, road and bridge checks, and follow-up areas. The [Nepal evidence notes](NEPAL_EVIDENCE.md) record the data, results and replay commands.
+Start with the [Nepal investigation](http://127.0.0.1:8780/nepal) after launching. Compare 15 NASA model cells across 42 years, then inspect the saved Syapru Besi event in Terrain & Flood. The [Disaster response map](http://127.0.0.1:8780/?view=response&run=event-fe47db331390#terrain) ranks welfare checks, crossing checks, and follow-up areas on radar evidence or matching optical RGB. The [Nepal evidence notes](NEPAL_EVIDENCE.md) record the data, results and replay commands.
 
 | Workspace | What you can do |
 | --- | --- |
 | NASA trends | Select a variable, one of six model cells and one of three periods from 1984–2025. Compare slopes per decade, confidence intervals and significance across 36 fixed comparisons. Download CSV, the evidence receipt and original NASA data. |
-| Terrain & flood | Rotate the Syapru Besi terrain, choose a cross-section, compare SAR and retained optical RGB, toggle overlays and trace questions to saved evidence. |
+| Terrain & flood | Inspect 3D terrain and imagery. Pick an area, set the date, and analyze it with provider access. Review completed observations, ranked response checks, reports and Flood Lab evidence in the same workspace. |
 | Case studies | Compare Syapru Besi, Kedarnath, Varanasi and Sangam Vihar in 3D or on a 2D map. Select elevation, slope, height above drainage (HAND), or before/after/changed NDVI. Inspect dates, source sampling and valid coverage. |
 | Research evidence | Inspect six preserved studies, including failed quality gates, drainage and observed-flow controls, and the Ahr road review. |
-| Flood processor | Open the full Flood Lab workspace, saved runs, reports and evidence-backed Q&A. The original area/date pipeline is available with provider access. |
 
 ## Run locally
 
@@ -24,7 +23,7 @@ python3.11 -m venv .venv-linux
 .venv-linux/bin/python start.py
 ```
 
-Open [LavaLabs](http://127.0.0.1:8780/#terrain). The same workspace navigation reaches terrain, case studies, research, Nepal investigation, NASA trends, and the Flood Lab processor. `start.py` starts one service on port 8780. Set `LAVALABS_PORT` to change the port for the whole app. On Windows with the scratch copy, run `start.ps1` from PowerShell to use its existing environment. Launch with `LAVALABS_LOCAL_ARCHIVE=1` to browse the additional saved runs in that local copy. The public repository ships two Nepal runs. New area/date acquisition requires its own provider credentials and network access. See the [Flood Lab access notes](components/floodlab/docs/data-access.md).
+Open [LavaLabs](http://127.0.0.1:8780/#terrain). Terrain & Flood contains the full processor and response workflow. Case Studies, Research Evidence, Nepal Investigation and NASA Trends have their own views. `start.py` starts one service on port 8780. Set `LAVALABS_PORT` to change the port for the whole app. On Windows with the scratch copy, run `start.ps1` from PowerShell to use its existing environment. Launch with `LAVALABS_LOCAL_ARCHIVE=1` to browse the additional saved runs in that local copy. The public repository ships two Nepal runs. New area/date acquisition requires its own provider credentials and network access. See the [Flood Lab access notes](components/floodlab/docs/data-access.md).
 
 Run `.venv-linux/bin/python scripts/bootstrap_demo.py --verify` to check every archived member against the bundle manifest. The original two run freezes, 90 m terrain scene and full 30 m Nepal research graph keep their source hashes. The separate four-case display manifest verifies the accessible display grids. The [public file inventory](provenance/public-files.json) records the exported subset.
 

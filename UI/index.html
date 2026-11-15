@@ -8,11 +8,21 @@
 <title>LavaLabs · Earth observation workspace</title><link rel="icon" href="/logo">
 <link rel="stylesheet" href="/assets/style.css"><link rel="stylesheet" href="/assets/noir.css"><link rel="stylesheet" href="/assets/workspace-shell.css"><link rel="stylesheet" href="/jai/assets/earth.css"><link rel="stylesheet" href="/ui/lava.css">
 <script defer src="/ui/app.js"></script><script defer src="/jai/assets/earth.js"></script><script defer src="/assets/visual-context.js"></script>
+<link rel="stylesheet" href="/ui/flood-desk.css">
+<script defer src="/ui/response/map.js"></script><script defer src="/ui/processor-lava.js"></script>
+<script defer src="/processor-assets/flood-workspace.js"></script><script defer src="/processor-assets/benchmarks.js"></script>
 </head>
 <body class="sq-document-scroll sq-clipped-scroll">
-<header><a class="brand" href="/#terrain"><img src="/logo" alt="LavaLabs volcano"><span>Lava<span class="brand-light">Labs</span></span></a><nav aria-label="Workspace"><button id="lab-tab">Case studies</button><button id="eval-tab">Research evidence</button><a href="/nepal">Nepal investigation</a><a href="/trends">NASA trends</a><a href="/processor">Flood processor</a></nav><div class="lava-status"><span class="status-dot"></span><span id="lava-status">Reading local evidence</span></div></header>
+<header><a class="brand" href="/#terrain"><img src="/logo" alt="LavaLabs volcano"><span>Lava<span class="brand-light">Labs</span></span></a><nav aria-label="Workspace"><button id="lab-tab">Case studies</button><button id="eval-tab">Research evidence</button><a href="/nepal">Nepal investigation</a><a href="/trends">NASA trends</a></nav><div class="lava-status"><span class="status-dot"></span><span id="lava-status">Reading local evidence</span></div></header>
 <main>
 <div class="intro"><div><h1 id="page-title">Case studies</h1><p id="page-description">Four measured windows. Source observations, terrain and uncertainty together.</p></div><a class="text-link nepal-entry" href="/nepal">Explore the Nepal investigation <span aria-hidden="true">→</span></a></div>
+<nav id="flood-views" aria-label="Terrain and flood views" hidden>
+ <button type="button" data-flood-view="terrain" aria-pressed="true">3D terrain</button>
+ <button type="button" data-flood-view="analysis" aria-pressed="false">Analyze area</button>
+ <button type="button" data-flood-view="response" aria-pressed="false">Disaster response</button>
+ <button type="button" data-flood-view="flood-evidence" aria-pressed="false">Flood evidence</button>
+</nav>
+<!-- flood views -->
 <section id="lab" hidden aria-labelledby="page-title">
  <div class="case-toolbar"><label for="case-select">Study area<select id="case-select"><option value="nepal">Syapru Besi, Nepal</option><option value="kedarnath">Kedarnath, Upper Mandakini</option><option value="varanasi">Varanasi, Ganges floodplain</option><option value="sangam-vihar">Sangam Vihar, Delhi</option></select></label><label for="case-field">Observation layer<select id="case-field"><option value="elevation">Elevation · DSM</option></select></label><button id="case-mode" type="button" aria-pressed="false">View as map</button></div>
  <p id="case-message" class="muted" role="status">Reading retained case data…</p>
@@ -24,6 +34,7 @@
 </section>
 <section id="evaluation" hidden>
  <p class="research-lead">Preserved experiments, controls and findings. A reproducible result is shown with the population it actually tested.</p>
+ <a class="text-link" href="/?view=flood-evidence#terrain">Flood Lab evidence and benchmarks →</a>
  <div id="research-list" role="list"><p class="muted">Reading frozen research results…</p></div>
  <section class="research-boundary"><h2>What remains unproved</h2><p>Physical exposure accuracy, surveyed drainage connectivity, flood depth, safe access and analyst decision benefit remain unestablished. These studies contain computational controls, previously inspected data and exploratory cases. The newer 2 m post-event surface failed the full-case coverage gate; it is not a verified DTM upgrade.</p><p>Earth-system trends are evaluated separately in the NASA Trend Lab. Two-date NDVI change is not a long-term trend or a significance result.</p><a href="/trends">Open the NASA trend analysis</a></section>
 </section>

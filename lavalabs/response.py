@@ -73,11 +73,15 @@ def inspect_point(mask, affine, point):
     return ("nearby", round(metres, 1)) if metres <= CONTACT_RADIUS else ("no_contact", None)
 
 
-def raster_image(mask):
+def raster_image(mask, *, overlay=False):
     palette = np.array([(17, 22, 25, 255)] * 256, dtype=np.uint8)
     palette[1] = (28, 62, 71, 255)
     palette[2] = (232, 151, 77, 255)
     palette[255] = (66, 69, 78, 255)
+    if overlay:
+        palette[0] = palette[1] = (0, 0, 0, 0)
+        palette[2] = (49, 227, 255, 210)
+        palette[255] = (42, 37, 58, 124)
     buffer = io.BytesIO()
     Image.fromarray(palette[mask]).save(buffer, format="PNG", optimize=True)
     return base64.b64encode(buffer.getvalue()).decode("ascii")
@@ -245,7 +249,9 @@ def build(bridge, run_id, *, include_map=True):
         "lead": lead, "settlements": osm_in_study, "access": context,
         "care": care_directory(care),
         "coverage": coverage, "contact_radius_m": CONTACT_RADIUS, "osm": osm_source,
-        "map": {"bounds": grid["bounds"], "crs": grid["crs"], "png": raster_image(mask), "roads": roads} if include_map else None,
+        "map": {"bounds": grid["bounds"], "crs": grid["crs"], "transform": grid["transform"],
+                "width": grid["width"], "height": grid["height"], "png": raster_image(mask),
+                "overlay": raster_image(mask, overlay=True), "roads": roads} if include_map else None,
         "nearby_run": CORRIDOR if run_id == SCENE else SCENE if run_id == CORRIDOR else None,
         "nepal": run_id in (SCENE, CORRIDOR) or 80 <= grid["bbox_wgs84"][0] <= 88.2 and 26.3 <= grid["bbox_wgs84"][1] <= 30.5,
         "sources": sources, "freeze_sha256": hashlib.sha256(freeze_raw).hexdigest(),

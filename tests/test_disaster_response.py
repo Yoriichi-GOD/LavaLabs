@@ -76,10 +76,34 @@ def test_corridor_brief_does_not_treat_missing_modeled_route_as_known_closure(cl
 
 
 def test_render_entry_points_and_archive_boundary(client):
-    assert 'id="processor-response"' in client.get("/processor").text
-    assert 'id="response-svg"' in client.get("/processor/response").text
-    assert f"/processor/response?run={SCENE}" in client.get("/nepal").text
+    home = client.get("/").text
+    for element_id in ("flood-views", "flood-processor", "processor-response", "response-svg", "event-pick", "map-optical"):
+        assert f'id="{element_id}"' in home
+    assert home.count('shadowrootmode="open"') == 2
+    assert 'id="event-bbox" required value=' not in home
+    assert '/?view=flood-evidence#terrain' in home
+    assert f"/?view=response&amp;run={SCENE}#terrain" in client.get("/nepal").text
+    legacy = client.get(f"/processor/response?run={SCENE}", follow_redirects=False)
+    assert legacy.status_code == 307 and legacy.headers["location"] == f"/?view=response&run={SCENE}#terrain"
+    assert client.get("/processor", follow_redirects=False).headers["location"] == "/?view=analysis#terrain"
     assert client.get("/api/flood/runs/private-archive-run/response").status_code == 404
+
+
+def test_response_overlay_uses_identical_grid_and_preserves_original_radar_classes(client):
+    base = f"/api/flood/runs/{SCENE}"
+    response = client.get(f"{base}/response").json()
+    overlay = Image.open(io.BytesIO(base64.b64decode(response["map"]["overlay"])))
+    mask, expected, _, _ = DemoBridge().mask(SCENE)
+    grid = client.get(f"{base}/visual-context").json()["after"]["grid"]
+    optical = client.get(f"{base}/visual/after.png")
+    assert optical.status_code == 200
+    assert overlay.size == Image.open(io.BytesIO(optical.content)).size
+    for key in ("crs", "transform", "width", "height"):
+        assert response["map"][key] == grid[key] == expected[key]
+    alpha = np.asarray(overlay)[:, :, 3]
+    assert np.all(alpha[(mask == 0) | (mask == 1)] == 0)
+    assert np.all(alpha[mask == 2] == 210)
+    assert np.all(alpha[mask == 255] == 124)
 
 
 def test_new_runs_read_points_from_the_frozen_topology():

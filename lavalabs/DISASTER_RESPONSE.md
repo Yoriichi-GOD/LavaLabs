@@ -1,6 +1,8 @@
 # Disaster response
 
-Open `/processor` and select a completed real flood run. The response panel also appears after a new real run completes. It links to the run’s action map and downloadable JSON brief on the same server.
+Open **Terrain & Flood → Analyze area**. Choose a saved run and click **Analyze saved observation** to compute its response. To request new imagery, pick two corners on the impact map or enter longitude/latitude bounds, choose an event date, and click **Run analysis**. New area/date jobs require provider access. Once a job completes, the response view shows its ranked checks and downloadable JSON brief.
+
+The map has radar and optical RGB basemaps. RGB uses the selected run’s hash-linked post-event Sentinel-2 source when dimensions, projected CRS and transform match. Candidate-water and coverage-gap pixels remain visible above the imagery with the same roads and pins. The optical capture date is separate from the radar pair, and RGB clouds remain visible.
 
 | Priority | Trigger | Follow-up |
 | --- | --- | --- |

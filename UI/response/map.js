@@ -1,14 +1,14 @@
 (() => {
-  const $ = id => document.getElementById(id)
+  const host = document.getElementById('flood-response')
+  const root = host?.shadowRoot || document
+  const $ = id => root.getElementById(id)
   const svgNS = 'http://www.w3.org/2000/svg'
-  const run = new URL(location.href).searchParams.get('run') || 'event-fe47db331390'
-  const api = '/api/flood/runs/' + encodeURIComponent(run) + '/response'
-  const responseUrl = id => '/processor/response?run=' + encodeURIComponent(id)
+  const responseUrl = id => '/?view=response&run=' + encodeURIComponent(id) + '#terrain'
   const states = {candidate: 'Candidate at point', nearby: 'Near a candidate', no_contact: 'No candidate nearby', unobserved: 'Radar gap', outside: 'Outside scene'}
   const titles = ['Check people first', 'Verify crossings and roads', 'Recheck when warnings change']
   const artifactLabels = {'result.json': 'Run calculations', 'manifest.json': 'Run source manifest', 'prediction.tif': 'Radar candidate raster', 'layers.geojson': 'Historical map layers', 'exposure.csv': 'Water intersections', 'connectivity.json': 'Historical access scenarios', 'topology-audit.json': 'Road and settlement audit'}
   const controls = new Map()
-  let data, selected, zoom = 1
+  let data, selected, run, pending, optical, zoom = 1
 
   function html(tag, content, parent, attrs = {}) {
     const el = document.createElement(tag)
@@ -45,7 +45,7 @@
       html('p', 'This run has no map locations for the ranked checks.', detail)
       return
     }
-    document.querySelectorAll('[data-site]').forEach(el => el.setAttribute('aria-pressed', String(el.dataset.site === selected.id)))
+    root.querySelectorAll('[data-site]').forEach(el => el.setAttribute('aria-pressed', String(el.dataset.site === selected.id)))
     html('strong', 'P' + selected.priority + ' · ' + selected.name, detail, {class: 'p' + selected.priority})
     html('p', selected.detail, detail)
     const [lon, lat] = selected.lonlat
@@ -80,7 +80,23 @@
     const width = (east - west) * unit, height = (north - south) * unit
     const left = (650 - width) / 2, top = (520 - height) / 2
     const at = ([x, y]) => [left + (x - west) * unit, top + (north - y) * unit]
-    svg('image', {x: left, y: top, width, height, preserveAspectRatio: 'none', href: 'data:image/png;base64,' + data.map.png}, $('raster-layer'))
+    const size = {x: left, y: top, width, height, preserveAspectRatio: 'none'}
+    svg('image', {...size, id: 'radar-basemap', href: 'data:image/png;base64,' + data.map.png}, $('raster-layer'))
+    if (optical) {
+      const image = svg('image', {...size, id: 'optical-basemap', hidden: ''}, $('raster-layer'))
+      svg('image', {...size, id: 'optical-overlay', hidden: '', href: 'data:image/png;base64,' + data.map.overlay}, $('raster-layer'))
+      image.addEventListener('load', () => {
+        if (!image.isConnected) return
+        $('map-optical').disabled = false
+        $('optical-state').textContent = 'Sentinel-2 RGB · ' + optical.date
+      })
+      image.addEventListener('error', () => {
+        if (!image.isConnected) return
+        $('map-optical').disabled = true
+        $('optical-state').textContent = 'RGB could not load for this run'
+      })
+      image.setAttribute('href', optical.url)
+    }
     svg('rect', {x: left, y: top, width, height, fill: 'none', stroke: '#62646d'}, $('raster-layer'))
     data.map.roads.forEach(road => svg('polyline', {
       points: road.xy.map(xy => at(xy).map(v => v.toFixed(2)).join(',')).join(' '),
@@ -179,6 +195,12 @@
       link.href = responseUrl(data.nearby_run)
       link.textContent = data.nearby_run === 'nepal-syapru-004' ? 'Review wider Nepal access and mapped care sites →' : 'Review the narrower Syapru Besi footprint →'
       link.hidden = false
+      link.onclick = event => {
+        if (window.LavaFlood) {
+          event.preventDefault()
+          window.LavaFlood.open('response', data.nearby_run)
+        }
+      }
     }
   }
 
@@ -209,16 +231,59 @@
       html('a', artifactLabels[file] || file, row, {href: '/api/flood/runs/' + encodeURIComponent(run) + '/artifact/' + file})
       html('span', ' · SHA-256 ' + digest, row)
     }
+    if (optical) {
+      const row = html('li', '', $('source-links'))
+      html('a', 'Sentinel-2 RGB · ' + optical.date, row, {href: optical.url})
+      html('span', ' · SHA-256 ' + optical.source_sha256 + ' · ' + optical.display, row)
+    }
   }
 
-  async function initialize() {
-    $('back-processor').href = '/processor?run=' + encodeURIComponent(run)
+  function changeBasemap(useOptical) {
+    $('map-radar').setAttribute('aria-pressed', String(!useOptical))
+    $('map-optical').setAttribute('aria-pressed', String(useOptical))
+    $('radar-basemap')?.toggleAttribute('hidden', useOptical)
+    $('optical-basemap')?.toggleAttribute('hidden', !useOptical)
+    $('optical-overlay')?.toggleAttribute('hidden', !useOptical)
+    $('paired-water-key').hidden = useOptical
+    root.querySelector('.response-map').classList.toggle('optical-map', useOptical)
+  }
+
+  async function initialize(id) {
+    if (id === run && id) return
+    pending?.abort()
+    run = id
+    $('response-content').hidden = true
+    $('map-optical').disabled = true
+    $('download-brief').hidden = true
+    $('load-status').hidden = false
+    $('load-status').textContent = id ? 'Checking saved evidence…' : 'Select a completed flood analysis to see response priorities.'
+    if (!id) return
+    pending = new AbortController()
+    const {signal} = pending
+    const base = '/api/flood/runs/' + encodeURIComponent(id)
+    const api = base + '/response'
     try {
-      const response = await fetch(api)
+      const [response, context] = await Promise.all([
+        fetch(api, {signal}),
+        fetch(base + '/visual-context', {signal}).then(res => res.ok ? res.json() : null).catch(() => null),
+      ])
       const packet = await response.json()
+      if (signal.aborted) return
       if (!response.ok) throw new Error(typeof packet.detail === 'string' ? packet.detail : 'Saved response evidence is unavailable.')
       data = packet
-      const name = run === 'event-fe47db331390' ? 'Syapru Besi, Nepal' : data.event_name.replace(/\s+—.*$/, '')
+      const grid = context?.after?.grid
+      optical = context?.optical_available && grid?.crs === data.map.crs &&
+        grid.width === data.map.width && grid.height === data.map.height &&
+        JSON.stringify(grid.transform) === JSON.stringify(data.map.transform)
+        ? context.after : null
+      for (const node of ['raster-layer', 'road-layer', 'pin-layer', 'priority-list', 'access-result',
+                          'care-list', 'settlements', 'source-links']) $(node).replaceChildren()
+      controls.clear()
+      $('related-run').hidden = true
+      $('map-optical').disabled = true
+      $('optical-state').textContent = optical ? 'Loading retained RGB…' : 'No matching optical RGB for this analysis'
+      changeBasemap(false)
+      const name = id === 'event-fe47db331390' ? 'Syapru Besi, Nepal' : data.event_name.replace(/\s+—.*$/, '')
       $('event-label').textContent = name + ' · ' + data.event_date.slice(0, 10)
       $('observation-dates').textContent = 'Radar pair ' + data.observations.map(value => value.slice(0, 10)).join(' / ')
       $('download-brief').href = api + '?brief=true'
@@ -232,9 +297,15 @@
       $('response-content').hidden = false
       $('load-status').hidden = true
     } catch (error) {
-      $('load-status').textContent = error.message
+      if (!signal.aborted) {
+        run = undefined
+        $('load-status').textContent = error.message
+      }
     }
   }
 
-  initialize()
+  $('map-radar').onclick = () => changeBasemap(false)
+  $('map-optical').onclick = () => changeBasemap(true)
+  if (host) host.loadResponse = initialize
+  else initialize(new URL(location.href).searchParams.get('run'))
 })()

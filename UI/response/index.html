@@ -18,15 +18,14 @@
   <main class="response-main">
     <div class="response-title">
       <div>
-        <a class="back" id="back-processor" href="/processor">← Flood processor</a>
-        <h1>Disaster response</h1>
+        <h2>Disaster response</h2>
         <p id="event-label">Field-verification priorities from a completed flood analysis.</p>
       </div>
       <a id="download-brief" class="control" hidden>Download brief (JSON) <span aria-hidden="true">↓</span></a>
     </div>
     <p id="load-status" role="status">Checking saved evidence…</p>
     <div id="response-content" hidden>
-      <p class="response-alert"><strong>Historical event.</strong> Confirm conditions with local incident command before dispatch. The map shows observation and access gaps alongside the ranked checks.</p>
+      <p class="response-alert"><strong>Historical event.</strong> Confirm site and access conditions with local incident command before dispatch.</p>
       <div class="response-layout">
         <section class="response-map" aria-labelledby="map-heading">
           <div class="section-top">
@@ -37,11 +36,16 @@
               <button id="map-fit" type="button">Fit</button>
             </div>
           </div>
+          <div class="response-layers" role="group" aria-label="Response map basemap">
+            <button id="map-radar" type="button" aria-pressed="true">Radar evidence</button>
+            <button id="map-optical" type="button" aria-pressed="false" disabled>Optical RGB</button>
+            <span id="optical-state" role="status"></span>
+          </div>
           <svg id="response-svg" role="group" aria-label="Map of ranked verification locations" viewBox="0 0 650 520">
             <title>Field-verification map for the selected run</title>
             <g id="raster-layer"></g><g id="road-layer"></g><g id="pin-layer"></g>
           </svg>
-          <div class="map-key" aria-label="Map legend"><span><i class="mark-water"></i>Water candidate</span><span><i class="mark-permanent"></i>Water in both scenes</span><span><i class="mark-gap"></i>Radar coverage gap</span><span><i class="mark-road"></i>Mapped road</span><span><i class="mark-road-check"></i>Road or bridge to verify</span></div>
+          <div class="map-key" aria-label="Map legend"><span><i class="mark-water"></i>Water candidate</span><span id="paired-water-key"><i class="mark-permanent"></i>Water in both scenes</span><span><i class="mark-gap"></i>Radar coverage gap</span><span><i class="mark-road"></i>Mapped road</span><span><i class="mark-road-check"></i>Road or bridge to verify</span></div>
           <div id="pin-detail" class="pin-detail" aria-live="polite"></div>
           <p class="map-attribution">Radar observations · © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a></p>
         </section>

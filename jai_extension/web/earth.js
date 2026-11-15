@@ -109,13 +109,13 @@
   tab.onclick=open;
   ['lab-tab','eval-tab'].forEach(id=>$('#'+id).addEventListener('click',()=>{panel.hidden=true;tab.classList.remove('active');$('main > .intro').hidden=false;history.replaceState(null,'',location.pathname+location.search+(id==='eval-tab'?'#evidence':'#cases'));}));
 
-  async function refresh() {
+  async function refresh(requestedRun) {
     if(state.activeJob||state.submitting)return;
     state.contextLoading=true;setBusy(false);
     $('#earth-refresh').disabled=true;
     const results=await Promise.allSettled([api('/api/flood/runs'),api('/api/terrain/status')]);
     const linkedRun = new URLSearchParams(location.search).get('run');
-    const selectedRun=state.sourcesLoaded?$('#earth-run').value:(linkedRun??localStorage.getItem('earth-run')??localStorage.getItem('jai-last-flood-run'));
+    const selectedRun=requestedRun??(state.sourcesLoaded?$('#earth-run').value:(linkedRun??localStorage.getItem('earth-run')??localStorage.getItem('jai-last-flood-run')));
     const selectedScene=state.sourcesLoaded?$('#earth-scene').value:localStorage.getItem('earth-scene');
     state.runs=results[0].status==='fulfilled'?results[0].value.runs.filter(r=>r.population==='FROZEN_REAL_OBSERVATION'):[];
     state.scenes=results[1].status==='fulfilled'?results[1].value.scenes:[];
@@ -132,6 +132,18 @@
     if(results[1].status==='rejected')message('Terrain service unavailable. Saved flood observations can still be inspected.');
     setBusy(Boolean(state.activeJob||state.submitting));
   }
+
+  window.LavaTerrain = {open(runId) {
+    if (!state.booted) { open(); return; }
+    const select = $('#earth-run');
+    if (runId && select.value !== runId && !state.activeJob && !state.submitting) {
+      if ([...select.options].some(option => option.value === runId)) {
+        select.value = runId;
+        selectContext();
+      } else refresh(runId);
+    }
+    if (state.view === 'terrain' && state.plotReady && !state.fallback) Plotly.Plots.resize($('#earth-surface'));
+  }};
 
   async function selectContext() {
     if(state.activeJob||state.submitting)return;
@@ -348,8 +360,12 @@
   $('#earth-stop').onclick=async()=>{if(!state.activeJob)return;try{$('#earth-stop').disabled=true;renderJob(await post('/api/investigations/'+state.activeJob+'/cancel',{}));}catch(error){feedback(error.message);}};
   $('#earth-ask-focus').onclick=()=>{$('#earth-question').focus();$('#earth-question').scrollIntoView({block:'nearest',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});};
   document.querySelectorAll('[data-prompt]').forEach(button=>button.onclick=()=>{const prompts={overview:state.run&&state.scene?'Summarize the saved water candidates and terrain in this area.':state.scene?'Summarize the terrain elevation and slope.':'Summarize the saved water candidates.',assets:'Which roads and buildings near the water candidates need inspection?',slope:'What are the terrain elevation and slope?'};$('#earth-question').value=prompts[button.dataset.prompt];$('#earth-question').focus();});
-  $('#earth-run').onchange=$('#earth-scene').onchange=selectContext;$('#earth-refresh').onclick=refresh;
+  $('#earth-run').onchange=()=>{
+    document.dispatchEvent(new CustomEvent('lavalabs:terrain-selection',{detail:$('#earth-run').value}));
+    selectContext();
+  };
+  $('#earth-scene').onchange=selectContext;$('#earth-refresh').onclick=()=>refresh();
   $('#earth-acquire').onclick=async()=>{if(!$('#earth-acquire-consent').checked){$('#earth-acquire-state').textContent='Approve this bounded public download first.';return;}$('#earth-acquire').disabled=true;$('#earth-acquire-state').textContent='Obtaining and measuring the public terrain…';try{const value=await post('/api/terrain/obtain',{confirmed:true});localStorage.setItem('earth-scene',value.id);$('#earth-acquire-state').textContent='Real terrain is available.';await refresh();}catch(error){$('#earth-acquire-state').textContent=error.message;}finally{$('#earth-acquire').disabled=false;}};
-  if(['#terrain','#flood','#investigate'].includes(location.hash))open();
+  if(['#terrain','#flood','#investigate'].includes(location.hash)&&!new URLSearchParams(location.search).has('view'))open();
   else if(location.hash==='#evidence')$('#eval-tab').click();
 })();

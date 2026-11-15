@@ -12,14 +12,15 @@
 
  function show(name){
   $('lab').hidden=name!=='cases';$('evaluation').hidden=name!=='evidence';
-  const earth=$('earth');if(earth)earth.hidden=name!=='terrain';
+  const earth=$('earth');if(earth&&name!=='terrain')earth.hidden=true;
   document.querySelector('main>.intro').hidden=false;
   $('lab-tab').classList.toggle('active',name==='cases');$('eval-tab').classList.toggle('active',name==='evidence');
   $('earth-tab')?.classList.toggle('active',name==='terrain');
   $('page-title').textContent=name==='terrain'?'Terrain & flood':name==='evidence'?'Research evidence':'Case studies';
-  $('page-description').textContent=name==='terrain'?'The Nepal investigation. Saved observations, historical terrain and source-linked answers.':name==='evidence'?'NDVI, terrain, drainage and evidence qualification—with their measured limits.':'Four measured windows. Source observations, terrain and uncertainty together.';
+  $('page-description').textContent=name==='terrain'?'Inspect terrain, analyze a flood area, and review response priorities.':name==='evidence'?'NDVI, terrain, drainage and evidence qualification—with their measured limits.':'Four measured windows. Source observations, terrain and uncertainty together.';
   if(name==='cases'){if(!caseData)loadCase(selectedCase);else requestAnimationFrame(drawCase);}
   if(name==='evidence')loadResearch();
+  document.dispatchEvent(new CustomEvent('lavalabs:workspace',{detail:name}));
  }
  window.Lava={show};
  // Keep the inherited optical-context extension's small public contract while
