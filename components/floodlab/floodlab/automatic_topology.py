@@ -31,14 +31,18 @@ def attach_topology(root,progress=lambda message:None):
   for i,c in enumerate(nx.weakly_connected_components(g)):
    touch[i]=bool(c&boundary)
    for n in c:components[n]=i
+ care_sites=[]
  for row in rows:
   tags=dict(row['tags']);ishub=tags.get('amenity')=='hospital' or tags.get('place') in ('town','city');issettlement=tags.get('place') in ('city','town','village','hamlet','isolated_dwelling','suburb','quarter','neighbourhood')
-  if not ishub and not issettlement:continue
-  geom=transform(proj,from_wkb(row['geom']));point=geom if geom.geom_type=='Point' else geom.representative_point();distance,index=tree.query([point.x,point.y]) if nodes else (float('inf'),0);node=nodes[int(index)] if distance<=200 else None;fid=f"{row['osm_type']}/{row['osm_id']}"
+  care=next((value for value in (tags.get('amenity'),tags.get('healthcare')) if value in {'hospital','clinic','doctor','doctors','health_post'}),None)
+  if not ishub and not issettlement and care is None:continue
+  geographic=from_wkb(row['geom']);location=geographic.representative_point()
+  geom=transform(proj,geographic);point=geom if geom.geom_type=='Point' else geom.representative_point();distance,index=tree.query([point.x,point.y]) if nodes else (float('inf'),0);node=nodes[int(index)] if distance<=200 else None;fid=f"{row['osm_type']}/{row['osm_id']}"
   entry={'id':fid,'name':tags.get('name:en',tags.get('name',fid)),'node_id':node,'snap_distance_m':float(distance) if np.isfinite(distance) else None,'boundary_truncated':touch.get(components.get(node),True),'snap_method':'nearest historical road node within 200m; unverified connector'}
   if ishub:hubs.append(entry)
-  if issettlement:settlements.append(entry)
+  if issettlement:settlements.append(dict(entry,point=[location.x,location.y],kind='settlement',place_type=tags['place']))
+  if care:care_sites.append(dict(entry,point=[location.x,location.y],kind='care',place_type=care))
  infra.update(graph_roads=roads,settlements=settlements,hubs=hubs,hub_node_ids=sorted({h['node_id'] for h in hubs if h['node_id'] is not None}),topology_status='Historical nodes; AOI boundary and observation coverage uncertain; turn restrictions unmodelled')
  (dst/'infrastructure.json').write_text(json.dumps(infra));manifest['infrastructure_sha256']=hashlib.sha256((dst/'infrastructure.json').read_bytes()).hexdigest()
  manifest['limitations']=[v for v in manifest['limitations'] if not v.startswith(('Automatic bounded','Connectivity is not assessed'))]+['Automatic debris is not yet available.','Historical road graph computed within the requested AOI. Boundary-connected components and unobserved roads remain unknown.','Nearest-node snapping within 200m is not verified driveway access; turn restrictions are unmodelled.']
- (dst/'manifest.json').write_text(json.dumps(manifest,indent=2));(dst/'topology-audit.json').write_text(json.dumps({'roads':len(roads),'nodes':len(nodes),'directed_edges':g.number_of_edges(),'hubs':hubs,'settlements':settlements,'excluded':excluded,'way_hashes':hashes},indent=2));return dst/'manifest.json'
+ (dst/'manifest.json').write_text(json.dumps(manifest,indent=2));(dst/'topology-audit.json').write_text(json.dumps({'roads':len(roads),'nodes':len(nodes),'directed_edges':g.number_of_edges(),'hubs':hubs,'settlements':settlements,'care_sites':care_sites,'excluded':excluded,'way_hashes':hashes},indent=2));return dst/'manifest.json'

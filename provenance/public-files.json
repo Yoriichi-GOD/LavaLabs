@@ -29,8 +29,8 @@
       "bytes": 4974
     },
     "README.md": {
-      "sha256": "d6cd316ffbe11b735c50d2140bf300c245665c5ea7e81b9cb2870cbd5659aa6b",
-      "bytes": 5306
+      "sha256": "2346e7a2b5a0f125392e5fddec551fc9dd215c3db921d16533c9ea426a59af1e",
+      "bytes": 5461
     },
     "UI/app.js": {
       "sha256": "740cd1dcedace19cee15d8a1a55de45b71ba2f86eeac4baee10363b2596cf781",
@@ -121,16 +121,28 @@
       "bytes": 122821
     },
     "UI/nepal/index.html": {
-      "sha256": "f3f8788fdf34915d26a5387ced1ef978f1b6e808fcaffcefeaeb3085a310ec09",
-      "bytes": 6814
+      "sha256": "81c7a882436227c1fd75c773f0fed4543d29c11dcdd16df328e8643b8003f4d8",
+      "bytes": 6982
     },
     "UI/processor-lava.js": {
-      "sha256": "ce83652c35aeaa96cef5be419ff4e494f30848d37eb5be09578754aefbfd3fa4",
-      "bytes": 592
+      "sha256": "89857492bed98545aaacd3863c53fb7bcef5b173bbde4da3e82bfea17f32d163",
+      "bytes": 1924
     },
     "UI/processor.css": {
-      "sha256": "5f28471dba8320ceff3d888da112788518b7ef6d42ab8ed9c722cfa960743ecf",
-      "bytes": 2027
+      "sha256": "cfb5996f4c872f4fe64c4eb79ec4a834e5237e724f01bb062b6c4a29abf66844",
+      "bytes": 2433
+    },
+    "UI/response/index.html": {
+      "sha256": "0235f292c5f72d33a6048630b7fd53633f469355fbd3024d319ef05085cec415",
+      "bytes": 4857
+    },
+    "UI/response/map.js": {
+      "sha256": "c0a90ed8ab55260048fd7b0cb6ec55001fde293362f90c5b5cc1d235502da3a8",
+      "bytes": 12647
+    },
+    "UI/response/style.css": {
+      "sha256": "141663a957d6a6297698d494628d0f51cad2b84c326772672a837ac8abb406bd",
+      "bytes": 7408
     },
     "UI/satquery/fonts/geist-OFL.txt": {
       "sha256": "03f7731e1f962a91216320e38a5fe00a3236b19a15b486b629e65aa82010907c",
@@ -241,16 +253,16 @@
       "bytes": 2951
     },
     "components/floodlab/floodlab/automatic.py": {
-      "sha256": "be57752a6e9b8e44af88e237d43d8caef6ba8651bbaf5f5d443f5095c0d108c3",
-      "bytes": 6883
+      "sha256": "232eaae4fcb24ad318db1c5bbe0e5a285088cb8c1674ad5bc2c6a64a61b0b95d",
+      "bytes": 7169
     },
     "components/floodlab/floodlab/automatic_optical.py": {
       "sha256": "83e43d9b2697960465251c075c31c1c7c37d45b890752eb8514a8bb726f74170",
       "bytes": 5044
     },
     "components/floodlab/floodlab/automatic_topology.py": {
-      "sha256": "69e2b509431616b4179bf0e5143d7dc5666ce3fa0365b9ee76cdb4896320c4a9",
-      "bytes": 4824
+      "sha256": "ae2f7831be645bf371c4c4f4e89b6ef38ca6befd7e75c8d29bed2bb2597bcb84",
+      "bytes": 5275
     },
     "components/floodlab/floodlab/copilot.py": {
       "sha256": "ffbe2f5727a4a43725b5ce4a830b2fb5309db517cfed50466e44900c13e9f116",
@@ -489,8 +501,8 @@
       "bytes": 11605
     },
     "components/floodlab/web/flood-workspace.js": {
-      "sha256": "c4c47e3fb9e1ef40e6a1a70543b182d17b433578987b04dfee419f03e41aa88a",
-      "bytes": 18949
+      "sha256": "4f54dada5f10f15c58e8125c0776ec87863e093a9f5f2e274a76c7d86a2d1929",
+      "bytes": 19414
     },
     "components/floodlab/web/flood.html": {
       "sha256": "6173d15472b6c3e5b2c57fc5474745aa305b910e31bacf34986e2b2f94b5af98",
@@ -624,6 +636,10 @@
       "sha256": "30a88793287b33db4209f55e92eef0ecbee3de49491b373af69ceaeef59a0d40",
       "bytes": 17542
     },
+    "lavalabs/DISASTER_RESPONSE.md": {
+      "sha256": "319696a2684e2ac9963755512b8546663b4dd4bbc1e79747adf514af0bae2c03",
+      "bytes": 3484
+    },
     "lavalabs/__init__.py": {
       "sha256": "bae2e842208d2431ab6bb0d18b317c2f68c03f1327dd48b43af77e2310e80321",
       "bytes": 88
@@ -636,9 +652,17 @@
       "sha256": "6594f5b0baeee5aedd594eefb7cd9d091cc6db512f0513f676b4d65892176c70",
       "bytes": 2635
     },
+    "lavalabs/response-points.json": {
+      "sha256": "9e127e5fa49c9b8410863c9a2841bf362eddb6aeddfd6fed836b65ad4758649c",
+      "bytes": 48894
+    },
+    "lavalabs/response.py": {
+      "sha256": "2076d022ddf95d905fb3be37eec4a5244e62ce0a1c1ee0e406a1bc066b9c7279",
+      "bytes": 14703
+    },
     "lavalabs/server.py": {
-      "sha256": "365b62c31642f6e6eb943fe0b8e2e4fe9d10a937cb1dd92fdd3da792fccc3738",
-      "bytes": 10826
+      "sha256": "9aaeeb67332bad27ad4e506e15ee73a50bc24aaa8179432b046c438895d3729e",
+      "bytes": 11988
     },
     "lavalabs/trend_exports.py": {
       "sha256": "1f0f64f69fa6d0e4e282bd25f8e3439763a876603dc7bef81916f53a4863d5a4",
@@ -1360,6 +1384,10 @@
       "sha256": "cd50f8e376d8923e65401585a82ad6951de94b7a34deb056c2800cbc04f5d492",
       "bytes": 3730
     },
+    "scripts/prepare_response_points.py": {
+      "sha256": "6a9542c003381843ea7ee19ddc30ddda9a662feb72d092d28fd7da0b8ca8cb5c",
+      "bytes": 2508
+    },
     "scripts/prepare_ui.py": {
       "sha256": "4708f49130f55d58017597301d39a92badb950036999accf245ee6a5210904d2",
       "bytes": 9122
@@ -1399,6 +1427,10 @@
     "start.py": {
       "sha256": "898dc41cd117ce54c8a3ab116250a093375794eb95bfec60ab048459c4190622",
       "bytes": 645
+    },
+    "tests/test_disaster_response.py": {
+      "sha256": "2de7c1f17d815666db31042f1445da35e1b370fa22aba4f207db029d966d66f0",
+      "bytes": 5151
     },
     "tests/test_drainage_consistency.py": {
       "sha256": "7d74fecec9e185d668175c308692fd0addeddd4a5fb7198e7906c976209e7abe",

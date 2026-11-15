@@ -23,6 +23,7 @@ from components.floodlab.floodlab import jobs as event_jobs
 from .public_runs import DemoBridge
 from .trend_exports import router as export_router
 from .nepal_exports import router as nepal_export_router
+from .response import build as build_response
 
 ROOT = Path(__file__).resolve().parents[1]
 UI = ROOT / 'UI'
@@ -183,7 +184,24 @@ def create_app():
         html = re.sub(r'<nav>(.*?)</nav>', lambda match: workspace_nav('/processor'), html, count=1)
         html = html.replace('<main>', '<main><nav class="processor-tabs" aria-label="Flood processor views">'
                             '<button class="active" id="lab-tab">Workspace</button><button id="eval-tab">Evidence</button></nav>', 1)
+        html = html.replace('<section class="question-panel">', '<section class="processor-response" id="processor-response" hidden>'
+                            '<h2>Disaster response</h2><p id="processor-response-status" role="status"></p>'
+                            '<a id="processor-response-link" hidden>Open response map &amp; actions →</a></section>'
+                            '<section class="question-panel">', 1)
         return HTMLResponse(with_brand(html), headers={'Cache-Control': 'no-store'})
+
+    @app.get('/processor/response', response_class=HTMLResponse)
+    def response_page():
+        html = (UI/'response/index.html').read_text(encoding='utf-8')
+        return HTMLResponse(with_brand(update_workspace_nav(html, '/processor')), headers={'Cache-Control': 'no-store'})
+
+    @app.get('/api/flood/runs/{run_id}/response')
+    def response_evidence(run_id: str, brief: bool = False):
+        packet = build_response(bridge, run_id, include_map=not brief)
+        headers = {'Cache-Control': 'no-store'}
+        if brief:
+            headers['Content-Disposition'] = f'attachment; filename="lavalabs-response-{run_id}.json"'
+        return JSONResponse(packet, headers=headers)
 
     @app.get('/flood', include_in_schema=False)
     def flood_alias():

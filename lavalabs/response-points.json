@@ -1,0 +1,2044 @@
+{
+  "license": "ODbL 1.0; © OpenStreetMap contributors",
+  "source_url": "https://www.openstreetmap.org/copyright",
+  "runs": {
+    "event-fe47db331390": {
+      "snapshot": "2026-08-25T00:00:00Z",
+      "source": "automatic/event-fe47db331390/historical-osm.parquet",
+      "source_sha256": "7de8a1222a65557d2f4840576322a50fdb26a7cfc3ff3c5f816d236a553bca89",
+      "points": [
+        {
+          "id": "node/10833649292",
+          "version": 2,
+          "name": "Pajung",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3275558,
+            28.1860282
+          ]
+        },
+        {
+          "id": "node/267564991",
+          "version": 9,
+          "name": "Syabru Bensi",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.337252,
+            28.1636668
+          ]
+        },
+        {
+          "id": "node/3510164368",
+          "version": 1,
+          "name": "node/3510164368",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3460492,
+            28.1767813
+          ]
+        }
+      ]
+    },
+    "nepal-syapru-004": {
+      "snapshot": "2026-07-27T00:00:00Z",
+      "source": "osm_pre_event/nepal-corridor-20260727.parquet",
+      "source_sha256": "d5a51c1a283fd550bf95cc664d22fdbe10c2d9a87e0476b16b2ed2ccc503a806",
+      "points": [
+        {
+          "id": "node/10207187270",
+          "version": 2,
+          "name": "National Rainbow Trout Research Station, Dhunche",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3047153,
+            28.1104105
+          ]
+        },
+        {
+          "id": "node/10207223745",
+          "version": 1,
+          "name": "Pasture and Fodder Research Station, Dhunche",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.302123,
+            28.1123859
+          ]
+        },
+        {
+          "id": "node/10315965426",
+          "version": 5,
+          "name": "Dhunche",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.2960583,
+            28.1127948
+          ]
+        },
+        {
+          "id": "node/10603476241",
+          "version": 2,
+          "name": "Ghormu",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2525951,
+            28.0135003
+          ]
+        },
+        {
+          "id": "node/10603486359",
+          "version": 2,
+          "name": "Parchyang",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2736249,
+            28.0115116
+          ]
+        },
+        {
+          "id": "node/10603738772",
+          "version": 2,
+          "name": "Saramthali",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.275039,
+            27.97573
+          ]
+        },
+        {
+          "id": "node/10794813511",
+          "version": 3,
+          "name": "Chalangpati",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.3712348,
+            28.1000905
+          ]
+        },
+        {
+          "id": "node/10833649292",
+          "version": 2,
+          "name": "Pajung",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3275558,
+            28.1860282
+          ]
+        },
+        {
+          "id": "node/10904983713",
+          "version": 2,
+          "name": "Homestay Chowk",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.441149,
+            27.977558
+          ]
+        },
+        {
+          "id": "node/10904983714",
+          "version": 2,
+          "name": "Sisipu chowk",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.447461,
+            27.999423
+          ]
+        },
+        {
+          "id": "node/10904983715",
+          "version": 2,
+          "name": "Kigong chowk",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.432501,
+            27.978879
+          ]
+        },
+        {
+          "id": "node/10904983716",
+          "version": 2,
+          "name": "School chowk",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.439956,
+            27.975889
+          ]
+        },
+        {
+          "id": "node/10904983717",
+          "version": 2,
+          "name": "Upra chowk",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.446387,
+            27.982189
+          ]
+        },
+        {
+          "id": "node/10904983718",
+          "version": 2,
+          "name": "Tamang ‍Chowk",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.409576,
+            27.970623
+          ]
+        },
+        {
+          "id": "node/10904983720",
+          "version": 2,
+          "name": "Majuwa chowk",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.407255,
+            27.966719
+          ]
+        },
+        {
+          "id": "node/10904983722",
+          "version": 2,
+          "name": "Pangpra",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.441639,
+            27.982905
+          ]
+        },
+        {
+          "id": "node/10904983723",
+          "version": 2,
+          "name": "Botgaun village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.419916,
+            27.971736
+          ]
+        },
+        {
+          "id": "node/10904983724",
+          "version": 2,
+          "name": "Nikleene village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.424481,
+            27.975322
+          ]
+        },
+        {
+          "id": "node/10904983725",
+          "version": 2,
+          "name": "Namsagaun",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.440586,
+            27.988023
+          ]
+        },
+        {
+          "id": "node/10904983726",
+          "version": 2,
+          "name": "Chyandanda",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.409198,
+            27.968531
+          ]
+        },
+        {
+          "id": "node/10904983727",
+          "version": 2,
+          "name": "Ranibari village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.424007,
+            27.980231
+          ]
+        },
+        {
+          "id": "node/10904983728",
+          "version": 2,
+          "name": "Lampate village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.421836,
+            27.983924
+          ]
+        },
+        {
+          "id": "node/10904983729",
+          "version": 2,
+          "name": "Lemgung village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.417612,
+            27.977042
+          ]
+        },
+        {
+          "id": "node/10904983730",
+          "version": 2,
+          "name": "Pangme village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.4180727,
+            27.974736
+          ]
+        },
+        {
+          "id": "node/10904983731",
+          "version": 2,
+          "name": "Heudung village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.413514,
+            27.97161
+          ]
+        },
+        {
+          "id": "node/10904983733",
+          "version": 2,
+          "name": "Dhadinbari village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.412033,
+            27.97711
+          ]
+        },
+        {
+          "id": "node/10904983734",
+          "version": 2,
+          "name": "Sangale danda village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.409315,
+            27.978294
+          ]
+        },
+        {
+          "id": "node/10904983735",
+          "version": 2,
+          "name": "Tengche village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.408414,
+            27.979553
+          ]
+        },
+        {
+          "id": "node/10904983736",
+          "version": 2,
+          "name": "Da gang village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.407085,
+            27.976103
+          ]
+        },
+        {
+          "id": "node/10904983737",
+          "version": 2,
+          "name": "Malung village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.4085781,
+            27.9771148
+          ]
+        },
+        {
+          "id": "node/10904983738",
+          "version": 2,
+          "name": "Katunje village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.4082,
+            27.973383
+          ]
+        },
+        {
+          "id": "node/10904983739",
+          "version": 2,
+          "name": "Bisan village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.407439,
+            27.970466
+          ]
+        },
+        {
+          "id": "node/10904983740",
+          "version": 2,
+          "name": "Dambiodar village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.416278,
+            27.963917
+          ]
+        },
+        {
+          "id": "node/10904983741",
+          "version": 2,
+          "name": "Negi village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.422048,
+            27.964639
+          ]
+        },
+        {
+          "id": "node/10904983742",
+          "version": 2,
+          "name": "Gyalmi village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.4349811,
+            27.9730437
+          ]
+        },
+        {
+          "id": "node/10904983743",
+          "version": 2,
+          "name": "Seljung village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.4312844,
+            27.9717881
+          ]
+        },
+        {
+          "id": "node/10904983744",
+          "version": 2,
+          "name": "Kaule village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.425546,
+            27.970002
+          ]
+        },
+        {
+          "id": "node/10904983745",
+          "version": 2,
+          "name": "Chyamdong village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.435162,
+            27.982332
+          ]
+        },
+        {
+          "id": "node/10904983746",
+          "version": 2,
+          "name": "Kigong village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.433191,
+            27.978498
+          ]
+        },
+        {
+          "id": "node/10904983747",
+          "version": 2,
+          "name": "Hukel village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.432266,
+            27.991816
+          ]
+        },
+        {
+          "id": "node/10904983748",
+          "version": 2,
+          "name": "Upra village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.446959,
+            27.983065
+          ]
+        },
+        {
+          "id": "node/10904983750",
+          "version": 2,
+          "name": "Apenou village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.449466,
+            27.985046
+          ]
+        },
+        {
+          "id": "node/10904983759",
+          "version": 2,
+          "name": "Pingtaba village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.44893,
+            27.998068
+          ]
+        },
+        {
+          "id": "node/10904983760",
+          "version": 2,
+          "name": "Sisipu village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.446851,
+            27.999661
+          ]
+        },
+        {
+          "id": "node/10904983761",
+          "version": 2,
+          "name": "Akhyu village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.446369,
+            27.994872
+          ]
+        },
+        {
+          "id": "node/10904983762",
+          "version": 2,
+          "name": "Singaje village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.442405,
+            27.992613
+          ]
+        },
+        {
+          "id": "node/10904983784",
+          "version": 1,
+          "name": "Health post",
+          "kind": "care",
+          "place_type": "hospital",
+          "point": [
+            85.440244,
+            27.976493
+          ]
+        },
+        {
+          "id": "node/10923355998",
+          "version": 2,
+          "name": "Ekpakhe",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2636698,
+            28.002583
+          ]
+        },
+        {
+          "id": "node/10923390428",
+          "version": 2,
+          "name": "Danuswara",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2633706,
+            27.9730206
+          ]
+        },
+        {
+          "id": "node/10923399838",
+          "version": 2,
+          "name": "Manduchet",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2699402,
+            27.9989545
+          ]
+        },
+        {
+          "id": "node/10923401248",
+          "version": 2,
+          "name": "Chyupar Khola",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2869612,
+            28.0268547
+          ]
+        },
+        {
+          "id": "node/10923402625",
+          "version": 2,
+          "name": "Kapthali",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2604973,
+            27.9994886
+          ]
+        },
+        {
+          "id": "node/10923406688",
+          "version": 2,
+          "name": "Thangsen Yubra",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3037755,
+            28.0076821
+          ]
+        },
+        {
+          "id": "node/10923410731",
+          "version": 2,
+          "name": "Ghichet",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2871624,
+            28.005871
+          ]
+        },
+        {
+          "id": "node/10923413444",
+          "version": 2,
+          "name": "Komu",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2537777,
+            28.0092053
+          ]
+        },
+        {
+          "id": "node/10923421509",
+          "version": 2,
+          "name": "Ghichet Ghattelung",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2841561,
+            28.0030286
+          ]
+        },
+        {
+          "id": "node/10934252167",
+          "version": 2,
+          "name": "Chauki Danda Chok",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.380841,
+            27.944019
+          ]
+        },
+        {
+          "id": "node/10934252168",
+          "version": 2,
+          "name": "Buspark Chok",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.378819,
+            27.92358
+          ]
+        },
+        {
+          "id": "node/10934252169",
+          "version": 2,
+          "name": "Amal Danda Chok",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.3796,
+            27.927713
+          ]
+        },
+        {
+          "id": "node/10934252170",
+          "version": 2,
+          "name": "Dupcheshwor Chok",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.389035,
+            27.94453
+          ]
+        },
+        {
+          "id": "node/10934252171",
+          "version": 2,
+          "name": "Gaupalika Chok",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.3818724,
+            27.9216009
+          ]
+        },
+        {
+          "id": "node/10935561422",
+          "version": 1,
+          "name": "Vyangle Chowk",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.369309,
+            27.919786
+          ]
+        },
+        {
+          "id": "node/10935561423",
+          "version": 2,
+          "name": "Nigale Chowk",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.395812,
+            27.901428
+          ]
+        },
+        {
+          "id": "node/10935561424",
+          "version": 2,
+          "name": "Megibagar Chowk",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.384238,
+            27.919734
+          ]
+        },
+        {
+          "id": "node/10935561425",
+          "version": 2,
+          "name": "Bhanghyang Danda Chowk",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.387469,
+            27.916335
+          ]
+        },
+        {
+          "id": "node/10935561426",
+          "version": 2,
+          "name": "Salle Danda Chowk",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.392039,
+            27.912422
+          ]
+        },
+        {
+          "id": "node/10935561427",
+          "version": 2,
+          "name": "Suryadanda Chowk",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.38706,
+            27.908917
+          ]
+        },
+        {
+          "id": "node/10935561438",
+          "version": 1,
+          "name": "Balkumari Health Post",
+          "kind": "care",
+          "place_type": "hospital",
+          "point": [
+            85.39177,
+            27.911287
+          ]
+        },
+        {
+          "id": "node/10967378661",
+          "version": 1,
+          "name": "Shikharbesi Health Post",
+          "kind": "care",
+          "place_type": "hospital",
+          "point": [
+            85.395068,
+            27.961697
+          ]
+        },
+        {
+          "id": "node/10967378662",
+          "version": 2,
+          "name": "Mishra Bhanjyang Chwok",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.39297,
+            27.954157
+          ]
+        },
+        {
+          "id": "node/10967378663",
+          "version": 2,
+          "name": "Gartir Bazar Chwok",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.401047,
+            27.960639
+          ]
+        },
+        {
+          "id": "node/10967378664",
+          "version": 1,
+          "name": "Chabise Bus Park Chwok",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.395152,
+            27.961854
+          ]
+        },
+        {
+          "id": "node/10967378665",
+          "version": 2,
+          "name": "Damai Tole",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.399864,
+            27.964504
+          ]
+        },
+        {
+          "id": "node/10967378666",
+          "version": 2,
+          "name": "Pahara Muni Tole",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.399466,
+            27.963332
+          ]
+        },
+        {
+          "id": "node/10967378667",
+          "version": 2,
+          "name": "Phulbari Tole",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.396198,
+            27.963431
+          ]
+        },
+        {
+          "id": "node/11186154602",
+          "version": 2,
+          "name": "Bamboo",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.3979245,
+            28.1550205
+          ]
+        },
+        {
+          "id": "node/11186154603",
+          "version": 2,
+          "name": "Tiwari",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.3564171,
+            28.1538237
+          ]
+        },
+        {
+          "id": "node/11186154604",
+          "version": 2,
+          "name": "Bhanjyang",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3551981,
+            28.1686192
+          ]
+        },
+        {
+          "id": "node/11186154605",
+          "version": 2,
+          "name": "Surka",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3619339,
+            28.1710681
+          ]
+        },
+        {
+          "id": "node/11186154608",
+          "version": 2,
+          "name": "Pairo",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.3780827,
+            28.1522344
+          ]
+        },
+        {
+          "id": "node/13242877439",
+          "version": 1,
+          "name": "Naukunda",
+          "kind": "settlement",
+          "place_type": "village",
+          "point": [
+            85.2765945,
+            28.0107971
+          ]
+        },
+        {
+          "id": "node/13242877442",
+          "version": 1,
+          "name": "Aamachhodingmo",
+          "kind": "settlement",
+          "place_type": "village",
+          "point": [
+            85.3130932,
+            28.1705778
+          ]
+        },
+        {
+          "id": "node/13242877443",
+          "version": 1,
+          "name": "Haku",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.2737453,
+            28.1255051
+          ]
+        },
+        {
+          "id": "node/13242877444",
+          "version": 1,
+          "name": "Chilime",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.3022373,
+            28.1836181
+          ]
+        },
+        {
+          "id": "node/13242877445",
+          "version": 1,
+          "name": "Gosaikunda",
+          "kind": "settlement",
+          "place_type": "village",
+          "point": [
+            85.298525,
+            28.110361
+          ]
+        },
+        {
+          "id": "node/13369073591",
+          "version": 1,
+          "name": "Ducheshwar",
+          "kind": "settlement",
+          "place_type": "village",
+          "point": [
+            85.3828285,
+            27.9220585
+          ]
+        },
+        {
+          "id": "node/13369073592",
+          "version": 1,
+          "name": "Tadi",
+          "kind": "settlement",
+          "place_type": "village",
+          "point": [
+            85.3089438,
+            27.924158
+          ]
+        },
+        {
+          "id": "node/1547068160",
+          "version": 9,
+          "name": "Sherpagaun",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3970476,
+            28.1625011
+          ]
+        },
+        {
+          "id": "node/2524771371",
+          "version": 7,
+          "name": "Jang",
+          "kind": "settlement",
+          "place_type": "village",
+          "point": [
+            85.3365949,
+            28.3134218
+          ]
+        },
+        {
+          "id": "node/2527671108",
+          "version": 4,
+          "name": "Labi",
+          "kind": "settlement",
+          "place_type": "village",
+          "point": [
+            85.4025572,
+            28.320307
+          ]
+        },
+        {
+          "id": "node/2553894641",
+          "version": 7,
+          "name": "Timure",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.3666715,
+            28.2528483
+          ]
+        },
+        {
+          "id": "node/2553969983",
+          "version": 6,
+          "name": "Thuman",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.338173,
+            28.210262
+          ]
+        },
+        {
+          "id": "node/2553991729",
+          "version": 6,
+          "name": "Gatlang",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.2683683,
+            28.1627995
+          ]
+        },
+        {
+          "id": "node/2554000784",
+          "version": 2,
+          "name": "Tatopani",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2988204,
+            28.2200652
+          ]
+        },
+        {
+          "id": "node/2554091027",
+          "version": 2,
+          "name": "Nagthali",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3158331,
+            28.2079017
+          ]
+        },
+        {
+          "id": "node/2554587303",
+          "version": 4,
+          "name": "Lingling",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3576961,
+            28.2108549
+          ]
+        },
+        {
+          "id": "node/267564991",
+          "version": 9,
+          "name": "Syabru Bensi",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.337252,
+            28.1636668
+          ]
+        },
+        {
+          "id": "node/269569034",
+          "version": 6,
+          "name": "गोठेन",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.257103,
+            28.1580389
+          ]
+        },
+        {
+          "id": "node/269569475",
+          "version": 2,
+          "name": "Godam",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2768371,
+            28.1573925
+          ]
+        },
+        {
+          "id": "node/269569477",
+          "version": 2,
+          "name": "Bahun Danda",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3219356,
+            28.1665549
+          ]
+        },
+        {
+          "id": "node/269569692",
+          "version": 2,
+          "name": "Sano Bharkhu",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3121197,
+            28.129782
+          ]
+        },
+        {
+          "id": "node/2772174431",
+          "version": 2,
+          "name": "Gongang",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2977228,
+            28.1989194
+          ]
+        },
+        {
+          "id": "node/2772174479",
+          "version": 3,
+          "name": "Brimdang",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3098914,
+            28.2036394
+          ]
+        },
+        {
+          "id": "node/2820552513",
+          "version": 2,
+          "name": "Brabal",
+          "kind": "settlement",
+          "place_type": "village",
+          "point": [
+            85.3391559,
+            28.1435744
+          ]
+        },
+        {
+          "id": "node/2828873676",
+          "version": 5,
+          "name": "Khangjim",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3591359,
+            28.1768066
+          ]
+        },
+        {
+          "id": "node/2857841832",
+          "version": 3,
+          "name": "Domen",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.3697875,
+            28.1507701
+          ]
+        },
+        {
+          "id": "node/3198204652",
+          "version": 7,
+          "name": "Kharanitar",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.308285,
+            27.9229272
+          ]
+        },
+        {
+          "id": "node/3198263833",
+          "version": 6,
+          "name": "माथिल्लो चौर",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3096911,
+            27.9251624
+          ]
+        },
+        {
+          "id": "node/3360413363",
+          "version": 3,
+          "name": "Sêrqung",
+          "kind": "settlement",
+          "place_type": "village",
+          "point": [
+            85.4291274,
+            28.3385054
+          ]
+        },
+        {
+          "id": "node/3415530606",
+          "version": 2,
+          "name": "Haku Besi",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2790735,
+            28.1164817
+          ]
+        },
+        {
+          "id": "node/3415530630",
+          "version": 3,
+          "name": "Sano Bharkhu",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.319707,
+            28.1374384
+          ]
+        },
+        {
+          "id": "node/3415536482",
+          "version": 3,
+          "name": "Sano Haku",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2701521,
+            28.1241718
+          ]
+        },
+        {
+          "id": "node/3415543901",
+          "version": 2,
+          "name": "Dalphedi",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.353164,
+            28.2290052
+          ]
+        },
+        {
+          "id": "node/3415546447",
+          "version": 2,
+          "name": "Gre",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2955714,
+            28.1424978
+          ]
+        },
+        {
+          "id": "node/3476508983",
+          "version": 1,
+          "name": "node/3476508983",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.2844728,
+            28.0029872
+          ]
+        },
+        {
+          "id": "node/3476508984",
+          "version": 5,
+          "name": "Yubra",
+          "kind": "settlement",
+          "place_type": "village",
+          "point": [
+            85.300912,
+            28.0049343
+          ]
+        },
+        {
+          "id": "node/3476508985",
+          "version": 2,
+          "name": "node/3476508985",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.2844653,
+            28.0054005
+          ]
+        },
+        {
+          "id": "node/3476508986",
+          "version": 1,
+          "name": "node/3476508986",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.2960446,
+            28.0057242
+          ]
+        },
+        {
+          "id": "node/3476508988",
+          "version": 1,
+          "name": "node/3476508988",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.3046017,
+            28.0141703
+          ]
+        },
+        {
+          "id": "node/3476508989",
+          "version": 2,
+          "name": "node/3476508989",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3064179,
+            28.0179632
+          ]
+        },
+        {
+          "id": "node/3476566610",
+          "version": 1,
+          "name": "node/3476566610",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.4428698,
+            27.9217786
+          ]
+        },
+        {
+          "id": "node/3476566654",
+          "version": 2,
+          "name": "node/3476566654",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.4408327,
+            27.9264499
+          ]
+        },
+        {
+          "id": "node/3476567510",
+          "version": 2,
+          "name": "node/3476567510",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.4358713,
+            27.9502964
+          ]
+        },
+        {
+          "id": "node/3477076592",
+          "version": 2,
+          "name": "Bolung village",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.4111229,
+            27.9701881
+          ]
+        },
+        {
+          "id": "node/3477076818",
+          "version": 3,
+          "name": "node/3477076818",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.4114426,
+            27.9745473
+          ]
+        },
+        {
+          "id": "node/3477076830",
+          "version": 1,
+          "name": "node/3477076830",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.4228098,
+            27.9755777
+          ]
+        },
+        {
+          "id": "node/3477194430",
+          "version": 1,
+          "name": "node/3477194430",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2774098,
+            28.0263775
+          ]
+        },
+        {
+          "id": "node/3477288719",
+          "version": 2,
+          "name": "node/3477288719",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3747379,
+            27.9421319
+          ]
+        },
+        {
+          "id": "node/3477288735",
+          "version": 1,
+          "name": "node/3477288735",
+          "kind": "settlement",
+          "place_type": "village",
+          "point": [
+            85.3717755,
+            27.9381914
+          ]
+        },
+        {
+          "id": "node/3477337922",
+          "version": 1,
+          "name": "node/3477337922",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3821576,
+            27.9544243
+          ]
+        },
+        {
+          "id": "node/3477337942",
+          "version": 1,
+          "name": "node/3477337942",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3802564,
+            27.9450862
+          ]
+        },
+        {
+          "id": "node/3477345247",
+          "version": 2,
+          "name": "Sundaradevi",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.364891,
+            27.9392856
+          ]
+        },
+        {
+          "id": "node/3477345287",
+          "version": 1,
+          "name": "node/3477345287",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3798864,
+            27.9368829
+          ]
+        },
+        {
+          "id": "node/3478046385",
+          "version": 4,
+          "name": "node/3478046385",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2638022,
+            28.1152615
+          ]
+        },
+        {
+          "id": "node/3478093355",
+          "version": 3,
+          "name": "Ghyangphedi",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.4413084,
+            27.9776059
+          ]
+        },
+        {
+          "id": "node/3478596518",
+          "version": 1,
+          "name": "node/3478596518",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.3776014,
+            28.3113844
+          ]
+        },
+        {
+          "id": "node/3478596519",
+          "version": 1,
+          "name": "node/3478596519",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.3765008,
+            28.3232479
+          ]
+        },
+        {
+          "id": "node/3478596520",
+          "version": 1,
+          "name": "node/3478596520",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.3817651,
+            28.3316352
+          ]
+        },
+        {
+          "id": "node/3483342625",
+          "version": 2,
+          "name": "node/3483342625",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.343484,
+            27.9700845
+          ]
+        },
+        {
+          "id": "node/3484417792",
+          "version": 1,
+          "name": "node/3484417792",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2721161,
+            27.9945574
+          ]
+        },
+        {
+          "id": "node/3488007976",
+          "version": 2,
+          "name": "Doglāng",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3081759,
+            28.0358802
+          ]
+        },
+        {
+          "id": "node/3491180289",
+          "version": 1,
+          "name": "node/3491180289",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.386223,
+            28.3371822
+          ]
+        },
+        {
+          "id": "node/3494541109",
+          "version": 2,
+          "name": "Dalgaun",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3421463,
+            28.2557551
+          ]
+        },
+        {
+          "id": "node/3494711409",
+          "version": 3,
+          "name": "node/3494711409",
+          "kind": "care",
+          "place_type": "hospital",
+          "point": [
+            85.3364796,
+            28.1421939
+          ]
+        },
+        {
+          "id": "node/3495699359",
+          "version": 7,
+          "name": "Goljung",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.3158899,
+            28.1700191
+          ]
+        },
+        {
+          "id": "node/3495699360",
+          "version": 4,
+          "name": "Chyamdole",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2963163,
+            28.1753617
+          ]
+        },
+        {
+          "id": "node/3495750389",
+          "version": 3,
+          "name": "node/3495750389",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2865329,
+            28.2049281
+          ]
+        },
+        {
+          "id": "node/3495750390",
+          "version": 4,
+          "name": "Tetanchet",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2814438,
+            28.21507
+          ]
+        },
+        {
+          "id": "node/3495750391",
+          "version": 2,
+          "name": "node/3495750391",
+          "kind": "settlement",
+          "place_type": "village",
+          "point": [
+            85.3108159,
+            28.1937659
+          ]
+        },
+        {
+          "id": "node/3495754793",
+          "version": 4,
+          "name": "Bhrajam",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.31696,
+            28.1877393
+          ]
+        },
+        {
+          "id": "node/3495857671",
+          "version": 3,
+          "name": "Thulo Syābru",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3606919,
+            28.1430447
+          ]
+        },
+        {
+          "id": "node/3510164368",
+          "version": 1,
+          "name": "node/3510164368",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3460492,
+            28.1767813
+          ]
+        },
+        {
+          "id": "node/3651242335",
+          "version": 1,
+          "name": "node/3651242335",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2820927,
+            27.9038871
+          ]
+        },
+        {
+          "id": "node/4967599293",
+          "version": 2,
+          "name": "Yarsa",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.2536461,
+            28.0104572
+          ]
+        },
+        {
+          "id": "node/4968010288",
+          "version": 3,
+          "name": "Bridhim",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.3669534,
+            28.199502
+          ]
+        },
+        {
+          "id": "node/5052630542",
+          "version": 2,
+          "name": "Lachyang",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.2980629,
+            27.9770202
+          ]
+        },
+        {
+          "id": "node/5052655881",
+          "version": 3,
+          "name": "Narjamandap",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.282362,
+            27.9196891
+          ]
+        },
+        {
+          "id": "node/5052982160",
+          "version": 4,
+          "name": "Chaughada",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.2517525,
+            27.9061061
+          ]
+        },
+        {
+          "id": "node/5053008554",
+          "version": 2,
+          "name": "Kabilas",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.2870936,
+            27.9130252
+          ]
+        },
+        {
+          "id": "node/5053070225",
+          "version": 3,
+          "name": "Samundratar",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.3805941,
+            27.9318029
+          ]
+        },
+        {
+          "id": "node/5053074351",
+          "version": 4,
+          "name": "Shikharbesi",
+          "kind": "settlement",
+          "place_type": "suburb",
+          "point": [
+            85.399301,
+            27.9782062
+          ]
+        },
+        {
+          "id": "node/5053160243",
+          "version": 2,
+          "name": "Rautbesi",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.4085933,
+            27.9209638
+          ]
+        },
+        {
+          "id": "node/5086621424",
+          "version": 4,
+          "name": "Resuo",
+          "kind": "settlement",
+          "place_type": "village",
+          "point": [
+            85.378218,
+            28.280321
+          ]
+        },
+        {
+          "id": "node/5411466640",
+          "version": 2,
+          "name": "Pangling",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.2810647,
+            28.1312515
+          ]
+        },
+        {
+          "id": "node/5651307969",
+          "version": 1,
+          "name": "Rasuwa District Hospital",
+          "kind": "care",
+          "place_type": "hospital",
+          "point": [
+            85.2964836,
+            28.1104436
+          ]
+        },
+        {
+          "id": "node/601106206",
+          "version": 5,
+          "name": "Dursagang",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3557436,
+            28.134476
+          ]
+        },
+        {
+          "id": "node/601521341",
+          "version": 6,
+          "name": "Laurebina",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3798387,
+            28.0923978
+          ]
+        },
+        {
+          "id": "node/601521345",
+          "version": 8,
+          "name": "Gosainkund",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.4098303,
+            28.0839368
+          ]
+        },
+        {
+          "id": "node/601594281",
+          "version": 8,
+          "name": "Chandanbari",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3401621,
+            28.1108705
+          ]
+        },
+        {
+          "id": "node/632389750",
+          "version": 7,
+          "name": "Gumnachok",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.4409313,
+            28.1814766
+          ]
+        },
+        {
+          "id": "node/632389884",
+          "version": 6,
+          "name": "Rimche",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.4221554,
+            28.1588218
+          ]
+        },
+        {
+          "id": "node/9640975459",
+          "version": 2,
+          "name": "Lama hotel",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.4302671,
+            28.1614303
+          ]
+        },
+        {
+          "id": "node/9640975460",
+          "version": 2,
+          "name": "Chhunama",
+          "kind": "settlement",
+          "place_type": "isolated_dwelling",
+          "point": [
+            85.4436379,
+            28.1855389
+          ]
+        },
+        {
+          "id": "node/992955542",
+          "version": 14,
+          "name": "Rasuwa Gadhi",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3777789,
+            28.2777749
+          ]
+        },
+        {
+          "id": "way/1218658531",
+          "version": 1,
+          "name": "Budune Community",
+          "kind": "settlement",
+          "place_type": "neighbourhood",
+          "point": [
+            85.30933492988166,
+            27.9180689
+          ]
+        },
+        {
+          "id": "way/340541048",
+          "version": 1,
+          "name": "way/340541048",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.37693445802547,
+            27.934297
+          ]
+        },
+        {
+          "id": "way/340549216",
+          "version": 3,
+          "name": "way/340549216",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.3786330530582,
+            27.928686
+          ]
+        },
+        {
+          "id": "way/341538706",
+          "version": 1,
+          "name": "way/341538706",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.28393026930857,
+            27.909615549999998
+          ]
+        },
+        {
+          "id": "way/341538712",
+          "version": 1,
+          "name": "way/341538712",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.28426161458412,
+            27.90954295
+          ]
+        },
+        {
+          "id": "way/341634054",
+          "version": 1,
+          "name": "way/341634054",
+          "kind": "settlement",
+          "place_type": "hamlet",
+          "point": [
+            85.37699212711864,
+            27.930821899999998
+          ]
+        },
+        {
+          "id": "way/787451283",
+          "version": 1,
+          "name": "Rasuwa District Hospital",
+          "kind": "care",
+          "place_type": "hospital",
+          "point": [
+            85.29667034528572,
+            28.1100125
+          ]
+        }
+      ]
+    }
+  }
+}

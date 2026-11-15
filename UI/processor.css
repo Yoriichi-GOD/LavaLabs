@@ -6,6 +6,10 @@ body > header nav[aria-label="Workspace"] a.active { color: var(--text); }
 main > .processor-tabs { margin-bottom: 16px; gap: 22px; }
 main > .processor-tabs button { font-size: 14px; }
 main > .processor-tabs .active { border-bottom-color: #ed775d; }
+.processor-response { padding: 1rem; margin: 0 0 1rem; border: 1px solid #684644; border-left: 3px solid #ff867b; border-radius: 5px; background: #201619; }
+.processor-response h2 { margin: 0; font-size: 1.12rem; }
+.processor-response p { margin: .45rem 0; color: #e0c6c3; }
+.processor-response a { display: inline-flex; align-items: center; color: #ffb3a6; font-size: .9rem; text-underline-offset: 4px; }
 
 @media (max-width: 760px) {
   body > header nav[aria-label="Workspace"] { gap: 0 16px; overflow: visible; }

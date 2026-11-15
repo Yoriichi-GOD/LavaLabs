@@ -49,7 +49,8 @@ def prepare(root,config):
    k,v=line.split('=',1);config_values[k.strip()]=v.strip().strip('\"').strip("'")
  key=config_values.get('OHSOME_API_KEY')
  if not key:raise ValueError('Historical OSM credential is missing')
- payload={'aoi':mapping(aoi),'filter':'building=* or highway=* or bridge=* or place=* or amenity=hospital','time':stamp,'clip':False}
+ query='building=* or highway=* or bridge=* or place=* or amenity=hospital or amenity=clinic or amenity=doctors or amenity=health_post or healthcare=hospital or healthcare=clinic or healthcare=doctor or healthcare=health_post'
+ payload={'aoi':mapping(aoi),'filter':query,'time':stamp,'clip':False}
  response=requests.post('https://api.heigit.org/ohsome-api/v2-rc/extraction/features.parquet',json=payload,headers={'Authorization':key},timeout=(20,240),allow_redirects=False)
  if response.status_code!=200:raise ValueError('Historical OSM acquisition failed; HTTP '+str(response.status_code))
  raw=response.content
@@ -61,7 +62,9 @@ def prepare(root,config):
   geom=from_wkb(row['geom']);tags=dict(row['tags'])
   if not geom.is_valid:raise ValueError('Invalid infrastructure geometry; repair requires review')
   kind='building' if tags.get('building') and geom.geom_type in ('Polygon','MultiPolygon') else ('bridge' if tags.get('bridge') not in (None,'no') else 'road') if tags.get('highway') and geom.geom_type in ('LineString','MultiLineString') else None
-  if kind:features.append({'type':'Feature','id':f"{row['osm_type']}/{row['osm_id']}",'properties':{'kind':kind,'osm_version':row['version'],'snapshot':stamp},'geometry':mapping(transform(project,geom))})
+  if kind:
+   names={k:tags[k] for k in ('name:en','name','ref') if k in tags} if kind in ('road','bridge') else {}
+   features.append({'type':'Feature','id':f"{row['osm_type']}/{row['osm_id']}",'properties':{'kind':kind,'osm_version':row['version'],'snapshot':stamp,'tags':names},'geometry':mapping(transform(project,geom))})
  infra={'role':'historical_osm','snapshot':stamp,'analysis_crs':f"EPSG:{plan['epsg']}",'features':features,'graph_roads':[],'settlements':[],'hub_node_ids':[]}
  save(dest/'infrastructure.json',infra)
  manifest={'event_name':'Area/date water baseline '+plan['event_date'],'synthetic':False,'event_time':plan['event_date']+'T00:00:00Z','osm_snapshot':stamp,'infrastructure_role':'historical_osm','infrastructure_path':'infrastructure.json','infrastructure_sha256':digest(dest/'infrastructure.json'),**obs,'analysis':{'tile_size':256,'water_db':-17.,'drop_db':3.,'min_exposed_road_m':1.},'limitations':['Automatic bounded water/exposure baseline only: debris and historical road topology are not connected in this path.','Connectivity is not assessed; empty settlement results do not mean zero isolation.','Fixed thresholds are unvalidated; incomplete radar layover mask; provider terrain correction recorded in request provenance.','OSM snapshot is one day before the event in UTC; missing assets are not counted.']}

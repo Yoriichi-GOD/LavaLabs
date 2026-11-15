@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101113">
+  <meta name="si-disclosure" content="OpenAI Codex assisted the code and action wording. Observations retain original source provenance.">
+  <title>LavaLabs · Disaster response</title>
+  <link rel="icon" href="/logo">
+  <link rel="stylesheet" href="/ui/response/style.css">
+  <script defer src="/ui/response/map.js"></script>
+</head>
+<body>
+  <header class="response-header">
+    <a class="brand" href="/"><img src="/logo" alt=""><span>LavaLabs</span></a>
+    <nav aria-label="Workspace"><a href="/processor" aria-current="page">Flood processor</a></nav>
+  </header>
+  <main class="response-main">
+    <div class="response-title">
+      <div>
+        <a class="back" id="back-processor" href="/processor">← Flood processor</a>
+        <h1>Disaster response</h1>
+        <p id="event-label">Field-verification priorities from a completed flood analysis.</p>
+      </div>
+      <a id="download-brief" class="control" hidden>Download brief (JSON) <span aria-hidden="true">↓</span></a>
+    </div>
+    <p id="load-status" role="status">Checking saved evidence…</p>
+    <div id="response-content" hidden>
+      <p class="response-alert"><strong>Historical event.</strong> Confirm conditions with local incident command before dispatch. The map shows observation and access gaps alongside the ranked checks.</p>
+      <div class="response-layout">
+        <section class="response-map" aria-labelledby="map-heading">
+          <div class="section-top">
+            <div><h2 id="map-heading">Response map</h2><p id="observation-dates"></p></div>
+            <div class="map-controls" role="group" aria-label="Map zoom">
+              <button id="map-plus" type="button" aria-label="Zoom in">+</button>
+              <button id="map-minus" type="button" aria-label="Zoom out">−</button>
+              <button id="map-fit" type="button">Fit</button>
+            </div>
+          </div>
+          <svg id="response-svg" role="group" aria-label="Map of ranked verification locations" viewBox="0 0 650 520">
+            <title>Field-verification map for the selected run</title>
+            <g id="raster-layer"></g><g id="road-layer"></g><g id="pin-layer"></g>
+          </svg>
+          <div class="map-key" aria-label="Map legend"><span><i class="mark-water"></i>Water candidate</span><span><i class="mark-permanent"></i>Water in both scenes</span><span><i class="mark-gap"></i>Radar coverage gap</span><span><i class="mark-road"></i>Mapped road</span><span><i class="mark-road-check"></i>Road or bridge to verify</span></div>
+          <div id="pin-detail" class="pin-detail" aria-live="polite"></div>
+          <p class="map-attribution">Radar observations · © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a></p>
+        </section>
+        <section class="response-actions" aria-labelledby="priorities-heading">
+          <h2 id="priorities-heading">What to verify first</h2>
+          <div id="priority-list"></div>
+        </section>
+      </div>
+      <div class="support-layout">
+        <section class="response-panel" aria-labelledby="access-heading">
+          <h2 id="access-heading">Access and transfer</h2>
+          <div id="access-result"></div>
+          <dl class="decision-steps">
+            <dt>After a crossing is cleared</dt><dd>Confirm the route and receiving facility with incident command before arranging transport.</dd>
+            <dt>If access is blocked or uncertain</dt><dd>Ask incident command to verify another approach or coordinate an authorized rescue team. Keep contact with people awaiting help.</dd>
+          </dl>
+          <div id="care-list"></div>
+          <a id="related-run" hidden></a>
+        </section>
+        <section class="response-panel" aria-labelledby="coverage-heading">
+          <h2 id="coverage-heading">Coverage and next rainfall</h2>
+          <p id="coverage-text"></p>
+          <div id="settlements"></div>
+          <p>When another warning is issued, check the previously flagged sites and communities near radar gaps with local contacts. Future inundation requires a new assessment.</p>
+          <p id="official-links" hidden><a href="https://www.dhm.gov.np/">Nepal DHM warnings</a> · <a href="https://nhfr.mohp.gov.np/">Nepal health facility registry</a></p>
+        </section>
+      </div>
+      <details class="response-sources">
+        <summary>Evidence and method</summary>
+        <p id="method-description"></p>
+        <p id="osm-source"></p>
+        <ul id="source-links"></ul>
+      </details>
+    </div>
+  </main>
+  <footer class="response-footer">LavaLabs · Research prototype · SI-assisted code and action wording</footer>
+</body>
+</html>
