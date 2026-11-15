@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>LavaLabs volcano, SI-generated placeholder</title>
+  <g transform="translate(5 -4) scale(.84)">
+    <path d="M7 53 24 25l8 7 8-7 17 28H7Z" stroke="#f2f2ef" stroke-width="3" stroke-linejoin="round"/>
+    <path d="m25 26 7-3 7 3M32 10v8M20 12l4 7M44 12l-4 7" stroke="#d1a47e" stroke-width="3" stroke-linecap="round"/>
+    <path d="m32 33-6 13 7-4-2 11" stroke="#d1a47e" stroke-width="3" stroke-linejoin="round"/>
+  </g>
+  <text x="32" y="60" text-anchor="middle" fill="#ead4c0" font-family="sans-serif" font-weight="700" font-size="18">SI</text>
+</svg>

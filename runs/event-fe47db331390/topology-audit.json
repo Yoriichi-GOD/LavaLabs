@@ -1,0 +1,64 @@
+{
+  "roads": 29,
+  "nodes": 2483,
+  "directed_edges": 4962,
+  "hubs": [],
+  "settlements": [
+    {
+      "id": "node/10833649292",
+      "name": "Pajung",
+      "node_id": 4022578954,
+      "snap_distance_m": 69.88181791169856,
+      "boundary_truncated": true,
+      "snap_method": "nearest historical road node within 200m; unverified connector"
+    },
+    {
+      "id": "node/267564991",
+      "name": "Syabru Bensi",
+      "node_id": 1357442290,
+      "snap_distance_m": 18.4562543820722,
+      "boundary_truncated": true,
+      "snap_method": "nearest historical road node within 200m; unverified connector"
+    },
+    {
+      "id": "node/3510164368",
+      "name": "node/3510164368",
+      "node_id": null,
+      "snap_distance_m": 370.5387391334355,
+      "boundary_truncated": true,
+      "snap_method": "nearest historical road node within 200m; unverified connector"
+    }
+  ],
+  "excluded": [],
+  "way_hashes": {
+    "84792450-v13.json": "a595426156ade70cb650ef4c95a7b40c6a9893cbb5a2a04efce919f7a4785792",
+    "341557602-v10.json": "aee25ae68b4ff2f56cbe7b0c7eae16186acb05819b86c424584f64adae20fbb4",
+    "84566285-v8.json": "3151fd40a8d9e1c9750fe1ab87577690c64763a523d4c98908d2a48e908b8887",
+    "332122791-v10.json": "22e9d7d818f2f699b8c4a4337f41d491e9b6f0ce0ce9869e0a69ceb69f21d987",
+    "341557608-v5.json": "b1b9ad4a47bf306174f96f8a69ce5f5fd1b55c91bc6af375be163336d975db9e",
+    "886925427-v3.json": "0b26161b12d79127a1560f25b801e198cef30e623fc592f0b7b2a486367e9b9d",
+    "848938548-v6.json": "11544820f4e3eab7aaf9569d5f2aab789224f37c63fd90b5076a26e8832ef15f",
+    "138829079-v31.json": "858e599d1a02f8241b0af7b742e63bde819118347cffd1680b115d4969ecbf90",
+    "643869488-v6.json": "97fe0f528ac27b993bce5861923c8b8d2793b34f6934be4cc537d37b839fc38c",
+    "934964429-v3.json": "66be1f9e691dfb5c0dfda13c87022f6757b2b438d8047b993041883acadb7618",
+    "84566287-v13.json": "216261b066e3a7036a3a8fabc766a585140188df7115b87d15f164c93e3d024f",
+    "83925852-v16.json": "4f6ee023ab437f0335f6a4128b5bfaf7a5cd5e390880567c49f7760cce75eb9e",
+    "399526178-v6.json": "a78ae9c18fe9f87446508a75ae6a98d314f16f8e2e0ec6afc5b545b78d26051a",
+    "83925854-v15.json": "87989a70f162536cb8a4ef18a3dedc8483ab5c18d4ee9cd6102478603068d021",
+    "1359685639-v1.json": "97da6c4664f14c99e1da83c994d2a7b4272afb18e4bb66a465bd755591198dc1",
+    "341557610-v8.json": "a44b25d1dc667b1c5a5d4adb652bd43f858feac624cfa004181ec40668d9e9c1",
+    "934964432-v1.json": "93675953b6202e37fd00cd7f29a6dbaf7efe37d739dc562c0bc722c4d7ae1265",
+    "121203554-v8.json": "71b7963286f9ce6eb5b42b244077d843dd2c03b187ec98e3816c709e19765fc0",
+    "1266396385-v1.json": "db16feabbce2528921ad2e85a37416a7206ff4a0f691a970d1867623eb800458",
+    "246173479-v18.json": "7b643535e1298367c767fc5fb2223ace4710c4a9a2eba310b2b84bfd64467a3b",
+    "1359685638-v1.json": "17e3d4baf1328783e07b5204a54283e2b4f682a60ae82a503ecc4cef1351e636",
+    "340634328-v5.json": "3f8ab32da42f713e0415fcfac7965bed1688e2b7faa675ebcc0387260cc1534f",
+    "341557606-v5.json": "bd8c16417c7bf4a55eed4b3b982de9f7de3e311a04bacdf65acbb7ec093b2ebb",
+    "760438582-v2.json": "ffd1c2c1e8694b0d24479f138647efe0d7deeabac0b3f6b2d140323095651648",
+    "504509851-v5.json": "7b26313fdd4b7dfc52fbe7d722c1171162b478474572826467177e31b05bbd34",
+    "1017959928-v3.json": "471096b9647585699c4ae6b6907ebe08c2f59e7a0e97ea446190a6499da01c16",
+    "1359685640-v1.json": "d8f3fcb99907d4d905b888fa5744858571878efb8564e40f03ecbdaa054463a9",
+    "594716135-v2.json": "0db68eee805694afb4ab85eec97254e12bdf097cebbf77886a9b7824ca6523b2",
+    "1017959927-v2.json": "93953cc85fe3104f66f9831e5edbc551ae98daa2953754b31fb5d8ed35329943"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "event_name": "Area/date water baseline 2026-08-26",
+  "synthetic": false,
+  "event_time": "2026-08-26T00:00:00Z",
+  "osm_snapshot": "2026-08-25T00:00:00Z",
+  "infrastructure_role": "historical_osm",
+  "infrastructure_path": "infrastructure.json",
+  "infrastructure_sha256": "6fdd03e9a267c68febd28da7027df19812331f890e5c07b68365df3190216e19",
+  "pre": {
+    "role": "observation",
+    "source": "Sentinel-1",
+    "units": "dB",
+    "bands": [
+      "VV",
+      "VH"
+    ],
+    "terrain_corrected": true,
+    "scene_id": "S1D_IW_GRDH_1SDV_20260816T122141_20260816T122206_004151_007980_B091_COG",
+    "datetime": "2026-08-16T12:21:41.058298Z",
+    "relative_orbit": 85,
+    "orbit_state": "ascending",
+    "platform": "sentinel-1d",
+    "path": "pre.tif",
+    "sha256": "6a8560f1745fceb13372cb2fb3a66e426a754a8af635f64571b098866d84b38b",
+    "source_sha256": "1768acb221d154a3085837499cf44e9331269d55565381c6a54f17673feb52b8",
+    "processing_request": "/mnt/c/Users/nrgen/.codex/scratch/satquery-flood-lab/data/automatic/event-fe47db331390/pre/request.json"
+  },
+  "post": {
+    "role": "observation",
+    "source": "Sentinel-1",
+    "units": "dB",
+    "bands": [
+      "VV",
+      "VH"
+    ],
+    "terrain_corrected": true,
+    "scene_id": "S1D_IW_GRDH_1SDV_20260828T122141_20260828T122206_004326_007FA4_C73B_COG",
+    "datetime": "2026-08-28T12:21:41.762029Z",
+    "relative_orbit": 85,
+    "orbit_state": "ascending",
+    "platform": "sentinel-1d",
+    "path": "post.tif",
+    "sha256": "a294a6e2ad122a23f8896f352a5ec25be0ca4a9d3b56493aefc371a8a2283363",
+    "source_sha256": "0efb50a393f403975462ec1acb9cdabdef0c441418cec7de6aeb3e48880b34c7",
+    "processing_request": "/mnt/c/Users/nrgen/.codex/scratch/satquery-flood-lab/data/automatic/event-fe47db331390/post/request.json"
+  },
+  "analysis": {
+    "tile_size": 256,
+    "water_db": -17.0,
+    "drop_db": 3.0,
+    "min_exposed_road_m": 1.0
+  },
+  "limitations": [
+    "Fixed thresholds are unvalidated; incomplete radar layover mask; provider terrain correction recorded in request provenance.",
+    "OSM snapshot is one day before the event in UTC; missing assets are not counted.",
+    "Historical road graph computed within the requested AOI. Boundary-connected components and unobserved roads remain unknown.",
+    "Nearest-node snapping within 200m is not verified driveway access; turn restrictions are unmodelled.",
+    "Unvalidated debris proxy; clearing/agriculture can be confused and already-bare deposits missed. SCL is resampled from 20m. Three nearest optical dates per side searched within 14 days; greatest clear coverage selected without reference labels."
+  ],
+  "debris": {
+    "path": "debris-candidates.tif",
+    "sha256": "d3f1849515bf76874a04988fc3d93fba8f21ee3b3f63bdae5f3ee5e0042e69d3",
+    "pre_date": "2026-08-22",
+    "post_date": "2026-08-27",
+    "method": "fixed vegetation-to-bare and SAR-change proxy",
+    "source_hashes": {
+      "2026-08-24": "e10806b7acbb85e34fd052fdb4636ea6da6728284e53ec0c168b662ee6eae9d2",
+      "2026-08-22": "ed892dbf52413907ed7f9f0ae58aca3d716c2e5fb452a54a0218d7dba2b2691b",
+      "2026-08-17": "87a6e4414e936b3bbbfeb431257fef82ec6d8362898c80a6909764f363db7907",
+      "2026-08-27": "964b26a5c8f218e6605c09fd929bac7849abd3acc4c3b334aa714809f89069a1",
+      "2026-09-01": "34540f18388bf64d0970b50b120b01611e7c91e3707e937404911f980c776a17",
+      "2026-09-06": "81e4ca3c423293d670bd6b8685da20cb0437fd2331cb91d93c329b6e124006b6"
+    },
+    "limitations": "Unvalidated debris proxy; clearing/agriculture can be confused and already-bare deposits missed. SCL is resampled from 20m. Three nearest optical dates per side searched within 14 days; greatest clear coverage selected without reference labels."
+  }
+}

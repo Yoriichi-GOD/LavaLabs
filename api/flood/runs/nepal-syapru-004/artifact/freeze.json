@@ -1,0 +1,20 @@
+{
+  "files": {
+    "connectivity.json": "891fcbb1d9630cec134336857db43d8b233d7676de751362ec8f4212b4c85cfd",
+    "debris-candidates.tif": "f572e3dc73d896f1bdf6189d2ffc120b510aea2cd486a04acf6dee380b46468a",
+    "debris-exposure.csv": "d44408e351c561e4fbf3c133eb35db88eca2c3ab5ad5275106e89494a21b8da8",
+    "exposure.csv": "722750ea440dc2ec480ec847d11d43173446b46dd024ec674ab0b8f9b8f74c8c",
+    "graph.json": "064b7412ace60c8fd03bc2a9241474e0452434cf3b727a4df70ce54187230ae2",
+    "layers.geojson": "54c68a826f6885310bab9d39203e6f33d2f1c57174df9484afee4b0a8876ae77",
+    "manifest.json": "8dc9dbc00b89aa6af6a4e7b692f923cc1d2d325e4143af663ad71bde49a54c89",
+    "post.png": "6c5fa0be2813edf33c06a89a274ec174d03e04e27ed9d1aff7d19241d8c48535",
+    "pre.png": "8a0e133ac4eed05d928038cd098650d1708bb36dafdc39a109f72ebc92574d47",
+    "prediction.tif": "30974c2e326d9d8c5d574383e601c1328de01fb74fe1557588e67b25744e923b",
+    "report-en.html": "3a50ae9ae36146ceb3480253b8a1eee984be70348be4f3dc36afba38a63867f0",
+    "report-ne.html": "df51440dfa27b61440a12e9f7aebe0f460b02ca9ac3c8fe1b968b8e05455c64f",
+    "result.json": "3735efdda3351e1a24aee3033935ced80cbe1ae802de7ca8901c93cee27cf4cc",
+    "sensitivity.json": "15617df6f225a8907dcbaec2e250946e43ffd17141cb08c7599d875c070fc30f",
+    "topology-audit.json": "c62cd1d909f4a3e8c3156fc5d95b5a0b2dd11e79b59c62303818188c691009ae"
+  },
+  "evaluation_started": true
+}

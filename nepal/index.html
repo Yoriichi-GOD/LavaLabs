@@ -1,0 +1,77 @@
+<!doctype html>
+<html data-hosted lang="en" data-theme="dark" class="sq-clipped-scroll">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <meta name="si-disclosure" content="OpenAI Codex assisted the code and documentation. NASA and Sentinel source data retain original provenance.">
+  <meta name="description" content="A 42-year NASA POWER trend grid and saved satellite evidence from the Syapru Besi flood.">
+  <title>LavaLabs · Nepal investigation</title>
+  <link rel="icon" href="/LavaLabs/favicon.svg">
+  <link rel="stylesheet" href="/LavaLabs/trends-data/style.css">
+  <link rel="stylesheet" href="/LavaLabs/assets/workspace-shell.css">
+  <link rel="stylesheet" href="/LavaLabs/ui/lava.css">
+  <link rel="stylesheet" href="/LavaLabs/ui/trends/noir.css">
+  <link rel="stylesheet" href="/LavaLabs/ui/nepal/case.css">
+  <script defer src="/LavaLabs/ui/trends/chrome.js"></script>
+  <script defer src="/LavaLabs/ui/nepal/case.js"></script>
+<link rel="stylesheet" href="/LavaLabs/ui/wordmark.css"></head>
+<body class="sq-document-scroll sq-clipped-scroll">
+  <header><a class="brand" href="/LavaLabs/#terrain"><img src="/LavaLabs/logo.png" alt="LavaLabs volcano"><span>Lava<span class="brand-light">Labs</span></span></a><nav aria-label="Workspace"><a href="/LavaLabs/#terrain">Terrain &amp; flood</a><a href="/LavaLabs/#cases">Case studies</a><a href="/LavaLabs/#evidence">Research evidence</a><a class="active" aria-current="page" href="/LavaLabs/nepal">Nepal investigation</a><a href="/LavaLabs/trends">NASA trends</a></nav></header>
+  <main class="nepal-case">
+    <section class="case-intro" aria-labelledby="case-heading">
+      <h1 id="case-heading">The Nepal investigation</h1>
+      <p>Compare 42 years of NASA climate data around Syapru Besi, then inspect what satellites recorded around the August 2026 flood.</p>
+      <div class="section-links"><a href="#regional">Regional trends</a><a href="#event">Event observations</a><a href="#audit">Sources &amp; methods</a></div>
+    </section>
+    <p id="case-status" role="status">Loading retained case evidence…</p>
+    <div id="case-content" hidden>
+      <section id="regional" aria-labelledby="regional-title">
+        <div class="case-section-header"><div><h2 id="regional-title">Regional trends</h2><p class="case-kicker">1984–2025 · NASA POWER / MERRA-2</p></div><label for="case-variable">Climate variable <select id="case-variable"><option value="T2M">Air temperature</option><option value="PRECTOTCORR">Annual precipitation</option></select></label></div>
+        <div class="regional-layout">
+          <section class="region-map" aria-labelledby="map-title">
+            <div class="region-head"><h3 id="map-title">15 model cells</h3><button id="select-site" type="button">Select Syapru cell</button></div>
+            <div id="nepal-grid" class="nepal-grid" role="group" aria-label="Model cells by latitude and longitude"></div>
+            <p class="grid-legend"><span class="colder">↓ Falling</span><span class="warmer">↑ Rising</span><span>● Adjusted p &lt; 0.05</span><span><b>◎</b> Syapru match</span></p>
+            <p id="regional-summary" class="case-note"></p>
+          </section>
+          <section class="cell-result" aria-labelledby="cell-title">
+            <p id="cell-title" class="case-kicker"></p>
+            <div class="result-heading"><p id="cell-slope" class="cell-slope"></p><span id="verdict" class="verdict" role="status"></span></div>
+            <p id="cell-reading" class="case-note"></p>
+            <dl id="trend-stats" class="evidence-stats"></dl>
+            <div class="chart-key"><span>Annual values</span><span>Fitted trend</span></div>
+            <svg id="annual-chart" role="img" viewBox="0 0 560 206" aria-label="Annual observations and fitted trend"></svg>
+            <details><summary>How sensitive is this result?</summary><div id="sensitivity"></div></details>
+            <details><summary>How does the slope vary by period?</summary><div id="subperiods"></div></details>
+            <div class="file-links"><a id="annual-download" download>Annual CSV</a><a id="receipt-download" download>Investigation receipt (JSON)</a><a id="raw-download" download>NASA source JSON</a></div>
+          </section>
+        </div>
+      </section>
+      <section id="event" aria-labelledby="event-title">
+        <div class="case-section-header"><div><h2 id="event-title">The flood observations</h2><p class="case-kicker">26 August 2026 · Saved SATQuery run</p></div><div class="section-links"><a class="case-button" href="/LavaLabs/?view=response&amp;run=event-fe47db331390#terrain">Open disaster response <span aria-hidden="true">→</span></a><a class="case-button" id="terrain-link" href="/LavaLabs/?run=event-fe47db331390#terrain">Open 3D terrain &amp; overlays <span aria-hidden="true">↗</span></a></div></div>
+        <div class="event-layout">
+          <div class="radar-review">
+            <div class="scene-controls" role="group" aria-label="Radar observation"><button id="before-button" type="button" aria-pressed="false">Before</button><button id="after-button" type="button" aria-pressed="true">After</button></div>
+            <figure><img id="radar-image" width="254" height="437" alt=""><figcaption id="radar-caption"></figcaption></figure>
+          </div>
+          <div class="event-evidence">
+            <h3>What the saved run found</h3>
+            <p class="case-note">The 10 m radar analysis shows candidate water change. The long-term model record ends in 2025. It provides regional context, while the 2026 imagery covers the event itself.</p>
+            <dl id="event-stats" class="evidence-stats"></dl>
+            <p id="event-boundary" class="case-note"></p>
+            <details><summary>Coverage and mask sensitivity</summary><div id="event-sensitivity"></div></details>
+            <div class="file-links"><a href="/LavaLabs/api/flood/runs/event-fe47db331390/artifact/prediction.tif">Candidate raster</a><a href="/LavaLabs/api/flood/runs/event-fe47db331390/artifact/exposure.csv">Mapped intersections CSV</a></div>
+          </div>
+        </div>
+      </section>
+      <section id="audit" aria-labelledby="audit-title" class="evidence-audit">
+        <h2 id="audit-title">Sources, methods and limits</h2>
+        <dl><dt>How the case joins to the grid</dt><dd id="site-match"></dd><dt>How the trend is estimated</dt><dd id="trend-method"></dd><dt>What remains open</dt><dd>These are model-cell trends from one reanalysis product. Independent climate corroboration, event attribution, field damage and road access require separate evidence.</dd></dl>
+        <div class="file-links"><a href="https://power.larc.nasa.gov/docs/services/api/temporal/monthly/">NASA POWER documentation</a><a href="/LavaLabs/ui/nepal/data/syapru-point.json" download>Syapru point check</a><a href="https://github.com/Yoriichi-GOD/LavaLabs/blob/main/NEPAL_EVIDENCE.md">Reproduction notes</a></div>
+      </section>
+    </div>
+  </main>
+  <footer class="lava-footer"><span>LavaLabs / Nepal investigation</span><span>NASA POWER · Copernicus Sentinel · OpenStreetMap</span><span>SI-assisted code &amp; writing</span></footer>
+</body>
+</html>

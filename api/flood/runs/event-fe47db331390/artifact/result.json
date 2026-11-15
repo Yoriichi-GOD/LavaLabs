@@ -1,0 +1,55 @@
+{
+  "run_id": "event-fe47db331390",
+  "event_name": "Area/date water baseline 2026-08-26",
+  "synthetic": false,
+  "summary": {
+    "valid_pixels": 99858,
+    "total_pixels": 110998,
+    "new_water_pixels": 956,
+    "new_water_m2": 95600.0,
+    "water_in_both_pixels": 452,
+    "mapped_buildings": 522,
+    "exposed_buildings": 2,
+    "exposed_road_m": 185.8461137204373,
+    "exposed_bridge_features": 2,
+    "connectivity_assessed": false,
+    "potentially_cut_off": 0,
+    "debris_candidate_pixels": 1041,
+    "debris_candidate_m2": 104100.0,
+    "debris_valid_pixels": 30239,
+    "debris_intersected_buildings": 71,
+    "debris_intersected_road_m": 1458.9344344663516
+  },
+  "analysis": {
+    "tile_size": 256,
+    "water_db": -17.0,
+    "drop_db": 3.0,
+    "min_exposed_road_m": 1.0
+  },
+  "classes": {
+    "0": "no candidate under this heuristic",
+    "1": "water observed in both dates, not proven permanent",
+    "2": "new-water candidate",
+    "255": "invalid"
+  },
+  "limitations": [
+    "Fixed VV threshold baseline is uncalibrated and unvalidated for this event.",
+    "Water in two observations is not proof of permanent water.",
+    "Nearest hub is selected by pre-event road distance; alternative hub access is reported separately.",
+    "Explicit node IDs required; settlement snapping and AOI completeness require preparation.",
+    "Templated reports are not an AI copilot.",
+    "Fixed thresholds are unvalidated; incomplete radar layover mask; provider terrain correction recorded in request provenance.",
+    "OSM snapshot is one day before the event in UTC; missing assets are not counted.",
+    "Historical road graph computed within the requested AOI. Boundary-connected components and unobserved roads remain unknown.",
+    "Nearest-node snapping within 200m is not verified driveway access; turn restrictions are unmodelled.",
+    "Unvalidated debris proxy; clearing/agriculture can be confused and already-bare deposits missed. SCL is resampled from 20m. Three nearest optical dates per side searched within 14 days; greatest clear coverage selected without reference labels.",
+    "Debris proxy is not a validated classifier; radar layover masking remains incomplete. Provider preprocessing is recorded in input provenance."
+  ],
+  "provenance": {
+    "manifest_sha256": "859624fd8718efb3c20a2431cb6c3c0a2bc69b5ee24c6f2ddc3f0f56389e1f0f",
+    "infrastructure_sha256": "6fdd03e9a267c68febd28da7027df19812331f890e5c07b68365df3190216e19",
+    "prediction_sha256": "b49b5b5978cd3606f2138306fa8bb687d65c268285f8816a660bbf0444d1ffa4"
+  },
+  "seconds": 1.3858678599990526,
+  "graph_disruption_basis": "water and debris candidates"
+}

@@ -1,0 +1,14 @@
+{
+  "eroded_1px": {
+    "exposed_buildings": 0,
+    "exposed_road_m": 0.0
+  },
+  "original": {
+    "exposed_buildings": 1,
+    "exposed_road_m": 87.39535286076142
+  },
+  "dilated_1px": {
+    "exposed_buildings": 2,
+    "exposed_road_m": 397.38577326648607
+  }
+}

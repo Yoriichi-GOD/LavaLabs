@@ -1,0 +1,59 @@
+{
+  "run_id": "nepal-syapru-004",
+  "event_name": "Syapru Besi, Nepal · 26 August 2026",
+  "synthetic": false,
+  "summary": {
+    "valid_pixels": 31838,
+    "total_pixels": 123123,
+    "new_water_pixels": 361,
+    "new_water_m2": 36100.0,
+    "water_in_both_pixels": 87,
+    "mapped_buildings": 355,
+    "exposed_buildings": 1,
+    "exposed_road_m": 87.39535286076142,
+    "exposed_bridge_features": 2,
+    "connectivity_assessed": false,
+    "potentially_cut_off": 0,
+    "debris_candidate_pixels": 2123,
+    "debris_candidate_m2": 212300.0,
+    "debris_valid_pixels": 26150,
+    "debris_intersected_buildings": 114,
+    "debris_intersected_road_m": 2025.3845099639504
+  },
+  "analysis": {
+    "tile_size": 256,
+    "water_db": -17.0,
+    "drop_db": 3.0,
+    "min_exposed_road_m": 1.0
+  },
+  "classes": {
+    "0": "no candidate under this heuristic",
+    "1": "water observed in both dates, not proven permanent",
+    "2": "new-water candidate",
+    "255": "invalid"
+  },
+  "limitations": [
+    "Fixed VV threshold baseline is uncalibrated and unvalidated for this event.",
+    "Water in two observations is not proof of permanent water.",
+    "Nearest hub is selected by pre-event road distance; alternative hub access is reported separately.",
+    "Explicit node IDs required; settlement snapping and AOI completeness require preparation.",
+    "Templated reports are not an AI copilot.",
+    "Infrastructure is historical OSM from 27 July 2026; missing/unmapped assets are not counted.",
+    "Copernicus Sentinel Hub processed raw GRD with Copernicus DEM30; API orchestration remains manual for this run.",
+    "Gamma0 terrain threshold is uncalibrated; exposure is to water candidates, not confirmed flood damage.",
+    "EMSR927 damage labels were not used for prediction or threshold selection.",
+    "Historical road topology acquired; inferred disruption assumes every exposed road segment is unusable.",
+    "Nearest-node settlement/hospital snapping is a proximity assumption, not verified driveway access.",
+    "Network components touching extract edges are boundary-uncertain. Unobserved roads remain unknown, not open.",
+    "Turn restrictions and time-dependent access restrictions are not modelled.",
+    "Candidate vegetation loss to bare ground with SAR change; can confuse land clearing/agriculture and misses debris on already bare ground. Not trained or independently calibrated. Optical SCL is native 20m resampled to 10m.",
+    "Debris proxy is not a validated classifier; radar layover masking remains incomplete. Provider preprocessing is recorded in input provenance."
+  ],
+  "provenance": {
+    "manifest_sha256": "46106b15b0f779912ecab3ebaab64fcb819a7da0ceaa8e02ad6fa5e13b576de5",
+    "infrastructure_sha256": "d441bcc589f490faad0886a05e253859e34d15e0f71794817295822117dda1c9",
+    "prediction_sha256": "30974c2e326d9d8c5d574383e601c1328de01fb74fe1557588e67b25744e923b"
+  },
+  "seconds": 3.784768183999404,
+  "graph_disruption_basis": "water and debris candidates"
+}

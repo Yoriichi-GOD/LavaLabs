@@ -1,0 +1,36 @@
+[
+  {
+    "id": "node/267564991",
+    "name": "Syabru Bensi",
+    "snap_distance_m": 18.4562543820722,
+    "node_id": 1357442290,
+    "status": "unknown_aoi_boundary",
+    "connected_before": true,
+    "connected_after_optimistic": false,
+    "connected_after_conservative": false,
+    "nearest_pre_event_hub": 12987616777,
+    "nearest_hub_after_conservative": false,
+    "nearest_hub_after_optimistic": false,
+    "alternative_hub_distance_after_m": null,
+    "distance_before_m": 15164.04463486755,
+    "distance_after_m": null,
+    "boundary_truncated": true
+  },
+  {
+    "id": "node/3510164368",
+    "name": "node/3510164368",
+    "snap_distance_m": 370.5387391334355,
+    "node_id": null,
+    "status": "unknown_off_network",
+    "connected_before": null,
+    "connected_after_optimistic": null,
+    "connected_after_conservative": null,
+    "nearest_pre_event_hub": null,
+    "nearest_hub_after_conservative": null,
+    "nearest_hub_after_optimistic": null,
+    "alternative_hub_distance_after_m": null,
+    "distance_before_m": null,
+    "distance_after_m": null,
+    "boundary_truncated": true
+  }
+]
