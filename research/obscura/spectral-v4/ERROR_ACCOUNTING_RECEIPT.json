@@ -1,0 +1,168 @@
+{
+  "firms_label_diagnostics": {
+    "at_or_below_90_percentile": {
+      "rows": 2337,
+      "targets": {
+        "t_aai": {
+          "C": 0.6268363863712768,
+          "F": 0.6268363863712768,
+          "observed": 2337
+        },
+        "t_ch4": {
+          "C": 1.0015376427214482,
+          "F": 1.0015376427214482,
+          "observed": 804
+        },
+        "t_co": {
+          "C": 0.9761776190477032,
+          "F": 0.9761776190477032,
+          "observed": 2315
+        },
+        "t_firms": {
+          "C": 0.7131720422577088,
+          "F": 0.6611102744056765,
+          "observed": 2337
+        },
+        "t_no2": {
+          "C": 0.9698517985813909,
+          "F": 0.9698517985813909,
+          "observed": 2266
+        }
+      }
+    },
+    "development_90_percentile": 2.2274000000000003,
+    "development_floor": -0.439,
+    "floor_rows": 2084,
+    "strictly_above_90_percentile": {
+      "rows": 260,
+      "targets": {
+        "t_aai": {
+          "C": 0.6352904911174668,
+          "F": 0.6352904911174668,
+          "observed": 260
+        },
+        "t_ch4": {
+          "C": 1.2052253317461894,
+          "F": 1.2052253317461894,
+          "observed": 93
+        },
+        "t_co": {
+          "C": 0.8565012055994741,
+          "F": 0.8565012055994741,
+          "observed": 259
+        },
+        "t_firms": {
+          "C": 2.6367429031094534,
+          "F": 2.4726570542095923,
+          "observed": 260
+        },
+        "t_no2": {
+          "C": 1.0443767754134412,
+          "F": 1.0443767754134412,
+          "observed": 259
+        }
+      }
+    },
+    "top_five_sites_share_of_control_firms_squared_error": 0.5249074514757095
+  },
+  "fixed_clear_fraction_strata": {
+    "10_to_50_percent": {
+      "rows": 83,
+      "targets": {
+        "t_aai": {
+          "C": 0.6432829730655594,
+          "F": 0.6432829730655594,
+          "observed": 83
+        },
+        "t_ch4": {
+          "C": 1.1354376102358428,
+          "F": 1.1354376102358428,
+          "observed": 17
+        },
+        "t_co": {
+          "C": 0.8371872884846189,
+          "F": 0.8371872884846189,
+          "observed": 80
+        },
+        "t_firms": {
+          "C": 1.2573590587649282,
+          "F": 1.1100950510494851,
+          "observed": 83
+        },
+        "t_no2": {
+          "C": 0.724917306429168,
+          "F": 0.724917306429168,
+          "observed": 79
+        }
+      }
+    },
+    "at_least_50_percent": {
+      "rows": 2485,
+      "targets": {
+        "t_aai": {
+          "C": 0.6238622869901083,
+          "F": 0.6238622869901083,
+          "observed": 2485
+        },
+        "t_ch4": {
+          "C": 1.0249668869762358,
+          "F": 1.0249668869762358,
+          "observed": 874
+        },
+        "t_co": {
+          "C": 0.9706034906013715,
+          "F": 0.9706034906013715,
+          "observed": 2466
+        },
+        "t_firms": {
+          "C": 1.0686234458928507,
+          "F": 1.0007371257936273,
+          "observed": 2485
+        },
+        "t_no2": {
+          "C": 0.9777676218201532,
+          "F": 0.9777676218201532,
+          "observed": 2419
+        }
+      }
+    },
+    "below_10_percent": {
+      "rows": 29,
+      "targets": {
+        "t_aai": {
+          "C": 0.8646046284893186,
+          "F": 0.8646046284893186,
+          "observed": 29
+        },
+        "t_ch4": {
+          "C": 0.49322506148924417,
+          "F": 0.49322506148924417,
+          "observed": 6
+        },
+        "t_co": {
+          "C": 0.7745748616444691,
+          "F": 0.7745748616444691,
+          "observed": 28
+        },
+        "t_firms": {
+          "C": 0.9698799773591973,
+          "F": 0.833086812200707,
+          "observed": 29
+        },
+        "t_no2": {
+          "C": 1.487912419213375,
+          "F": 1.487912419213375,
+          "observed": 27
+        }
+      }
+    }
+  },
+  "limits": [
+    "Strata have different denominators and cannot be ranked as comparable global scores.",
+    "Tail boundary uses development labels for descriptive accounting only.",
+    "Error concentration cannot establish the leader method or future-time accuracy."
+  ],
+  "no_site_identifiers_or_rows_exported": true,
+  "purpose": "Error accounting only; no model or threshold selection.",
+  "schema": 1
+}

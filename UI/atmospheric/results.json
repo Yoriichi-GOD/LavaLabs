@@ -24,5 +24,28 @@
  "saved_replay":{"version_id":372947210,"successful":true,"pipeline_seconds":794.109,"feature_seconds":608.504,"viewer_runtime_seconds":821.9,"prediction_hash_matches_interactive":true},
  "image_public_mcrmse":1.15808,
  "limitations":["Confirmation is used for an accept/reject gate; its selected result is not an untouched estimate.","Gate v2 was fixed during initial image extraction, before any image development/confirmation scores were observed.","The earlier raw baseline evaluated all training sites, including the confirmation sites.","Withheld dates prevent true forward-time validation. Private-test error remains unknown.","Development feature-family selection has selection optimism."],
- "si_disclosure":"OpenAI Codex assisted source, tests, analysis implementation, interface and documentation. Competition observations retain organizer provenance."
+ "si_disclosure":"OpenAI Codex assisted source, tests, analysis implementation, interface and documentation. Competition observations retain organizer provenance.",
+ "sparse_followup":{
+  "method": "FIRMS-only sparse spectral branch",
+  "development_control": 0.9337828782984863,
+  "development_candidate": 0.9194996153136487,
+  "brightness_control": 0.9306248677799932,
+  "shuffled_control": 0.9198552400579277,
+  "stress_control": 0.9662826535718777,
+  "stress_candidate": 0.9462006522193394,
+  "development_rows": 2597,
+  "development_sites": 64,
+  "fold_wins": 2,
+  "folds": 3,
+  "bootstrap_gain_interval": [
+    0.0022878839891939565,
+    0.025015197666052272
+  ],
+  "four_targets_unchanged": true,
+  "gate_passed": true,
+  "public_mcrmse": 1.13057,
+  "saved_version": 373122625,
+  "fresh_replay_verified": true,
+  "limitation": "Reused development and conditional fixed-OOF bootstrap; not independent or forward-time confirmation. Shuffled control nearly matches full descriptors, so local spatial causation is unproven."
+}
 }

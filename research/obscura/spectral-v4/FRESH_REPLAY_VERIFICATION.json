@@ -1,0 +1,11 @@
+{
+  "candidate_sha256": "ae6287bd5aee9269d6d5eb6ffe8e77f7b60db3714c7b275e59154474a2a2055a",
+  "development_mcrmse": 0.9194996153136487,
+  "environment_mcrmse": 0.9462006522193394,
+  "expected_results_matched": true,
+  "no_scored_submission_in_notebook": true,
+  "note": "Fresh process established by the saved Save and Run All version, not by this in-process assertion alone.",
+  "protected_exported_targets_equal": true,
+  "rows": 1221,
+  "schema": 1
+}

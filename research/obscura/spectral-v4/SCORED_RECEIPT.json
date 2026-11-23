@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "public_mcrmse": 1.13057,
+  "notebook_version": 373122625,
+  "candidate_sha256": "ae6287bd5aee9269d6d5eb6ffe8e77f7b60db3714c7b275e59154474a2a2055a",
+  "observed_status": "Complete",
+  "scored_submissions_this_branch": 1,
+  "private_score": "unknown",
+  "fresh_replay_seconds": 767.2,
+  "public_source_version": 373134416,
+  "final_selected_versions": [
+    373122625,
+    372947210
+  ],
+  "final_selected_scores": [
+    1.13057,
+    1.15808
+  ],
+  "rank_snapshot": 50,
+  "leader_public_snapshot": 0.92847,
+  "public_source_visibility": "Public verified",
+  "public_source_license": "Apache 2.0",
+  "public_source_output_files": 0,
+  "compute_sessions_stopped": true
+}

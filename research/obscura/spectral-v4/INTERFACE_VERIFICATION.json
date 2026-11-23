@@ -1,0 +1,37 @@
+{
+  "schema": 1,
+  "desktop_width": 1280,
+  "mobile_width": 390,
+  "mobile_document_width": 390,
+  "protected_target_controls": [
+    {
+      "target": "t_ch4",
+      "passed": true
+    },
+    {
+      "target": "t_no2",
+      "passed": true
+    },
+    {
+      "target": "t_co",
+      "passed": true
+    },
+    {
+      "target": "t_aai",
+      "passed": true
+    },
+    {
+      "target": "t_firms",
+      "passed": true
+    }
+  ],
+  "followup_cards": 1,
+  "invalid_followup_metric_error_visible": true,
+  "other_research_remained_available": true,
+  "recovery_after_restored_receipt": true,
+  "pdf_pages_visually_reviewed": [
+    1,
+    2,
+    3
+  ]
+}

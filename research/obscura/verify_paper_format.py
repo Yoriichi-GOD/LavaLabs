@@ -27,6 +27,8 @@ for table in tables:
     for row in table['rows']:
         assert all(normalize(value) in flat for value in row)
 assert len(reader.pages)==3
+assert '1.13057' in text and '0.91950' in text and '767.2' in text
+assert 'Not scored yet' not in text and 'â€' not in text
 font_names=set()
 for page in reader.pages:
     for obj in page['/Resources']['/Font'].values():
@@ -42,7 +44,7 @@ with pdfplumber.open(path) as pdf:
         assert any(c['x0']>310 for c in page.chars)
 report={'pages':3,'page_size':'US Letter','columns':2,'column_width_pt':251,'gutter_pt':12,
         'fonts':sorted(font_names),'all_times_fonts_embedded':True,
-        'original_paragraphs_retained':len(paragraphs),'tables_retained':len(tables),
+        'current_paragraphs_verified':len(paragraphs),'tables_verified':len(tables),
         'reference_count':11,'margin_checks':'passed','visual_pages_inspected':[1,2,3],
         'reference_usage':'Formatting only; no reference-paper research content copied.',
         'pdf_sha256':hashlib.sha256(path.read_bytes()).hexdigest()}

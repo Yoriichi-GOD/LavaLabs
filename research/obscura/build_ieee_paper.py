@@ -79,14 +79,14 @@ headings={
     'Confirmation and leaderboard evidence':('subsection','B. Confirmation and Public Scoring'),
     'Reproduction and measured runtime':('section','V. '+smallcaps('Reproduction and Runtime')),
     'One fixed model follow-up':('section','VI. '+smallcaps('Fixed Model Follow-Up')),
-    'Verification, provenance and limitations':('section','VII. '+smallcaps('Verification and Limitations')),
+    'Verification, provenance and limitations':('section','VI. '+smallcaps('Verification and Limitations')),
     'Attribution and AI use':('section',smallcaps('Acknowledgment and AI Disclosure')),
     'References and reviewer entry points':('section',smallcaps('References')),
 }
 captions=[
     ('I','OBSERVED TARGET SUPPORT'),
-    ('II','MATCHED DEVELOPMENT RESULTS'),
-    ('III','CONFIRMATION RESULTS BY TARGET'),
+    ('II','CONTROLLED SPECTRAL DEVELOPMENT RESULTS'),
+    ('III','DISTINCT EVALUATION POPULATIONS'),
     ('IV','LOCAL AND PUBLIC EVALUATION POPULATIONS'),
     ('V','FIXED MODEL FOLLOW-UP'),
 ]
@@ -102,7 +102,7 @@ def frame(x,y,w,h,name):
     return Frame(x,y,w,h,id=name,leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)
 
 doc=BaseDocTemplate(str(DEST),pagesize=letter,
-    title='LavaLabs Atmospheric Lab: Cloud-Quality Ablations and Site-Aware Prediction in OBSCURA',
+    title='LavaLabs Atmospheric Lab: Site-Aware Spectral Prediction in OBSCURA',
     author='Saishreek Singh',subject='Measured OBSCURA research; two-column serif presentation',
     leftMargin=LEFT,rightMargin=RIGHT,topMargin=40,bottomMargin=42,
     allowSplitting=1,pageCompression=1)
@@ -112,7 +112,7 @@ regular=[frame(LEFT,42,COL,710,'left'),frame(LEFT+COL+GAP,42,COL,710,'right')]
 doc.addPageTemplates([PageTemplate(id='First',frames=first,onPage=header),
                       PageTemplate(id='Body',frames=regular,onPage=header)])
 story=[NextPageTemplate('Body'),
-       Paragraph('LavaLabs Atmospheric Lab: Cloud-Quality Ablations and Site-Aware Prediction in OBSCURA',styles['title']),
+       Paragraph('LavaLabs Atmospheric Lab: Site-Aware Spectral Prediction in OBSCURA',styles['title']),
        Paragraph('Saishreek Singh',styles['author']),
        Paragraph('Solo student entry, OBSCURA Satellite AI Research Challenge, 23 November 2026',styles['event']),
        FrameBreak()]
@@ -162,8 +162,8 @@ for index,block in enumerate(CONTENT):
     text=block['text']
     body_capture.append(text)
     if in_abstract:
-        story.append(Paragraph('<i>Abstract</i>—'+text,styles['abstract']))
-        story.append(Paragraph('<i>Index Terms</i>—Earth observation, atmospheric regression, site-grouped validation, cloud-quality ablation, reproducibility.',styles['abstract']))
+        story.append(Paragraph('<i>Abstract</i> - '+text,styles['abstract']))
+        story.append(Paragraph('<i>Index Terms</i> - Earth observation, atmospheric regression, site-grouped validation, cloud-quality ablation, reproducibility.',styles['abstract']))
         in_abstract=False
     elif in_references and text.startswith('<link'):
         reference_number+=1

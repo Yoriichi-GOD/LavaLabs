@@ -1,3 +1,12 @@
+<!-- spectral-latest-20261123 -->
+# Current result: sparse spectral FIRMS follow-up
+
+Accepted public MCRMSE **1.13057**, versus 1.15808 for the previous HistGB finalist; both are selected. Private unknown. Development **0.91950** versus **0.93378**, with two environmental holdouts, saved-array audit and exact fresh-process replay. See [the current method, controls and evidence](spectral-v4/README.md). The updated three-page report uses the same serif two-column format; the [original report and source](frozen-report-before-spectral/) are preserved. Public source contains all three guarded recipes and no row outputs.
+
+## Historical baseline and fixed-model notes
+
+The material below records the earlier phase; statements that model search stopped or all custom features failed are historical snapshots superseded by the controlled spectral follow-up above.
+
 # LavaLabs Atmospheric Lab
 
 Five-target atmospheric regression for [OBSCURA](https://www.kaggle.com/competitions/obscura), developed by Saishreek Singh. The pipeline combines permitted weather, season, terrain and spectral inputs with optional Sentinel-2 chip summaries, masks missing labels per target, validates on unseen training sites, and exports the exact competition template.

@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "default_private_run_flags": {
+    "RUN_IN_PRIVATE_COPY": false,
+    "RUN_CAT_IN_PRIVATE_COPY": false,
+    "RUN_SPECTRAL_IN_PRIVATE_COPY": false
+  },
+  "embedded_source_groups": 4,
+  "embedded_source_files": 28,
+  "competition_rows_or_outputs_embedded": false,
+  "sha256": "d24fab9bd094f481d980a32752f84d55e184a8edd9650e92a7a2af079fdea4d4"
+}

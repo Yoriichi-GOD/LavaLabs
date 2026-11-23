@@ -1,0 +1,18 @@
+{
+  "files": {
+    "spectral_lab/__init__.py": "45a906a5fe23371ff72484a2beca952479553b189d6a1753838dd507014cc8e6",
+    "spectral_lab/audit_saved.py": "d8f1aba1fd5f59ab62a79ee57b62cc5b14c47ec6482142216283c6d25331deb2",
+    "spectral_lab/baseline.py": "29cf9fc30386c6ffc104edaf196c7c396e6c1742a998521c9e9c1ea78aa80b75",
+    "spectral_lab/comparison.py": "1b7935bb2cd098755ace829258675336b1b0d6356ed7c01632c396019bdd28fa",
+    "spectral_lab/core.py": "bfdb1e7400bc3c31ae6621c9ef34e9b1420c97f1859a5b72f022897ac9a3ed6a",
+    "spectral_lab/extractor.py": "f158de5690301aaacbee1f2fe4a0ed4e4a7ab7474399b9aaa7aea0c3edff65c8",
+    "spectral_lab/features.py": "936ca060ea7f6c0ab1802d36e0a01495d598f1b88a89f6148ea0bd3d2c940aee",
+    "spectral_lab/hotspots.py": "6936e1a133fcf524e3f8bc8a440eede563e55d2554f69385d6d32e207af1d51d",
+    "spectral_lab/independent_audit.py": "fb6c344ab4e856d4551bc3c0131f1384cbe8ad2ac930de04f4f3ab9793589fe0",
+    "spectral_lab/selection.py": "f8f771be572ccc3d73c6af53e44fb35ab00e561304f21b1501b1556f6c0ec4c9",
+    "test_comparison.py": "725e1aaabf6ffd5ed7c0748171ff6d4a60a076b8fc86265ffe66e1ba840fe922",
+    "test_extractor.py": "811e601bc90ad5d34d0fdc3b393680052a5790f73bbffd07c5787b97c715013f",
+    "test_hotspots.py": "c67427a0c4807174a8cf9b637f01f090f6d615bca94f7b8c55d3f1bfb21c71eb"
+  },
+  "intent": "Frozen before new real-data accuracy; source only."
+}

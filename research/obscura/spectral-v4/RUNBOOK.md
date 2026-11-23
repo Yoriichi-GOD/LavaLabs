@@ -1,0 +1,18 @@
+# Sparse spectral experiment
+
+This is a private experiment, separate from the submitted LavaLabs recipes. The source does not contain competition rows, chips, IDs, weights or predictions. Competition observations and per-row outputs must stay inside the private Kaggle notebook. Do not publish its output directory or private overlays.
+
+The question, fixed controls, split, promotion thresholds and resource limits are recorded in [EXPERIMENT_CONTRACT.md](EXPERIMENT_CONTRACT.md). References and data assumptions are in `../literature-20261123/`. The feature implementation is independent; it does not copy third-party fire code. The mathematical descriptors are motivated by that literature, with engineering constants documented explicitly. They are not calibrated fire detections, physical emissions or a novel proven retrieval method.
+
+1. Run the nine synthetic checks with the existing NumPy/SciPy/scikit-learn environment. No new package or pretrained model is required.
+2. Build `LavaLabs-Spectral-Private.ipynb` with `build_notebook.py`; the source freeze contains SHA-256 digests of every packaged module/test. Import privately with the official competition data attached. Use CPU and two threads; internet is unnecessary.
+3. Run the first cell. It repeats the software checks and profiles 32 fixed randomly selected training images without reading labels. Inspect six private label-blind overlays. A failed feasibility gate stops this branch.
+4. Only after that review, execute `run_comparison.py` in a new cell. It extracts all 4,439 image features privately, runs matched whole-site nested evaluation and the two environmental holdouts, writes private OOF files, and independently rereads the saved predictions against the exact source truth. It does not export a competition submission.
+5. Copy only aggregate receipts back to the project. If any promotion gate fails, retain the current selected submissions and archive the negative result. A positive gate still requires a separate full refit, fresh-session replay and export audit before scoring. Diagnostics cannot become alternative candidate selections retrospectively.
+6. Save a private notebook version **with outputs** to preserve the receipts and OOF arrays. A Quick Save runtime is an archive operation, not training runtime or fresh scientific replay. Stop the interactive session after verification.
+
+Software evidence so far: nine checks passed locally. These cover synthetic spectral/brightness separation, band identity, off-center behavior, missingness and integer arithmetic, deterministic shuffling, cache identity/corruption, outer-label independence, protected targets and label-free site-disjoint environmental partitions. They do not establish real-world detection or prediction accuracy.
+
+The same nine checks passed in the actual private Kaggle CPU session (3.93 seconds). The 32-chip label-blind profile passed: 32 supported chips, 11 varying thermal columns, 5.82 seconds measured extraction, 806.90 seconds linear full-pass projection. Projection is not a runtime guarantee. Maximum measured reflectance was 1.5701; no clipping to one or inference of saturation from that value was applied. Six private overlays were reviewed before prediction evaluation. Candidates also appear on reflective structures, mine/water edges and a dark/cloud-affected case. All profile chips reached the 32-candidate cap; this is a descriptor mechanism, not evidence of 32 fires per chip. No thresholds were changed following that review. See PROFILE_MEASURED_RECEIPT.json for exact aggregate values.
+
+No changes to the final project, paper, public source or selected submissions are authorized by a software pass alone. Promotion requires the measured gate in the experiment contract.

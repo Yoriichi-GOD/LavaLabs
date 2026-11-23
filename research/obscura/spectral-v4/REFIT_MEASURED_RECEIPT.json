@@ -1,0 +1,51 @@
+{
+  "candidate_sha256": "ae6287bd5aee9269d6d5eb6ffe8e77f7b60db3714c7b275e59154474a2a2055a",
+  "control_choices": [
+    {
+      "amplitude": 0.25,
+      "image_weight": 1,
+      "inner_rmse": 1.0025714682361666
+    },
+    {
+      "amplitude": 0.75,
+      "image_weight": 0.5,
+      "inner_rmse": 0.9388197094491767
+    },
+    {
+      "amplitude": 0.5,
+      "image_weight": 1,
+      "inner_rmse": 0.9896242687273177
+    },
+    {
+      "amplitude": 1,
+      "image_weight": 1,
+      "inner_rmse": 0.6121608439222558
+    },
+    {
+      "amplitude": 0.25,
+      "image_weight": 1,
+      "inner_rmse": 1.012858025000585
+    }
+  ],
+  "control_sha256": "007abb84e2f53b01d7ca71929647d83ea6803e2cb186871fd61f3cda38892c20",
+  "experiment": "accepted_firms_only_full_refit",
+  "firms_choice": {
+    "amplitude": 0.75,
+    "branch_weight": 1,
+    "image_weight": 0,
+    "inner_rmse": 0.9616945963829785
+  },
+  "fresh_session_replay_verified": false,
+  "limits": [
+    "Full-training OOF selects final weights; it is not an untouched accuracy estimate.",
+    "Private final CSV; no scored export before fresh-session reproduction.",
+    "No physical fire, emission or spatial-mechanism claim follows from this score."
+  ],
+  "protected_targets_byte_equal": true,
+  "rows": 1221,
+  "schema": 1,
+  "scored_submission_made": false,
+  "seconds": 28.364644739999903,
+  "sites": 81,
+  "train_rows": 3218
+}

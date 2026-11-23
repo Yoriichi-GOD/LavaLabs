@@ -1,0 +1,7 @@
+{
+  "files": {
+    "spectral_lab/refit.py": "1e9607e06942e62248f493b587c93559306dcd77cb841fbb8a9f87af7fb6e86f",
+    "test_refit.py": "566f8274c91c2e7f43e68582c76c0f1ac68dce8da3606f933536b42d4dec4c3b"
+  },
+  "development_freeze_sha256": "ac5453c9b5dceade5d38e6ecceb858d97a4fa40415e129b1efaf281f0739dc38"
+}

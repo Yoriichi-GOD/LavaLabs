@@ -1,0 +1,52 @@
+{
+  "chips": 32,
+  "experiment": "label_blind_sparse_profile",
+  "limits": [
+    "Projection is not a runtime guarantee. No labels or accuracy inspected.",
+    "Reflectance-shaped anomalies are not calibrated heat/fire measurements."
+  ],
+  "linear_full_pass_projection_seconds": 806.9042746399424,
+  "passed": true,
+  "schema": 1,
+  "seconds": 5.816836402000035,
+  "summary": {
+    "band_max": {
+      "max": 1.5701,
+      "mean": 1.213625,
+      "min": 0.6381
+    },
+    "band_over_one_fraction": {
+      "max": 0.0012342664930555555,
+      "mean": 0.00019652755172164352,
+      "min": 0
+    },
+    "candidate_count": {
+      "max": 32,
+      "mean": 32,
+      "min": 32
+    },
+    "clear_fraction": {
+      "max": 0.9999728732638888,
+      "mean": 0.8935082753499348,
+      "min": 0.2824028862847222
+    },
+    "observable_fraction": {
+      "max": 1,
+      "mean": 0.9999879201253254,
+      "min": 0.9996134440104166
+    },
+    "quality_flag1_fraction": {
+      "max": 0,
+      "mean": 0,
+      "min": 0
+    },
+    "strict_clear_candidate_count": {
+      "max": 32,
+      "mean": 25.875,
+      "min": 0
+    }
+  },
+  "supported_chips": 32,
+  "varying_thermal_columns": 11,
+  "workers": 2
+}

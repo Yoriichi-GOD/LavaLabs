@@ -44,6 +44,17 @@
   }
   $('atmo-validation-note').textContent=`${receipt.counts.train.toLocaleString('en-GB')} training observations · ${receipt.counts.sites} sites · ${receipt.feature_extraction.chip_count.toLocaleString('en-GB')} supplied chips. Development family selection has selection optimism.`;
   $('atmo-method-copy').textContent=`Fixed regularized HistGradientBoosting; three outer development site folds, three inner site folds for convex mixture selection, and a separate ${receipt.selection.confirmation_sites}-site acceptance partition. Final refit uses five grouped folds for weights. ${receipt.limitations.join(' ')}`;
+  if(receipt.sparse_followup){
+   const s=receipt.sparse_followup;
+   if([s.development_control,s.development_candidate,s.brightness_control,s.shuffled_control,s.stress_control,s.stress_candidate].some(v=>!Number.isFinite(v)))throw Error('The spectral follow-up receipt contains incomplete metrics.');
+   const card=node('section',undefined,'atmo-conclusion');card.id='atmo-spectral-followup';
+   card.append(node('h3','Sparse spectral features pass the controlled comparison.'));
+   card.append(node('p',`FIRMS-only follow-up: ${fmt(s.development_candidate)} MCRMSE versus ${fmt(s.development_control)} for the frozen control on ${s.development_sites} development sites. Wins ${s.fold_wins}/${s.folds} folds; the other four targets are unchanged.`));
+   card.append(node('p',`Environmental holdouts: ${fmt(s.stress_candidate)} versus ${fmt(s.stress_control)}. Brightness-only control: ${fmt(s.brightness_control)}; shuffled descriptors: ${fmt(s.shuffled_control)}.`, 'atmo-caption'));
+   card.append(node('p',Number.isFinite(s.public_mcrmse)?`Accepted public score: ${fmt(s.public_mcrmse)}. Private-test accuracy is unknown.`:'Public scoring is pending; these are development results.', 'atmo-caption'));
+   card.append(node('p',s.limitation,'atmo-caption'));
+   $('atmo-content').prepend(card);$('atmo-verdict').textContent='Earlier control and acceptance check';
+  }
   target();$('atmo-content').hidden=false;$('atmo-status').textContent='Measured experiment · Aggregate evidence only';
  }
  async function load(){

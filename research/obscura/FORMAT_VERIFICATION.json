@@ -12,8 +12,8 @@
     "/Helvetica"
   ],
   "all_times_fonts_embedded": true,
-  "original_paragraphs_retained": 41,
-  "tables_retained": 5,
+  "current_paragraphs_verified": 29,
+  "tables_verified": 3,
   "reference_count": 11,
   "margin_checks": "passed",
   "visual_pages_inspected": [
@@ -22,5 +22,5 @@
     3
   ],
   "reference_usage": "Formatting only; no reference-paper research content copied.",
-  "pdf_sha256": "bad2737b39144e30a888dc2764cb752befa9133b12fd501f9f2fe94fc208fe9c"
+  "pdf_sha256": "152ce4e22f188a8ed0e9f23d4c18bfac734f3cbbf0bfcc8c689105c75eb45b48"
 }
