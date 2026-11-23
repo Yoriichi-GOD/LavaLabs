@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-23",
+  "devpost": {
+    "url": "https://devpost.com/software/lavalabs-atmospheric-lab",
+    "submission_id": 1316917,
+    "project_id": 1561793,
+    "observed_status": "Submitted to OBSCURA",
+    "terms": "User confirmed acceptance and submission at action time",
+    "research_pdf_uploaded": true
+  },
+  "kaggle": {
+    "final_selected": 2,
+    "baseline_selected": false,
+    "candidates": [
+      {
+        "version": 372947210,
+        "public_mcrmse": 1.15808
+      },
+      {
+        "version": 372977582,
+        "public_mcrmse": 1.16407
+      }
+    ],
+    "source_version": 372991446,
+    "source_visibility": "public",
+    "source_url": "https://www.kaggle.com/code/saishreeksingh/lavalabs-atmospheric-lab-source-and-evidence",
+    "public_source_output_files": 0,
+    "license": "Apache-2.0",
+    "private_performance": "unknown"
+  },
+  "repository": {
+    "url": "https://github.com/Yoriichi-GOD/LavaLabs",
+    "implementation_commit": "05534e4",
+    "pages_commit": "ced5762",
+    "scope": "Allowlisted new research and evidence UI; unrelated untracked work preserved"
+  },
+  "hosted_evidence": "https://yoriichi-god.github.io/LavaLabs/#evidence",
+  "paper": {
+    "url": "https://yoriichi-god.github.io/LavaLabs/ui/atmospheric/LavaLabs-Obscura-Research.pdf",
+    "pages": 3,
+    "format": "Two-column serif; formatting reference only",
+    "sha256": "bad2737b39144e30a888dc2764cb752befa9133b12fd501f9f2fe94fc208fe9c",
+    "hosted_bytes_match_local": true,
+    "original_paragraphs_retained": 41,
+    "tables_retained": 5,
+    "references_retained": 11
+  },
+  "checks": {
+    "atmospheric_tests": 30,
+    "integrated_app_tests": 30,
+    "post_release_serving_privacy_test": "1 passed",
+    "independent_ui_review": "ship at narrow atmospheric evidence UI scope",
+    "mobile_target_capture": "390 x 844, AAI values and count visible",
+    "all_paper_pages_rendered_and_reviewed": true
+  },
+  "limits": [
+    "Private score and prize qualification are unknown.",
+    "Development reuse and confirmation acceptance create selection optimism.",
+    "No independent field accuracy or future-time validation is established.",
+    "Devpost video field was optional and final checklist did not require a video; none supplied. Earlier cross-source video wording remains inconsistent."
+  ]
+}
