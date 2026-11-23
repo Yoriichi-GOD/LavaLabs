@@ -99,7 +99,7 @@ class Export:
                 self.asset(ROOT/name, mount + "/" + Path(name).relative_to(prefixes[mount]).as_posix())
         for source, mount in (
             ("UI/art", "art"), ("UI/satquery/fonts", "assets/fonts"), ("UI/nepal", "ui/nepal"),
-            ("UI/trends", "ui/trends"), ("UI/response", "ui/response"), ("trend_lab/web/data", "trends-data/data"),
+            ("UI/trends", "ui/trends"), ("UI/response", "ui/response"), ("UI/atmospheric", "ui/atmospheric"), ("trend_lab/web/data", "trends-data/data"),
         ):
             for file in sorted((ROOT/source).rglob("*")):
                 if file.is_file() and file.name != "index.html":

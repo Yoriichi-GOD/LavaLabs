@@ -12,6 +12,14 @@ Start with the [Nepal investigation](http://127.0.0.1:8780/nepal) after launchin
 | Case studies | Compare Syapru Besi, Kedarnath, Varanasi and Sangam Vihar in 3D or on a 2D map. Select elevation, slope, height above drainage (HAND), or before/after/changed NDVI. Inspect dates, source sampling and valid coverage. |
 | Research evidence | Inspect six preserved studies, including failed quality gates, drainage and observed-flow controls, and the Ahr road review. |
 
+## OBSCURA Atmospheric Lab
+
+LavaLabs now includes a separate atmospheric research contribution for OBSCURA: five standardized atmospheric/thermal targets, missing-label masks, whole-site validation, conservative prediction mixtures and a verified 1,221-row export. Open [Research evidence](http://127.0.0.1:8780/#evidence) for the aggregate comparison and per-target confirmation results. Competition rows, identifiers, imagery and predictions remain private on Kaggle.
+
+The measured development comparison retained the official image summaries and rejected our added cloud/spatial complexity. Confirmation MCRMSE was 0.862056 versus 0.887252 for the table mixture; this partition is an acceptance gate, not untouched final-test evidence. The retained image/blending candidate scored 1.15808 publicly, versus 1.32129 for the first raw table baseline (12.35% lower public-subset error). Site-CV and public scores still differ, so transfer remains a material limitation. See the [Obscura method and replay guide](research/obscura/README.md) and [research report](UI/atmospheric/LavaLabs-Obscura-Research.pdf). This work does not claim that the existing flood cases validate atmospheric predictions.
+
+[Source-only Kaggle notebook](https://www.kaggle.com/code/saishreeksingh/lavalabs-atmospheric-lab-source-and-evidence?scriptVersionId=372991446) contains both frozen recipes with no row outputs. A later fixed Ordered CatBoost improved reused-development MCRMSE to 0.931200 but scored 1.16407 publicly; both accepted candidates are selected for final evaluation, and model search is closed. The report uses the requested two-column serif format.
+
 ## Run locally
 
 Use Python 3.11 on Linux or WSL. The checkout bundles the frozen demonstration and needs about 550 MB of free space for the first restore, plus the Python environment. The saved workflows work offline after installation.

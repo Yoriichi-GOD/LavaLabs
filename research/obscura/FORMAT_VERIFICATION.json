@@ -1,0 +1,26 @@
+{
+  "pages": 3,
+  "page_size": "US Letter",
+  "columns": 2,
+  "column_width_pt": 251,
+  "gutter_pt": 12,
+  "fonts": [
+    "/AAAAAA+TimesNewRomanPS-BoldItalicMT",
+    "/AAAAAA+TimesNewRomanPS-BoldMT",
+    "/AAAAAA+TimesNewRomanPS-ItalicMT",
+    "/AAAAAA+TimesNewRomanPSMT",
+    "/Helvetica"
+  ],
+  "all_times_fonts_embedded": true,
+  "original_paragraphs_retained": 41,
+  "tables_retained": 5,
+  "reference_count": 11,
+  "margin_checks": "passed",
+  "visual_pages_inspected": [
+    1,
+    2,
+    3
+  ],
+  "reference_usage": "Formatting only; no reference-paper research content copied.",
+  "pdf_sha256": "bad2737b39144e30a888dc2764cb752befa9133b12fd501f9f2fe94fc208fe9c"
+}
