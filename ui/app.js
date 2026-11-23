@@ -17,7 +17,7 @@
   $('lab-tab').classList.toggle('active',name==='cases');$('eval-tab').classList.toggle('active',name==='evidence');
   $('earth-tab')?.classList.toggle('active',name==='terrain');
   $('page-title').textContent=name==='terrain'?'Terrain & flood':name==='evidence'?'Research evidence':'Case studies';
-  $('page-description').textContent=name==='terrain'?'Inspect terrain, analyze a flood area, and review response priorities.':name==='evidence'?'NDVI, terrain, drainage and evidence qualification—with their measured limits.':'Four measured windows. Source observations, terrain and uncertainty together.';
+  $('page-description').textContent=name==='terrain'?'Inspect terrain, analyze a flood area, and review response priorities.':name==='evidence'?'Atmospheric prediction, NDVI, terrain and drainage—with their measured controls and limits.':'Four measured windows. Source observations, terrain and uncertainty together.';
   if(name==='cases'){if(!caseData)loadCase(selectedCase);else requestAnimationFrame(drawCase);}
   if(name==='evidence')loadResearch();
   document.dispatchEvent(new CustomEvent('lavalabs:workspace',{detail:name}));

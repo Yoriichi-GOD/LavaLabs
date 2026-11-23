@@ -1,0 +1,28 @@
+{
+ "schema":2,"receipt_kind":"curated_aggregate","measured_date":"2026-11-23",
+ "source_notebook":"https://www.kaggle.com/code/saishreeksingh/lavalabs-atmospheric-lab-experiments",
+ "source_modules_sha256":"e878c89e8a00143e35c1f6819f7c926fdf9e7fd90c2cb081d053d5d3407b405c",
+ "counts":{"train":3218,"test":1221,"sites":81},
+ "selection":{"candidate":"official","control":"official","novel":"no_fallback","challenger_eligible":false,"development_sites":64,"confirmation_sites":17,"tolerance":1e-10,
+  "gate_protocol":"Development chooses one control and at most one novel challenger. Novel must beat both controls on confirmation; no confirmation search between novel variants.",
+  "development_comparison":{"scores":{"table":{"mcrmse":0.9375793434856433},"official":{"mcrmse":0.9337828782984863},"no_fallback":{"mcrmse":0.9362702230645311},"spatial":{"mcrmse":0.9366078818446638}},
+   "raw_scores":{"table":{"mcrmse":0.9681269208767747},"official":{"mcrmse":0.9514027186801808},"no_fallback":{"mcrmse":0.9551641018432251},"spatial":{"mcrmse":0.9562586999159486}},
+   "fold_mean_score":{"mcrmse":1.0225869373217704}}
+ },
+ "confirmation":{
+  "table":{"mcrmse":0.8872517261752882,"observed":{"t_ch4":216,"t_no2":605,"t_co":614,"t_aai":621,"t_firms":621},"rmse":{"t_ch4":0.9357364308371873,"t_no2":0.9718464587146988,"t_co":1.1783843022578548,"t_aai":0.6601832269373011,"t_firms":0.6901082121293997}},
+  "official":{"mcrmse":0.8620563381127063,"observed":{"t_ch4":216,"t_no2":605,"t_co":614,"t_aai":621,"t_firms":621},"rmse":{"t_ch4":0.9357364308371873,"t_no2":0.9336143692506326,"t_co":1.1629062399522856,"t_aai":0.627325978047846,"t_firms":0.65069867247558}}
+ },
+ "retained_variant":"official",
+ "retained_choices":[{"amplitude":0.25,"image_weight":1},{"amplitude":0.75,"image_weight":0.5},{"amplitude":0.5,"image_weight":1},{"amplitude":1,"image_weight":1},{"amplitude":0.25,"image_weight":1}],
+ "feature_extraction":{"chip_count":4439,"columns":{"official":54,"no_fallback":57,"spatial":73},"insufficient_clear_count":14,"insufficient_clear_fraction":0.0031538634827663887,"seconds":446.265,"feature_source_sha256":"ebe42b35788e87fe76f0b46dbc152609f9c8ba5ff793dc94fc048d029bd23725"},
+ "parameters":{"max_iter":250,"learning_rate":0.04,"max_depth":3,"min_samples_leaf":40,"l2_regularization":5,"max_features":0.6,"random_state":0,"early_stopping":false},
+ "environment":{"python":"3.13.18","numpy":"2.1.3","pandas":"2.3.3","scikit-learn":"1.6.1","rasterio":"1.5.2","scipy":"1.16.3"},
+ "interactive_seconds":608.654,
+ "prediction_export":{"rows":1221,"columns":6,"sha256":"007abb84e2f53b01d7ca71929647d83ea6803e2cb186871fd61f3cda38892c20","boundary":"Prediction values and identifiers remain in private Kaggle output."},
+ "raw_baseline":{"site_cv_mcrmse":0.9663821183586387,"public_mcrmse":1.32129,"version_id":372915885},
+ "saved_replay":{"version_id":372947210,"successful":true,"pipeline_seconds":794.109,"feature_seconds":608.504,"viewer_runtime_seconds":821.9,"prediction_hash_matches_interactive":true},
+ "image_public_mcrmse":1.15808,
+ "limitations":["Confirmation is used for an accept/reject gate; its selected result is not an untouched estimate.","Gate v2 was fixed during initial image extraction, before any image development/confirmation scores were observed.","The earlier raw baseline evaluated all training sites, including the confirmation sites.","Withheld dates prevent true forward-time validation. Private-test error remains unknown.","Development feature-family selection has selection optimism."],
+ "si_disclosure":"OpenAI Codex assisted source, tests, analysis implementation, interface and documentation. Competition observations retain organizer provenance."
+}

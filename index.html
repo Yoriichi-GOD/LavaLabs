@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="/LavaLabs/assets/style.css"><link rel="stylesheet" href="/LavaLabs/assets/noir.css"><link rel="stylesheet" href="/LavaLabs/assets/workspace-shell.css"><link rel="stylesheet" href="/LavaLabs/jai/assets/earth.css"><link rel="stylesheet" href="/LavaLabs/ui/lava.css">
 <script defer src="/LavaLabs/ui/app.js"></script><script defer src="/LavaLabs/jai/assets/earth.js"></script><script defer src="/LavaLabs/assets/visual-context.js"></script>
 <link rel="stylesheet" href="/LavaLabs/ui/flood-desk.css">
+<link rel="stylesheet" href="/LavaLabs/ui/atmospheric/evidence.css"><script defer src="/LavaLabs/ui/atmospheric/evidence.js"></script>
 <script defer src="/LavaLabs/ui/response/map.js"></script><script defer src="/LavaLabs/ui/processor-lava.js"></script>
 <script defer src="/LavaLabs/processor-assets/flood-workspace.js"></script><script defer src="/LavaLabs/processor-assets/benchmarks.js"></script>
 <link rel="stylesheet" href="/LavaLabs/ui/wordmark.css"></head>
@@ -103,6 +104,17 @@
  <section class="case-context"><h2>A common workflow, different evidence</h2><div class="case-index"><button data-case="nepal"><strong>Syapru Besi</strong><span>Sentinel water candidates, retained RGB, historical terrain and mapped infrastructure</span></button><button data-case="kedarnath"><strong>Kedarnath</strong><span>Landsat in 2013; limited common clear support, registration unresolved</span></button><button data-case="varanasi"><strong>Varanasi</strong><span>River–city context, Sentinel-2 indices, drainage and source-scale limits</span></button><button data-case="sangam-vihar"><strong>Sangam Vihar</strong><span>Urban drainage review with explicit limits on culverts, DTM and physical outlets</span></button></div></section>
 </section>
 <section id="evaluation" hidden>
+ <section class="atmospheric-evidence" aria-labelledby="atmo-title" id="atmospheric-evidence">
+  <div class="atmo-heading"><div><h2 id="atmo-title">LavaLabs Atmospheric Lab</h2><p>OBSCURA · Five targets, unseen sites, measured controls.</p></div><a class="text-link" href="https://www.kaggle.com/competitions/obscura">Competition brief</a></div>
+  <p id="atmo-status" role="status">Reading measured atmospheric experiments…</p>
+  <div id="atmo-content" hidden>
+   <div class="atmo-conclusion"><h3 id="atmo-verdict"></h3><p id="atmo-conclusion"></p><p id="atmo-public-score" class="atmo-caption"></p></div>
+   <div class="atmo-layout"><section aria-labelledby="atmo-comparison-title"><h3 id="atmo-comparison-title">Challenge the added complexity</h3><p class="atmo-caption">Pooled nested development MCRMSE. Lower is better. Identical sites and model settings.</p><div id="atmo-comparison"></div><p class="atmo-caption" id="atmo-validation-note"></p></section>
+    <section aria-labelledby="atmo-target-title"><div class="atmo-target-heading"><h3 id="atmo-target-title">Inspect a target</h3><label>Indicator <select id="atmo-target"><option value="t_ch4">Methane · CH4</option><option value="t_no2">Nitrogen dioxide · NO2</option><option value="t_co">Carbon monoxide · CO</option><option value="t_aai">Aerosol index · AAI</option><option value="t_firms">Thermal / fire · FIRMS</option></select></label></div><dl id="atmo-target-values"></dl><p id="atmo-target-note"></p></section></div>
+   <section class="atmo-actions" aria-labelledby="atmo-actions-title"><h3 id="atmo-actions-title">What to investigate next</h3><ol><li><strong>Verify transfer first.</strong> Compare unseen-site validation with the scored test result before using any indicator in a decision.</li><li><strong>Review missing observations.</strong> Check target label support and cloudy-image coverage before adding a model.</li><li><strong>Promote only a repeatable gain.</strong> Keep simpler controls when a feature family fails its second site partition.</li></ol><p>These are research verification priorities. The anonymous standardized targets do not provide facility locations, physical pollution units or a future forecast.</p></section>
+   <details class="atmo-method"><summary>Method, provenance and limits</summary><p id="atmo-method-copy"></p><p>Earlier LavaLabs flood, NDVI and terrain investigations are prior work. This atmospheric experiment uses only the competition inputs. OpenAI Codex assisted code, tests and writing.</p><div class="atmo-downloads"><a href="/LavaLabs/ui/atmospheric/results.json" download>Aggregate evidence JSON</a><a href="/LavaLabs/ui/atmospheric/LavaLabs-Obscura-Research.pdf" download>Research report PDF</a></div></details>
+  </div>
+ </section>
  <p class="research-lead">Preserved experiments, controls and findings. A reproducible result is shown with the population it actually tested.</p>
  <a class="text-link" href="/LavaLabs/?view=flood-evidence#terrain">Flood Lab evidence and benchmarks →</a>
  <div id="research-list" role="list"><p class="muted">Reading frozen research results…</p></div>
