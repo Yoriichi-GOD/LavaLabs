@@ -15,3 +15,7 @@ Public source **373134416** is Apache-2.0, contains all three guarded recipes an
 The existing app serving/privacy regression passes (1 test), and desktop/390-pixel browser checks preserve all five old target controls. Invalid new evidence produces an explicit error without removing older research, then recovers after restoring the receipt. The current three-page Times New Roman, two-column report passes content/font/margin checks; every page was visually inspected. The original report and source are archived unchanged. The supplied reference paper affected formatting only.
 
 See the adjacent measured receipts, independent audits, source freezes and interface check for exact evidence. Subsequent deployment/Devpost save success is recorded separately; this scientific result does not by itself prove external publication.
+
+## External release verified
+
+Implementation **9326014** and Pages **140697e** were pushed. All three hosted presentation assets match the reviewed hashes, including the three-page PDF. Devpost saved the revised story, new interface screenshot and supplied PDF, and its public page still shows **Submitted to OBSCURA**. The existing terms checkbox remained checked/disabled; no new agreement was accepted. Public source version **373134416** is Public/Apache-2.0 with zero output files. Both Kaggle interactive sessions are stopped. See RELEASE_CLOSURE.json, HOSTED_RELEASE_VERIFICATION.json and DEVPOST_UPDATE_RECEIPT.json.

@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "main_commit": "9326014",
+  "pages_commit": "140697e",
+  "verified_assets": [
+    {
+      "url": "https://yoriichi-god.github.io/LavaLabs/ui/atmospheric/evidence.js",
+      "sha256": "e5c79b1fb3c7f5fcaf1042ead224cdffe0cc88c8bf4a6e0511b2f00824cc0162",
+      "bytes": 6898
+    },
+    {
+      "url": "https://yoriichi-god.github.io/LavaLabs/ui/atmospheric/results.json",
+      "sha256": "f13af7c983abc6d5d0bfa8bacb9947933e5238257dd730192e45dac482b1030c",
+      "bytes": 4551
+    },
+    {
+      "url": "https://yoriichi-god.github.io/LavaLabs/ui/atmospheric/LavaLabs-Obscura-Research.pdf",
+      "sha256": "152ce4e22f188a8ed0e9f23d4c18bfac734f3cbbf0bfcc8c689105c75eb45b48",
+      "bytes": 180260
+    }
+  ],
+  "public_score": 1.13057,
+  "source_notebook_version": 373134416,
+  "original_report_preserved": true
+}

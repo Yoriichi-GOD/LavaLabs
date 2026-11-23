@@ -1,0 +1,40 @@
+{
+  "schema": 1,
+  "implementation_commit": "9326014",
+  "pages_commit": "140697e",
+  "source_notebook_version": 373134416,
+  "private_scientific_replay_version": 373122625,
+  "fresh_replay_seconds": 767.2,
+  "public_mcrmse": 1.13057,
+  "final_selected_versions": [
+    373122625,
+    372947210
+  ],
+  "final_selected_scores": [
+    1.13057,
+    1.15808
+  ],
+  "rank_at_post_submission_check": 50,
+  "leader_public_at_check": 0.92847,
+  "private_score": "unknown",
+  "devpost_url": "https://devpost.com/software/lavalabs-atmospheric-lab",
+  "devpost_status": "Submitted",
+  "devpost_story_and_screenshot_updated": true,
+  "research_pdf_uploaded_and_saved": true,
+  "hosted_pdf_bytes_match_reviewed_file": true,
+  "all_three_public_presentation_assets_hash_match": true,
+  "paper_pages": 3,
+  "new_model_checks_passed": 11,
+  "app_serving_privacy_regression_passed": 1,
+  "all_five_historical_target_controls_pass": true,
+  "desktop_and_390px_checks_pass": true,
+  "error_recovery_pass": true,
+  "original_report_preserved": true,
+  "public_source_output_files": 0,
+  "kaggle_interactive_sessions_stopped": true,
+  "limits": [
+    "Leader was not beaten. Private/future-time performance remains unknown.",
+    "Shuffled control nearly matches the full branch; causal spatial attribution is not established.",
+    "The local PDF supplied to Devpost is verified, but the remote attachment bytes were not independently hashed."
+  ]
+}
